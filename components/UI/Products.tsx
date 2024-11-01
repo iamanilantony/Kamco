@@ -45,7 +45,10 @@ const ProductsPage: React.FC = () => {
 
             <div className="space-y-6">
                 {currentItems.map((product) => (
-                    <div key={product.id} className="border border-gray-200 rounded-lg p-4 flex cursor-pointer">
+                    <div
+                    key={product.id}
+                    className="border border-gray-200 rounded-lg p-4 flex cursor-pointer hover:bg-gray-100 transition-bg duration-300"
+                  >
                         <img src={product.image} alt={product.title} className="w-48 h-48 object-cover rounded-lg mr-16" />
                         <div className="flex-1 text-left">
                             <div className='flex justify-between'>
