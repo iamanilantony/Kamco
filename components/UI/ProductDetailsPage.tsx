@@ -113,7 +113,24 @@ const ProductDetailPage = () => {
                 <h2 className="text-2xl font-bold mb-2">Other Products</h2>
                 <div className="flex space-x-4">
                     {product.otherProducts.map((image, index) => (
-                        <img key={index} src={image} alt={`Other Product ${index + 1}`} className="w-128 h-128 object-cover rounded-lg" />
+                        <div
+                            key={index}
+                            className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
+                        >
+                            <img
+                                // src={`/products/image${index + 1}.svg`} // Update image source here
+                                src={`/Kamco_hero1.svg`} // Update image source here
+                                alt={`Product ${index + 1}`}
+                                className="w-64 h-64 object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center text-white">
+                                <h3 className="text-xl font-semibold">Product Title {index + 1}</h3>
+                                <p className="text-center mb-4">Short description of the product.</p>
+                                <Link href="/more-details" className="bg-green-600 px-4 py-2 text-xs rounded-md hover:bg-green-700 transition">
+                                    More Details
+                                </Link>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

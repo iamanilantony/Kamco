@@ -31,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </Head>
           <header className="flex justify-between items-center pb-4 px-6">
             <div className="text-2xl font-bold text-green-700 md:ml-20">
-              <img src="logo.png" alt="Logo" className="w-full h-10 object-cover rounded-[8%]" />
+              <img src="/logo.png" alt="Logo" className="w-full h-10 object-cover rounded-[8%]" />
             </div>
            <NavBar />
           </header>
