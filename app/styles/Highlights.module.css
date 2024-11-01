@@ -1,0 +1,7 @@
+.slick-slide {
+    margin: 0 27px; /* Margin for the individual slides */
+}
+
+.slick-list {
+    margin: 0 -27px; /* Negative margin to offset the slide margins */
+}
