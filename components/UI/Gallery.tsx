@@ -8,49 +8,47 @@ const GallerySection = () => {
         { image: "/Kamco_hero1.svg" },
         { image: "/Kamco_hero2.svg" },
         { image: "/Kamco_hero3.svg" },
-        { image: "/eco-luxury2.svg.svg" },
-        { image: "/eco-luxury3.svg.svg" },
-        { image: "/eco-luxury4.svg.svg" },
-        { image: "/eco-luxury5.svg.svg" },
-        // Add more gallery items as needed
+        { image: "/eco-luxury2.svg" },
+        { image: "/eco-luxury3.svg" },
+        { image: "/eco-luxury4.svg" },
+        { image: "/eco-luxury5.svg" },
     ];
 
     const gallerySettings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1, // Showing one image at a time
+        slidesToShow: 1, 
         slidesToScroll: 1,
     };
 
     return (
-        <div className="py-10 bg-[#166434] -mx-16 mt-16">
-            <div className="max-w-8xl mx-auto flex flex-col md:flex-row"> {/* Responsive layout */}
-                <div className="w-full md:w-1/2 text-center md:text-left my-auto px-4 md:pl-16"> {/* Adjusted text section */}
-                    <h2 className="text-4xl font-normal text-white mb-4">Gallery</h2>
-                    <p className="text-white mb-4 font-sans w-3/5 font-normal mx-auto">
-                        Explore the world of KAMCO with the photos of our past events, products, customers, and so on.
-                    </p>
-                    <Link href="/gallery" className="w-1/2 md:w-1/5 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-100 transition font-sans">
-                        View All Photos
-                    </Link>
-                </div>
-                <div className="w-full md:w-1/2 flex justify-center items-center px-4 md:px-16 mt-8 md:mt-0"> {/* Center slider on mobile */}
-                    <Slider {...gallerySettings} className="w-full"> {/* Ensure slider takes full width */}
+        <div className="py-10 bg-[#166434] mx-2 mt-16 md:-mx-16">
+            <div className="max-w-8xl mx-auto flex flex-col md:flex-row">
+                <div className="w-full md:w-1/2 flex justify-center items-center px-8 md:px-16 mb-8 md:mb-0">
+                    <Slider {...gallerySettings} className="w-full">
                         {galleryItems.map((item, index) => (
-                            <div key={index} className="h-96 w-full"> {/* Set a fixed height for slider items */}
+                            <div key={index} className="h-64 md:h-96 w-full"> 
                                 <img
                                     src={item.image}
                                     alt={`Gallery Image ${index + 1}`}
-                                    className="w-full h-full object-cover rounded-lg" // Ensure image covers the area
+                                    className="w-full h-full object-cover rounded-lg" 
                                 />
                             </div>
                         ))}
                     </Slider>
                 </div>
+                <div className="w-full md:w-1/2 px-8 md:px-4 flex flex-col justify-center text-left">
+                    <h2 className="text-3xl md:text-4xl font-normal text-white mb-4">Gallery</h2>
+                    <p className="text-white mb-4 font-sans w-full md:w-4/5 font-normal">
+                        Explore the world of KAMCO with the photos of our past events, products, customers, and so on.
+                    </p>
+                    <Link href="/gallery" className="w-full md:w-1/5 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-100 transition font-sans">
+                        View All Photos
+                    </Link>
+                </div>
             </div>
         </div>
-
     );
 };
 

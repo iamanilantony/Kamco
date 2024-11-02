@@ -41,7 +41,7 @@ const NavBar: React.FC = () => {
                 <Link href="#" className={`block md:inline-block text-gray-700 px-1 md:px-2 font-normal transition-all duration-200 ease-in-out ${isActive('/language') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}>
                     <span className="inline-block min-w-[40px] text-center">അ</span>
                 </Link>
-                <Link href="/login" className="block md:inline-block bg-[#166434] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md">
+                <Link href="https://www.kamcoindia.com/dealers/user_login" className="block md:inline-block bg-[#166434] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md">
                     Login
                 </Link>
             </nav>
