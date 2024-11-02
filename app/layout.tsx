@@ -24,18 +24,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}>
-        <div className="max-w-full mx-auto pt-10">
+        <div className="max-w-full mx-auto">
           <Head>
             <title>Camco</title>
             {/* <link rel="icon" href="/favicon.ico" /> */}
           </Head>
-          <header className="flex justify-between items-center pb-4 px-6">
-            <div className="text-2xl font-bold text-green-700 md:ml-20">
-              <img src="/logo.png" alt="Logo" className="w-full h-10 object-cover rounded-[8%]" />
-            </div>
            <NavBar />
-          </header>
-          <main className="text-center py-10">{children}</main>
+          <main className="text-center">{children}</main>
           <FooterSection/>
         </div>
         <Analytics />
