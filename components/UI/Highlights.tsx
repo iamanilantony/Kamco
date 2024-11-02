@@ -42,7 +42,7 @@ const HighlightsSection = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3,
         slidesToScroll: 1,
         nextArrow: <img src='/right-arrow-black.svg' alt="Next" className="arrow" />,
         prevArrow: <img src='/left-arrow-black.svg' alt="Previous" className="arrow" />,

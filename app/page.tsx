@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import Slider from "react-slick";
 import GallerySection from '@/components/UI/Gallery';
 import HighlightsSection from '@/components/UI/Highlights';
 import TestimonialsSection from '@/components/UI/Testimonials';
 import ContactSection from '@/components/UI/ContactSection';
+import Hero from '@/components/UI/Hero';
 
 export default function Home() {
 
@@ -54,42 +53,7 @@ export default function Home() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4">
       {/* Hero Section */}
-      <div className="min-h-max grid md:grid-cols-2 gap-8 items-center mb-24 md:mt-12 md:mb-4 mt-24">
-        {/* Image Content */}
-        <div className="order-1 md:order-2 grid md:grid-cols-3 gap-4 h-full">
-          {/* Left Column with Two Stacked Images */}
-          <div className="col-span-3 md:col-span-2 grid md:grid-rows-2 gap-4 h-full">
-            <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden">
-              <Image src="/Kamco_hero2.svg" fill className="object-cover" alt="Image 1" />
-            </div>
-            <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:block hidden">
-              <Image src="/Kamco_hero3.svg" fill className="object-cover" alt="Image 2" />
-            </div>
-          </div>
-
-          {/* Right Column with Single Tall Image */}
-          <div className="relative w-full h-52 md:h-full rounded-lg overflow-hidden md:block hidden">
-            <Image src="/Kamco_hero1.svg" fill className="object-cover" alt="Image 3" />
-          </div>
-        </div>
-
-        {/* Text Content */}
-        <div className="order-2 md:order-1 flex flex-col justify-center space-y-4 text-left">
-          <h1 className="text-4xl md:text-6xl font-normal text-gray-900 mb-4">Cultivating Success</h1>
-          <p className="text-gray-700 text-thin text-base w-full md:w-3/4 mb-4 font-sans">
-            From tillers and tractors to sprayers and seeders, we offer a wide range of high-quality agricultural tools that help farmers work smarter, not harder. Trust us to provide the equipment you need to cultivate success, season after season.
-          </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/register" className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition font-sans text-center">
-              Register Now
-            </Link>
-            <Link href="/dealers" className="border border-gray-900 text-gray-900 px-6 py-3 rounded-md hover:bg-gray-900 hover:text-white transition font-sans text-center">
-              Explore Dealers
-            </Link>
-          </div>
-        </div>
-      </div>
-
+      <Hero />
       {/* Green Statistics Section */}
       <div className="min-h-[30vh] bg-[#166434] text-white flex flex-wrap items-center justify-around py-8 rounded-lg mt-12 px-4 md:px-40">
         <div className="text-center mb-4 md:mb-0">
