@@ -35,19 +35,19 @@ const TestimonialsSection = () => {
         },
     ];
 
-    const [slidesToShow, setSlidesToShow] = useState(3);
+    const [slidesToShow, setSlidesToShow] = useState(3); // Default to 3 for server-side rendering
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setSlidesToShow(window.innerWidth < 768 ? 1 : 3);
-        }
+      if (typeof window !== 'undefined') {
+        setSlidesToShow(window.innerWidth < 768 ? 1 : 3);
+      }
     }, []);
 
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: window.innerWidth < 768 ? 1 : 3,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         nextArrow: <img src='/right-arrow-black.svg' alt="Next" className="arrow" />,
         prevArrow: <img src='/left-arrow-black.svg' alt="Previous" className="arrow" />,
