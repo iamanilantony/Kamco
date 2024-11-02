@@ -1,38 +1,47 @@
 'use client';
 
-import Slider from "react-slick"; 
+import Slider from "react-slick";
+import { useEffect, useState } from 'react';
 
 const TestimonialsSection = () => {
     const highlights = [
         {
-          content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
-          author: "Raghesh K, Rice Farmer",
+            content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
+            author: "Raghesh K, Rice Farmer",
         },
         {
             content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
             author: "Raghesh K, Rice Farmer",
-          },
-          {
+        },
+        {
             content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
             author: "Raghesh K, Rice Farmer",
-          },
-          {
+        },
+        {
             content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
             author: "Raghesh K, Rice Farmer",
-          },
-          {
+        },
+        {
             content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
             author: "Raghesh K, Rice Farmer",
-          },
-          {
+        },
+        {
             content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
             author: "Raghesh K, Rice Farmer",
-          },
-          {
+        },
+        {
             content: "The quality of these tools is unmatched! I've seen a noticeable improvement in my farm's efficiency since switching to their products. Highly recommended!",
             author: "Raghesh K, Rice Farmer",
-          },
+        },
     ];
+
+    const [slidesToShow, setSlidesToShow] = useState(3);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setSlidesToShow(window.innerWidth < 768 ? 1 : 3);
+        }
+    }, []);
 
     const settings = {
         dots: true,
@@ -43,7 +52,7 @@ const TestimonialsSection = () => {
         nextArrow: <img src='/right-arrow-black.svg' alt="Next" className="arrow" />,
         prevArrow: <img src='/left-arrow-black.svg' alt="Previous" className="arrow" />,
     };
-  
+
     return (
         <div className="py-10 mt-20">
             <h2 className="text-4xl font-normal text-center mb-8">Testimonials</h2>

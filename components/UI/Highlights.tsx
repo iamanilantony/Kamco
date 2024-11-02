@@ -2,6 +2,7 @@
 
 import Slider from "react-slick"; 
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import styles from '@/app/styles/Highlights.module.css'; // Ensure the path is correct
 
 const HighlightsSection = () => {
@@ -38,11 +39,19 @@ const HighlightsSection = () => {
         },
     ];
 
+    const [slidesToShow, setSlidesToShow] = useState(3);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+          setSlidesToShow(window.innerWidth < 768 ? 1 : 3);
+        }
+      }, []);
+
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         nextArrow: <img src='/right-arrow-black.svg' alt="Next" className="arrow" />,
         prevArrow: <img src='/left-arrow-black.svg' alt="Previous" className="arrow" />,
