@@ -94,7 +94,7 @@ const tenderData = [
 
 const TenderTable = () => {
     return (
-        <div className="p-4 md:p-8 bg-gray-100 min-h-screen w-fit font-sans">
+        <div className="p-4 md:p-8 bg-gray-100 min-h-screen font-sans">
             <div className="max-w-6xl mx-auto bg-white p-4 md:p-6 rounded-md">
                 <div className="mb-4">
                     <input
