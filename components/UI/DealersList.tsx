@@ -1,4 +1,5 @@
 // pages/dealers.js
+
 import Link from 'next/link';
 
 export default function DealersPage() {
@@ -61,14 +62,29 @@ export default function DealersPage() {
     ];
 
     return (
-        <div className="min-h-screen min-w-xl font-sans px-20">
+        <div className="px-4 md:px-10 lg:px-20 py-10 font-sans">
             <h1 className="text-3xl font-bold mb-6">Authorized Dealers</h1>
 
-            {/* Filter, Sort, and Categories Buttons */}
-            <div className="flex space-x-4 mb-4">
-                <button className="border border-gray-300 rounded-md px-4 py-2">Filters</button>
-                <button className="border border-gray-300 rounded-md px-4 py-2">Sort</button>
-                <button className="border border-gray-300 rounded-md px-4 py-2">Categories</button>
+            {/* Filter, Sort, and Categories Select Inputs */}
+            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4">
+                <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
+                    <option>Filters</option>
+                    <option>By State</option>
+                    <option>By Rating</option>
+                    <option>By Proximity</option>
+                </select>
+                <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
+                    <option>Sort</option>
+                    <option>Name: A-Z</option>
+                    <option>Name: Z-A</option>
+                    <option>Rating: High to Low</option>
+                </select>
+                <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
+                    <option>Categories</option>
+                    <option>All Dealers</option>
+                    <option>Top-rated</option>
+                    <option>Newly Added</option>
+                </select>
             </div>
 
             {/* Dealers Grid */}
