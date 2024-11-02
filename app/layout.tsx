@@ -10,8 +10,8 @@ import NavBar from "@/components/UI/NavBar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Camco",
-  description: "Camco website",
+  title: "Kamco",
+  description: "Kamco website",
 }
 
 interface RootLayoutProps {
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}>
         <div className="max-w-full mx-auto">
           <Head>
-            <title>Camco</title>
+            <title>Kamco</title>
             {/* <link rel="icon" href="/favicon.ico" /> */}
           </Head>
            <NavBar />
