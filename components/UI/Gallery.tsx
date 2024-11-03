@@ -8,10 +8,6 @@ const GallerySection = () => {
         { image: "/Kamco_hero1.svg" },
         { image: "/Kamco_hero2.svg" },
         { image: "/Kamco_hero3.svg" },
-        { image: "/eco-luxury2.svg" },
-        { image: "/eco-luxury3.svg" },
-        { image: "/eco-luxury4.svg" },
-        { image: "/eco-luxury5.svg" },
     ];
 
     const gallerySettings = {

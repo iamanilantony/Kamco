@@ -43,7 +43,7 @@ const Hero = () => {
             From tillers and tractors to sprayers and seeders, we offer a wide range of high-quality agricultural tools that help farmers work smarter, not harder. Trust us to provide the equipment you need to cultivate success, season after season.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/register" className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition font-sans text-center">
+            <Link href="https://www.kamcoindia.com/dealers" target='_blank' className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition font-sans text-center">
               Register Now
             </Link>
             <Link href="/dealers" className="border border-gray-900 text-gray-900 px-6 py-3 rounded-md hover:bg-gray-900 hover:text-white transition font-sans text-center">

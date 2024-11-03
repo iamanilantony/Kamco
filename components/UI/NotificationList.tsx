@@ -10,27 +10,6 @@ const data = [
     title: 'RECRUITMENT FOR THE POST OF SALES OFFICER (ON CONTRACT BASIS)',
     description: 'As a part of expansion of our markets and to improve sales in Odisha, the Company is planning to recruit dynamic and self-motivated persons with a flare of sales, on contract basis.'
   },
-  {
-    category: 'Releases',
-    date: '24 Jun 2024',
-    time: '15:45',
-    title: 'RECRUITMENT FOR THE POST OF SALES OFFICER (ON CONTRACT BASIS)',
-    description: 'As a part of expansion of our markets and to improve sales in Odisha, the Company is planning to recruit dynamic and self-motivated persons with a flare of sales, on contract basis.'
-  },
-  {
-    category: 'Products',
-    date: '24 Jun 2024',
-    time: '15:45',
-    title: 'RECRUITMENT FOR THE POST OF SALES OFFICER (ON CONTRACT BASIS)',
-    description: 'As a part of expansion of our markets and to improve sales in Odisha, the Company is planning to recruit dynamic and self-motivated persons with a flare of sales, on contract basis.'
-  },
-  {
-    category: 'News',
-    date: '24 Jun 2024',
-    time: '15:45',
-    title: 'RECRUITMENT FOR THE POST OF SALES OFFICER (ON CONTRACT BASIS)',
-    description: 'As a part of expansion of our markets and to improve sales in Odisha, the Company is planning to recruit dynamic and self-motivated persons with a flare of sales, on contract basis.'
-  }
 ];
 
 const RecruitmentList = () => {

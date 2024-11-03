@@ -1,0 +1,58 @@
+{
+    "categories": [
+      {
+        "name": "Land Preparation",
+        "codeName": "PR-01",
+        "subcategories": [
+          { "name": "Power Tillers", "codeName": "PR-011", "src": "/products/PR-011.jpg" },
+          { "name": "Tractors", "codeName": "PR-012", "src": "/products/PR-012.jpg" }
+        ]
+      },
+      {
+        "name": "Plant protection",
+        "codeName": "PR-02",
+        "subcategories": [
+          { "name": "Drone", "codeName": "PR-021", "src": "/products/PR-021.jpg" },
+          { "name": "Sprayers", "codeName": "PR-022", "src": "/products/PR-022.jpg" }
+        ]
+      },
+      {
+        "name": "De weeding",
+        "codeName": "PR-03",
+        "subcategories": [
+          { "name": "Echo Leopard Power weeder", "codeName": "PR-031", "src": "/products/PR-031.jpg" },
+          { "name": "Geared Power weeder", "codeName": "PR-032", "src": "/products/PR-032.jpg" },
+          { "name": "Garden Tillers", "codeName": "PR-033", "src": "/products/PR-033.jpg" },
+          { "name": "Micro Tiller", "codeName": "PR-034", "src": "/products/PR-034.jpg" },
+          { "name": "Cono Weeder", "codeName": "PR-035", "src": "/products/PR-035.jpg" },
+          { "name": "Brush Cutter", "codeName": "PR-036", "src": "/products/PR-036.jpg" },
+          { "name": "Electric Brush cutter", "codeName": "PR-037", "src": "/products/PR-037.jpg" }
+        ]
+      },
+      {
+        "name": "Harvesting",
+        "codeName": "PR-04",
+        "subcategories": [
+          { "name": "Power Reaper", "codeName": "PR-041", "src": "/products/PR-041.jpg" },
+          { "name": "Brush Cutter", "codeName": "PR-036", "src": "/products/PR-036.jpg" },
+          { "name": "Electric Brush cutter", "codeName": "PR-037", "src": "/products/PR-037.jpg" },
+          { "name": "Mini Harvest Combines", "codeName": "PR-044", "src": "/products/PR-044.jpg" }
+        ]
+      },
+      {
+        "name": "Garden Tools",
+        "codeName": "PR-05",
+        "subcategories": [
+          { "name": "Mini Tool Kit", "codeName": "PR-051", "src": "/products/PR-051.jpg" },
+          { "name": "Horti tool Kit", "codeName": "PR-052", "src": "/products/PR-052.jpg" },
+          { "name": "Agri Tool Kit", "codeName": "PR-053", "src": "/products/PR-053.jpg" }
+        ]
+      },
+      {
+        "name": "KAMCO-lite",
+        "codeName": "PR-06",
+        "src": "/products/PR-06.jpg"
+      }
+    ]
+  }
+  

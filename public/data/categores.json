@@ -1,0 +1,35 @@
+{
+    "categories": [
+      {
+        "name": "Land Preparation",
+        "codeName": "PR-01",
+        "src": "/products/PR-01.jpg"
+      },
+      {
+        "name": "Plant protection",
+        "codeName": "PR-02",
+        "src": "/products/PR-02.jpg"
+      },
+      {
+        "name": "De weeding",
+        "codeName": "PR-03",
+        "src": "/products/PR-03.jpg"
+      },
+      {
+        "name": "Harvesting",
+        "codeName": "PR-04",
+        "src": "/products/PR-04.jpg"
+      },
+      {
+        "name": "Garden Tools",
+        "codeName": "PR-05",
+        "src": "/products/PR-05.jpg"
+      },
+      {
+        "name": "KAMCO-lite",
+        "codeName": "PR-06",
+        "src": "/products/PR-06.jpg"
+      }
+    ]
+  }
+  
