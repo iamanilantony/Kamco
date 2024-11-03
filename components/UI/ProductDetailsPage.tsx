@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import {products} from '@/public/data/productDetails.json'
 
 const ProductDetailPage = () => {
     const { id } = useParams();
 
     // Sample product data (Replace this with actual data fetching logic)
-    const products = [
+    const productsx = [
         {
             id: '1',
             title: "Heavy-Duty Rotary Tiller",
@@ -59,7 +60,7 @@ const ProductDetailPage = () => {
     return (
         <div className="container mx-auto p-4 font-sans">
             <div className="flex flex-col md:flex-row mb-8">
-                <img src={product.image} alt={product.title} className="w-full md:w-1/2 h-64 object-cover rounded-lg mb-4 md:mb-0" />
+                <img src={product.image} alt={product.title} className="w-full md:w-1/2 h-fit object-cover rounded-lg mb-4 md:mb-0" />
                 <div className="md:ml-6 mt-4 md:mt-0 text-left">
                     <h1 className="text-2xl md:text-3xl font-bold mb-2">{product.title}</h1>
                     <h2 className="text-lg md:text-xl text-gray-700">₹ {product.price}</h2>
@@ -104,13 +105,13 @@ const ProductDetailPage = () => {
             <div>
                 <h2 className="text-xl md:text-2xl font-bold mb-2">Other Products</h2>
                 <div className="flex flex-wrap space-x-4 overflow-x-auto">
-                    {product.otherProducts.map((image, index) => (
+                    {product?.otherProducts?.length && product?.otherProducts || [].map((image, index) => (
                         <div
                             key={index}
                             className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
                         >
                             <img
-                                src={`/Kamco_hero1.svg`} // Update image source here
+                                src={`${image}` || 'https://www.kamcoindia.com/userfiles/no-image.jpg'} // Update image source here
                                 alt={`Product ${index + 1}`}
                                 className="w-32 h-32 md:w-64 md:h-64 object-cover"
                             />

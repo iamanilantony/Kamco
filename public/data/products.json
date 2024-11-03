@@ -12,8 +12,8 @@
         "name": "Plant protection",
         "codeName": "PR-02",
         "subcategories": [
-          { "name": "Drone", "codeName": "PR-021", "src": "/products/PR-021.jpg" },
-          { "name": "Sprayers", "codeName": "PR-022", "src": "/products/PR-022.jpg" }
+          { "name": "Drone", "codeName": "PR-021", "src": "/products/PR-021.png" },
+          { "name": "Sprayers", "codeName": "PR-022", "src": "/products/PR-022.png" }
         ]
       },
       {

@@ -1,0 +1,496 @@
+{
+    "products": [
+      {
+        "id": "PR-011",
+        "title": "Power Tillers",
+        "price": 12000,
+        "piecesLeft": 150,
+        "description": "Engine Power: 30 HP minimum required. Used for soil preparation, ploughing, and weeding. Ideal for small and medium-sized farms with hardened steel blades for superior cutting.",
+        "features": [
+          "Adjustable depth control skid shoes",
+          "Durable side chain drive",
+          "Rear debris shield"
+        ],
+        "idealfor": [
+          "Tilling and soil preparation",
+          "Mixing organic matter",
+          "Light to medium ploughing"
+        ],
+        "blades": "Hardened steel blades for optimal durability and cutting.",
+        "gearbox": "Robust gearbox for efficient power transmission.",
+        "weight": "500 lbs",
+        "image": "/products/PR-011.jpg",
+        "additionalDetails": {
+          "warranty": "1-year warranty on parts and labor",
+          "maintenance": "Regular blade sharpening and oil changes required",
+          "compatibility": "Works with most small-scale tractors"
+        },
+        "dealers": [
+          { "name": "Green Farm Equipment", "rating": 4.5, "image": "/dealer1.jpg" },
+          { "name": "Agro Supply Co.", "rating": 4.2, "image": "/dealer2.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-012.jpg", "/products/PR-021.png"
+        ]
+      },
+      {
+        "id": "PR-012",
+        "title": "Tractors",
+        "price": 30000,
+        "piecesLeft": 75,
+        "description": "A 50 HP tractor designed for medium to large-scale farm operations. Suitable for tilling, ploughing, and transport tasks.",
+        "features": [
+          "Powerful 4-cylinder diesel engine",
+          "Hydraulic lift system",
+          "Enhanced steering capabilities"
+        ],
+        "idealfor": [
+          "Medium to large-scale ploughing",
+          "Heavy transport",
+          "Towing farm equipment"
+        ],
+        "blades": "Not applicable",
+        "gearbox": "Heavy-duty gearbox with 6-speed transmission.",
+        "weight": "7000 lbs",
+        "image": "/products/PR-012.jpg",
+        "additionalDetails": {
+          "warranty": "2-year warranty on engine and major parts",
+          "maintenance": "Routine checks for hydraulic system and oil changes",
+          "compatibility": "Compatible with most standard agricultural implements"
+        },
+        "dealers": [
+          { "name": "AgriTech Solutions", "rating": 4.7, "image": "/dealer3.jpg" },
+          { "name": "Kisan Depot", "rating": 4.4, "image": "/dealer4.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-011.jpg", "/products/PR-022.png"
+        ]
+      },
+      {
+        "id": "PR-021",
+        "title": "Drone",
+        "price": 5000,
+        "piecesLeft": 50,
+        "description": "A modern agricultural drone for crop monitoring and spraying. Equipped with GPS and high-resolution camera for precise operation.",
+        "features": [
+          "GPS navigation system",
+          "Multi-nozzle spraying capability",
+          "High-resolution imaging"
+        ],
+        "idealfor": [
+          "Pest control spraying",
+          "Field surveying",
+          "Nutrient distribution"
+        ],
+        "blades": "Propeller blades for lift and mobility.",
+        "gearbox": "N/A",
+        "weight": "20 lbs",
+        "image": "/products/PR-021.png",
+        "additionalDetails": {
+          "warranty": "6-month warranty on parts",
+          "maintenance": "Battery charging and propeller checks required",
+          "compatibility": "Controlled via smartphone or remote controller"
+        },
+        "dealers": [
+          { "name": "Sky AgriTech", "rating": 4.8, "image": "/dealer5.jpg" },
+          { "name": "Field Eyes Solutions", "rating": 4.5, "image": "/dealer6.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-022.png", "/products/PR-033.jpg"
+        ]
+      },
+      {
+        "id": "PR-022",
+        "title": "Sprayers",
+        "price": 1500,
+        "piecesLeft": 200,
+        "description": "Portable sprayer for effective pest and nutrient application in small to medium-sized fields. Easy to handle and maintain.",
+        "features": [
+          "Adjustable nozzle",
+          "Ergonomic handle",
+          "Compact design for easy transport"
+        ],
+        "idealfor": [
+          "Targeted pesticide application",
+          "Fertilizer spraying",
+          "Herbicide application"
+        ],
+        "blades": "Not applicable",
+        "gearbox": "N/A",
+        "weight": "15 lbs",
+        "image": "/products/PR-022.png",
+        "additionalDetails": {
+          "warranty": "1-year limited warranty",
+          "maintenance": "Regular cleaning of nozzles and pump checks",
+          "compatibility": "Suitable for most crop types"
+        },
+        "dealers": [
+          { "name": "AgriSpray Depot", "rating": 4.1, "image": "/dealer7.jpg" },
+          { "name": "Farm Tools Co.", "rating": 4.3, "image": "/dealer8.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-021.png", "/products/PR-034.jpg"
+        ]
+      },
+      {
+        "id": "PR-031",
+        "title": "Echo Leopard Power Weeder",
+        "price": 3200,
+        "piecesLeft": 90,
+        "description": "A powerful weeder designed for efficient de-weeding and soil aeration. Ideal for small to medium farms to enhance crop growth.",
+        "features": [
+          "High-performance engine",
+          "Ergonomic handle for comfort",
+          "Low vibration for extended use"
+        ],
+        "idealfor": [
+          "De-weeding",
+          "Soil aeration",
+          "Garden maintenance"
+        ],
+        "blades": "Precision-engineered blades for effective weeding.",
+        "gearbox": "Sturdy, single-speed gearbox for reliable performance.",
+        "weight": "50 lbs",
+        "image": "/products/PR-031.jpg",
+        "additionalDetails": {
+          "warranty": "1-year manufacturer warranty",
+          "maintenance": "Requires periodic blade cleaning and engine oil check",
+          "compatibility": "Compatible with various weeding attachments"
+        },
+        "dealers": [
+          { "name": "Weed Master Supplies", "rating": 4.4, "image": "/dealer9.jpg" },
+          { "name": "GreenField Tools", "rating": 4.3, "image": "/dealer10.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-032.jpg", "/products/PR-036.jpg"
+        ]
+      },
+      {
+        "id": "PR-032",
+        "title": "Geared Power Weeder",
+        "price": 3500,
+        "piecesLeft": 65,
+        "description": "A robust power weeder with advanced gearing for effective performance in tough soil conditions. Ideal for professional farming.",
+        "features": [
+          "Multi-speed gearbox",
+          "Durable frame construction",
+          "Adjustable blade angles"
+        ],
+        "idealfor": [
+          "Heavy-duty weeding",
+          "Soil preparation",
+          "Field maintenance"
+        ],
+        "blades": "Adjustable hardened steel blades.",
+        "gearbox": "Multi-speed gearbox for different weeding conditions.",
+        "weight": "60 lbs",
+        "image": "/products/PR-032.jpg",
+        "additionalDetails": {
+          "warranty": "2-year comprehensive warranty",
+          "maintenance": "Requires regular gearbox lubrication and blade inspection",
+          "compatibility": "Fits most tiller attachments"
+        },
+        "dealers": [
+          { "name": "Farm Gear Plus", "rating": 4.6, "image": "/dealer11.jpg" },
+          { "name": "Rural Tools Hub", "rating": 4.5, "image": "/dealer12.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-033.jpg", "/products/PR-037.jpg"
+        ]
+      },
+      {
+        "id": "PR-033",
+        "title": "Garden Tillers",
+        "price": 2100,
+        "piecesLeft": 110,
+        "description": "Compact and lightweight garden tiller perfect for home gardens and small farms. Equipped with adjustable blades and easy handling.",
+        "features": [
+          "Lightweight and easy to maneuver",
+          "Adjustable depth control",
+          "Low-noise operation"
+        ],
+        "idealfor": [
+          "Home gardening",
+          "Flower bed tilling",
+          "Soil loosening"
+        ],
+        "blades": "Adjustable steel blades for fine tilling.",
+        "gearbox": "Compact, reliable gearbox.",
+        "weight": "35 lbs",
+        "image": "/products/PR-033.jpg",
+        "additionalDetails": {
+          "warranty": "6-month limited warranty",
+          "maintenance": "Minimal maintenance required",
+          "compatibility": "Ideal for small-scale tilling tasks"
+        },
+        "dealers": [
+          { "name": "Urban Garden Supply", "rating": 4.2, "image": "/dealer13.jpg" },
+          { "name": "PlantEase Co.", "rating": 4.1, "image": "/dealer14.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-034.jpg", "/products/PR-035.jpg"
+        ]
+      },
+      {
+        "id": "PR-034",
+        "title": "Micro Tiller",
+        "price": 1800,
+        "piecesLeft": 95,
+        "description": "A small, highly portable tiller designed for precise soil turning in tight spaces. Perfect for vegetable gardens and flower beds.",
+        "features": [
+          "Compact size for tight areas",
+          "Easy-start engine",
+          "Adjustable tilling depth"
+        ],
+        "idealfor": [
+          "Small garden beds",
+          "Precise soil aeration",
+          "Vegetable gardening"
+        ],
+        "blades": "Compact steel blades for controlled tilling.",
+        "gearbox": "N/A",
+        "weight": "20 lbs",
+        "image": "/products/PR-034.jpg",
+        "additionalDetails": {
+          "warranty": "6-month warranty on parts",
+          "maintenance": "Blade checks and regular oil changes required",
+          "compatibility": "Works with light-duty attachments"
+        },
+        "dealers": [
+          { "name": "MicroFarm Supplies", "rating": 4.0, "image": "/dealer15.jpg" },
+          { "name": "Compact Garden Tech", "rating": 4.2, "image": "/dealer16.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-033.jpg", "/products/PR-036.jpg"
+        ]
+      },
+      {
+        "id": "PR-036",
+        "title": "Brush Cutter",
+        "price": 1300,
+        "piecesLeft": 150,
+        "description": "A durable and powerful brush cutter for clearing dense vegetation and maintaining farm boundaries.",
+        "features": [
+          "High-speed cutting blade",
+          "Adjustable handle for comfort",
+          "Fuel-efficient engine"
+        ],
+        "idealfor": [
+          "Clearing undergrowth",
+          "Trimming grass and small plants",
+          "Farm boundary maintenance"
+        ],
+        "blades": "High-speed steel cutting blade.",
+        "gearbox": "Heavy-duty gearbox for smooth operation.",
+        "weight": "25 lbs",
+        "image": "/products/PR-036.jpg",
+        "additionalDetails": {
+          "warranty": "1-year warranty",
+          "maintenance": "Regular blade sharpening and engine oil checks",
+          "compatibility": "Suitable for most brush clearing tasks"
+        },
+        "dealers": [
+          { "name": "Field Tools Ltd.", "rating": 4.5, "image": "/dealer31.jpg" },
+          { "name": "GreenField Equipment", "rating": 4.4, "image": "/dealer32.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-037.jpg", "/products/PR-041.jpg"
+        ]
+      },
+      {
+        "id": "PR-037",
+        "title": "Electric Brush Cutter",
+        "price": 1450,
+        "piecesLeft": 140,
+        "description": "An eco-friendly electric brush cutter designed for light to medium vegetation trimming, perfect for residential use.",
+        "features": [
+          "Quiet, electric motor",
+          "Adjustable handle for ergonomic use",
+          "Efficient cutting blade"
+        ],
+        "idealfor": [
+          "Light grass trimming",
+          "Residential lawn care",
+          "Maintaining garden paths"
+        ],
+        "blades": "Durable, electric-powered steel blade.",
+        "gearbox": "N/A",
+        "weight": "15 lbs",
+        "image": "/products/PR-037.jpg",
+        "additionalDetails": {
+          "warranty": "1-year warranty",
+          "maintenance": "Minimal maintenance, regular cleaning recommended",
+          "compatibility": "Standard power outlet required"
+        },
+        "dealers": [
+          { "name": "EcoTrim Supplies", "rating": 4.5, "image": "/dealer19.jpg" },
+          { "name": "GreenCut Depot", "rating": 4.4, "image": "/dealer20.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-033.jpg", "/products/PR-034.jpg"
+        ]
+      },
+      {
+        "id": "PR-041",
+        "title": "Power Reaper",
+        "price": 5000,
+        "piecesLeft": 60,
+        "description": "A versatile machine designed for harvesting crops with precision and efficiency. Ideal for small to medium-sized farms.",
+        "features": [
+          "Adjustable cutting height",
+          "Fuel-efficient engine",
+          "Easy maneuverability"
+        ],
+        "idealfor": [
+          "Harvesting rice",
+          "Cutting wheat",
+          "Small farm harvesting operations"
+        ],
+        "blades": "High-quality steel blades for efficient crop cutting.",
+        "gearbox": "Heavy-duty gearbox with variable speeds.",
+        "weight": "450 lbs",
+        "image": "/products/PR-041.jpg",
+        "additionalDetails": {
+          "warranty": "2-year limited warranty",
+          "maintenance": "Blade sharpening and regular oil changes required",
+          "compatibility": "Compatible with most small-scale farms"
+        },
+        "dealers": [
+          { "name": "Harvest Master Traders", "rating": 4.6, "image": "/dealer21.jpg" },
+          { "name": "CropTools Pro", "rating": 4.3, "image": "/dealer22.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-036.jpg", "/products/PR-044.jpg"
+        ]
+      },
+      {
+        "id": "PR-044",
+        "title": "Mini Harvest Combines",
+        "price": 12000,
+        "piecesLeft": 30,
+        "description": "Compact, multi-functional harvest combine suitable for small farms, offering efficient cutting, threshing, and winnowing.",
+        "features": [
+          "Integrated cutting and threshing",
+          "Compact and easy to operate",
+          "Low fuel consumption"
+        ],
+        "idealfor": [
+          "Small-scale farming",
+          "Harvesting grains",
+          "Simplified farm processes"
+        ],
+        "blades": "Precision-engineered cutting blades.",
+        "gearbox": "Heavy-duty gearbox with smooth operation.",
+        "weight": "800 lbs",
+        "image": "/products/PR-044.jpg",
+        "additionalDetails": {
+          "warranty": "2-year comprehensive warranty",
+          "maintenance": "Regular checks for optimal performance",
+          "compatibility": "Best for small farm operations"
+        },
+        "dealers": [
+          { "name": "MiniHarvest Equipments", "rating": 4.7, "image": "/dealer23.jpg" },
+          { "name": "AgriCombine Center", "rating": 4.5, "image": "/dealer24.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-041.jpg", "/products/PR-037.jpg"
+        ]
+      },
+      {
+        "id": "PR-051",
+        "title": "Mini Tool Kit",
+        "price": 500,
+        "piecesLeft": 200,
+        "description": "A comprehensive tool kit designed for home gardening and light farm tasks. Compact and easy to carry.",
+        "features": [
+          "Durable tools",
+          "Ergonomic handles",
+          "Compact case for storage"
+        ],
+        "idealfor": [
+          "Home gardening",
+          "Light weeding",
+          "Small repairs"
+        ],
+        "blades": "High-quality stainless steel tools.",
+        "gearbox": "N/A",
+        "weight": "5 lbs",
+        "image": "/products/PR-051.jpg",
+        "additionalDetails": {
+          "warranty": "6-month warranty",
+          "maintenance": "Clean tools after use",
+          "compatibility": "N/A"
+        },
+        "dealers": [
+          { "name": "Garden Tools Hub", "rating": 4.4, "image": "/dealer25.jpg" },
+          { "name": "HandyFarm Kits", "rating": 4.3, "image": "/dealer26.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-052.jpg", "/products/PR-053.jpg"
+        ]
+      },
+      {
+        "id": "PR-052",
+        "title": "Horti Tool Kit",
+        "price": 600,
+        "piecesLeft": 150,
+        "description": "A specially curated tool kit for horticultural activities. Comes with a variety of high-quality tools for specialized gardening.",
+        "features": [
+          "Wide range of gardening tools",
+          "High-quality, rust-resistant materials",
+          "Compact storage case"
+        ],
+        "idealfor": [
+          "Horticultural activities",
+          "Garden maintenance",
+          "Pruning and planting"
+        ],
+        "blades": "Rust-resistant, precision tools.",
+        "gearbox": "N/A",
+        "weight": "6 lbs",
+        "image": "/products/PR-052.jpg",
+        "additionalDetails": {
+          "warranty": "1-year warranty",
+          "maintenance": "Clean and store properly after use",
+          "compatibility": "N/A"
+        },
+        "dealers": [
+          { "name": "HortiPro Supplies", "rating": 4.6, "image": "/dealer27.jpg" },
+          { "name": "GreenThumb Tools", "rating": 4.5, "image": "/dealer28.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-051.jpg", "/products/PR-053.jpg"
+        ]
+      },
+      {
+        "id": "PR-053",
+        "title": "Agri Tool Kit",
+        "price": 700,
+        "piecesLeft": 100,
+        "description": "An essential tool kit tailored for general agricultural use, perfect for small and medium-sized farm tasks.",
+        "features": [
+          "Comprehensive set of farm tools",
+          "Durable and long-lasting",
+          "Easy to carry"
+        ],
+        "idealfor": [
+          "General farm work",
+          "Repair tasks",
+          "Soil preparation"
+        ],
+        "blades": "Stainless steel tools for durability.",
+        "gearbox": "N/A",
+        "weight": "8 lbs",
+        "image": "/products/PR-053.jpg",
+        "additionalDetails": {
+          "warranty": "1-year warranty",
+          "maintenance": "Keep tools dry and clean",
+          "compatibility": "N/A"
+        },
+        "dealers": [
+          { "name": "AgriTools Depot", "rating": 4.7, "image": "/dealer29.jpg" },
+          { "name": "FarmAid Supply Co.", "rating": 4.6, "image": "/dealer30.jpg"
+        }]}  
+    ]
+  }
+  
