@@ -7,50 +7,6 @@ import {products} from '@/public/data/productDetails.json'
 const ProductDetailPage = () => {
     const { id } = useParams();
 
-    // Sample product data (Replace this with actual data fetching logic)
-    const productsx = [
-        {
-            id: '1',
-            title: "Heavy-Duty Rotary Tiller",
-            price: 15299,
-            piecesLeft: 128,
-            description: "Engine Power: 50 HP minimum required Working Width: 5 feet (customizable options available) Tilling Depth: Adjustable up to 8 inches Blades: Hardened steel blades for superior cutting and durability Gearbox: Heavy-duty, sealed gearbox for long-lasting performance Weight: 650 lbs Drive Type: PTO shaft with shear bolt protection Features: Adjustable skid shoes for varied depth control Side chain drive for consistent performance Rear shield to prevent debris from flying Ideal For: Soil preparation for planting Mixing compost or organic matter Breaking up compacted soil",
-            features: [
-                'Adjustable skid shoes for varied depth control',
-                'Side chain drive for consistent performance',
-                'Rear shield to prevent debris from flying'
-            ],
-            idealfor: [
-                'Soil preparation for planting',
-                'Mixing compost or organic matter',
-                'Breaking up compacted soil'
-            ],
-            blades: 'Hardened steel blades for superior cutting and durability',
-            gearbox: 'Heavy-duty, sealed gearbox for long-lasting performance',
-            weight: '650 lbs',
-            image: "/Kamco_hero1.svg", // Replace with actual image paths
-            additionalDetails: {
-                warranty: "2-year limited warranty on parts and labor",
-                maintenance: "Requires periodic blade sharpening and gearbox lubrication",
-                compatibility: "Fits most standard tractors with a 3-point hitch system",
-            },
-            dealers: [
-                { name: "Kottaram Traders", rating: 4.3, image: '/Kamco_hero1.svg' },
-                { name: "Kottaram Traders", rating: 4.3, image: '/Kamco_hero1.svg' },
-                { name: "Kottaram Traders", rating: 4.3, image: '/Kamco_hero1.svg' },
-                { name: "Kottaram Traders", rating: 4.2, image: '/Kamco_hero1.svg' },
-                { name: "Kottaram Traders", rating: 4.3, image: '/Kamco_hero1.svg' },
-                { name: "Kottaram Traders", rating: 4.3, image: '/Kamco_hero1.svg' },
-            ],
-            otherProducts: [
-                "/Kamco_hero2.svg", // Replace with actual image paths
-                "/Kamco_hero3.svg",
-            ],
-        },
-        // Add more products as needed
-    ];
-
-    // Find the product by ID
     const product = products.find(prod => prod.id === id);
 
     if (!product) {

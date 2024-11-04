@@ -78,33 +78,31 @@ export default function Home() {
 
       {/* Products Section */}
       <div className="py-10 my-24">
-  <h2 className="text-4xl font-normal text-center mb-16 py-4 underline underline-offset-[16px] decoration-[#166434]">CATEGORIES</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-    {products.categories.map((categories, index) => 
-    (
-      <div
-        key={index}
-        className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
-      >
-        <Link href="/products">
-        <img
-          src={categories.src} // Use the src field from the product object
-          alt={`Product ${index + 1}`}
-          className="w-full h-48 sm:h-64 object-cover"
-          width={1/6}
-          height={200}
-          />
-        <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity flex flex-col items-center justify-center md:flex-row justify-center items-center text-white font-sans">
-          <span className="text-lg md:text-xl font-semibold">{categories.name}</span>
-          <div className="px-2 py-2 opacity-0 group-hover:opacity-80 text-xs md:text-xs rounded-md transition">
-            <img src='/right-arrow-round-white.svg' alt='Right arrow' className='w-6'/>
-          </div>
+        <h2 className="text-4xl font-normal text-center mb-16 py-4 underline underline-offset-[16px] decoration-[#166434]">CATEGORIES</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+          {products.categories.map((category, index) => (
+            <div
+              key={index}
+              className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
+            >
+              <Link href={{ pathname: '/products', query: { category: category.name } }}>
+                  <img
+                    src={category.src}
+                    alt={`Category ${index + 1}`}
+                    className="w-full h-48 sm:h-64 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity flex flex-col items-center justify-center md:flex-row text-white font-sans">
+                    <span className="text-lg md:text-xl font-semibold">{category.name}</span>
+                    <div className="px-2 py-2 opacity-0 group-hover:opacity-80 text-xs md:text-xs rounded-md transition">
+                      <img src='/right-arrow-round-white.svg' alt='Right arrow' className='w-6' />
+                    </div>
+                  </div>
+              </Link>
+            </div>
+          ))}
         </div>
-        </Link>
+
       </div>
-    ))}
-  </div>
-</div>
 
 
       {/* Gallery Section */}

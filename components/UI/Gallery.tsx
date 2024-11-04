@@ -16,6 +16,7 @@ const GallerySection = () => {
         speed: 500,
         slidesToShow: 1, 
         slidesToScroll: 1,
+        autoplay: true
     };
 
     return (
@@ -39,7 +40,7 @@ const GallerySection = () => {
                     <p className="text-white mb-4 font-sans w-full md:w-4/5 font-normal">
                         Explore the world of KAMCO with the photos of our past events, products, customers, and so on.
                     </p>
-                    <Link href="/gallery" className="w-full md:w-1/5 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-100 transition font-sans">
+                    <Link href="/gallery" className="w-full md:w-1/5 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition font-sans">
                         View All Photos
                     </Link>
                 </div>
