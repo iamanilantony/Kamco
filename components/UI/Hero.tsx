@@ -17,7 +17,7 @@ const Hero = () => {
                   <Image src="/Kamco_hero2.svg" fill className="object-cover" alt="Image 1" />
                 </div>
                 <div className="w-full h-52 rounded-lg overflow-hidden">
-                  <Image src="/Kamco_hero3.svg" fill className="object-cover" alt="Image 2" />
+                  <Image src="/Tractor.jpg" fill className="object-cover" alt="Image 2" />
                 </div>
               </Slider>
             </div>
@@ -26,7 +26,7 @@ const Hero = () => {
               <Image src="/Kamco_hero2.svg" fill className="object-cover" alt="Image 1" />
             </div>
             <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:block hidden">
-              <Image src="/Kamco_hero3.svg" fill className="object-cover" alt="Image 2" />
+              <Image src="/Tractor.jpg" fill className="object-cover" alt="Image 2" />
             </div>
           </div>
 
