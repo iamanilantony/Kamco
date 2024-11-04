@@ -2,12 +2,12 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import {products} from '@/public/data/productDetails.json'
+import products from '@/public/data/productDetails.json'
 
 const ProductDetailPage = () => {
     const { id } = useParams();
 
-    const product = products.find(prod => prod.id === id);
+    const product = products && products?.products.find(prod => prod.id === id);
 
     if (!product) {
         return <p>Product not found</p>;
