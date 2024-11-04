@@ -66,7 +66,7 @@ export default function DealersPage() {
             <h1 className="text-3xl font-bold mb-6">Authorized Dealers</h1>
 
             {/* Filter, Sort, and Categories Select Inputs */}
-            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4">
+            {/* <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4">
                 <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
                     <option>Filters</option>
                     <option>By State</option>
@@ -85,7 +85,7 @@ export default function DealersPage() {
                     <option>Top-rated</option>
                     <option>Newly Added</option>
                 </select>
-            </div>
+            </div> */}
 
             {/* Dealers Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

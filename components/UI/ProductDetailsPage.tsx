@@ -58,7 +58,7 @@ const ProductDetailPage = () => {
                 </div>
             </div>
 
-            <div>
+            {/* <div>
                 <h2 className="text-xl md:text-2xl font-bold mb-2">Other Products</h2>
                 <div className="flex flex-wrap space-x-4 overflow-x-auto">
                     {product?.otherProducts?.length && product?.otherProducts || [].map((image, index) => (
@@ -81,7 +81,7 @@ const ProductDetailPage = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

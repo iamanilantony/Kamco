@@ -5,25 +5,11 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import allProducts from '@/public/data/products.json';
 
-
-// const formatSubcategories = (categories: any) => {
-//     return categories.flatMap(category => 
-//         category.subcategories?.map(subcategory => ({
-//             name: subcategory.name,
-//             codeName: subcategory.codeName,
-//             src: subcategory.src,
-//             piecesLeft: 128, // Default value, replace as needed
-//             description: `Description for ${subcategory.name}` // Custom description, replace as needed
-//         }))
-//     );
-// };
-
 const ProductsPage = () => {
-
     const searchParams = useSearchParams();
     const category = searchParams.get('category'); // Read the category from the query parameter
     const router = useRouter();
-    // Sample product data derived from JSON structure provided
+
     const allProducts = [
         { name: "Power Tillers", codeName: "PR-011", category: "Land Preparation", src: "/products/PR-011.jpg", piecesLeft: 128, description: "Efficient tillers for land preparation." },
         { name: "Tractors", codeName: "PR-012", category: "Land Preparation", src: "/products/PR-012.jpg", piecesLeft: 75, description: "High-performance tractors for large-scale fields." },
@@ -34,68 +20,60 @@ const ProductsPage = () => {
         { name: "Cono Weeder", codeName: "PR-035", category: "De weeding", src: "/products/PR-035.png", piecesLeft: 85, description: "Specialized cono weeder for efficient de-weeding." },
         { name: "Brush Cutter", codeName: "PR-036", category: "Plant protection", src: "/products/PR-036.jpg", piecesLeft: 200, description: "Versatile brush cutter for various applications." },
         { name: "Power Reaper", codeName: "PR-041", category: "Harvesting", src: "/products/PR-041.jpg", piecesLeft: 45, description: "Efficient power reaper for harvesting tasks." },
-      ];
-
-    // const router = useRouter();
-    // const { category } = router.query;
-
-    // const formattedProducts =  formatSubcategories(products);
-
+    ];
 
     const itemsPerPage = 5; // Number of items to display per page
-    // const totalItems = products.filter(product => {
-    //     if (product?.src) {
-    //         const image = new Image();
-    //         image.src = product.src;
-    //         return image.complete;
-    //     }
-    //     return false;
-    // })
-
-    const filteredProducts = category
-    ? allProducts.filter((product) => product.category === category)
-    : allProducts;
-
-    const totalPages = Math.ceil(filteredProducts.filter(product => product?.src || 0).length / itemsPerPage); // Total number of pages based on products with images
-
     const [currentPage, setCurrentPage] = useState(1); // State to track the current page
+    const [filteredProducts, setFilteredProducts] = useState(allProducts); // State to hold filtered products
+
+    // Function to filter products based on category
+    const filterProductsByCategory = (category: string | null) => {
+        if (category) {
+            return allProducts.filter((product) => product.category === category);
+        }
+        return allProducts;
+    };
+
+    // Initial filtering on component mount
+    useEffect(() => {
+        const initialFilteredProducts = filterProductsByCategory(category);
+        setFilteredProducts(initialFilteredProducts);
+    }, [category]);
 
     // Function to handle page change
     const handlePageChange = (page: number) => {
-        if (page < 1 || page > totalPages) return; // Ensure page is within bounds
+        if (page < 1 || page > Math.ceil(filteredProducts.length / itemsPerPage)) return; // Ensure page is within bounds
         setCurrentPage(page);
     };
 
-        // Get the current items to display, filtering out products without images
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        
-        const currentItems = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
-    
+    // Function to handle category selection
+    const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const selectedCategory = event.target.value;
+        const newFilteredProducts = filterProductsByCategory(selectedCategory);
+        setFilteredProducts(newFilteredProducts); // Update the filtered products based on selection
+        setCurrentPage(1); // Reset to the first page when the category changes
+    };
+
+    // Get the current items to display
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentItems = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
 
     return (
         <div className="px-4 md:px-10 lg:px-20 py-10 font-sans">
             <header className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0">
                 <div className="flex flex-col space-y-2 w-full md:flex-row md:space-x-4 md:space-y-0">
-                    {/* <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
-                        <option>Filters</option>
-                        <option>Price Range</option>
-                        <option>Availability</option>
-                        <option>Ratings</option>
-                    </select>
-                    <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
-                        <option>Sort</option>
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
-                        <option>Newest First</option>
-                    </select> */}
-                    <select className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto">
-                        <option>Categories</option>
-                        <option>Land Preparation</option>
-                        <option>Plant protection</option>
-                        <option>De weeding</option>
-                        <option>Harvesting</option>
-                        <option>Garden Tools</option>
-                        <option>KAMCO-lite</option>
+                    <select 
+                        className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto" 
+                        onChange={handleCategoryChange}
+                        defaultValue={category || ""}
+                    >
+                        <option value="">Categories</option>
+                        <option value="Land Preparation">Land Preparation</option>
+                        <option value="Plant protection">Plant protection</option>
+                        <option value="De weeding">De weeding</option>
+                        <option value="Harvesting">Harvesting</option>
+                        <option value="Garden Tools">Garden Tools</option>
+                        <option value="KAMCO-lite">KAMCO-lite</option>
                     </select>
                 </div>
                 <Link href="/dealers">
@@ -135,10 +113,10 @@ const ProductsPage = () => {
                 >
                     Previous
                 </button>
-                <span className="text-sm md:text-base">Page {currentPage} of {totalPages}</span>
+                <span className="text-sm md:text-base">Page {currentPage} of {Math.ceil(filteredProducts.length / itemsPerPage)}</span>
                 <button
                     onClick={() => handlePageChange(currentPage + 1)}
-                    disabled={currentPage === totalPages}
+                    disabled={currentPage === Math.ceil(filteredProducts.length / itemsPerPage)}
                     className="px-3 py-2 border border-gray-300 rounded-md disabled:opacity-50 text-sm md:text-base"
                 >
                     Next
