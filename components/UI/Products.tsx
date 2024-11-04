@@ -7,7 +7,7 @@ import allProducts from '@/public/data/products.json';
 
 const ProductsPage = () => {
     const searchParams = useSearchParams();
-    const category = searchParams.get('category'); // Read the category from the query parameter
+    const category = searchParams.get('category') || '';
     const router = useRouter();
 
     const allProducts = [
