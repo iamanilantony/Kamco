@@ -14,19 +14,19 @@ const Hero = () => {
             <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:hidden">
               <Slider autoplay infinite dots={false}>
                 <div className="w-full h-52 rounded-lg overflow-hidden">
-                  <Image src="/Kamco_hero2.svg" fill className="object-cover" alt="Image 1" />
+                  <Image src="/DSC_0995.JPG" fill className="object-cover" alt="Image 1" />
                 </div>
                 <div className="w-full h-52 rounded-lg overflow-hidden">
-                  <Image src="/Tractor.jpg" fill className="object-cover" alt="Image 2" />
+                  <Image src="/kamco.JPG" fill className="object-cover" alt="Image 2" />
                 </div>
               </Slider>
             </div>
             {/* Static images for larger screens */}
             <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:block hidden">
-              <Image src="/Kamco_hero2.svg" fill className="object-cover" alt="Image 1" />
+              <Image src="/DSC_0995.JPG" fill className="object-cover" alt="Image 1" />
             </div>
             <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:block hidden">
-              <Image src="/Tractor.jpg" fill className="object-cover" alt="Image 2" />
+              <Image src="/kamco.JPG" fill className="object-cover" alt="Image 2" />
             </div>
           </div>
 
@@ -38,8 +38,8 @@ const Hero = () => {
 
         {/* Text Content */}
         <div className="order-2 md:order-1 flex flex-col justify-center space-y-4 text-left">
-          <h1 className="text-4xl md:text-6xl font-normal text-gray-900 mb-4">Cultivating Success</h1>
-          <p className="text-gray-700 text-thin text-base w-full md:w-3/4 mb-4 font-sans">
+          <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-4">Cultivating Success</h1>
+          <p className="text-gray-700 text-normal text-base w-full md:w-3/4 mb-4 font-sans">
             From tillers and tractors to sprayers and seeders, we offer a wide range of high-quality agricultural tools that help farmers work smarter, not harder. Trust us to provide the equipment you need to cultivate success, season after season.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

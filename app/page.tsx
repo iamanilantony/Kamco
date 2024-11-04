@@ -8,50 +8,6 @@ import products from '@/public/data/categores.json'
 import Image from 'next/image';
 
 export default function Home() {
-
-  const highlights = [
-    {
-      title: "Top 10 Must-Have Tools for Every Modern Farmer",
-      date: "03-10-2024",
-      readTime: "4 min read",
-      image: "/path/to/highlight-image1.jpg", // Update image path
-    },
-    {
-      title: "Top 10 Must-Have Tools for Every Modern Farmer",
-      date: "03-10-2024",
-      readTime: "4 min read",
-      image: "/path/to/highlight-image2.jpg", // Update image path
-    },
-    // Add more highlights as needed
-  ];
-
-  const galleryImages = [
-    {
-      image: "/Kamco_hero2.svg", // Update image path
-    },
-    {
-      image: "/Kamco_hero2.svg", // Update image path
-    },
-    // Add more gallery images as needed
-  ];
-
-  const gallerySettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
-
-
   return (
     <div className="max-w-screen-2xl mx-auto px-4">
       {/* Hero Section */}
