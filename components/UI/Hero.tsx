@@ -5,54 +5,28 @@ import Slider from "react-slick";
 import Link from 'next/link';
 
 const Hero = () => {
-    return(
-        <div className="min-h-max grid md:grid-cols-2 gap-8 items-center mb-24 md:mt-12 md:mb-4 mt-18">
-        {/* Image Content */}
-        <div className="order-1 md:order-2 grid grid-cols-3 gap-4 h-full">
-          {/* Image Slider for Mobile */}
-          <div className="col-span-3 md:col-span-2 grid grid-rows-1 gap-4 h-full">
-            <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:hidden">
-              <Slider autoplay infinite dots={false}>
-                <div className="w-full h-52 rounded-lg overflow-hidden">
-                  <Image src="/DSC_0995.JPG" fill className="object-cover" alt="Image 1" />
-                </div>
-                <div className="w-full h-52 rounded-lg overflow-hidden">
-                  <Image src="/kamco.JPG" fill className="object-cover" alt="Image 2" />
-                </div>
-              </Slider>
-            </div>
-            {/* Static images for larger screens */}
-            <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:block hidden">
-              <Image src="/DSC_0995.JPG" fill className="object-cover" alt="Image 1" />
-            </div>
-            <div className="relative w-full h-52 md:h-72 rounded-lg overflow-hidden md:block hidden">
-              <Image src="/kamco.JPG" fill className="object-cover" alt="Image 2" />
-            </div>
-          </div>
-
-          {/* Right Column with Single Tall Image */}
-          <div className="relative w-full h-52 md:h-full rounded-lg overflow-hidden md:block hidden">
-            <Image src="/Kamco_hero1.svg" fill className="object-cover" alt="Image 3" />
-          </div>
-        </div>
-
-        {/* Text Content */}
-        <div className="order-2 md:order-1 flex flex-col justify-center space-y-4 text-left">
-          <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-4">Cultivating Success</h1>
-          <p className="text-gray-700 text-normal text-base w-full md:w-3/4 mb-4 font-sans">
-            From tillers and tractors to sprayers and seeders, we offer a wide range of high-quality agricultural tools that help farmers work smarter, not harder. Trust us to provide the equipment you need to cultivate success, season after season.
-          </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="https://www.kamcoindia.com/dealers" target='_blank' className="bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition font-sans text-center">
-              Register Now
-            </Link>
-            <Link href="/dealers" className="border border-gray-900 text-gray-900 px-6 py-3 rounded-md hover:bg-gray-900 hover:text-white transition font-sans text-center">
-              Explore Dealers
-            </Link>
-          </div>
+  return (
+    <div
+      className="flex flex-column justify-start items-center min-h-max gap-8 px-20 mb-24 md:mt-2 md:mb-4 mt-18 h-[50rem]"
+      style={{ backgroundImage: `url('kamco_factory1.JPG')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
+      {/* Text Content */}
+      <div className="order-2 md:order-1 flex flex-col space-y-4 w-1/2 items-start">
+        <h1 className="text-white text-left text-4xl md:text-6xl font-normal mb-4 text-left">Empowering Farmers, Enriching the Nation.</h1>
+        <p className="text-gray-200 font-medium text-base w-full md:w-3/4 mb-4 font-sans text-left">
+        Unleashing the power of innovation—tools that turn hard work into unstoppable growth, enabling greater efficiency and sustainable success.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+          <Link href="https://www.kamcoindia.com/dealers" target='_blank' className="bg-white text-black px-6 py-3 rounded-md hover:bg-gray-700 transition font-sans">
+            Register Now
+          </Link>
+          <Link href="/dealers" className="border text-white border-white text-gray-900 px-6 py-3 rounded-md hover:bg-gray-900 hover:text-white transition font-sans">
+            Explore Dealers
+          </Link>
         </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default Hero
