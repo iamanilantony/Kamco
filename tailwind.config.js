@@ -8,6 +8,15 @@ module.exports = {
   darkMode: ["class"],
   theme: {
     extend: {
+      animation: {
+        'bounce-up': 'bounceUp 1s ease-out forwards',
+      },
+      keyframes: {
+        bounceUp: {
+          '0%': { transform: 'translateY(30px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+      },
       fontFamily: {
         sans: ['Quicksand', 'sans-serif'],
         'poppins': ['Poppins'],

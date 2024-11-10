@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 
 const FooterSection = () => {
@@ -9,7 +8,7 @@ const FooterSection = () => {
             {/* Newsletter Section */}
             <div className="mb-8 bg-white text-gray-800 font-sans flex flex-col md:flex-row items-center justify-center py-8">
                 <span className='bg-black p-6 mr-0 md:mr-6 mb-4 md:mb-0'>
-                    <img src="/paperclip.svg" alt="Newsletter Icon" />
+                    <img src="paperclip.svg" alt="Newsletter Icon" />
                 </span>
                 <div className='mb-4 md:mb-0 md:mr-16 text-center md:text-left'>
                     <h2 className="text-xl font-bold flex items-center mb-2 justify-center md:justify-start">

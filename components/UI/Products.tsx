@@ -59,7 +59,7 @@ const ProductsPage = () => {
     const currentItems = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
 
     return (
-        <div className="px-4 md:px-10 lg:px-20 py-10 font-sans">
+        <div className="px-4 md:px-10 lg:px-2 py-10 font-sans">
             <header className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0">
                 <div className="flex flex-col space-y-2 w-full md:flex-row md:space-x-4 md:space-y-0">
                     <select 

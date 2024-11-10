@@ -17,7 +17,7 @@ const ContactSection = () => {
 
             {/* Right Side - Contact Form */}
             <div className='w-full md:w-1/2 md:ml-8'> {/* Adjust width for mobile */}
-                <h2 className="text-4xl font-normal mb-8 text-center md:text-left">Connect With Us</h2>
+                <h2 className="text-4xl font-normal md:mb-4 mb-8 text-center md:text-left">Connect With Us</h2>
                 <div className="p-8 bg-[#166434] text-white rounded-lg shadow-lg font-sans">
                     <form>
                         <div className="mb-4">

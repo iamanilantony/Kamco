@@ -6,35 +6,19 @@ import ContactSection from '@/components/UI/ContactSection';
 import Hero from '@/components/UI/Hero';
 import products from '@/public/data/categores.json'
 import Image from 'next/image';
+import StatsSection from '@/components/UI/StatsSection';
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="mx-auto px-4 max-w-screen-2xl">
+      <div className="mx-auto px-4 max-w-screen-4xl">
         {/* Hero Section */}
         {/* Green Statistics Section */}
-        <div className="min-h-[30vh] bg-[#166434] text-white flex flex-wrap items-center justify-around py-8 rounded-lg mt-12 px-4 md:px-40">
-          <div className="text-center mb-4 md:mb-0">
-            <p className="text-3xl md:text-4xl font-bold">50+</p>
-            <p className="text-base md:text-lg">Years of Experience</p>
-          </div>
-          <div className="text-center mb-4 md:mb-0">
-            <p className="text-3xl md:text-4xl font-bold">80+</p>
-            <p className="text-base md:text-lg">Dealers Across Country</p>
-          </div>
-          <div className="text-center mb-4 md:mb-0">
-            <p className="text-3xl md:text-4xl font-bold">1L+</p>
-            <p className="text-base md:text-lg">Happy Customers</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl md:text-4xl font-bold">900+</p>
-            <p className="text-base md:text-lg">Skilled Man Power</p>
-          </div>
-        </div>
+       <StatsSection />
 
         {/* Products Section */}
-        <div className="py-10 my-24">
+        <div className="py-10">
           <h2 className="text-4xl font-normal text-center mb-16 py-4 underline underline-offset-[16px] decoration-[#166434]">CATEGORIES</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {products.categories.map((category, index) => (
