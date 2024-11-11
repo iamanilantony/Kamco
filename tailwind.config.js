@@ -8,6 +8,12 @@ module.exports = {
   darkMode: ["class"],
   theme: {
   	extend: {
+		screens: {
+			sm: '640px',   
+			md: '1050px',  
+			lg: '1280px',  
+			xl: '1536px',
+		  },
   		animation: {
   			'bounce-up': 'bounceUp 1s ease-out forwards'
   		},

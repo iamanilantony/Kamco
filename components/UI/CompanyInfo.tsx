@@ -12,9 +12,9 @@ import ManufacturingSection from './ManufactoringSection';
 
 const CompanyInfoPage = () => {
     return (
-        <div className="flex md:flex-col flex-row font-sans items-center">
+        <div className="flex flex-col font-sans items-center">
             <div
-                className="relative flex flex-col justify-center items-start min-h-max gap-8 px-2 md:px-20 mb-24 md:mt-2 md:mb-4 mt-18 w-full h-[35rem]"
+                className="relative flex flex-col justify-center items-start min-h-max gap-8 px-2 md:px-20 mb-8 md:mt-2 md:mb-4 mt-18 w-full h-[35rem]"
                 style={{ backgroundImage: `url('IMG1112135.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
@@ -24,19 +24,19 @@ const CompanyInfoPage = () => {
                     </h1>
                 </div>
             </div>
-            <section className='w-full md:w-full p-4 md:px-8 md:pr-24 text-left overflow-auto'>
-                <div className='flex justify-between w-full px-10 items-center'>
-                    <img className="w-3/4 mx-20 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/Kamco_hero1.svg' alt="Company Information" />
-                    <div className='w-3/4 mx-20'>
-                        <p className="text-sm md:text-base">KKAMCO was started way back in 1973 to aid farmers in their quest for higher productivity, more prosperity and greater happiness in their lives. KAMCO products for mechanized farming are manufactured in 5 production units. A 700-strong team of highly qualified and experienced Engineers, Professionals, and Technicians form the foundation of the continued success of KAMCO in achieving their goals. More than 250 dedicated vendors and over 80 dealers align with KAMCO in a successful partnership of providing exceptional assistance to the farming sector. No wonder KAMCO has become an acronym for Quality in the minds of hundreds of thousands of customers in India and abroad.</p>
+            <section className='w-full p-4 md:px-8 md:pr-24 text-left overflow-auto'>
+                <div className='flex flex-col md:flex-row justify-between w-full px-0 md:px-10 items-center'>
+                    <img className="w-full md:w-3/4 md:mx-20 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0010.JPG' alt="Company Information" />
+                    <div className='w-full md:w-3/4 md:mx-20'>
+                        <p className="text-sm md:text-base">KAMCO was started way back in 1973 to aid farmers in their quest for higher productivity, more prosperity and greater happiness in their lives. KAMCO products for mechanized farming are manufactured in 5 production units. A 700-strong team of highly qualified and experienced Engineers, Professionals, and Technicians form the foundation of the continued success of KAMCO in achieving their goals. More than 250 dedicated vendors and over 80 dealers align with KAMCO in a successful partnership of providing exceptional assistance to the farming sector. No wonder KAMCO has become an acronym for Quality in the minds of hundreds of thousands of customers in India and abroad.</p>
                     </div>
                 </div>
             </section>
 
             <section id="missionVission" className="bg-cover bg-center bg-[#008C44]">
                 <div className="vision-mission-bg-img lg:ps-5 lg:pe-5 py-10">
-                    <ul className="flex items-center lg:ps-5 lg:pe-5 text-white">
-                        <li className="w-1/2">
+                    <ul className="flex md:flex-row flex-col items-center lg:ps-5 lg:pe-5 text-white">
+                        <li className="w-full mb-20 md:mb-0 md:w-1/2">
                             <div className="bg-overlay w-full px-5">
                                 <div className="text-center px-5 mx-0 lg:mx-5">
                                     <h4 className="text-bold  text-2xl font-sans  font-semibold">Our Vision </h4>
@@ -44,7 +44,7 @@ const CompanyInfoPage = () => {
                                 </div>
                             </div>
                         </li>
-                        <li className="w-1/2 mt-5 md:mt-0">
+                        <li className="w-full md:w-1/2 mt-5 md:mt-0">
                             <div className="bg-overlay w-full px-5">
                                 <div className="text-center px-5 mx-0 lg:mx-5">
                                     <h4 className="text-bold  text-2xl font-sans bg- font-semibold">Our Mission</h4>
@@ -58,8 +58,8 @@ const CompanyInfoPage = () => {
 
 
             <section className='w-full md:w-full p-4 md:px-8 md:pr-24 text-left overflow-auto'>
-                <div className='flex justify-between w-full px-10 items-center'>
-                    <div className='w-3/4 mx-20'>
+                <div className='flex flex-col-reverse md:flex-row justify-between w-full px-10 items-center'>
+                    <div className='w-full md:w-3/4 mx-20'>
                         {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">Company Information</h2> */}
                         <div className="text-sm md:text-base space-y-4">
                             <p><strong>Agricultural Evolution:</strong> Tools have advanced, making farming more efficient and predictable.</p>
@@ -74,7 +74,7 @@ const CompanyInfoPage = () => {
                         </div>
 
                     </div>
-                    <img className="w-3/4 mx-20 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0013.JPG' alt="Company Information" />
+                    <img className="w-full md:w-3/4 mx-20 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0013.JPG' alt="Company Information" />
                 </div>
             </section>
 
@@ -118,12 +118,10 @@ const CompanyInfoPage = () => {
 
             <HistorySection />
 
-            <section>
-                <ManufacturingSection />
-            </section>
+            <ManufacturingSection />
 
             <section>
-                <div className="text-sm md:text-base md:mx-20 md:my-20 md:py-10">
+                <div className="text-sm md:text-base md:mx-20 my-20 md:py-10">
                     <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center">Board of Directors</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 md:mb-10">
                         <div className="flex flex-col items-center text-center">

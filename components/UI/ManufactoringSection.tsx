@@ -64,8 +64,8 @@ const ManufacturingSection = () => {
   };
 
   return (
-    <section className="bg-[#008C44] py-12 px-4 md:px-16">
-      <h2 className="text-4xl text-white text-center font-bold mb-8">KAMCO Manufacturing Facilities</h2>
+    <section className="bg-[#008C44] mt-10 md:mt-20 py-12 px-8 md:px-16 w-[100vw]">
+      <h2 className="text-lg md:text-4xl text-white text-center font-bold mb-8">KAMCO Manufacturing Facilities</h2>
 
       <div className="w-full max-w-screen-xl mx-auto">
         {/* Add the Slider component */}
@@ -73,24 +73,27 @@ const ManufacturingSection = () => {
           {facilitiesData.map((facility, index) => (
             <div
               key={index}
-              className="relative px-8 mx-16 h-96 w-[300px] sm:w-[400px] lg:w-[600px]"
+              className="relative px-2 sm:px-4 md:px-12 lg:px-16 mx-4 sm:mx-6 md:mx-8 lg:mx-16 mb-6"
             >
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-white p-4 sm:p-6 rounded-lg w-full sm:w-[250px] lg:w-[300px] xl:w-[350px] h-[400px] sm:h-[400px] lg:h-[500px] flex flex-col justify-between">
                 <Image
                   src={facility.image}
                   alt={facility.title}
                   width={500}
                   height={300}
-                  className="w-full h-[200px] object-cover rounded-lg mb-4"
+                  className="w-full h-[200px] sm:h-[250px] object-cover rounded-lg mb-4"
                 />
-                <h3 className="text-xl font-semibold text-[#008C44]">{facility.title}</h3>
-                <p className="text-gray-700 mt-2 text-black text-sm">{facility.description}</p>
+                <div className="flex flex-col flex-1 justify-between">
+                  <h3 className="text-base md:text-2xl font-semibold mb-4 text-[#008C44]">{facility.title}</h3>
+                  <p className="text-gray-700 text-xs sm:text-base text-black flex-1 overflow-hidden">{facility.description}</p>
+                </div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
     </section>
+
   );
 };
 

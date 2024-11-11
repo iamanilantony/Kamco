@@ -70,46 +70,49 @@ const HistorySection = () => {
   };
 
   return (
-    <section className="w-full p-4 md:px-8 md:pr-24 text-left overflow-auto">
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 mt-4 md:mt-20">Our Journey</h2>
+<section className="w-full p-2 md:px-8 md:pr-24 text-left overflow-auto">
+  <div className="flex flex-col items-center justify-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4 mt-4 md:mt-20 text-center">Our Journey</h2>
 
-        {/* Horizontal Slider (Top Section) */}
-        <div className="w-full md:w-2/4 mb-6 md:mb-0">
-          <Slider {...settings}>
-            {historyContent.map((point, index) => (
-              <div
-                key={index}
-                className={`cursor-pointer text-center p-4 transition-all duration-300 ${activeTab === point.year ? 'bg-[#008C44] text-white' : 'bg-gray-200'}`}
-                onClick={() => setActiveTab(point.year)} // Handle click to change active tab
-              >
-                <p className="font-semibold">{point.year}</p>
-              </div>
-            ))}
-          </Slider>
-        </div>
-
-        {/* Info and Image (Right Side) */}
-        <div className="flex justify-between items-center w-full md:w-3/4 ml-8">
-          <div className='w-1/2'>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{activeTab}</h2>
-            <div className="text-sm md:text-base space-y-4">
-              <p>{historyContent.find(point => point.year === activeTab)?.description}</p>
-            </div>
+    {/* Horizontal Slider (Top Section) */}
+    <div className="w-full md:w-2/4 mb-6 md:mb-10">
+      <Slider {...settings}>
+        {historyContent.map((point, index) => (
+          <div
+            key={index}
+            className={`text-xs md:text-base cursor-pointer text-center p-1 md:p-4 transition-all duration-300 ${activeTab === point.year ? 'bg-[#008C44] text-white' : 'bg-gray-200'}`}
+            onClick={() => setActiveTab(point.year)} // Handle click to change active tab
+          >
+            <p className="font-semibold">{point.year}</p>
           </div>
+        ))}
+      </Slider>
+    </div>
 
-          <div className="mt-6">
-            <Image
-              src={historyContent.find(point => point.year === activeTab)?.image || '/img/default.jpg'}
-              alt={`Image for ${activeTab}`}
-              width={500}
-              height={300}
-              className="rounded-lg object-cover w-full h-80"
-            />
-          </div>
+    {/* Info and Image (Right Side) */}
+    <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-3/4 mt-8 md:mt-0 md:ml-8">
+      {/* Text Content */}
+      <div className="w-full md:w-1/2 mb-6 md:mb-0">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">{activeTab}</h2>
+        <div className="text-sm md:text-base space-y-4">
+          <p>{historyContent.find(point => point.year === activeTab)?.description}</p>
         </div>
       </div>
-    </section>
+
+      {/* Image Content */}
+      <div className="w-5/6 md:w-1/2 mt-6 md:mt-0">
+        <Image
+          src={historyContent.find(point => point.year === activeTab)?.image || '/img/default.jpg'}
+          alt={`Image for ${activeTab}`}
+          width={500}
+          height={300}
+          className="rounded-lg object-cover w-full h-80"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
   );
 };
 
