@@ -35,7 +35,7 @@ const StatsSection = () => {
   return (
     <div
       ref={ref}
-      className="min-h-[30vh] bg-[#166434] text-white flex flex-wrap items-center justify-around rounded-lg mt-12 px-4 md:px-40"
+      className="min-h-[30vh] bg-[#166434] text-white flex flex-wrap items-center justify-around rounded-lg mt-12 px-4 md:px-20"
     >
       <div className="text-center mb-4 md:mb-0">
         <p className="text-xl md:text-4xl font-bold">

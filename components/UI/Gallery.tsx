@@ -30,7 +30,7 @@ const GallerySection = () => {
     };
 
     return (
-        <div className="py-10 bg-[#166434] mx-2 mt-16 md:-mx-16">
+        <div className="py-10 bg-[#166434] mx-2 mt-16 md:mx-auto w-full">
             <div className="max-w-8xl mx-auto flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 flex justify-center items-center px-8 md:px-16 mb-8 md:mb-0">
                     <Slider {...gallerySettings} className="w-full">
