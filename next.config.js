@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["www.kamcoindia.com"],
+    domains: ["www.kamcoindia.com", "www.worldometers.info"],
   },
 };
 

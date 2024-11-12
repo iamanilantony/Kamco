@@ -1,10 +1,14 @@
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
+import CountrySelection from './AvailableCountriesButton';
 import products from '@/public/data/productDetails.json'
+import ProductImageSlider from './ProductImageSlider';
 
 const ProductDetailPage = () => {
+
     const { id } = useParams();
 
     const product = products && products?.products.find(prod => prod.id === id);
@@ -13,75 +17,151 @@ const ProductDetailPage = () => {
         return <p>Product not found</p>;
     }
 
+
+    const [selectedRAM, setSelectedRAM] = useState("4 GB");
+    const [pincode, setPincode] = useState("");
+
     return (
-        <div className="container mx-auto p-4 font-sans">
-            <div className="flex flex-col md:flex-row mb-8">
-                <img src={product.image} alt={product.title} className="w-full md:w-1/2 h-fit object-cover rounded-lg mb-4 md:mb-0" />
-                <div className="md:ml-6 mt-4 md:mt-0 text-left">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-2">{product.title}</h1>
-                    <h2 className="text-lg md:text-xl text-gray-700">₹ {product.price}</h2>
-                    <p className="text-gray-500 text-sm md:text-base">{product.piecesLeft} Pieces Left</p>
-                    <p className="mt-4 text-sm md:text-base">{product.description}</p>
-                    <div className="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
-                        <button className="bg-[#166434] text-white px-4 py-2 rounded-md hover:bg-[#0f4222] transition duration-200 text-sm md:text-base">Contact Dealers</button>
-                        <button className="bg-gray-200 text-[#166434] px-4 py-2 rounded-md hover:bg-gray-300 transition duration-200 text-sm md:text-base">Enquire Now</button>
-                    </div>
-                </div>
-            </div>
+        <div className="container mx-auto p-6 font-sans">
+            {/* Product Info Section */}
+            <div className="flex flex-col md:flex-row space-y-6 md:space-y-0">
+                {/* Product Image */}
+                {/* <div className="w-full md:w-1/2">
+                    <Image
+                        src={product.image}
+                        alt={product.title}
+                        width={500}
+                        height={300}
+                        className="w-full h-auto object-cover rounded-lg"
+                    />
+                </div> */}
+                <ProductImageSlider product={{ title: product.title, images: product.image }} />
 
-            <div className='flex flex-col md:flex-row justify-between text-left space-y-4 md:space-y-0 md:space-x-4'>
-                <div className="mb-8 w-full md:w-1/2">
-                    <h2 className="text-xl md:text-2xl font-bold mb-2">Product Detail</h2>
-                    <div className="py-4 rounded-lg text-sm md:text-base">
-                        <h3 className="font-semibold">Product Detail</h3>
-                        <p>Warranty: {product.additionalDetails.warranty}</p>
-                        <p>Maintenance: {product.additionalDetails.maintenance}</p>
-                        <p>Compatibility: {product.additionalDetails.compatibility}</p>
-                    </div>
-                </div>
+                {/* Product Info */}
+                <div className="md:ml-6 w-full md:w-1/2 text-left">
+                    <h1 className="text-3xl font-bold text-gray-900">{product.title}</h1>
+                    <h2 className="text-2xl font-semibold text-[#166434]">₹ {product.price}</h2>
+                    <p className="text-gray-500 text-sm">{product.piecesLeft} Pieces Left</p>
 
-                <div className='flex flex-col w-full md:w-1/2'>
-                    <div className="mb-8">
-                        <h2 className="text-xl md:text-2xl font-bold mb-2">Dealers Near You</h2>
-                        <ul className="grid grid-cols-2 gap-2 md:gap-4">
-                            {product.dealers.map((dealer, index) => (
-                                <li key={index} className="flex items-center mb-2">
-                                    <img src={dealer.image} alt={`Other Product ${index + 1}`} className="w-8 h-8 object-cover rounded-2xl mr-2" />
-                                    <div className="flex flex-col">
-                                        <span className="font-bold text-sm md:text-base">{dealer.name}</span>
-                                        <span className="text-gray-500 text-xs md:text-sm">{dealer.rating} Rating</span>
-                                    </div>
-                                </li>
+                    {/* RAM Selection */}
+                    {/* <div className="flex space-x-4 mt-4">
+            {["4 GB", "6 GB", "8 GB"].map((ram) => (
+              <button
+                key={ram}
+                onClick={() => setSelectedRAM(ram)}
+                className={`px-6 py-2 rounded-md text-sm font-semibold
+                  ${selectedRAM === ram ? "bg-[#008C44] text-white" : "bg-white text-gray-700 border border-gray-300"} 
+                  hover:bg-[#0f4222] hover:text-white transition-all duration-200`}
+              >
+                {ram}
+              </button>
+            ))}
+          </div> */}
+
+                    {/* Delivery Info */}
+                    <div className="mt-4">
+                        <p className="text-sm text-gray-700">
+                            {product.description}
+                            {/* <span className="font-semibold">Delivery by 15 Nov, Friday</span> | Free ₹40 if ordered before 12:30 PM */}
+                        </p>
+                        {/* <div className="mt-2">
+              <input
+                type="text"
+                placeholder="Enter Delivery Pincode"
+                value={pincode}
+                onChange={(e) => setPincode(e.target.value)}
+                className="border border-gray-300 rounded-md px-3 py-2 text-sm w-full md:w-1/2"
+              />
+              <button className="bg-[#008C44] text-white px-6 py-2 rounded-md text-sm mt-2 hover:bg-[#0f4222]">
+                Check
+              </button>
+            </div> */}
+                        <CountrySelection />
+                    </div>
+
+                    {/* Highlights */}
+                    <div className="mt-6">
+                        <h3 className="text-lg font-semibold text-gray-800">Highlights</h3>
+                        <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            {product.features.map((feature, index) => (
+                                <li key={index} className="text-sm">{feature}</li>
                             ))}
                         </ul>
                     </div>
+
+                    <div className="mt-6">
+                        <h3 className="text-lg font-semibold text-gray-800">Additional Features</h3>
+                        <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            {product.additionalDetails.map((feature, index) => (
+                                <li key={index} className="text-sm">{feature}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="flex justify-between space-x-8 mt-6">
+                        <div className="flex flex-col items-start">
+                            <p className="font-semibold text-gray-700">Blades</p>
+                            <p className="text-sm text-gray-500">{product.blades}</p>
+                        </div>
+                        <div className="flex flex-col items-start">
+                            <p className="font-semibold text-gray-700">Gearbox</p>
+                            <p className="text-sm text-gray-500">{product.gearbox}</p>
+                        </div>
+                        <div className="flex flex-col items-start">
+                            <p className="font-semibold text-gray-700">Weight</p>
+                            <p className="text-sm text-gray-500">{product.weight}</p>
+                        </div>
+                    </div>
+
+                    {/* Seller Info */}
+                    <div className="mt-6">
+                        <h3 className="text-lg font-semibold text-gray-800">Sellers</h3>
+                        <div className="space-y-4 mt-4">
+                            {product.dealers.map((dealer, index) => (
+                                <div key={index} className="flex items-center space-x-4">
+                                    <img
+                                        src={dealer.image}
+                                        alt={dealer.name}
+                                        className="w-12 h-12 rounded-full object-cover"
+                                    />
+                                    <div>
+                                        <span className="font-semibold text-gray-800">{dealer.name}</span>
+                                        <div className="flex items-center space-x-1 text-yellow-500">
+                                            <span className="text-sm">{dealer.rating}★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="text-sm text-gray-600 mt-2">
+                            7 Days Service Center Replacement/Repair, GST invoice available
+                        </p>
+                    </div>
+
+
+                    {/* Buttons */}
+                    <div className="mt-6 flex space-x-4">
+                        <button className="bg-[#166434] text-white px-6 py-3 rounded-md hover:bg-[#0f4222] transition-all duration-200 text-lg">
+                            Contact Dealers
+                        </button>
+                        <button className="bg-gray-200 text-[#166434] px-6 py-3 rounded-md hover:bg-gray-300 transition-all duration-200 text-lg">
+                            Enquire Now
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            {/* <div>
-                <h2 className="text-xl md:text-2xl font-bold mb-2">Other Products</h2>
-                <div className="flex flex-wrap space-x-4 overflow-x-auto">
-                    {product?.otherProducts?.length && product?.otherProducts || [].map((image, index) => (
-                        <div
-                            key={index}
-                            className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
-                        >
-                            <img
-                                src={`${image}` || 'https://www.kamcoindia.com/userfiles/no-image.jpg'} // Update image source here
-                                alt={`Product ${index + 1}`}
-                                className="w-32 h-32 md:w-64 md:h-64 object-cover"
-                            />
-                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center text-white">
-                                <h3 className="text-sm md:text-xl font-semibold">Product Title {index + 1}</h3>
-                                <p className="text-xs md:text-base text-center mb-4">Short description of the product.</p>
-                                <Link href="/more-details" className="bg-green-600 px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm rounded-md hover:bg-green-700 transition">
-                                    More Details
-                                </Link>
-                            </div>
+            {/* Other Products */}
+            <div className="mt-12">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Other Products You Might Like</h3>
+                <div className="flex space-x-8">
+                    {product.otherProducts && product.otherProducts.map((productImage, index) => (
+                        <div key={index} className="w-32 h-32 rounded-lg overflow-hidden cursor-pointer">
+                            <img src={productImage} alt={`Other Product ${index + 1}`} className="w-full h-full object-cover" />
                         </div>
                     ))}
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };

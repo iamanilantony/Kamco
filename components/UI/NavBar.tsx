@@ -2,98 +2,117 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
-const NavBar: React.FC = () => {
-    const pathname = usePathname();
+const categories = [
+  { name: "Land Preparation", image: "/products/PR-011.jpg" },
+  { name: "Plant protection", image: "/products/PR-012.jpg" },
+  { name: "De weeding", image: "/products/PR-033.jpg" },
+  { name: "Harvesting", image: "/products/PR-032.jpg" },
+  { name: "Garden Tools", image: "/products/PR-041.jpg" },
+];
 
-    const isActive = (path: string): boolean => pathname === path;
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("");
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const handleLinkClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
 
-    const handleLinkClick = () => {
-        if (isMenuOpen) {
-            setIsMenuOpen(false);
-        }
-    };
+  return (
+    <header className="flex flex-wrap items-center justify-between p-4 md:px-6 font-sans">
+      <div className="flex justify-between items-center w-full md:w-auto z-50">
+        <img src="/logo.png" alt="Logo" className="h-10 object-cover rounded-[8%]" />
+        <button className="text-green-700 text-2xl md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          ☰
+        </button>
+      </div>
 
-    return (
-        <header className="flex flex-wrap items-center justify-between p-4 md:px-6 font-sans">
-            <div className="flex justify-between items-center w-full md:w-auto">
-            <Link href='/'>
-                <img src="/logo.png" alt="Logo" className="h-10 object-cover rounded-[8%]" />
-            </Link>
-                <button className="text-green-700 text-2xl md:hidden" onClick={toggleMenu}>
-                    ☰
-                </button>
+      <nav
+        className={`w-full md:flex md:w-auto space-y-4 md:space-y-0 md:space-x-6 p-2 md:p-4 items-center mt-4 md:mt-0 ${isMenuOpen ? 'block' : 'hidden'} md:flex-row text-center bg-white md:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none z-50`}
+      >
+        <Link
+          href="/"
+          onClick={handleLinkClick}
+          className="block md:inline-block text-gray-700 px-1 md:px-2 font-normal transition-all duration-200 ease-in-out"
+        >
+          <span className="inline-block min-w-[80px] text-center">Home</span>
+        </Link>
+
+        {/* Products Dropdown */}
+        <div className="relative group">
+          <Link
+            href="/products"
+            onClick={handleLinkClick}
+            className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+          >
+            <span className="inline-block min-w-[80px] text-center">Products</span>
+          </Link>
+          {/* Dropdown */}
+          <div className="absolute left-0 hidden group-hover:block bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="grid grid-cols-2 gap-2">
+              {categories.map((category, index) => (
+                <div
+                  key={index}
+                  className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                  onClick={() => setActiveCategory(category.name)}
+                >
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-10 h-10 object-cover rounded-md"
+                  />
+                  <span>{category.name}</span>
+                </div>
+              ))}
             </div>
+          </div>
+        </div>
 
-            {/* Menu for small and medium screens (hidden by default, visible when isMenuOpen is true) */}
-            <nav
-                className={`w-full md:flex md:w-auto space-y-4 md:space-y-0 md:space-x-6 p-2 md:p-4 items-center mt-4 md:mt-0 
-                ${isMenuOpen ? 'block' : 'hidden'} md:flex-row text-center bg-white md:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none`}
-            >
-                <Link
-                    href="/"
-                    onClick={handleLinkClick}
-                    className={`block md:inline-block text-gray-700 px-1 md:px-2 font-normal transition-all duration-200 ease-in-out 
-                    ${isActive('/') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}
-                >
-                    <span className="inline-block min-w-[80px] text-center">Home</span>
-                </Link>
-                <Link
-                    href="/aboutUs"
-                    onClick={handleLinkClick}
-                    className={`block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out 
-                    ${isActive('/aboutUs') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}
-                >
-                    <span className="inline-block min-w-[80px] text-center">About Us</span>
-                </Link>
-                <Link
-                    href="/products"
-                    onClick={handleLinkClick}
-                    className={`block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out 
-                    ${isActive('/products') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}
-                >
-                    <span className="inline-block min-w-[80px] text-center">Products</span>
-                </Link>
-                <Link
-                    href="/projects"
-                    onClick={handleLinkClick}
-                    className={`block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out 
-                    ${isActive('/projects') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}
-                >
-                    <span className="inline-block min-w-[80px] text-center">Projects</span>
-                </Link>
-                <Link
-                    href="/tenders"
-                    onClick={handleLinkClick}
-                    className={`block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out 
-                    ${isActive('/tenders') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}
-                >
-                    <span className="inline-block min-w-[80px] text-center">Tenders</span>
-                </Link>
-                <Link
-                    href="/notifications"
-                    onClick={handleLinkClick}
-                    className={`block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out 
-                    ${isActive('/notifications') ? 'font-semibold text-[#166434]' : 'hover:font-semibold hover:scale-105'}`}
-                >
-                    <span className="inline-block min-w-[100px] text-center">Notifications</span>
-                </Link>
-                <Link
-                    href="https://www.kamcoindia.com/dealers/user_login"
-                    onClick={handleLinkClick}
-                    className="block md:inline-block bg-[#166434] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md"
-                >
-                    Login
-                </Link>
-            </nav>
-        </header>
-    );
+        <Link
+          href="/projects"
+          onClick={handleLinkClick}
+          className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+        >
+          <span className="inline-block min-w-[80px] text-center">Projects</span>
+        </Link>
+        
+        <Link
+          href="/tenders"
+          onClick={handleLinkClick}
+          className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+        >
+          <span className="inline-block min-w-[80px] text-center">Tenders</span>
+        </Link>
+
+        <Link
+          href="/aboutUs"
+          onClick={handleLinkClick}
+          className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+        >
+          <span className="inline-block min-w-[80px] text-center">About Us</span>
+        </Link>
+
+        <Link
+          href="/notifications"
+          onClick={handleLinkClick}
+          className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+        >
+          <span className="inline-block min-w-[100px] text-center">Notifications</span>
+        </Link>
+
+        <Link
+          href="https://www.kamcoindia.com/dealers/user_login"
+          onClick={handleLinkClick}
+          className="block md:inline-block bg-[#166434] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md"
+        >
+          Login
+        </Link>
+      </nav>
+    </header>
+  );
 };
 
 export default NavBar;

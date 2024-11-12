@@ -30,7 +30,8 @@ module.exports = {
   			}
   		},
   		fontFamily: {
-  			sans: ['Quicksand', 'sans-serif'],
+  			sans: ['Open Sans', 'Quicksand', 'sans-serif'],
+			gloock: ['Gloock', 'sans-serif'], 
   			poppins: ['Poppins'],
   			roboto: ['Roboto', 'sans-serif'],
   			'serif-custom': ['Times New Roman"', 'serif']
