@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div
       className="flex flex-column justify-start items-center min-h-max gap-8 px-2 md:px-20 mb-24 md:mt-2 md:mb-4 mt-18 h-[50rem]"
-      style={{ backgroundImage: `url('/kamco_factory1.JPG')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{ backgroundImage: `url('/kamco_factory1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       {/* Text Content */}
       <div className="order-2 md:order-1 flex flex-col space-y-4 w-full md:w-1/2 items-start animate__animated animate__fadeIn animate__delay-[0.05s]">
