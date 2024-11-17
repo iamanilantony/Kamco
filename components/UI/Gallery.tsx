@@ -46,7 +46,7 @@ const GallerySection = () => {
                     </Slider>
                 </div>
                 <div className="w-full md:w-1/2 px-8 md:px-4 flex flex-col justify-center text-left">
-                    <h2 className="text-3xl md:text-4xl font-normal text-white mb-4">Gallery</h2>
+                    <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">Gallery</h2>
                     <p className="text-white mb-4 font-sans w-full md:w-4/5 font-normal">
                         Explore the world of KAMCO with the photos of our past events, products, customers, and so on.
                     </p>

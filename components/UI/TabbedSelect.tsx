@@ -27,7 +27,7 @@ const TabbedSelect = ({ category, handleCategoryChange }: { category: string, ha
                             alt={categoryItem.name} 
                             width={80} 
                             height={80} 
-                            className={`transition-all duration-300 ${category === categoryItem.name ? 'grayscale-0' : 'grayscale'} hover:grayscale-0`} 
+                            className={`transition-all duration-300 ${category === categoryItem.name ? 'grayscale-0' : 'grayscale'} hover:grayscale-0 md:h-20 h-10`} 
                         />
                         <span className="text-xs sm:text-sm">{categoryItem.name}</span>
                     </button>

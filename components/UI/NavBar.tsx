@@ -4,20 +4,30 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const categories = [
-  { name: "Land Preparation", image: "/products/PR-011.jpg" },
-  { name: "Plant protection", image: "/products/PR-012.jpg" },
-  { name: "De weeding", image: "/products/PR-033.jpg" },
-  { name: "Harvesting", image: "/products/PR-032.jpg" },
-  { name: "Garden Tools", image: "/products/PR-041.jpg" },
+  { name: "Land Preparation", image: "/products/PR-011.jpg", slug: "land-preparation" },
+  { name: "Plant protection", image: "/products/PR-012.jpg", slug: "plant-protection" },
+  { name: "De weeding", image: "/products/PR-033.jpg", slug: "de-weeding" },
+  { name: "Harvesting", image: "/products/PR-032.jpg", slug: "harvesting" },
+  { name: "Garden Tools", image: "/products/PR-041.jpg", slug: "garden-tools" },
 ];
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const handleProductsClick = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent the default navigation action
+    setIsMenuOpen(!isMenuOpen); // Toggle the submenu visibility
+  };
+
+  const handleCategoryClick = (slug: string) => {
+    setActiveCategory(slug); // Set the active category
+    setIsMenuOpen(false); // Close the submenu after selecting a category
+  };
 
   const handleLinkClick = () => {
     if (isMenuOpen) {
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // Close the submenu if menu is open
     }
   };
 
@@ -36,39 +46,43 @@ const NavBar = () => {
         <Link
           href="/"
           onClick={handleLinkClick}
-          className="block md:inline-block text-gray-700 px-1 md:px-2 font-normal transition-all duration-200 ease-in-out"
+          className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
         >
           <span className="inline-block min-w-[80px] text-center">Home</span>
         </Link>
 
         {/* Products Dropdown */}
-        <div className="relative group">
-          <Link
+        <div className="relative">
+          <a
             href="/products"
-            onClick={handleLinkClick}
+            onClick={handleProductsClick}
             className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
           >
             <span className="inline-block min-w-[80px] text-center">Products</span>
-          </Link>
+          </a>
           {/* Dropdown */}
-          <div className="absolute left-0 hidden group-hover:block bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
-            <div className="grid grid-cols-2 gap-2">
-              {categories.map((category, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 rounded-md p-2"
-                  onClick={() => setActiveCategory(category.name)}
-                >
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-10 h-10 object-cover rounded-md"
-                  />
-                  <span>{category.name}</span>
-                </div>
-              ))}
+          {isMenuOpen && (
+            <div className="absolute left-0 bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+              <div className="grid grid-cols-2 gap-2">
+                {categories.map((category, index) => (
+                  <Link
+                    key={index}
+                    href={{ pathname: '/products', query: { category: category.name } }}
+                    // href={`/products/${category.slug}`} // Navigate to product page based on the category slug
+                    onClick={() => handleCategoryClick(category.slug)} // Close the menu after selecting a category
+                    className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                  >
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="w-10 h-10 object-cover rounded-md"
+                    />
+                    <span>{category.name}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <Link
@@ -76,7 +90,7 @@ const NavBar = () => {
           onClick={handleLinkClick}
           className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
         >
-          <span className="inline-block min-w-[80px] text-center">Projects</span>
+          <span className="inline-block min-w-[80px] text-center">Strategic Initiatives</span>
         </Link>
         
         <Link

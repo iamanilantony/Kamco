@@ -4,12 +4,22 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <div
-      className="flex flex-column justify-start items-center min-h-max gap-8 px-2 md:px-20 mb-24 md:mt-2 md:mb-4 mt-18 h-[50rem]"
-      style={{ backgroundImage: `url('/kamco_factory1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="group relative flex items-center justify-start min-h-max gap-8 px-2 md:px-20 mb-24 md:mt-2 md:mb-4 mt-18 h-[50rem] overflow-hidden"
     >
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-all custom-transition-scale group-hover:scale-[1.10]"
+        style={{ backgroundImage: `url('/kamco_factory1.jpg')` }}
+      ></div>
+
+      {/* White Overlay */}
+      {/* <div
+        className="absolute inset-0 bg-white opacity-20 transition-opacity custom-transition-opacity group-hover:opacity-50"
+      ></div> */}
+
       {/* Text Content */}
-      <div className="order-2 md:order-1 flex flex-col space-y-4 w-full md:w-1/2 items-start animate__animated animate__fadeIn animate__delay-[0.05s]">
-        <h1 className="text-white text-left text-4xl md:text-6xl font-normal mb-4 text-left animate-bounce-up">
+      <div className="relative z-10 order-2 md:order-1 flex flex-col space-y-4 w-full md:w-1/2 items-start animate__animated animate__fadeIn animate__delay-[0.05s]">
+        <h1 className="text-white text-left text-4xl md:text-6xl font-semibold text-left animate-bounce-up">
           Empowering Farmers, Enriching the Nation.
         </h1>
 
@@ -29,4 +39,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;

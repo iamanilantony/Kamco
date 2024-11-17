@@ -13,7 +13,7 @@
 
 
 body {
-    font-family: 'Gloock', 'Open+Sans' ,'Poppins', 'Quicksand', sans-serif !important;
+    font-family: Arial,Helvetica,sans-serif ,'Poppins', 'Quicksand', sans-serif !important;
     font-size: 16px;
     color: #000;
 }
@@ -86,3 +86,14 @@ body {
     @apply bg-background text-foreground;
     }
 }
+
+
+/* Add this to your global CSS file or in a <style> block in the component */
+.custom-transition-scale {
+  transition: transform 5s ease-in-out; /* Apply 5s scaling transition */
+}
+
+.custom-transition-opacity {
+  transition: opacity 5s ease-in-out; /* Apply 5s opacity transition */
+}
+

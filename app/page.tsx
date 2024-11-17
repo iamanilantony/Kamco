@@ -15,7 +15,7 @@ export default function Home() {
       <div className="mx-auto px-4 max-w-screen-4xl">
         {/* Hero Section */}
         {/* Green Statistics Section */}
-       <StatsSection />
+        <StatsSection />
 
         {/* Products Section */}
         <div className="py-10">
@@ -24,13 +24,13 @@ export default function Home() {
             {products.categories.map((category, index) => (
               <div
                 key={index}
-                className="relative group rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105"
+                className="relative group rounded-lg overflow-hidden shadow-lg transition-all duration-500"
               >
                 <Link href={{ pathname: '/products', query: { category: category.name } }}>
                   <img
                     src={category.src}
                     alt={`Category ${index + 1}`}
-                    className="w-full h-48 sm:h-64 object-cover"
+                    className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity flex flex-col items-center justify-center md:flex-row text-white font-sans">
                     <span className="text-lg md:text-xl font-semibold">{category.name}</span>
@@ -40,6 +40,7 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
+
             ))}
           </div>
 

@@ -11,17 +11,17 @@ const ProductsPage = () => {
     const categoryFromParams = searchParams.get('category') || '';
     const router = useRouter();
 
-    const allProducts = [
-        { name: "Power Tillers", codeName: "PR-011", category: "Land Preparation", src: "/products/PR-011.jpg", piecesLeft: 128, description: "Efficient tillers for land preparation." },
-        { name: "Tractors", codeName: "PR-012", category: "Land Preparation", src: "/products/PR-012.jpg", piecesLeft: 75, description: "High-performance tractors for large-scale fields." },
-        { name: "Drone", codeName: "PR-021", category: "Plant protection", src: "/products/PR-021.png", piecesLeft: 56, description: "Advanced drones for plant protection." },
-        { name: "Echo Leopard Power weeder", codeName: "PR-031", category: "De weeding", src: "/products/PR-031.png", piecesLeft: 150, description: "Reliable power weeder for de-weeding tasks." },
-        { name: "Geared Power weeder", codeName: "PR-032", category: "De weeding", src: "/products/PR-032.jpg", piecesLeft: 60, description: "Durable, geared power weeder for intensive work." },
-        { name: "Garden Tillers", codeName: "PR-033", category: "Garden Tools", src: "/products/PR-033.jpg", piecesLeft: 120, description: "Compact tillers for garden use." },
-        { name: "Cono Weeder", codeName: "PR-035", category: "De weeding", src: "/products/PR-035.png", piecesLeft: 85, description: "Specialized cono weeder for efficient de-weeding." },
-        { name: "Brush Cutter", codeName: "PR-036", category: "Plant protection", src: "/products/PR-036.jpg", piecesLeft: 200, description: "Versatile brush cutter for various applications." },
-        { name: "Power Reaper", codeName: "PR-041", category: "Harvesting", src: "/products/PR-041.jpg", piecesLeft: 45, description: "Efficient power reaper for harvesting tasks." },
-    ];
+const allProducts = [
+    { name: "Power Tillers", codeName: "PR-011", category: "Land Preparation", src: "/products/PR-011.jpg", piecesLeft: 128, description: "Efficient tillers for land preparation.", slug: "land-preparation" },
+    { name: "Tractors", codeName: "PR-012", category: "Land Preparation", src: "/products/PR-012.jpg", piecesLeft: 75, description: "High-performance tractors for large-scale fields.", slug: "land-preparation" },
+    { name: "Drone", codeName: "PR-021", category: "Plant protection", src: "/products/PR-021.png", piecesLeft: 56, description: "Advanced drones for plant protection.", slug: "plant-protection" },
+    { name: "Echo Leopard Power weeder", codeName: "PR-031", category: "De weeding", src: "/products/PR-031.png", piecesLeft: 150, description: "Reliable power weeder for de-weeding tasks.", slug: "de-weeding" },
+    { name: "Geared Power weeder", codeName: "PR-032", category: "De weeding", src: "/products/PR-032.jpg", piecesLeft: 60, description: "Durable, geared power weeder for intensive work.", slug: "de-weeding" },
+    { name: "Garden Tillers", codeName: "PR-033", category: "Garden Tools", src: "/products/PR-033.jpg", piecesLeft: 120, description: "Compact tillers for garden use.", slug: "garden-tools" },
+    { name: "Cono Weeder", codeName: "PR-035", category: "De weeding", src: "/products/PR-035.png", piecesLeft: 85, description: "Specialized cono weeder for efficient de-weeding.", slug: "de-weeding" },
+    { name: "Brush Cutter", codeName: "PR-036", category: "Plant protection", src: "/products/PR-036.jpg", piecesLeft: 200, description: "Versatile brush cutter for various applications.", slug: "plant-protection" },
+    { name: "Power Reaper", codeName: "PR-041", category: "Harvesting", src: "/products/PR-041.jpg", piecesLeft: 45, description: "Efficient power reaper for harvesting tasks.", slug: "harvesting" },
+];
 
     const itemsPerPage = 12; // Number of items to display per page
     const [currentPage, setCurrentPage] = useState(1); // State to track the current page
@@ -35,7 +35,7 @@ const ProductsPage = () => {
         }
         return allProducts;
     };
-
+    
     // Initial filtering on component mount
     useEffect(() => {
         const initialFilteredProducts = filterProductsByCategory(category);
@@ -66,19 +66,6 @@ const ProductsPage = () => {
         <div className="px-4 md:px-10 lg:px-2 py-10 font-sans">
             <header className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0">
                 <div className="flex flex-col space-y-2 w-full md:flex-col md:space-x-4 md:space-y-0">
-                    {/* <select
-                        className="border border-gray-300 rounded-md px-3 py-2 text-sm md:text-base w-full md:w-auto"
-                        onChange={handleCategoryChange}
-                        defaultValue={category || ""}
-                    >
-                        <option value="">Categories</option>
-                        <option value="Land Preparation">Land Preparation</option>
-                        <option value="Plant protection">Plant protection</option>
-                        <option value="De weeding">De weeding</option>
-                        <option value="Harvesting">Harvesting</option>
-                        <option value="Garden Tools">Garden Tools</option>
-                        <option value="KAMCO-lite">KAMCO-lite</option>
-                    </select> */}
                     <TabbedSelect category={category} handleCategoryChange={handleCategoryChange} />
                 </div>
                 {/* <Link href="/dealers">
