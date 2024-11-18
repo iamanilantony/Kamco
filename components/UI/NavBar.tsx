@@ -15,9 +15,11 @@ const categories = [
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);  // For mobile menu
   const [isStatutoryMenuOpen, setIsStatutoryMenuOpen] = useState(false);  // For Statutory submenu
+  const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);  // For Statutory submenu
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);  // For Products submenu
 
   const statutoryMenuRef = useRef<HTMLDivElement>(null); // Ref for the Statutory dropdown
+  const aboutUsRef = useRef<HTMLDivElement>(null); // Ref for the Statutory dropdown
   const hamburgerRef = useRef<HTMLButtonElement>(null); // Ref for the hamburger button
   const productMenuRef = useRef<HTMLDivElement>(null); // Ref for the Product dropdown
 
@@ -35,6 +37,11 @@ const NavBar = () => {
     setIsStatutoryMenuOpen(!isStatutoryMenuOpen); // Toggle Statutory submenu visibility
   };
 
+  const handleAboutUsRefToggle = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsAboutUsOpen(!isAboutUsOpen); // Toggle Statutory submenu visibility
+  };
+
   // Function to toggle Products menu visibility
   const handleProductMenuToggle = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -45,10 +52,12 @@ const NavBar = () => {
   const handleClickOutside = (e: MouseEvent) => {
     if (
       statutoryMenuRef.current && !statutoryMenuRef.current.contains(e.target as Node) &&
+      aboutUsRef.current && !aboutUsRef.current.contains(e.target as Node) &&
       productMenuRef.current && !productMenuRef.current.contains(e.target as Node) &&
       !hamburgerRef.current?.contains(e.target as Node)
     ) {
       setIsStatutoryMenuOpen(false); // Close the Statutory menu if click is outside
+      setIsAboutUsOpen(false); // Close the Statutory menu if click is outside
       setIsProductMenuOpen(false); // Close the product menu if click is outside
     }
   };
@@ -70,6 +79,9 @@ const NavBar = () => {
     }
     if (isProductMenuOpen) {
       setIsProductMenuOpen(false); // Close the product menu if menu is open
+    }
+    if (isAboutUsOpen) {
+      setIsAboutUsOpen(false); // Close the product menu if menu is open
     }
   };
 
@@ -148,13 +160,70 @@ const NavBar = () => {
           <span className="inline-block min-w-[80px] text-center">Tenders</span>
         </Link>
 
-        <Link
+        {/* <Link
           href="/aboutUs"
           onClick={handleLinkClick}
           className="block md:inline-block text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
         >
           <span className="inline-block min-w-[80px] text-center">About Us</span>
-        </Link>
+        </Link> */}
+
+             {/* About Us Dropdown */}
+             <div className="md:relative" ref={aboutUsRef}>
+          <span
+            onClick={handleAboutUsRefToggle}
+            className="block md:inline-block cursor-pointer text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
+          >
+            <span className="inline-block min-w-[80px] z-40 text-center">About Us</span>
+          </span>
+          {/* Statutory Dropdown */}
+          {isAboutUsOpen && (
+  <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+              <div className="flex flex-col space-y-2">
+                <Link
+                  href="/aboutUs"
+                  onClick={handleLinkClick}
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="https://www.kamcoindia.com/userfiles/Organizational%20Chart_20-12-2021(1).jpg"
+                  onClick={handleLinkClick}
+                  target="_blank"
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  Org Structure
+                </Link>
+
+                <Link
+                  href="/right-to-information"
+                  onClick={handleLinkClick}
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  Finance Report
+                </Link>
+
+                <Link
+                  href="/right-to-information"
+                  onClick={handleLinkClick}
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  Awards and Recognition
+                </Link>
+
+                <Link
+                  href="/right-to-information"
+                  onClick={handleLinkClick}
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  Finance Report
+                </Link>
+              </div>
+            </div>
+          )}
+
+        </div>
 
         {/* Statutory Dropdown */}
         <div className="md:relative" ref={statutoryMenuRef}>
