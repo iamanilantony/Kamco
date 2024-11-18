@@ -19,7 +19,7 @@
         "blades": "Hardened steel blades for optimal durability and cutting.",
         "gearbox": "Robust gearbox for efficient power transmission.",
         "weight": "500 lbs",
-        "image": ["/products/PR-011_1.jpg","/products/PR-011_2.jpg","/products/PR-011_3.jpg","/products/PR-011_4.png"],
+        "image": ["/products/PR-011_1.jpg","/products/PR-011_2.jpg","/products/PR-011_3.jpg","/products/PR-011_4.pngw"],
         "additionalDetails": [
           "1-year warranty on parts and labor", "Regular blade sharpening and oil changes required",
           "Works with most small-scale tractors"
@@ -29,7 +29,7 @@
           { "name": "Agro Supply Co.", "rating": 4.2, "image": "/dealer2.jpg" }
         ],
         "otherProducts": [
-          "/products/PR-012.jpg", "/products/PR-021.png"
+          "/products/PR-012.jpg", "/products/PR_021.png"
         ]
       },
       {
@@ -84,7 +84,7 @@
         "blades": "Propeller blades for lift and mobility.",
         "gearbox": "N/A",
         "weight": "20 lbs",
-        "image": ["/products/PR-021.png","/products/PR-021.png"],
+        "image": ["/products/PR_021.png","/products/PR_021.png"],
         "additionalDetails": [
           "6-month warranty on parts",
           "Battery chargi and propeller checksrequired",
@@ -128,7 +128,7 @@
           { "name": "Farm Tools Co.", "rating": 4.3, "image": "/dealer8.jpg" }
         ],
         "otherProducts": [
-          "/products/PR-021.png", "/products/PR-034.jpg"
+          "/products/PR_021.png", "/products/PR-034.jpg"
         ]
       },
       {

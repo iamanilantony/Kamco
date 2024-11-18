@@ -5,8 +5,8 @@ import TestimonialsSection from '@/components/UI/Testimonials';
 import ContactSection from '@/components/UI/ContactSection';
 import Hero from '@/components/UI/Hero';
 import products from '@/public/data/categores.json'
-import Image from 'next/image';
 import StatsSection from '@/components/UI/StatsSection';
+import FAQSection from '@/components/UI/FAQSection';
 
 export default function Home() {
   return (
@@ -51,7 +51,14 @@ export default function Home() {
           <HighlightsSection />
           <GallerySection />
           <TestimonialsSection />
-          <ContactSection />
+          <div className='flex'>
+            <div className='w-1/2'>
+              <FAQSection />
+            </div>
+            <div className='w-1/2'>
+              <ContactSection />
+            </div>
+          </div>
         </div>
       </div>
     </div>

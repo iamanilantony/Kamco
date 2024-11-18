@@ -150,3 +150,18 @@ body {
 .slick-center .carousel-item {
   transform: rotateY(0deg) translateZ(200px); /* Bring the center item closer */
 }
+
+/* Add this to your global CSS or the component's style */
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+  transform: scale(1.3); /* Zoom in effect */
+  cursor: zoom-in;
+}

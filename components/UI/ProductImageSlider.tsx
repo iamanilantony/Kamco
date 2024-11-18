@@ -11,7 +11,9 @@ interface ProductProps {
 
 const ProductImageSlider = ({ product }: { product: ProductProps }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
+  const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
   const sliderRef = useRef<any>(null); // Create a reference for the slider
+  const zoomContainerRef = useRef<any>(null);
 
   const handleImageClick = (index: number) => {
     setCurrentImage(index);
@@ -29,20 +31,52 @@ const ProductImageSlider = ({ product }: { product: ProductProps }) => {
     ref: sliderRef // Attach the ref to the slider
   };
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    // Get the position of the mouse relative to the image
+    const rect = e.currentTarget.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+
+    // Calculate zoom position
+    const x = (offsetX / rect.width) * 100;
+    const y = (offsetY / rect.height) * 100;
+
+    setZoomPosition({ x, y });
+  };
+
   return (
     <div className="w-full md:w-1/2">
       <div className="relative">
         {/* Main Image Slider */}
         <Slider {...settings} className="w-full">
           {product.images.map((img, index) => (
-            <div key={index}>
-              <Image
-                src={img}
-                alt={product.title}
-                width={500}
-                height={300}
-                className="w-full h-auto object-cover rounded-lg"
-              />
+            <div key={index} className="group relative">
+              <div
+                className="relative overflow-hidden"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={() => setZoomPosition({ x: 0, y: 0 })}
+              >
+                <Image
+                  src={img}
+                  alt={product.title}
+                  width={500}
+                  height={300}
+                  className="product-image w-full h-auto object-cover rounded-lg transition-all duration-300"
+                />
+
+                {/* Zoom Overlay Container */}
+                {zoomPosition.x !== 0 && zoomPosition.y !== 0 && (
+                  <div
+                    className="zoom-overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"
+                    style={{
+                      backgroundImage: `url(${img})`,
+                      backgroundPosition: `${zoomPosition.x}% ${zoomPosition.y}%`,
+                      backgroundSize: '200%',
+                      backgroundRepeat: 'no-repeat',
+                    }}
+                  />
+                )}
+              </div>
             </div>
           ))}
         </Slider>
