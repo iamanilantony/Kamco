@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import FooterSection from "@/components/UI/Footer"
 import NavBar from "@/components/UI/NavBar"
+import { NavigationMenu } from "@/components/UI/navigation-menu";
 
 const inter = Inter({ subsets: ["latin"] })
 

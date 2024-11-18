@@ -12,8 +12,9 @@ const CompanyInfoPage = () => {
             case 'hydroponicSystems':
                 return (
                     <div>
-                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Hydroponic_Farm_Illustration.jpg' alt="Hydroponic Systems" />
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Hydroponic Systems</h2>
+                        {/* <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Hydroponic_Farm_Illustration.jpg' alt="Hydroponic Systems" /> */}
+                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/hydrophonic.jpg' alt="Hydroponic Systems" />
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Hydroponic Systems</h2>
                         <div className="p-4">
                             <h1 className="text-2xl font-bold text-green-600 mb-4">Leading the Future of Sustainable Agriculture with Advanced Hydroponic Systems</h1>
 
@@ -55,8 +56,8 @@ const CompanyInfoPage = () => {
             case 'nightPachaCurryStreetInitiative':
                 return (
                     <div>
-                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Night_Market.jpg' alt="Company Night Pacha Curry Street Initiative" />
-                        <h2 className="text-2xl md:text-4xl font-bold mb-4">Night Pacha Curry Street Initiative</h2>
+                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/NightMarkets2.jpg' alt="Company Night Pacha Curry Street Initiative" />
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Night Pacha Curry Street Initiative</h2>
                         <div className="p-4">
                             {/* <h1 className="text-2xl font-bold text-green-600 mb-4">Night Pacha Curry Street Initiative</h1> */}
 
@@ -79,37 +80,37 @@ const CompanyInfoPage = () => {
 
                     </div>
                 );
-            case 'polyclinicAndEmployeeWelfare':
-                return (
-                    <div>
-                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Polyclinic.jpg' alt="Company Polyclinic and Employee Welfare" />
-                        <h2 className="text-2xl md:text-4xl font-bold mb-4">Polyclinic and Employee Welfare</h2>
-                        <div className="p-4">
-                            {/* <h1 className="text-2xl font-bold text-green-600 mb-4">Polyclinic and Employee Welfare</h1> */}
+            // case 'polyclinicAndEmployeeWelfare':
+                // return (
+                //     <div>
+                //         <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Polyclinic.jpg' alt="Company Polyclinic and Employee Welfare" />
+                //         <h2 className="text-3xl md:text-4xl font-bold mb-4">Polyclinic and Employee Welfare</h2>
+                //         <div className="p-4">
+                //             {/* <h1 className="text-2xl font-bold text-green-600 mb-4">Polyclinic and Employee Welfare</h1> */}
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO: Your Partner in Health and Well-Being</h2>
-                            <p className="mb-4">
-                                At KAMCO, we are committed to prioritizing the health and well-being of our employees. To enhance our existing medical facilities, we are actively seeking a corporate health partner to establish and operate a polyclinic within the KAMCO campus. This initiative aims to provide comprehensive healthcare services not only to our employees but also to the general public, furthering our commitment to community health.
-                            </p>
+                //             <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO: Your Partner in Health and Well-Being</h2>
+                //             <p className="mb-4">
+                //                 At KAMCO, we are committed to prioritizing the health and well-being of our employees. To enhance our existing medical facilities, we are actively seeking a corporate health partner to establish and operate a polyclinic within the KAMCO campus. This initiative aims to provide comprehensive healthcare services not only to our employees but also to the general public, furthering our commitment to community health.
+                //             </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Comprehensive Health Services</h2>
-                            <p className="mb-4">
-                                The proposed polyclinic will offer a wide range of medical services, ensuring convenient access to healthcare for KAMCO employees and their dependents. With our strategic location near the airport, the facility is positioned to attract a diverse clientele, creating a valuable revenue stream that will help cross-subsidize healthcare expenses.
-                            </p>
+                //             <h2 className="text-xl font-semibold text-indigo-800 mb-2">Comprehensive Health Services</h2>
+                //             <p className="mb-4">
+                //                 The proposed polyclinic will offer a wide range of medical services, ensuring convenient access to healthcare for KAMCO employees and their dependents. With our strategic location near the airport, the facility is positioned to attract a diverse clientele, creating a valuable revenue stream that will help cross-subsidize healthcare expenses.
+                //             </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Expertise in Employee Welfare</h2>
-                            <p className="mb-4">
-                                KAMCO has a longstanding tradition of supporting employee health through comprehensive medical reimbursement facilities for inpatient treatments and partnerships with local hospitals for first aid services. By integrating a polyclinic into our campus, we will enhance our commitment to employee welfare and foster a healthier workplace environment.
-                            </p>
-                        </div>
+                //             <h2 className="text-xl font-semibold text-indigo-800 mb-2">Expertise in Employee Welfare</h2>
+                //             <p className="mb-4">
+                //                 KAMCO has a longstanding tradition of supporting employee health through comprehensive medical reimbursement facilities for inpatient treatments and partnerships with local hospitals for first aid services. By integrating a polyclinic into our campus, we will enhance our commitment to employee welfare and foster a healthier workplace environment.
+                //             </p>
+                //         </div>
 
-                    </div>
-                );
+                //     </div>
+                // );
             case 'tractorManufacturing':
                 return (
                     <div className="text-sm md:text-base">
                         <img className="w-full h-48 md:h-72 object-cover mb-4" src='/kamco_factory.JPG' alt="Tractor Manufacturing" />
-                        <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center">Tractor Manufacturing</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left px-4 text-left">Tractor Manufacturing</h2>
                         <div className="p-4">
                             <p className="text-xl font-semibold text-indigo-800 mb-2">KAMCO: Pioneering Tractor Manufacturing Through Strategic Collaboration</p>
 
@@ -138,8 +139,8 @@ const CompanyInfoPage = () => {
             case 'seedsandPlanting':
                 return (
                     <div>
-                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/seeds.jpg' alt="Seeds and Planting Materials" />
-                        <h2 className="text-2xl md:text-4xl font-bold mb-4">Seeds and Planting Materials</h2>
+                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='planting.jpg' alt="Seeds and Planting Materials" />
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Seeds and Planting Materials</h2>
                         <div className="p-4">
 
                             <p className="mb-4">
@@ -176,8 +177,8 @@ const CompanyInfoPage = () => {
             case 'fertilizersAndSoil':
                 return (
                     <div>
-                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Fertilizers.jpg' alt="Fertilizers and Soil Health" />
-                        <h2 className="text-2xl md:text-4xl font-bold mb-4">Fertilizers and Soil Health</h2>
+                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/WomanFieldwithPlants.jpg' alt="Fertilizers and Soil Health" />
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Fertilizers and Soil Health</h2>
                         <div className="p-4">
                             <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO’s Fertilizer Solutions: Comprehensive Support for Indian Agriculture</h2>
                             <p className="mb-4">
@@ -233,13 +234,13 @@ const CompanyInfoPage = () => {
                 >
                     <option value="hydroponicSystems">Hydroponic Systems</option>
                     <option value="nightPachaCurryStreetInitiative">Night Pacha Curry Street Initiative</option>
-                    <option value="polyclinicAndEmployeeWelfare">Polyclinic and Employee Welfare</option>
-                    <option value="tractorManufacturing">Tractor Manufacturing</option>
-                    <option value="seedsandPlanting">Seeds and Planting Materials</option>
+                    {/* <option value="polyclinicAndEmployeeWelfare">Polyclinic and Employee Welfare</option> */}
                     <option value="fertilizersAndSoil">Fertilizers and Soil Health</option>
+                    <option value="seedsandPlanting">Seeds and Planting Materials</option>
+                    <option value="tractorManufacturing">Tractor Manufacturing</option>
                 </select>
             </div>
-            <div className="hidden md:block w-full md:w-1/4 bg-gray-100 p-4 text-sm md:text-base">
+            <div className="hidden md:block w-full md:w-1/5 bg-gray-100 p-4 pr-0 text-sm md:text-base text-left">
                 <ul>
                     <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'hydroponicSystems' ? 'text-green-600' : ''}`}>
                         <span onClick={() => setActiveTab('hydroponicSystems')}>Hydroponic Systems</span>
@@ -247,18 +248,18 @@ const CompanyInfoPage = () => {
                     <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'nightPachaCurryStreetInitiative' ? 'text-green-600' : ''}`}>
                         <span onClick={() => setActiveTab('nightPachaCurryStreetInitiative')}>Night Pacha Curry Street Initiative</span>
                     </li>
-                    <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'polyclinicAndEmployeeWelfare' ? 'text-green-600' : ''}`}>
+                    {/* <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'polyclinicAndEmployeeWelfare' ? 'text-green-600' : ''}`}>
                         <span onClick={() => setActiveTab('polyclinicAndEmployeeWelfare')}>Polyclinic and Employee Welfare</span>
-                    </li>
-                    <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'tractorManufacturing' ? 'text-green-600' : ''}`}>
-                        <span onClick={() => setActiveTab('tractorManufacturing')}>Tractor Manufacturing</span>
+                    </li> */}
+                    <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'fertilizersAndSoil' ? 'text-green-600' : ''}`}>
+                        <span onClick={() => setActiveTab('fertilizersAndSoil')}>Fertilizers and Soil Health</span>
                     </li>
                     <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'seedsandPlanting'
                         ? 'text-green-600' : ''}`}>
                         <span onClick={() => setActiveTab('seedsandPlanting')}>Seeds and Planting Materials</span>
                     </li>
-                    <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'fertilizersAndSoil' ? 'text-green-600' : ''}`}>
-                        <span onClick={() => setActiveTab('fertilizersAndSoil')}>Fertilizers and Soil Health</span>
+                    <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'tractorManufacturing' ? 'text-green-600' : ''}`}>
+                        <span onClick={() => setActiveTab('tractorManufacturing')}>Tractor Manufacturing</span>
                     </li>
                 </ul>
             </div>

@@ -1,4 +1,5 @@
-import tenderData from 'public/data/tendors.json'
+import Link from 'next/link';
+import tendorData from 'public/data/tendors.json'
 
 const TenderTable = () => {
     return (
@@ -25,17 +26,17 @@ const TenderTable = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {tenderData.map((tender, index) => (
+                        {tendorData.map((tendor, index) => (
                             <tr key={index} className="odd:bg-white even:bg-gray-50">
-                                <td className="border border-gray-300 p-2 text-center">{tender.serialNo}</td>
-                                <td className="border border-gray-300 p-2 text-center">{tender.tenderID}</td>
-                                <td className="border border-gray-300 p-2">{tender.title}</td>
-                                <td className="border border-gray-300 p-2 text-center">{tender.publishedDate}</td>
-                                <td className="border border-gray-300 p-2 text-center">{tender.lastDateToDownload}</td>
-                                <td className="border border-gray-300 p-2 text-center">{tender.submissionDeadline}</td>
-                                <td className="border border-gray-300 p-2 text-center">{tender.openingDate}</td>
+                                <td className="border border-gray-300 p-2 text-center">{tendor.serialNo}</td>
+                                <td className="border border-gray-300 p-2 text-center">{tendor.tendorID}</td>
+                                <td className="border border-gray-300 p-2">{tendor.title}</td>
+                                <td className="border border-gray-300 p-2 text-center">{tendor.publishedDate}</td>
+                                <td className="border border-gray-300 p-2 text-center">{tendor.lastDateToDownload}</td>
+                                <td className="border border-gray-300 p-2 text-center">{tendor.submissionDeadline}</td>
+                                <td className="border border-gray-300 p-2 text-center">{tendor.openingDate}</td>
                                 <td className="border border-gray-300 p-2 text-center">
-                                    <a href={tender.documentLink} className="text-green-700 hover:underline">Download</a>
+                                    <Link href={`/tendors/${tendor.serialNo}`} className="text-green-700 hover:underline">Read more</Link>
                                 </td>
                             </tr>
                         ))}

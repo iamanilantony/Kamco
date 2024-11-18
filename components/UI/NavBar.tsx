@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { NavigationMenu } from './navigation-menu';
 
 const categories = [
   { name: "Land Preparation", image: "/products/PR-011.jpg", slug: "land-preparation" },
@@ -12,22 +13,44 @@ const categories = [
 ];
 
 const NavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);  // For mobile menu
+  const [isStatutoryMenuOpen, setIsStatutoryMenuOpen] = useState(false);  // For Statutory submenu
 
-  const handleProductsClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent the default navigation action
-    setIsMenuOpen(!isMenuOpen); // Toggle the submenu visibility
+  const statutoryMenuRef = useRef<HTMLDivElement>(null); // Ref for the Statutory dropdown
+  const hamburgerRef = useRef<HTMLButtonElement>(null); // Ref for the hamburger button
+
+  // Toggle mobile menu
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleCategoryClick = (slug: string) => {
-    setActiveCategory(slug); // Set the active category
-    setIsMenuOpen(false); // Close the submenu after selecting a category
+  // Function to toggle Statutory menu visibility
+  const handleStatutoryMenuToggle = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsStatutoryMenuOpen(!isStatutoryMenuOpen); // Toggle Statutory submenu visibility
   };
+
+  // Function to close the Statutory menu when clicking outside
+  const handleClickOutside = (e: MouseEvent) => {
+    if (statutoryMenuRef.current && !statutoryMenuRef.current.contains(e.target as Node) && !hamburgerRef.current?.contains(e.target as Node)) {
+      setIsStatutoryMenuOpen(false); // Close the Statutory menu if click is outside
+    }
+  };
+
+  // Event listener for detecting clicks outside of the Statutory menu
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside); // Cleanup listener on component unmount
+    };
+  }, []);
 
   const handleLinkClick = () => {
     if (isMenuOpen) {
-      setIsMenuOpen(false); // Close the submenu if menu is open
+      setIsMenuOpen(false); // Close the menu if menu is open
+    }
+    if (isStatutoryMenuOpen) {
+      setIsStatutoryMenuOpen(false); // Close the statutory menu if menu is open
     }
   };
 
@@ -35,13 +58,19 @@ const NavBar = () => {
     <header className="flex flex-wrap items-center justify-between p-4 md:px-6 font-sans">
       <div className="flex justify-between items-center w-full md:w-auto z-50">
         <img src="/logo.png" alt="Logo" className="h-10 object-cover rounded-[8%]" />
-        <button className="text-green-700 text-2xl md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {/* Mobile Menu Toggle */}
+        <button
+          ref={hamburgerRef}
+          className="text-green-700 text-2xl md:hidden"
+          onClick={handleMenuToggle}
+        >
           ☰
         </button>
       </div>
 
+      {/* Main Navigation */}
       <nav
-        className={`w-full md:flex md:w-auto space-y-4 md:space-y-0 md:space-x-6 p-2 md:p-4 items-center mt-4 md:mt-0 ${isMenuOpen ? 'block' : 'hidden'} md:flex-row text-center bg-white md:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none z-50`}
+        className={`w-full md:flex md:w-auto space-y-4 md:space-y-0 md:gap-6 p-2 md:p-4 items-center mt-4 md:mt-0 ${isMenuOpen ? 'block' : 'hidden'} md:flex-row text-center bg-white md:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none z-50`}
       >
         <Link
           href="/"
@@ -53,13 +82,13 @@ const NavBar = () => {
 
         {/* Products Dropdown */}
         <div className="relative">
-          <a
-            href="/products"
-            onClick={handleProductsClick}
-            className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+          <span
+            // href="/products"
+            onClick={handleMenuToggle}
+            className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all cursor-pointer duration-200 ease-in-out"
           >
             <span className="inline-block min-w-[80px] text-center">Products</span>
-          </a>
+          </span>
           {/* Dropdown */}
           {isMenuOpen && (
             <div className="absolute left-0 bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
@@ -68,8 +97,7 @@ const NavBar = () => {
                   <Link
                     key={index}
                     href={{ pathname: '/products', query: { category: category.name } }}
-                    // href={`/products/${category.slug}`} // Navigate to product page based on the category slug
-                    onClick={() => handleCategoryClick(category.slug)} // Close the menu after selecting a category
+                    onClick={() => handleLinkClick()} // Close the menu after selecting a category
                     className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 rounded-md p-2"
                   >
                     <img
@@ -85,6 +113,7 @@ const NavBar = () => {
           )}
         </div>
 
+        {/* Other Links */}
         <Link
           href="/projects"
           onClick={handleLinkClick}
@@ -92,9 +121,9 @@ const NavBar = () => {
         >
           <span className="inline-block min-w-[80px] text-center">Strategic Initiatives</span>
         </Link>
-        
+
         <Link
-          href="/tenders"
+          href="/tendors"
           onClick={handleLinkClick}
           className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
         >
@@ -108,6 +137,47 @@ const NavBar = () => {
         >
           <span className="inline-block min-w-[80px] text-center">About Us</span>
         </Link>
+
+        {/* Statutory Dropdown */}
+        <div className="relative" ref={statutoryMenuRef}>
+          <a
+            href="/statuatory"
+            onClick={handleStatutoryMenuToggle}
+            className="block md:inline-block text-gray-700 px-1 md:px-1 font-normal transition-all duration-200 ease-in-out"
+          >
+            <span className="inline-block min-w-[80px] text-center">Statutory</span>
+          </a>
+          {/* Statutory Dropdown */}
+          {isStatutoryMenuOpen && (
+            <div className="absolute left-0 bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+              <div className="flex flex-col space-y-2">
+                <Link
+                  href="/cm-redressal-cell"
+                  onClick={handleLinkClick}
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  CM Redressal Cell
+                </Link>
+                <Link
+                  href="https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
+                  onClick={handleLinkClick}
+                  target="_blank"
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  Corporate Social Responsibility (CSR)
+                </Link>
+
+                <Link
+                  href="/right-to-information"
+                  onClick={handleLinkClick}
+                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
+                >
+                  Right to Information (RTI)
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
 
         <Link
           href="/notifications"
@@ -125,6 +195,7 @@ const NavBar = () => {
           Login
         </Link>
       </nav>
+      {/* <NavigationMenu /> */}
     </header>
   );
 };

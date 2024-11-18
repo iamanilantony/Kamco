@@ -47,7 +47,7 @@ const FooterSection = () => {
                         <ul>
                             <li className='mb-4'><Link href="/dealers">Products</Link></li>
                             <li className='mb-4'><Link href="/dealers">Dealers</Link></li>
-                            <li className='mb-4'><Link href="/tenders">Tenders</Link></li>
+                            <li className='mb-4'><Link href="/tendors">Tenders</Link></li>
                             <li className='mb-4'><Link href="/notifications">Notifications</Link></li>
                             <li className='mb-4'><Link href="/highlights">Highlights</Link></li>
                             <li className='mb-4'><Link href="/highlights">Production</Link></li>
