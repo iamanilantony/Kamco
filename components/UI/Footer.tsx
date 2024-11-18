@@ -45,10 +45,10 @@ const FooterSection = () => {
                 <div className="grid grid-cols-2 md:grid-cols-2 gap-4 font-sans text-normal md:w-1/5 mt-8 md:mt-0">
                     <div className='mr-0 md:mr-40'>
                         <ul>
-                            <li className='mb-4 text-gray-400 text-xs'>PAGES</li>
-                            <li className='mb-4'><Link href="/dealers">Products</Link></li>
-                            <li className='mb-4'><Link href="/dealers">Dealers</Link></li>
-                            <li className='mb-4'><Link href="/tendors">Tenders</Link></li>
+                            <li className='mb-4 hover:text-gray-500 text-gray-400 text-xs'>PAGES</li>
+                            <li className='mb-4 hover:text-gray-500'><Link href="/dealers">Products</Link></li>
+                            <li className='mb-4 hover:text-gray-500'><Link href="/dealers">Dealers</Link></li>
+                            <li className='mb-4 hover:text-gray-500'><Link href="/tendors">Tenders</Link></li>
                             {/* <li className='mb-4'><Link href="/notifications">Notifications</Link></li> */}
                             {/* <li className='mb-4'><Link href="/highlights">Highlights</Link></li>
                             <li className='mb-4'><Link href="/highlights">Production</Link></li>
@@ -57,10 +57,10 @@ const FooterSection = () => {
                     </div>
                     <div>
                         <ul>
-                            <li className='mb-4 text-gray-400 text-xs'>About Us</li>
-                            <li className='mb-4'><Link href="/overview">Overview</Link></li>
+                            <li className='mb-4 hover:text-gray-500  text-gray-400 text-xs'>About Us</li>
+                            <li className='mb-4 hover:text-gray-500 '><Link href="/overview">Overview</Link></li>
                             {/* <li className='mb-4'><Link href="/overview">Company Information</Link></li> */}
-                            <li className='mb-4'><Link href="/history">History</Link></li>
+                            <li className='mb-4 hover:text-gray-500 '><Link href="/history">History</Link></li>
                             {/* <li className='mb-4'><Link href="/board-of-directors">Board of Directors</Link></li> */}
                             {/* <li className='mb-4'><Link href="/organizational-structure">Organizational Structure</Link></li>
                             <li className='mb-4'><Link href="/organizational-structure">Quality Assurance</Link></li>
