@@ -197,7 +197,7 @@ const NavBar = () => {
                 </Link>
 
                 <Link
-                  href="/right-to-information"
+                  href="/report"
                   onClick={handleLinkClick}
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
                 >
@@ -205,19 +205,11 @@ const NavBar = () => {
                 </Link>
 
                 <Link
-                  href="/right-to-information"
+                  href="/awards"
                   onClick={handleLinkClick}
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
                 >
                   Awards and Recognition
-                </Link>
-
-                <Link
-                  href="/right-to-information"
-                  onClick={handleLinkClick}
-                  className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
-                >
-                  Finance Report
                 </Link>
               </div>
             </div>
