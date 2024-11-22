@@ -23,9 +23,18 @@ const VideoTestimonialsSection = () => {
   const [slidesToShow, setSlidesToShow] = useState(3); // Default to 3 for server-side rendering
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    const updateSlidesToShow = () => {
       setSlidesToShow(window.innerWidth < 768 ? 1 : 3);
+    };
+    
+    if (typeof window !== 'undefined') {
+      updateSlidesToShow();
+      window.addEventListener('resize', updateSlidesToShow);
     }
+
+    return () => {
+      window.removeEventListener('resize', updateSlidesToShow);
+    };
   }, []);
 
   const settings = {
@@ -40,7 +49,7 @@ const VideoTestimonialsSection = () => {
 
   return (
     <div className="py-10 mt-20">
-      <h2 className="text-4xl font-normal text-center mb-8">Video Testimonials</h2>
+      <h2 className="text-4xl font-bold text-center mb-8">Video Testimonials</h2>
       <div className="max-w-8xl mx-auto mb-1 px-4">
         <Slider {...settings} className="px-4 md:px-0">
           {highlights.map((highlight, index) => (

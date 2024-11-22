@@ -19,7 +19,7 @@ export default function Home() {
 
         {/* Products Section */}
         <div className="py-10">
-          <h2 className="text-4xl font-normal text-center mb-16 py-4 underline underline-offset-[16px] decoration-[#166434]">CATEGORIES</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 py-4">CATEGORIES</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {products.categories.map((category, index) => (
               <div
@@ -51,11 +51,11 @@ export default function Home() {
           <HighlightsSection />
           <GallerySection />
           <TestimonialsSection />
-          <div className='flex'>
-            <div className='w-1/2'>
+          <div className='flex md:flex-row flex-col'>
+            <div className='w-full md:w-1/2'>
               <FAQSection />
             </div>
-            <div className='w-1/2'>
+            <div className='w-full md:w-1/2'>
               <ContactSection />
             </div>
           </div>
