@@ -15,37 +15,51 @@ const categories = [
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);  // For mobile menu
   const [isStatutoryMenuOpen, setIsStatutoryMenuOpen] = useState(false);  // For Statutory submenu
-  const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);  // For Statutory submenu
+  const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);  // For About Us submenu
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);  // For Products submenu
 
   const statutoryMenuRef = useRef<HTMLDivElement>(null); // Ref for the Statutory dropdown
-  const aboutUsRef = useRef<HTMLDivElement>(null); // Ref for the Statutory dropdown
+  const aboutUsRef = useRef<HTMLDivElement>(null); // Ref for the About Us dropdown
   const hamburgerRef = useRef<HTMLButtonElement>(null); // Ref for the hamburger button
   const productMenuRef = useRef<HTMLDivElement>(null); // Ref for the Product dropdown
 
   // Toggle mobile menu
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
-    if (isProductMenuOpen) {
-      setIsProductMenuOpen(false); // Close product menu if mobile menu opens
+    if (!isMenuOpen) {
+      setIsProductMenuOpen(false);
+      setIsStatutoryMenuOpen(false);
+      setIsAboutUsOpen(false);
     }
   };
 
   // Function to toggle Statutory menu visibility
   const handleStatutoryMenuToggle = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsStatutoryMenuOpen(!isStatutoryMenuOpen); // Toggle Statutory submenu visibility
+    setIsStatutoryMenuOpen(!isStatutoryMenuOpen);
+    if (!isStatutoryMenuOpen) {
+      setIsProductMenuOpen(false);
+      setIsAboutUsOpen(false);
+    }
   };
 
   const handleAboutUsRefToggle = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsAboutUsOpen(!isAboutUsOpen); // Toggle Statutory submenu visibility
+    setIsAboutUsOpen(!isAboutUsOpen);
+    if (!isAboutUsOpen) {
+      setIsProductMenuOpen(false);
+      setIsStatutoryMenuOpen(false);
+    }
   };
 
   // Function to toggle Products menu visibility
   const handleProductMenuToggle = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsProductMenuOpen(!isProductMenuOpen); // Toggle Products submenu visibility
+    setIsProductMenuOpen(!isProductMenuOpen);
+    if (!isProductMenuOpen) {
+      setIsStatutoryMenuOpen(false);
+      setIsAboutUsOpen(false);
+    }
   };
 
   // Function to close the Statutory and Product menu when clicking outside
@@ -57,7 +71,7 @@ const NavBar = () => {
       !hamburgerRef.current?.contains(e.target as Node)
     ) {
       setIsStatutoryMenuOpen(false); // Close the Statutory menu if click is outside
-      setIsAboutUsOpen(false); // Close the Statutory menu if click is outside
+      setIsAboutUsOpen(false); // Close the About Us menu if click is outside
       setIsProductMenuOpen(false); // Close the product menu if click is outside
     }
   };
@@ -74,15 +88,9 @@ const NavBar = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false); // Close the menu if menu is open
     }
-    if (isStatutoryMenuOpen) {
-      setIsStatutoryMenuOpen(false); // Close the statutory menu if menu is open
-    }
-    if (isProductMenuOpen) {
-      setIsProductMenuOpen(false); // Close the product menu if menu is open
-    }
-    if (isAboutUsOpen) {
-      setIsAboutUsOpen(false); // Close the product menu if menu is open
-    }
+    setIsStatutoryMenuOpen(false);
+    setIsProductMenuOpen(false);
+    setIsAboutUsOpen(false);
   };
 
   return (
@@ -127,7 +135,7 @@ const NavBar = () => {
                   <Link
                     key={index}
                     href={{ pathname: '/products', query: { category: category.slug === 'all' ? '' : category.name } }}
-                    onClick={() => handleLinkClick()} // Close the menu after selecting a category
+                    onClick={handleLinkClick} // Close the menu after selecting a category
                     className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 rounded-md p-2"
                   >
                     <img
@@ -160,25 +168,16 @@ const NavBar = () => {
           <span className="inline-block min-w-[80px] text-center">Tenders</span>
         </Link>
 
-        {/* <Link
-          href="/aboutUs"
-          onClick={handleLinkClick}
-          className="block md:inline-block text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
-        >
-          <span className="inline-block min-w-[80px] text-center">About Us</span>
-        </Link> */}
-
-             {/* About Us Dropdown */}
-             <div className="md:relative" ref={aboutUsRef}>
+        {/* About Us Dropdown */}
+        <div className="md:relative" ref={aboutUsRef}>
           <span
             onClick={handleAboutUsRefToggle}
             className="block md:inline-block cursor-pointer text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
           >
             <span className="inline-block min-w-[80px] z-40 text-center">About Us</span>
           </span>
-          {/* Statutory Dropdown */}
           {isAboutUsOpen && (
-  <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/aboutUs"
@@ -214,7 +213,6 @@ const NavBar = () => {
               </div>
             </div>
           )}
-
         </div>
 
         {/* Statutory Dropdown */}
@@ -225,9 +223,8 @@ const NavBar = () => {
           >
             <span className="inline-block min-w-[80px] z-40 text-center">Statutory</span>
           </span>
-          {/* Statutory Dropdown */}
           {isStatutoryMenuOpen && (
-  <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/cm-redressal-cell"
@@ -255,7 +252,6 @@ const NavBar = () => {
               </div>
             </div>
           )}
-
         </div>
 
         <Link
