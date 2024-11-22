@@ -1,85 +1,155 @@
-'use client';
+import Link from "next/link"
+import { Facebook, Twitter, Instagram, Youtube, Phone, Mail, MapPin } from 'lucide-react'
 
-import Link from 'next/link';
+export default function Footer() {
 
-const FooterSection = () => {
+    const footerLinks = [
+        { name: "Home", slug: '#' },
+        { name: "About us", slug: 'aboutUs' },
+        { name: "Products", slug: 'products' },
+        { name: "Strategic Initiatives", slug: 'projects' },
+        { name: "Support", slug: '#' },
+        { name: "Tenders", slug: 'tendors' },
+        { name: "Media", slug: '#' },
+    ]
     return (
-        <div className="bg-[#166434] text-white py-10 px-4">
-            {/* Newsletter Section */}
-            <div className="mb-8 bg-white text-gray-800 font-sans flex flex-col md:flex-row items-center justify-center py-8">
-                <span className='bg-black p-6 mr-0 md:mr-6 mb-4 md:mb-0'>
-                    <img src="paperclip.svg" alt="Newsletter Icon" />
-                </span>
-                <div className='mb-4 md:mb-0 md:mr-16 text-center md:text-left'>
-                    <h2 className="text-xl font-bold flex items-center mb-2 justify-center md:justify-start">
-                        Newsletter
-                    </h2>
-                    <p>Sign up for our newsletter</p>
-                </div>
-                <div className="flex w-full md:w-auto justify-center md:justify-start px-2">
-                    <input
-                        type="email"
-                        placeholder="Your email address"
-                        className="p-2 rounded-l-lg border border-gray-300 focus:outline-none w-full md:w-96"
-                    />
-                    <button className="bg-black text-white px-4 py-2 rounded-r-lg">
-                        Subscribe
-                    </button>
-                </div>
-            </div>
-
-            {/* Company Information */}
-            <div className='flex flex-col md:flex-row mt-16 justify-between'>
-                <div className="mb-8 font-normal md:w-2/5">
-                    <h2 className="text-3xl mb-4">KAMCO</h2>
-                    {/* <p className="mb-4 font-sans">
-                        KAMCO (Kerala Agro Machinery Corporation Ltd.) is a leading manufacturer of high-quality agricultural machinery, dedicated to empowering farmers with innovative and reliable equipment. With a commitment to excellence and sustainability, KAMCO supports the growth of the agricultural sector by providing advanced tools that enhance productivity and efficiency.
-                    </p> */}
-                    <p className="text-xs md:text-base mb-2 font-sans">91-484-2474301 (5 lines), 9400865666</p>
-                    <p className="text-xs md:text-base mb-2 font-sans">mail@kamcoindia.com</p>
-                    <p className='text-xs md:text-base font-sans'>KAMCO, Kerala Agro Machinery Corporation Limited</p>
-                    <p className='text-xs md:text-base font-sans'>Regd. Office: Athani - 683 585, Ernakulam Dist., Kerala State.</p>
-                </div>
-
-                {/* Navigation Links */}
-                <div className="grid grid-cols-2 md:grid-cols-2 gap-4 font-sans text-normal md:w-1/5 mt-8 md:mt-0">
-                    <div className='mr-0 md:mr-40'>
-                        <ul>
-                            <li className='mb-4 hover:text-gray-500 text-gray-400 text-xs'>PAGES</li>
-                            <li className='mb-4 hover:text-gray-500'><Link href="/dealers">Products</Link></li>
-                            <li className='mb-4 hover:text-gray-500'><Link href="/dealers">Dealers</Link></li>
-                            <li className='mb-4 hover:text-gray-500'><Link href="/tendors">Tenders</Link></li>
-                            {/* <li className='mb-4'><Link href="/notifications">Notifications</Link></li> */}
-                            {/* <li className='mb-4'><Link href="/highlights">Highlights</Link></li>
-                            <li className='mb-4'><Link href="/highlights">Production</Link></li>
-                            <li className='mb-4'><Link href="/highlights">CSR</Link></li> */}
-                        </ul>
+        <footer className="bg-[#166434] text-white">
+            <div className="container mx-auto px-4 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Company Info Section */}
+                    <div className="space-y-6">
+                        <Link href="/" className="block">
+                            <img
+                                src="/LogoMain.png"
+                                alt="KAMCO Logo"
+                                className="h-16"
+                                width={200}
+                                height={64}
+                            />
+                        </Link>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                            KAMCO was started way back in 1973 to aid farmers in their quest for higher
+                            productivity, more prosperity and greater happiness in their lives.
+                        </p>
+                        <div className="flex space-x-4">
+                            <Link href="#" className="text-white hover:text-gray-300 transition-colors">
+                                <Facebook className="h-5 w-5" />
+                                <span className="sr-only">Facebook</span>
+                            </Link>
+                            <Link href="#" className="text-white hover:text-gray-300 transition-colors">
+                                <Twitter className="h-5 w-5" />
+                                <span className="sr-only">Twitter</span>
+                            </Link>
+                            <Link href="#" className="text-white hover:text-gray-300 transition-colors">
+                                <Instagram className="h-5 w-5" />
+                                <span className="sr-only">Instagram</span>
+                            </Link>
+                            <Link href="#" className="text-white hover:text-gray-300 transition-colors">
+                                <Youtube className="h-5 w-5" />
+                                <span className="sr-only">YouTube</span>
+                            </Link>
+                        </div>
                     </div>
+
+                    {/* Main Links Section */}
                     <div>
-                        <ul>
-                            <li className='mb-4 hover:text-gray-500  text-gray-400 text-xs'>About Us</li>
-                            <li className='mb-4 hover:text-gray-500 '><Link href="/overview">Overview</Link></li>
-                            {/* <li className='mb-4'><Link href="/overview">Company Information</Link></li> */}
-                            <li className='mb-4 hover:text-gray-500 '><Link href="/history">History</Link></li>
-                            {/* <li className='mb-4'><Link href="/board-of-directors">Board of Directors</Link></li> */}
-                            {/* <li className='mb-4'><Link href="/organizational-structure">Organizational Structure</Link></li>
-                            <li className='mb-4'><Link href="/organizational-structure">Quality Assurance</Link></li>
-                            <li className='mb-4'><Link href="/manufacturing-process">Manufacturing Process</Link></li> */}
+                        <h3 className="text-lg font-semibold mb-4">Main Links</h3>
+                        <ul className="space-y-3">
+                            {footerLinks.map((item) => (
+                                <li key={item.slug}>
+                                    <Link
+                                        href={item.slug}
+                                        className="text-gray-300 hover:text-white transition-colors flex items-center"
+                                    >
+                                        <span className="mr-2">›</span>
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
-                </div>
-                <div className='font-sans mt-8 md:mt-0 md:mr-4'>
-                    <h3 className="font-bold text-center">Follow Us on</h3>
-                    <ul className="flex space-x-4 flex-row justify-center items-center mt-4 md:mt-0">
-                        <li><Link href="#"><img className='w-[25px]' src="/fb.svg" alt="Facebook" /></Link></li>
-                        <li><Link href="#"><img className='w-[25px]' src="/youtube.svg" alt="YouTube" /></Link></li>
-                        <li><Link href="#"><img className='w-[25px]' src="/instagram.svg" alt="Instagram" /></Link></li>
-                        <li><Link href="#"><img className='w-[25px]' src="/mail.svg" alt="Email" /></Link></li>
-                    </ul>
+
+                    {/* Other Links Section */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Other Links</h3>
+                        <ul className="space-y-3">
+                            {[
+                                "Career",
+                                "News & Events",
+                                "Gallery",
+                                "Downloads",
+                                "Contact",
+                            ].map((item) => (
+                                <li key={item}>
+                                    <Link
+                                        href="#"
+                                        className="text-gray-300 hover:text-white transition-colors flex items-center"
+                                    >
+                                        <span className="mr-2">›</span>
+                                        {item}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Section */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                        <div className="space-y-4">
+                            <div className="flex items-start space-x-3">
+                                <Phone className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
+                                <div>
+                                    <p>91-484-2474301 (5lines),</p>
+                                    <p>9400865666</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <Mail className="h-5 w-5 text-yellow-400 flex-shrink-0" />
+                                <Link
+                                    href="mailto:mail@kamcoindia.com"
+                                    className="hover:text-yellow-400 transition-colors"
+                                >
+                                    mail@kamcoindia.com
+                                </Link>
+                            </div>
+                            <div className="flex items-start space-x-3">
+                                <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
+                                <div className="text-sm">
+                                    <p>Kerala Agro Machinery Corporation Limited</p>
+                                    <p>Regd. Office: Athani - 683 585,</p>
+                                    <p>Ernakulam Dist., Kerala State.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
-};
 
-export default FooterSection;
+            {/* Bottom Bar */}
+            <div className="border-t border-gray-700">
+                <div className="container mx-auto px-4 py-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                        <p className="text-sm text-gray-300">
+                            © Copyright 2024 kamcoindia.com
+                        </p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-300">
+                            <Link href="#" className="hover:text-white transition-colors">
+                                Terms & Conditions
+                            </Link>
+                            <span>/</span>
+                            <Link href="#" className="hover:text-white transition-colors">
+                                Privacy Policy
+                            </Link>
+                            <span>/</span>
+                            <Link href="#" className="hover:text-white transition-colors">
+                                Sitemap
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    )
+}
+
