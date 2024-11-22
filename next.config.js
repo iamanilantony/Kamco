@@ -7,6 +7,10 @@ const nextConfig = {
   images: {
     domains: ["www.kamcoindia.com", "www.worldometers.info"],
   },
+  webpack: (config) => {
+    // You can make any custom modifications here
+    return config;
+  },
 };
 
 module.exports = withContentlayer(nextConfig);

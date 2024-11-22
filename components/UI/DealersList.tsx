@@ -33,7 +33,7 @@ export default function DealersPage() {
             {/* Dealers Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {dealers.map((dealer, index) => (
-                    <Link href={`/dealers/${dealer.id}`} key={index}>
+                    // <Link href={`/dealers/${dealer.id}`} key={index}>
                         <div className="p-6 border rounded-lg shadow-sm bg-white text-left hover:bg-[#166434] hover:text-white cursor-pointer transition duration-300 ease-in-out">
                             <div className="flex items-center mb-4">
                                 {/* <div className={`w-10 h-10 rounded-full bg-gray-300`} /> */}
@@ -42,7 +42,7 @@ export default function DealersPage() {
                             <p className={`text-sm`}>{dealer.address}</p>
                             <p className={`text-sm mt-2`}>Tel: {dealer.phone}</p>
                         </div>
-                    </Link>
+                    // </Link>
                 ))}
             </div>
         </div>

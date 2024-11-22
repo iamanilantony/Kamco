@@ -82,7 +82,7 @@ const ProductsPage = () => {
                             <div className="flex-1">
                                 <h2 className="text-lg font-semibold">{product.name}</h2>
                                 <p className="text-gray-700 text-sm mb-2">{product.description}</p>
-                                <p className="text-gray-500 text-sm">{product.piecesLeft} Pieces Left</p>
+                                {/* <p className="text-gray-500 text-sm">{product.piecesLeft} Pieces Left</p> */}
 
                                 {/* <button className="text-[#166434] font-semibold hover:underline text-sm">Details</button> */}
                             </div>
