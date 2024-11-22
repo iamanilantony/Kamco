@@ -19,7 +19,7 @@ export default function Home() {
 
         {/* Products Section */}
         <div className="py-10">
-          <h2 className="text-4xl font-bold text-center mb-16 py-4">CATEGORIES</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 py-4">Categories</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {products.categories.map((category, index) => (
               <div
