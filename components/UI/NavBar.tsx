@@ -192,7 +192,7 @@ const NavBar = () => {
                   target="_blank"
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
                 >
-                  Organization Structure
+                  Organizational Structure
                 </Link>
 
                 <Link
