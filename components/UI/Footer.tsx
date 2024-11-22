@@ -71,26 +71,17 @@ export default function Footer() {
 
                     {/* Other Links Section */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Other Links</h3>
-                        <ul className="space-y-3">
-                            {[
-                                "Career",
-                                "News & Events",
-                                "Gallery",
-                                "Downloads",
-                                "Contact",
-                            ].map((item) => (
-                                <li key={item}>
-                                    <Link
-                                        href="#"
-                                        className="text-gray-300 hover:text-white transition-colors flex items-center"
-                                    >
-                                        <span className="mr-2">›</span>
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                        <h3 className="text-lg font-semibold mb-4">Join our newsletter</h3>
+                        <div className="bg-white rounded-2xl p-2 py-2 w-fit flex items-center">
+                            <input
+                                type="text"
+                                placeholder="Enter your Email"
+                                className="text-sm ml-2 text-black border-0 focus:outline-none focus:ring-0"
+                            />
+                            <button className="text-white bg-orange-600 p-4 rounded-2xl">
+                                <img src='/right-arrow-black.svg' className="w-[15px]" />
+                            </button>
+                        </div>
                     </div>
 
                     {/* Contact Section */}
