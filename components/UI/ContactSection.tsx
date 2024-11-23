@@ -5,7 +5,7 @@ import React from 'react';
 const ContactSection = () => {
     return (
         <div>
-            <h2 className="text-4xl font-normal md:mb-4 mb-8 text-center">Connect With Us</h2>
+            <h2 className="text-4xl md:mb-4 mb-8 text-center font-bold">Connect With Us</h2>
             <div className="flex flex-col md:flex-row justify-between py-10 md:mx-20">
                 {/* Right Side - Contact Form */}
                 <div className='w-full'> {/* Adjust width for mobile */}
