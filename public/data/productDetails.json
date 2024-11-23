@@ -260,6 +260,39 @@
         ]
       },
       {
+        "id": "PR-035",
+        "title": "Cono Weeder",
+        "price": 1800,
+        "piecesLeft": 95,
+        "description": "A small, highly portable tiller designed for precise soil turning in tight spaces. Perfect for vegetable gardens and flower beds.",
+        "features": [
+          "Compact size for tight areas",
+          "Easy-start engine",
+          "Adjustable tilling depth"
+        ],
+        "idealfor": [
+          "Small garden beds",
+          "Precise soil aeration",
+          "Vegetable gardening"
+        ],
+        "blades": "Compact steel blades for controlled tilling.",
+        "gearbox": "N/A",
+        "weight": "20 lbs",
+        "image": ["/products/PR-035_2.jpg","/products/PR-035_4.jpg"],
+        "additionalDetails": [
+          "6-month warranty on parts",
+          "Blade chec and regular oilchanges required",
+          "Works wit light-duty attachments"
+        ],
+        "dealers": [
+          { "name": "MicroFarm Supplies", "rating": 4.0, "image": "/dealer15.jpg" },
+          { "name": "Compact Garden Tech", "rating": 4.2, "image": "/dealer16.jpg" }
+        ],
+        "otherProducts": [
+          "/products/PR-033.jpg", "/products/PR-036.jpg"
+        ]
+      },
+      {
         "id": "PR-036",
         "title": "Brush Cutter",
         "price": 1300,
