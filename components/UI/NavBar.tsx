@@ -126,14 +126,14 @@ const NavBar = () => {
         <div className="relative flex justify-center" ref={productMenuRef}>
           <span
             onClick={handleProductMenuToggle}
-            className=" text-gray-700 px-1 font-normal transition-all cursor-pointer duration-200 ease-in-out flex items-center"
+            className="text-gray-700 px-1 font-normal transition-all cursor-pointer duration-200 ease-in-out flex items-center"
           >
             <span className="inline-block min-w-[80px] text-center">Products</span>
             <FaChevronDown className="ml-1 text-sm" />
           </span>
           {/* Dropdown */}
           {isProductMenuOpen && (
-            <div className="absolute left-0 bg-white z-60 text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute top-full left-0 bg-white z-50 text-gray-700 w-max mt-1 rounded-lg shadow-md p-2">
               <div className="grid grid-cols-2 gap-2">
                 {categories.map((category, index) => (
                   <Link
@@ -182,7 +182,7 @@ const NavBar = () => {
             <FaChevronDown className="ml-1 text-sm" />
           </span>
           {isAboutUsOpen && (
-            <div className="absolute left-0 z-40 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute top-full left-0 z-40 md:left-auto md:right-auto bg-white text-gray-700 w-max mt-1 rounded-lg shadow-md p-2">
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/aboutUs"
@@ -230,7 +230,7 @@ const NavBar = () => {
             <FaChevronDown className="ml-1 text-sm" />
           </span>
           {isStatutoryMenuOpen && (
-            <div className="absolute z-50 left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute top-full left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-1 rounded-lg shadow-md p-2">
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/cm-redressal-cell"

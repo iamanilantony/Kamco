@@ -26,7 +26,9 @@ const GallerySection = () => {
         speed: 500,
         slidesToShow: 1, 
         slidesToScroll: 1,
-        autoplay: true
+        autoplay: true,
+        nextArrow: <img src='/right-arrow-black.svg' alt="Next" className="arrow" />,
+        prevArrow: <img src='/left-arrow-black.svg' alt="Previous" className="arrow" />,
     };
 
     return (
