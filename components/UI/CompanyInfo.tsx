@@ -26,9 +26,9 @@ const CompanyInfoPage = () => {
             </div>
             <section className='w-full p-4 md:px-8 md:pr-24 text-left overflow-auto'>
                 <div className='flex flex-col md:flex-row justify-between w-full px-0 md:px-10 items-center'>
-                    <img className="w-full md:w-3/4 md:mx-20 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0010.JPG' alt="Company Information" />
-                    <div className='w-full md:w-3/4 md:mx-20'>
-                        <p className="text-sm md:text-base">KAMCO was started way back in 1973 to aid farmers in their quest for higher productivity, more prosperity and greater happiness in their lives. KAMCO products for mechanized farming are manufactured in 5 production units. A 700-strong team of highly qualified and experienced Engineers, Professionals, and Technicians form the foundation of the continued success of KAMCO in achieving their goals. More than 250 dedicated vendors and over 80 dealers align with KAMCO in a successful partnership of providing exceptional assistance to the farming sector. No wonder KAMCO has become an acronym for Quality in the minds of hundreds of thousands of customers in India and abroad.</p>
+                    <img className="w-full md:w-3/4 md:mx-10 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0010.JPG' alt="Company Information" />
+                    <div className='w-full'>
+                        <p className="text-sm md:text-base w-full">KAMCO was started way back in 1973 to aid farmers in their quest for higher productivity, more prosperity and greater happiness in their lives. KAMCO products for mechanized farming are manufactured in 5 production units. A 700-strong team of highly qualified and experienced Engineers, Professionals, and Technicians form the foundation of the continued success of KAMCO in achieving their goals. More than 250 dedicated vendors and over 80 dealers align with KAMCO in a successful partnership of providing exceptional assistance to the farming sector. No wonder KAMCO has become an acronym for Quality in the minds of hundreds of thousands of customers in India and abroad.</p>
                     </div>
                 </div>
             </section>
@@ -59,7 +59,7 @@ const CompanyInfoPage = () => {
 
             <section className='w-full md:w-full p-4 md:px-8 md:pr-24 text-left overflow-auto'>
                 <div className='flex flex-col-reverse md:flex-row justify-between w-full px-10 items-center'>
-                    <div className='w-full md:w-3/4 mx-20'>
+                    <div className='w-full'>
                         {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">Company Information</h2> */}
                         <div className="text-sm md:text-base space-y-4">
                             <p><strong>Agricultural Evolution:</strong> Tools have advanced, making farming more efficient and predictable.</p>
@@ -74,7 +74,7 @@ const CompanyInfoPage = () => {
                         </div>
 
                     </div>
-                    <img className="w-full md:w-3/4 mx-20 h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0013.JPG' alt="Company Information" />
+                    <img className="w-full h-48 md:h-96 object-cover mb-4 rounded-lg" src='/general/DSC_0013.JPG' alt="Company Information" />
                 </div>
             </section>
 

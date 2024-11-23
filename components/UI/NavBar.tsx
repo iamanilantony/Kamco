@@ -97,7 +97,9 @@ const NavBar = () => {
   return (
     <header className="sticky md:flex md:justify-between top-0 w-full z-50 bg-white p-4 md:px-6 font-sans">
       <div className="flex justify-between items-center w-full md:w-auto">
-        <img src="/logo.png" alt="Logo" className="h-10 object-cover rounded-[8%]" />
+        <Link href='/'>
+          <img src="/logo.png" alt="Logo" className="h-10 object-cover rounded-[8%]" />
+        </Link>
         {/* Mobile Menu Toggle */}
         <button
           ref={hamburgerRef}
