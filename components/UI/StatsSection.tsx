@@ -55,7 +55,7 @@ const StatsSection = () => {
         </p>
         <p className="text-sm md:text-lg">Happy Customers</p>
       </div>
-      <div className="text-center">
+      <div className="text-center mb-4 md:mb-0">
         <p className="text-xl md:text-4xl font-bold">
           {inView ? <CountUp endValue={900} /> : '0'}
         </p>
