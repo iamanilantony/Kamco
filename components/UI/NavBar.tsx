@@ -189,7 +189,7 @@ const NavBar = () => {
                 <Link
                   href="https://www.kamcoindia.com/userfiles/Organizational%20Chart_20-12-2021(1).jpg"
                   onClick={handleLinkClick}
-                  target="_blank"
+                  // target="_blank"
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
                 >
                   Organizational Structure
