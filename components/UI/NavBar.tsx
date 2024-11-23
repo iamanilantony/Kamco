@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { FaChevronDown } from 'react-icons/fa';
 
 const categories = [
   { name: "All Products", image: "/products/PR-011.jpg", slug: "all" },
@@ -120,12 +121,13 @@ const NavBar = () => {
         </Link>
 
         {/* Products Dropdown */}
-        <div className="relative" ref={productMenuRef}>
+        <div className="relative flex justify-center" ref={productMenuRef}>
           <span
             onClick={handleProductMenuToggle}
-            className="block md:inline-block text-gray-700 px-1 font-normal transition-all cursor-pointer duration-200 ease-in-out"
+            className=" text-gray-700 px-1 font-normal transition-all cursor-pointer duration-200 ease-in-out flex items-center"
           >
             <span className="inline-block min-w-[80px] text-center">Products</span>
+            <FaChevronDown className="ml-1 text-sm" />
           </span>
           {/* Dropdown */}
           {isProductMenuOpen && (
@@ -169,15 +171,16 @@ const NavBar = () => {
         </Link>
 
         {/* About Us Dropdown */}
-        <div className="md:relative" ref={aboutUsRef}>
+        <div className="md:relative flex justify-center" ref={aboutUsRef}>
           <span
             onClick={handleAboutUsRefToggle}
-            className="block md:inline-block cursor-pointer text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
+            className="cursor-pointer text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out flex items-center"
           >
             <span className="inline-block min-w-[80px] z-40 text-center">About Us</span>
+            <FaChevronDown className="ml-1 text-sm" />
           </span>
           {isAboutUsOpen && (
-            <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute left-0 z-40 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/aboutUs"
@@ -216,15 +219,16 @@ const NavBar = () => {
         </div>
 
         {/* Statutory Dropdown */}
-        <div className="md:relative" ref={statutoryMenuRef}>
+        <div className="md:relative flex justify-center" ref={statutoryMenuRef}>
           <span
             onClick={handleStatutoryMenuToggle}
-            className="block md:inline-block cursor-pointer text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
+            className="cursor-pointer text-gray-700 z-10 px-1 font-normal transition-all duration-200 ease-in-out flex items-center"
           >
-            <span className="inline-block min-w-[80px] z-40 text-center">Statutory</span>
+            <span className="md:inline-block min-w-[80px] z-40 text-center">Statutory</span>
+            <FaChevronDown className="ml-1 text-sm" />
           </span>
           {isStatutoryMenuOpen && (
-            <div className="absolute left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
+            <div className="absolute z-50 left-0 right-0 md:left-auto md:right-auto md:mx-0 mx-auto bg-white text-gray-700 w-max mt-2 rounded-lg shadow-md p-2">
               <div className="flex flex-col space-y-2">
                 <Link
                   href="/cm-redressal-cell"
