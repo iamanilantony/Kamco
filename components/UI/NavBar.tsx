@@ -199,11 +199,11 @@ const NavBar = () => {
                 </Link>
 
                 <Link
-                  href="/report"
+                  href="/financial-report"
                   onClick={handleLinkClick}
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
                 >
-                  Finance Report
+                  Financial Report
                 </Link>
 
                 <Link
