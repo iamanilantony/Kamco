@@ -13,10 +13,8 @@ export default function Page() {
                         <Link
                             href="https://www.kamcoindia.com/userfiles/PIO_24-04-2024(1).jpg"
                             target="_blank"
-                            className="cursor-pointer hover:bg-gray-100 rounded-md p-2 block"
-                        >
-                            List of Public Information Officers
-                        </Link>
+                            className="cursor-pointer hover:bg-gray-100 rounded-md block"
+                        >List of Public Information Officers</Link>
                     </li>
                     <li>
                         Query Disposition Status (BEFORE 2020):
