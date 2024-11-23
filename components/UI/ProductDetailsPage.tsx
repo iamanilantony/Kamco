@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation';
 import CountrySelection from './AvailableCountriesButton';
 import products from '@/public/data/productDetails.json'
 import ProductImageSlider from './ProductImageSlider';
+import Link from 'next/link';
 
 const ProductDetailPage = () => {
 
@@ -36,10 +37,10 @@ const ProductDetailPage = () => {
                             {/* <span className="font-semibold">Delivery by 15 Nov, Friday</span> | Free ₹40 if ordered before 12:30 PM */}
                         </p>
                         <div className="mt-4">
-              <p
-                className="border border-green-600 rounded-md px-3 py-2 text-sm w-full md:w-1/3 text-green-600"
-              >Delivering internationally</p>
-            </div>
+                            <p
+                                className="border border-green-600 rounded-md px-3 py-2 text-sm w-full md:w-1/3 text-green-600"
+                            >Delivering internationally</p>
+                        </div>
                     </div>
                     <div className="mt-4">
                         <h3 className="text-lg font-semibold text-gray-800">Highlights</h3>
@@ -74,12 +75,16 @@ const ProductDetailPage = () => {
                         </div>
                     </div>
                     <div className="mt-6 flex space-x-4">
-                        <button className="bg-[#166434] text-white px-6 py-3 rounded-md hover:bg-[#0f4222] transition-all duration-200 text-lg">
-                            Contact Dealers
-                        </button>
+                        <Link href='/dealers'>
+                            <button className="bg-[#166434] text-white px-6 py-3 rounded-md hover:bg-[#0f4222] transition-all duration-200 text-lg">
+                                Contact Dealers
+                            </button>
+                        </Link>
+                        <Link href='/contact'>
                         <button className="bg-gray-200 text-[#166434] px-6 py-3 rounded-md hover:bg-gray-300 transition-all duration-200 text-lg">
                             Enquire Now
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>
