@@ -16,39 +16,37 @@ const CompanyInfoPage = () => {
                         <img className="w-full h-48 md:h-72 object-cover mb-4" src='/hydrophonic.jpg' alt="Hydroponic Systems" />
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Hydroponic Systems</h2>
                         <div className="p-4">
-                            <h1 className="text-2xl font-bold text-green-600 mb-4">Leading the Future of Sustainable Agriculture with Advanced Hydroponic Systems</h1>
+                            <h1 className="text-2xl font-bold text-green-600 mb-4">Leading Sustainable Agriculture</h1>
 
                             <p className="mb-4">
-                                Leveraging decades of expertise in agricultural innovation, KAMCO is now expanding its product range into hydroponic systems – an advanced, soil-free method of cultivation that offers substantial benefits for sustainable and efficient farming. Our new hydroponic solutions are engineered with the highest precision, using mineral nutrient solutions in water to cultivate a variety of high-value crops, including lettuce, spinach, herbs, tomatoes, cucumbers, leafy vegetables, and even strawberries.
+                            KAMCO is expanding into hydroponic systems—an advanced, soil-free farming method that boosts sustainability and efficiency. Using nutrient-rich water, our systems help grow crops like lettuce, spinach, herbs, tomatoes, cucumbers, and even strawberries faster and with higher yields.
                             </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Our Expertise and Capabilities in Hydroponics</h2>
+                            <h1 className="text-xl font-semibold text-indigo-800 mb-2">Our Expertise in Hydroponics</h1>
                             <p className="mb-4">
-                                KAMCO brings its extensive experience and technical knowledge to this emerging agricultural technology, providing a complete, end-to-end solution tailored to meet the needs of urban and semi-urban farmers. Our hydroponic systems are designed to:
+                            With years of experience in agriculture, KAMCO offers complete hydroponic solutions, ideal for urban and semi-urban farmers. Our systems are designed to:                            </p>
+
+                            <ul className="list-disc list-inside mb-4">
+                                <li><strong>Increase Yield & Growth Speed:</strong> Plants grow 30-50% faster and produce up to 10 times more than traditional farming. Vertical stacking optimizes space, making it perfect for cities.</li>
+                                <li><strong>Use Smart Technology:</strong> Our software and IoT systems allow real-time monitoring, automated irrigation, nutrient dosing, and lighting, making hydroponic farming easier to manage.</li>
+                                <li><strong>Promote Sustainability:</strong> Hydroponics uses less water and no soil, making it ideal for urban areas with limited land, helping maximize food production in crowded spaces.</li>
+                                <li><strong>Offer Complete Solutions:</strong> We provide everything from system setup and maintenance to expert advice and high-quality planting materials, making hydroponic farming easy and accessible.</li>
+                            </ul>
+
+                            <h1 className="text-xl font-semibold text-indigo-800 mb-2">Project Goals</h1>
+                            <p className="mb-4">
+                            KAMCO’s hydroponic systems aim to:
                             </p>
 
                             <ul className="list-disc list-inside mb-4">
-                                <li><strong>Maximize Yield and Growth Speed:</strong> By providing direct access to nutrient solutions, our systems allow plants to grow 30-50% faster than traditional methods, with yields up to 10 times higher. Vertical layering within the system optimizes space, making it ideal for urban environments where land is limited.</li>
-                                <li><strong>Leverage Cutting-Edge Software and IoT Automation:</strong> Developed by KAMCO’s R&D team, our proprietary software and IoT solutions offer real-time monitoring and control for hydroponic systems. With capabilities like automated irrigation, nutrient dosing, and lighting management, our system ensures optimal conditions and ease of use, allowing farmers to focus on production without concerns over system management.</li>
-                                <li><strong>Drive Sustainable Agriculture:</strong> We are committed to promoting sustainable agriculture by introducing hydroponic solutions in densely populated regions. With the capacity to cultivate a wide range of crops using less water and no soil, KAMCO's hydroponic systems are ideal for maximizing agricultural productivity in space-constrained urban areas.</li>
-                                <li><strong>Complete, Integrated Solutions for Farmers:</strong> Our full-service offering includes the hardware, software, installation, and maintenance of hydroponic systems, as well as access to high-quality planting materials and expert agricultural advisory services. This approach ensures seamless integration, making advanced hydroponic farming more accessible than ever.</li>
-                            </ul>
-
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Project Goals and Strategic Impact</h2>
-                            <p className="mb-4">
-                                Our hydroponic systems align with KAMCO’s broader vision of empowering farmers and fostering food security. By deploying these solutions, we aim to:
-                            </p>
-
-                            <ul className="list-disc list-inside mb-4">
-                                <li>Expand sustainable farming options in urban and semi-urban areas.</li>
-                                <li>Enhance resource efficiency for higher profitability and better yield outcomes.</li>
-                                <li>Educate communities, including institutions and educational centers, on the benefits of hydroponic farming.</li>
-                                <li>Tap into the commercial potential of urban hydroponics, creating a resilient and profitable agribusiness sector.</li>
+                                <li>Expand sustainable farming in urban areas.</li>
+                                <li>Improve resource efficiency for better profits and higher yields.</li>
+                                <li>Educate communities and institutions about hydroponic farming.</li>
+                                <li>Tap into the commercial potential of urban farming for a strong agribusiness sector.</li>
                             </ul>
 
                             <p className="mb-4">
-                                With our proven expertise, dedicated R&D, and expansive marketing and support network, KAMCO is well-positioned to lead in this transformative agricultural field, offering sustainable, profitable solutions that contribute to local food security and empower farmers. Join us in shaping the future of urban farming with KAMCO’s hydroponic solutions.
-                            </p>
+                            With KAMCO's expertise, R&D, and support network, we're ready to lead the way in sustainable, urban farming. Join us in shaping the future of agriculture with our innovative hydroponic solutions.                            </p>
                         </div>
 
                     </div>
@@ -61,19 +59,22 @@ const CompanyInfoPage = () => {
                         <div className="p-4">
                             {/* <h1 className="text-2xl font-bold text-green-600 mb-4">Night Pacha Curry Street Initiative</h1> */}
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Bringing Fresh, Healthy Produce to Kerala’s Urban Communities</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Bringing Fresh, Healthy Produce to Kerala's Cities
+</h2>
                             <p className="mb-4">
-                                As part of its commitment to socio-economic growth and the promotion of healthy lifestyles, KAMCO is launching the "Night Pacha Curry Street" project in urban areas across Kerala. This unique initiative creates vibrant night markets offering fresh, organic fruits, vegetables, and locally sourced produce, providing an accessible hub for nutritious food options in Kerala's bustling cityscapes.
+                            KAMCO is launching the Night Pacha Curry Street project to bring fresh, organic fruits, vegetables, and locally grown produce to Kerala’s urban areas. These vibrant night markets will offer easy access to healthy food while supporting local farmers and promoting sustainable farming practices.
                             </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Our Expertise and Role as a Facilitator</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO’s Role
+</h2>
                             <p className="mb-4">
-                                With decades of experience supporting agricultural advancements, KAMCO serves as a trusted facilitator for "Night Pacha Curry Street," leveraging our networks and expertise to manage the markets, integrate vendors, and create a welcoming, dynamic environment. The project also highlights various agricultural machinery beneficial for farm produce, making the space both a market and an educational platform that supports local farmers while promoting sustainable, eco-friendly practices.
-                            </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Strategic Partnerships and Community Impact</h2>
+                            With years of experience in agriculture, KAMCO will manage and organize the markets, helping connect farmers with customers and create a lively, welcoming space. The project will also showcase agricultural tools and eco-friendly farming methods, educating the community along the way.                            </p>
+
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Community Impact and Partnerships
+</h2>
                             <p className="mb-4">
-                                To bring "Pacha Curry Street" to life, KAMCO will engage with event management experts and utilize available funding through government schemes, ensuring a seamless and appealing experience for residents and tourists alike. This community-centered approach not only supports local farmers but also fosters a healthier lifestyle among Kerala’s urban population, encouraging the consumption of fresh, nutritious food.
+                            By partnering with event experts and using government funding, KAMCO aims to create an enjoyable experience for both residents and tourists. This initiative will help local farmers thrive and encourage healthier food choices for Kerala’s urban population.
                             </p>
                         </div>
 
@@ -112,26 +113,24 @@ const CompanyInfoPage = () => {
                         <img className="w-full h-48 md:h-72 object-cover mb-4" src='/kamco_factory.JPG' alt="Tractor Manufacturing" />
                         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left px-4 text-left">Tractor Manufacturing</h2>
                         <div className="p-4">
-                            <p className="text-xl font-semibold text-indigo-800 mb-2">KAMCO: Pioneering Tractor Manufacturing Through Strategic Collaboration</p>
+                            <p className="text-xl font-semibold text-indigo-800 mb-2">KAMCO's Strategic Expansion
+</p>
 
                             <p className="mb-4">
-                                Kerala Agro Machinery Corporation Ltd. (KAMCO) is poised to expand its product offerings by entering the tractor manufacturing sector, driven by our commitment to innovation and excellence in agricultural machinery. To enhance our capabilities, we are exploring strategic collaborations with leading tractor manufacturers, aiming to integrate advanced features that meet the evolving needs of farmers.
+                            KAMCO (Kerala Agro Machinery Corporation Ltd.) is entering the tractor manufacturing sector, driven by a commitment to innovation and excellence. We’re exploring partnerships with leading tractor manufacturers to integrate advanced features that meet the growing needs of farmers.
                             </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Access to Cutting-Edge Technology</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Access to Advanced Technology</h2>
                             <p className="mb-4">
-                                Through this collaboration, KAMCO will gain access to cutting-edge technology and expertise, allowing us to enhance our product offerings and improve market reach in a highly competitive and growing agricultural sector. With India’s agricultural tractor market being the largest globally, with over 800,000 units sold annually, this partnership positions KAMCO to capitalize on the rising demand for mechanization, particularly among small and marginal farmers.
-                            </p>
+                            Through these collaborations, KAMCO will gain access to cutting-edge technology, enhancing our product offerings and expanding our reach in India’s largest agricultural tractor market. With over 800,000 units sold annually, the partnership positions KAMCO to meet the increasing demand for mechanization, especially among small farmers.                            </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Meeting Market Demands</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Focusing on Market Needs</h2>
                             <p className="mb-4">
-                                Compact tractors (20-40 HP) are increasingly sought after, as more than 85% of Indian farmers operate on small landholdings. By focusing on affordable and efficient solutions for this segment, KAMCO aims to cater to the specific needs of our farmers, fostering agricultural productivity and sustainability.
-                            </p>
+                            Compact tractors (20-40 HP) are in high demand, as over 85% of Indian farmers have small landholdings. KAMCO aims to provide affordable, efficient solutions for this segment to boost productivity and sustainability.                            </p>
 
                             <h2 className="text-xl font-semibold text-indigo-800 mb-2">Long-Term Growth and Sustainability</h2>
                             <p className="mb-4">
-                                Partnering with a major tractor manufacturer will not only strengthen KAMCO’s market positioning but also facilitate entry into new markets, enhancing our competitive edge in the Indian tractor industry. Together, we can leverage our strengths to ensure long-term growth and sustainability in the agricultural machinery sector.
-                            </p>
+                            Partnering with a leading tractor manufacturer will strengthen KAMCO’s market position, open new opportunities, and ensure long-term growth and sustainability in the agricultural machinery sector. Together, we’ll help transform farming practices for a more productive future.                            </p>
                         </div>
 
                     </div>
@@ -144,32 +143,31 @@ const CompanyInfoPage = () => {
                         <div className="p-4">
 
                             <p className="mb-4">
-                                With a solid foundation in the agricultural sector, KAMCO is expanding into the seeds and planting material business as part of our commitment to deliver comprehensive solutions that drive agricultural productivity. Leveraging our expertise and extensive market reach, KAMCO is poised to become a trusted provider of high-quality seeds, planting materials, and seedlings. This venture reinforces KAMCO’s dedication to supporting the nation’s agricultural growth and sustainability.
-                            </p>
+                            Helping Farmers Grow with Quality Products
+KAMCO is expanding into the seeds and planting materials business to support agricultural growth and productivity in India. With our strong background in agriculture, we aim to provide farmers with high-quality seeds, seedlings, and planting materials, helping to improve crop yields and sustainability.                            </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Our Expertise and Capabilities</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Our Expertise  
+</h2>
                             <p className="mb-4">
-                                KAMCO’s diversification into this sector is supported by our well-established capabilities and experience in the agricultural industry. Through this new initiative, KAMCO will offer a wide range of premium-quality seeds and planting materials, selected with strict adherence to industry standards and regulatory requirements.
-                            </p>
+                            Building on years of experience, KAMCO will offer a wide range of premium seeds and planting materials that meet strict industry standards. We ensure that all products are reliable and of the highest quality.                            </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Strategic Collaborations and Sourcing</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Strategic Partnerships  
+</h2>
                             <p className="mb-4">
-                                Our operations in this field will be strengthened by collaborations with government entities, corporations, public sector undertakings (PSUs), and private firms. KAMCO will source materials both domestically and internationally, working with reputable suppliers to ensure that our products meet high standards for quality and reliability. This approach allows us to deliver robust and reliable solutions to farmers, nurseries, and agricultural organizations.
-                            </p>
+                            We collaborate with government agencies, corporations, and trusted suppliers both in India and abroad. These partnerships help us source the best materials and deliver them to farmers, nurseries, and agricultural organizations.                            </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Multiple Channels for Wide Accessibility</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Wide Accessibility  
+</h2>
                             <p className="mb-4">
-                                KAMCO’s extensive dealership network, strong ties with nurseries, and involvement in government schemes enable us to make these products accessible across the country. Through partnerships with state and central initiatives such as Navodhan, which require significant quantities of planting materials, we can reach farmers and agribusinesses directly, providing them with the resources they need to boost productivity and improve crop quality.
-                            </p>
+                            Thanks to our extensive dealer network and partnerships with government schemes like Navodhan, KAMCO ensures that high-quality seeds and planting materials are available to farmers across the country, boosting productivity and crop quality.                            </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">A Commitment to Agricultural Growth</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Commitment to Agricultural Growth  
+</h2>
                             <p className="mb-4">
-                                Our goal in entering the seeds and planting material business is to support agricultural productivity and contribute to regional and national development goals. By supplying high-quality planting materials, KAMCO will play an essential role in fostering sustainable agricultural practices, improving yield outcomes, and contributing to the success of small and large-scale farming operations alike.
-                            </p>
+                            KAMCO is dedicated to supporting farmers and promoting sustainable farming practices. By providing top-quality planting materials, we aim to help farmers of all sizes improve their yields and contribute to national agricultural development.                            </p>
 
                             <p className="mb-4">
-                                With a legacy of agricultural innovation, a reputation for quality, and an extensive network, KAMCO is well-equipped to serve as a reliable partner in the seeds and planting material sector. By combining quality products with our market expertise, KAMCO aims to support farmers, nurseries, and agricultural initiatives across the nation, fostering growth and productivity for a more sustainable future.
-                            </p>
+                            With a strong reputation for quality and a broad network, KAMCO is a trusted partner in the seeds and planting materials industry, helping farmers succeed and grow in a sustainable way.                            </p>
                         </div>
 
                     </div>
@@ -178,26 +176,26 @@ const CompanyInfoPage = () => {
                 return (
                     <div>
                         <img className="w-full h-48 md:h-72 object-cover mb-4" src='/WomanFieldwithPlants.jpg' alt="Fertilizers and Soil Health" />
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Fertilizers and Soil Health</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">KAMCO's Fertilizer Solutions
+</h2>
                         <div className="p-4">
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO’s Fertilizer Solutions: Comprehensive Support for Indian Agriculture</h2>
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Supporting Indian Agriculture
+</h2>
                             <p className="mb-4">
-                                As a public sector leader in agricultural machinery, KAMCO is expanding its expertise to include high-quality fertilizers, reinforcing our commitment to providing farmers with complete agricultural solutions. Leveraging our strong market presence and trusted dealer network, we are poised to enter the fertilizer sector through trading and manufacturing, delivering essential nutrients directly to the hands of farmers.
+                            KAMCO is expanding its expertise to include high-quality fertilizers, offering farmers comprehensive agricultural solutions. With our strong market presence and trusted dealer network, we are entering the fertilizer sector through both trading and manufacturing to deliver essential nutrients directly to farmers.                            </p>
+
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Meeting India's Fertilizer Demand
+</h2>
+                            <p className="mb-4">
+                            India is one of the largest consumers of fertilizers, with high demand for key nutrients like nitrogen (N), phosphorus (P), and potassium (K), as well as specialty and organic fertilizers for sustainable growth. KAMCO aims to meet this need by supplying fertilizers such as urea, diammonium phosphate (DAP), and complex formulations.                            </p>
+
+                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO’s Approach</h2>
+                            <p className="mb-4">
+                            KAMCO is exploring both trading and manufacturing models to supply fertilizers, addressing India’s annual consumption of 65-70 million metric tonnes. With our reputation for quality and expansive distribution network, we aim to boost crop productivity, improve soil health, and support the government’s goal to double farmers’ incomes.
                             </p>
 
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">Our Expertise and Strategic Vision</h2>
                             <p className="mb-4">
-                                India is among the largest consumers of fertilizers globally, as sustainable agricultural productivity is vital for feeding its growing population. With government support through subsidies and a focus on balanced fertilizer use, demand remains high for essential nutrients like nitrogen (N), phosphorus (P), and potassium (K), along with specialty and organic fertilizers that promote sustainable growth.
-                            </p>
-
-                            <h2 className="text-xl font-semibold text-indigo-800 mb-2">KAMCO’s Fertilizer Business Models</h2>
-                            <p className="mb-4">
-                                To serve this demand, KAMCO is exploring two business models—trading and manufacturing—tailored to supply critical fertilizers such as urea, diammonium phosphate (DAP), and complex formulations. Our goal is to meet India’s substantial need for fertilizers, which sees an annual sales volume of about 65-70 million metric tonnes, with urea accounting for nearly 60% of total consumption.
-                            </p>
-
-                            <p className="mb-4">
-                                With a reputation for quality and an expansive distribution network, KAMCO is well-positioned to support India’s agricultural sector, enhancing crop productivity and soil health while contributing to the government’s mission to double farmers' incomes. Our entry into fertilizers represents our commitment to empowering Indian farmers with the resources they need for success.
-                            </p>
+                            KAMCO’s entry into fertilizers reinforces our commitment to empowering farmers and driving sustainable agricultural growth.                            </p>
                         </div>
 
 
