@@ -8,10 +8,10 @@ export default function Page() {
 
     return (
         <div className="flex md:flex-row flex-col">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 md:my-14 my-0 px-4 md:px-0">
                 <ContactSection />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-start items-start p-6 md:mx-20 mx-4 md:my-14 bg-white rounded-lg border border-gray-200">
+            <div className="w-fit md:w-1/2 flex flex-col justify-start items-start py-4 md:px-0 px-4 md:mx-20 mx-4 my-8 md:my-14 bg-white rounded-lg border border-gray-200">
                 <h3 className="text-3xl font-bold text-gray-800 mb-6">Contact Us</h3>
                 <div className="space-y-6">
                     <div className="flex items-start space-x-4">
