@@ -56,7 +56,7 @@ const CompanyInfoPage = () => {
             case 'nightPachaCurryStreetInitiative':
                 return (
                     <div>
-                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/NightMarkets2.jpg' alt="Company Night Pacha Curry Street Initiative" />
+                        <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Night_Market.jpg' alt="Company Night Pacha Curry Street Initiative" />
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 px-4 text-left">Night Pacha Curry Street Initiative</h2>
                         <div className="p-4">
                             {/* <h1 className="text-2xl font-bold text-green-600 mb-4">Night Pacha Curry Street Initiative</h1> */}
