@@ -11,6 +11,7 @@ interface ProductProps {
 
 const ProductImageSlider = ({ product }: { product: ProductProps }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
+  const [zoomEnabled, setZoomEnabled] = useState<boolean>(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
   const sliderRef = useRef<any>(null); // Create a reference for the slider
   const zoomContainerRef = useRef<any>(null);
@@ -32,6 +33,8 @@ const ProductImageSlider = ({ product }: { product: ProductProps }) => {
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
+    if (!zoomEnabled) return;
+
     // Get the position of the mouse relative to the image
     const rect = e.currentTarget.getBoundingClientRect();
     const offsetX = e.clientX - rect.left;
@@ -44,6 +47,13 @@ const ProductImageSlider = ({ product }: { product: ProductProps }) => {
     setZoomPosition({ x, y });
   };
 
+  const handleImageToggleZoom = () => {
+    setZoomEnabled((prev) => !prev);
+    if (zoomEnabled) {
+      setZoomPosition({ x: 0, y: 0 });
+    }
+  };
+
   return (
     <div className="w-full md:w-1/2">
       <div className="relative">
@@ -53,6 +63,7 @@ const ProductImageSlider = ({ product }: { product: ProductProps }) => {
             <div key={index} className="group relative">
               <div
                 className="relative overflow-hidden"
+                onClick={handleImageToggleZoom}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => setZoomPosition({ x: 0, y: 0 })}
               >
@@ -61,11 +72,11 @@ const ProductImageSlider = ({ product }: { product: ProductProps }) => {
                   alt={product.title}
                   width={500}
                   height={300}
-                  className="product-image w-full h-auto object-cover rounded-lg transition-all duration-300"
+                  className="product-image w-full h-auto object-cover rounded-lg duration-300"
                 />
 
                 {/* Zoom Overlay Container */}
-                {zoomPosition.x !== 0 && zoomPosition.y !== 0 && (
+                {zoomEnabled && zoomPosition.x !== 0 && zoomPosition.y !== 0 && (
                   <div
                     className="zoom-overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"
                     style={{
@@ -114,8 +125,8 @@ const ProductImageSlider = ({ product }: { product: ProductProps }) => {
                 alt={`Preview ${index}`}
                 width={70}
                 height={70}
-                className={`object-cover rounded-md transition-all duration-200 transform ${
-                  currentImage === index ? 'scale-110 border-2 border-[#008C44]' : ''
+                className={`object-cover rounded-md duration-200 ${
+                  currentImage === index ? 'border-2 border-[#008C44]' : ''
                 }`}
               />
               {currentImage === index && (
