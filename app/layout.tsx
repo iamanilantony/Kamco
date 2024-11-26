@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div className="max-w-full mx-auto">
           <Head>
             <title>Kamco</title>
-            {/* <link rel="icon" href="/favicon.ico" /> */}
+            <link rel="icon" href="/LogoMain.png" />
           </Head>
            <NavBar />
           <main className="text-center">{children}</main>
