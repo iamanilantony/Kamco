@@ -6,7 +6,7 @@ const ContactSection = () => {
     return (
         <div>
             <h2 className="text-4xl md:mt-4 mb-8 text-center font-bold">Connect With Us</h2>
-            <div className="flex flex-col md:flex-row justify-between py-10 md:mx-20">
+            <div className="flex flex-col md:flex-row justify-between py-10 md:py-0 md:mx-20">
                 {/* Right Side - Contact Form */}
                 <div className='w-full'> {/* Adjust width for mobile */}
                     <div className="p-8 bg-[#166434] text-white rounded-lg shadow-lg font-sans w-full">
