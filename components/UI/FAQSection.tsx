@@ -18,11 +18,11 @@ const faqData: FAQ[] = [
   },
   {
     question: "Does Kamco provide maintenance and repair services?",
-    answer: "Yes, Kamco offers maintenance and repair services for all our products. You can contact the nearest dealer for service or request repairs through our service portal."
+    answer: "Yes, Kamco offers maintenance and repair services for all our products. You can contact the nearest dealer for service or contact kamco number or email."
   },
   {
     question: "How do I request support for my Kamco equipment?",
-    answer: "You can request support for your Kamco equipment by visiting our support page on the website. Our customer support team is available to assist you with troubleshooting, maintenance, or repairs."
+    answer: "You can request support for your Kamco equipment contacting us on our kamco number or email. Our customer support team is available to assist you with troubleshooting, maintenance, or repairs."
   },
   {
     question: "Where can I find user manuals and technical documents?",
