@@ -5,7 +5,10 @@
 @import "animate.css/animate.min.css";
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+/* font import for new page */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -18,6 +21,12 @@ body {
 }
 .inter-font {
   font-family: "Inter", sans-serif;
+}
+.exo-font {
+  font-family: "Exo 2", sans-serif;
+}
+.urbanist-font {
+  font-family: "Urbanist", sans-serif;
 }
 @layer base {
   :root {

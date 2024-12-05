@@ -38,14 +38,14 @@ const Hero = () => {
             delay={1}
             text="Empowering Farmers"
             staggerAmount={0.3}
-            className="text-left inter-font font-light text-3xl md:text-6xl"
+            className="text-left exo-font font-light text-3xl md:text-6xl"
           />
           <SplitText
             blured
             delay={1.3}
             text="Enriching The Nation"
             staggerAmount={0.3}
-            className=" mt-4 text-left inter-font font-light text-2xl md:text-6xl"
+            className=" mt-4 text-left exo-font font-light text-2xl md:text-6xl"
           />
         </div>
         <motion.div
@@ -80,9 +80,9 @@ const Hero = () => {
         {/* Stats Section */}
         <div className="pt-8 flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10">
           {/* Stats */}
-          <div className="flex justify-center lg:justify-start space-x-12 md:space-x-24 ml-4 md:ml-12">
-            <div className="text-center">
-              <h2 className="text-4xl md:text-6xl font-sans font-bold text-gray-900">
+          <div className="flex justify-center lg:justify-start space-x-12 md:space-x-20 ml-4 md:ml-12">
+            <div className="text-center ">
+              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
                 50+
               </h2>
               <p className="text-base md:text-lg font-medium text-gray-600">
@@ -90,7 +90,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-4xl md:text-6xl font-sans font-bold text-gray-900">
+              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
                 80+
               </h2>
               <p className="text-base md:text-lg font-medium text-gray-600">
@@ -98,7 +98,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-4xl md:text-6xl font-sans font-bold text-gray-900">
+              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
                 1L+
               </h2>
               <p className="text-base md:text-lg font-medium text-gray-600">
@@ -106,7 +106,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-4xl md:text-6xl font-sans font-bold text-gray-900">
+              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
                 900+
               </h2>
               <p className="text-base md:text-lg font-medium text-gray-600">
@@ -118,11 +118,11 @@ const Hero = () => {
           {/* Buttons */}
         </div>
         <div className="flex flex-col space-y-3 mt-6 md:mt-0">
-          <button className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-xl md:text-3xl font-sans">
+          <button className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-xl md:text-2xl urbanist-font">
             Register Now
           </button>
 
-          <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-xl md:text-3xl font-sans">
+          <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-xl md:text-2xl urbanist-font">
             Explore Dealers
           </button>
         </div>

@@ -65,7 +65,7 @@ const SplitText = ({
                 <span
                   className="char inline-block"
                   key={index}
-                  style={{ lineHeight: "1.3" }}
+                  style={{ lineHeight: "1.19" }}
                 >
                   {letter}{" "}
                 </span>
