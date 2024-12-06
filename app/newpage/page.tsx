@@ -4,6 +4,7 @@ import Hero from "./sections/hero";
 import Footer from "@/components/new_ui/footer";
 import Categories from "./sections/categories";
 import Highlights from "./sections/highlights";
+import Gallery from "./sections/gallery";
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
       <Hero />
       <Categories />
       <Highlights />
+      <Gallery />
       <Footer />
     </div>
   );
