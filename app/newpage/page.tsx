@@ -5,6 +5,7 @@ import Footer from "@/components/new_ui/footer";
 import Categories from "./sections/categories";
 import Highlights from "./sections/highlights";
 import Gallery from "./sections/gallery";
+import FAQsSection from "./sections/faq";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <Categories />
       <Highlights />
       <Gallery />
+      <FAQsSection />
       <Footer />
     </div>
   );
