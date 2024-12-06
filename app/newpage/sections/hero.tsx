@@ -32,20 +32,20 @@ const Hero = () => {
       />
 
       <div className="absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12 flex flex-col md:flex-row justify-between items-center">
-        <div>
+        <div className="text-center md:text-left">
           <SplitText
             blured
             delay={1}
             text="Empowering Farmers"
             staggerAmount={0.3}
-            className="text-left exo-font font-light text-3xl md:text-6xl"
+            className="exo-font font-light text-3xl md:text-6xl"
           />
           <SplitText
             blured
             delay={1.3}
             text="Enriching The Nation"
             staggerAmount={0.3}
-            className=" mt-4 text-left exo-font font-light text-2xl md:text-6xl"
+            className="mt-4 exo-font font-light text-2xl md:text-6xl"
           />
         </div>
         <motion.div
@@ -59,7 +59,7 @@ const Hero = () => {
             duration: 1,
             delay: 1.5,
           }}
-          className="text-right text-sm mt-4 md:mt-0"
+          className="text-center md:text-right text-sm mt-4 md:mt-0"
         >
           <p>Unleashing the power of innovation—tools that</p>
           <p>turn hard work into unstoppable</p>
@@ -80,36 +80,36 @@ const Hero = () => {
         {/* Stats Section */}
         <div className="pt-8 flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10">
           {/* Stats */}
-          <div className="flex justify-center lg:justify-start space-x-12 md:space-x-20 ml-4 md:ml-12">
-            <div className="text-center ">
-              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
+          <div className="flex justify-center lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
                 50+
               </h2>
-              <p className="text-base md:text-lg font-medium text-gray-600">
+              <p className="text-sm md:text-lg font-medium text-gray-600">
                 Years of <br /> Experience
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
                 80+
               </h2>
-              <p className="text-base md:text-lg font-medium text-gray-600">
+              <p className="text-sm md:text-lg font-medium text-gray-600">
                 Dealers <br /> Across Country
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
                 1L+
               </h2>
-              <p className="text-base md:text-lg font-medium text-gray-600">
+              <p className="text-sm md:text-lg font-medium text-gray-600">
                 Happy <br /> Customers
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-4xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
                 900+
               </h2>
-              <p className="text-base md:text-lg font-medium text-gray-600">
+              <p className="text-sm md:text-lg font-medium text-gray-600">
                 Skilled <br /> Manpower
               </p>
             </div>
@@ -118,11 +118,11 @@ const Hero = () => {
           {/* Buttons */}
         </div>
         <div className="flex flex-col space-y-3 mt-6 md:mt-0">
-          <button className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-xl md:text-2xl urbanist-font">
+          <button className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
             Register Now
           </button>
 
-          <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-xl md:text-2xl urbanist-font">
+          <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
             Explore Dealers
           </button>
         </div>

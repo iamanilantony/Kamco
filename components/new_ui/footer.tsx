@@ -21,7 +21,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#c5eaaf] px-8 md:px-64 py-12 font-sans">
+    <footer className="bg-[#c0eba6] px-8 md:px-[10vw] py-8 exo-font">
+      {" "}
+      {/* Reduced py-12 to py-8 */}
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-80">
           {/* Logo and Description Section */}
@@ -29,8 +31,8 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src="/new_images/logo.webp"
-                width={250}
-                height={250}
+                width={200}
+                height={150}
                 alt="logo"
                 className=""
               />
@@ -57,7 +59,9 @@ export default function Footer() {
           {/* Main Links Section */}
           <div className="flex flex-col md:flex-row gap-12">
             <div>
-              <h3 className="font-semibold text-lg mb-6">Main Links</h3>
+              <h3 className="font-semibold exo-font text-lg mb-2">
+                Main Links
+              </h3>
               <ul className="space-y-4">
                 {[
                   "About us",
@@ -80,14 +84,14 @@ export default function Footer() {
 
             {/* Newsletter Section */}
             <div>
-              <h3 className="font-semibold text-lg mb-6">
+              <h3 className="font-semibold exo-font text-lg mb-2">
                 Join our newsletter
               </h3>
-              <p className="text-sm text-gray-700 mb-4">
+              <p className="text-sm text-gray-700 mb-4 exo-font">
                 Get the latest KAMCO updates right in your inbox, join our
                 newsletter today!
               </p>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-start items-center">
                 <div className="relative flex items-center bg-black text-gray-100 px-4 py-2 rounded-full w-96">
                   <input
                     type="email"
@@ -111,7 +115,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-6 border-t border-gray-500">
+        <div className="mt-8 pt-4 border-t border-gray-500">
+          {" "}
+          {/* Reduced mt-12 to mt-8 and pt-6 to pt-4 */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-700">
               © Copyright 2024. All rights reserved

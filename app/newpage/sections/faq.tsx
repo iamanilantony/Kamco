@@ -1,8 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 // import { motion } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const FAQsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -55,9 +58,30 @@ const FAQsSection = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const ref = useRef<HTMLDivElement>(null);
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from(".innerdiv", {
+        opacity: 0,
+        y: 500,
+        ease: "power2.inOut",
+        duration: 1,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top 55%",
+          end: "bottom 55%",
+          // scrub: 1,
+          // markers: true,
+        },
+      });
+    },
+    { scope: ref }
+  );
+
   return (
-    <section className="py-12 px-4 md:px-6">
-      <div className="max-w-[80vw] mx-auto md:px-32">
+    <section ref={ref} className="py-12 px-4 md:px-6">
+      <div className="max-w-[80vw] mx-auto md:px-32 innerdiv">
         <div className="flex flex-col justify-center items-center gap-3 urbanist-font">
           <h3 className="text-xl text-[rgb(52,121,40)] leading-snug">FAQs</h3>
           <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">

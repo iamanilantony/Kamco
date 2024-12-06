@@ -14,6 +14,7 @@ const Gallery = () => {
       gsap.utils.toArray<HTMLDivElement>(".parall-img").forEach((img) => {
         const randomDuration = gsap.utils.random(0.5, 1.5);
         gsap.from(img, {
+          opacity: 0,
           y: "500px",
           duration: randomDuration,
           ease: "power2.inOut",
@@ -45,8 +46,8 @@ const Gallery = () => {
       ref={ref}
       className="my-32 flex flex-col justify-between px-6 relative gap-48"
     >
-      <button className="px-6 py-3 text-lg font-medium bg-lime-200 text-green-900 rounded-lg shadow hover:bg-lime-300 transition absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        View Gallery
+      <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        Explore Dealers
       </button>
       <div className="flex justify-between items-center">
         {Array.from({ length: 4 }).map((_, index) => (

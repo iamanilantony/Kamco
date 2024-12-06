@@ -16,14 +16,14 @@ const Navbar: React.FC = () => {
     { name: "Statutory", href: "/statutory" },
   ];
   return (
-    <nav className="bg-[#FAFFF7] py-3 px-4 md:px-64 flex items-center justify-between">
+    <nav className="bg-[#FAFFF7] py-3 px-4 xl:px-64 flex items-center justify-between">
       {/* Logo */}
       <Image
         src="/new_images/logo.webp"
         width={150}
         height={150}
         alt="logo"
-        className="ml-4 md:ml-32"
+        className="ml-4 xl:ml-32"
       />
       {/* Menu Items */}
       <div className="flex items-center justify-center">

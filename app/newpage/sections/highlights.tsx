@@ -49,8 +49,8 @@ const Highlights = () => {
 
       {/* Footer Section */}
       <div className="mt-8 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
-        <button className="px-6 py-3 text-lg font-medium bg-lime-200 text-green-900 rounded-lg shadow hover:bg-lime-300 transition">
-          View All Articles
+        <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font capitalize">
+          view all articles
         </button>
         <div className="flex items-center gap-4">
           <button className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-700 transition">
