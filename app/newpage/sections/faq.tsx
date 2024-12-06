@@ -57,7 +57,7 @@ const FAQsSection = () => {
 
   return (
     <section className="py-12 px-4 md:px-6">
-      <div className="max-w-[80vw] mx-auto">
+      <div className="max-w-[80vw] mx-auto md:px-32">
         <div className="flex flex-col justify-center items-center gap-3 urbanist-font">
           <h3 className="text-xl text-[rgb(52,121,40)] leading-snug">FAQs</h3>
           <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">

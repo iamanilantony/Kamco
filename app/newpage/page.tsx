@@ -6,6 +6,7 @@ import Categories from "./sections/categories";
 import Highlights from "./sections/highlights";
 import Gallery from "./sections/gallery";
 import FAQsSection from "./sections/faq";
+import Contact from "./sections/contact";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <Highlights />
       <Gallery />
       <FAQsSection />
+      <Contact />
       <Footer />
     </div>
   );

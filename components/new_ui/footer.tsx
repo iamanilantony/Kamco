@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   const socialLinks = [
@@ -84,18 +87,24 @@ export default function Footer() {
                 Get the latest KAMCO updates right in your inbox, join our
                 newsletter today!
               </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-4 py-2 rounded-l-full bg-white border-0 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="bg-black text-white px-4 py-2 rounded-r-full hover:bg-gray-800"
-                >
-                  <HiArrowRight size={20} />
-                </button>
+              <div className="flex justify-center items-center">
+                <div className="relative flex items-center bg-black text-gray-100 px-4 py-2 rounded-full w-96">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="flex-grow bg-transparent outline-none text-white placeholder:text-gray-400 px-3"
+                  />
+                  <motion.button
+                    whileHover={{
+                      x: 5,
+                      color: "black",
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    className="bg-[#A5F400] text-black rounded-full w-10 h-10 flex justify-center items-center"
+                  >
+                    <HiArrowRight />
+                  </motion.button>
+                </div>
               </div>
             </div>
           </div>
