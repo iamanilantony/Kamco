@@ -27,7 +27,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        className="w-full h-full object-cover rounded-2xl"
+        className="w-full h-full object-cover rounded-2xl md:rounded-none md:object-cover"
         src="/new_images/hero.webm"
       />
 
@@ -38,14 +38,14 @@ const Hero = () => {
             delay={1}
             text="Empowering Farmers"
             staggerAmount={0.3}
-            className="exo-font font-light text-3xl md:text-6xl"
+            className="exo-font font-light text-3xl max-sm:text-xl md:text-6xl"
           />
           <SplitText
             blured
             delay={1.3}
             text="Enriching The Nation"
             staggerAmount={0.3}
-            className="mt-4 exo-font font-light text-2xl md:text-6xl"
+            className="md:mt-4 exo-font font-light max-sm:text-xl text-2xl md:text-6xl"
           />
         </div>
         <motion.div
@@ -59,7 +59,7 @@ const Hero = () => {
             duration: 1,
             delay: 1.5,
           }}
-          className="text-center md:text-right text-sm mt-4 md:mt-0"
+          className="text-center md:text-right text-sm max-sm:text-xs mt-4 md:mt-0"
         >
           <p>Unleashing the power of innovation—tools that</p>
           <p>turn hard work into unstoppable</p>
@@ -70,7 +70,7 @@ const Hero = () => {
     </motion.div>,
   ];
   return (
-    <div className="flex justify-start items-center flex-col gap-2 md:min-h-[80vh]">
+    <div className="flex justify-start items-center flex-col gap-2 md:min-h-[80vh] px-4 md:px-0">
       <ImageSlider
         showDots={false}
         className="max-h-[50vh] w-full md:w-[94vw] mt-2"
@@ -117,7 +117,7 @@ const Hero = () => {
 
           {/* Buttons */}
         </div>
-        <div className="flex flex-col space-y-3 mt-6 md:mt-0">
+        <div className="flex flex-col space-y-3 mt-6 md:mt-0 px-4 md:px-0">
           <button className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
             Register Now
           </button>
