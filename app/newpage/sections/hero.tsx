@@ -27,7 +27,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        className="w-full h-full object-cover rounded-2xl md:rounded-none md:object-cover"
+        className="w-full h-full object-cover rounded-2xl md:object-cover"
         src="/new_images/hero.webm"
       />
 

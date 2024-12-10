@@ -39,7 +39,7 @@ const Highlights = () => {
             <Image
               src="/new_images/wheat.webp" // Replace with your image path
               alt="Farming Insights"
-              className="rounded-lg shadow-md object-cover w-full"
+              className="rounded-lg shadow-md object-cover w-full max-sm:h-32"
               width={800}
               height={400}
             />

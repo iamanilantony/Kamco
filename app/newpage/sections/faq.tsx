@@ -83,8 +83,10 @@ const FAQsSection = () => {
     <section ref={ref} className="py-12 px-4 md:px-6">
       <div className="max-w-[80vw] mx-auto md:px-32 innerdiv">
         <div className="flex flex-col justify-center items-center gap-3 urbanist-font">
-          <h3 className="text-xl text-[rgb(52,121,40)] leading-snug">FAQs</h3>
-          <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+          <h3 className="text-xl md:text-2xl text-[rgb(52,121,40)] leading-snug">
+            FAQs
+          </h3>
+          <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Frequently Asked Questions
           </h2>
         </div>
@@ -97,7 +99,7 @@ const FAQsSection = () => {
                   onClick={() => toggleAccordion(index)}
                 >
                   <div className="flex justify-between items-center cursor-pointer">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900">
                       {faq.title}
                     </h3>
                     <span className="text-xl font-bold">
@@ -111,7 +113,9 @@ const FAQsSection = () => {
                     activeIndex === index ? "block" : "hidden"
                   )}
                 >
-                  <p className="mt-3 inter-font text-sm">{faq.description}</p>
+                  <p className="mt-3 inter-font text-sm md:text-base">
+                    {faq.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -124,7 +128,7 @@ const FAQsSection = () => {
                   onClick={() => toggleAccordion(index + 5)}
                 >
                   <div className="flex justify-between items-center cursor-pointer">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-900">
                       {faq.title}
                     </h3>
                     <span className="text-xl font-bold">
@@ -138,7 +142,9 @@ const FAQsSection = () => {
                     activeIndex === index + 5 ? "block" : "hidden"
                   )}
                 >
-                  <p className="mt-3 inter-font text-sm">{faq.description}</p>
+                  <p className="mt-3 inter-font text-sm md:text-base">
+                    {faq.description}
+                  </p>
                 </div>
               </div>
             ))}
