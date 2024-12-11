@@ -1,11 +1,16 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useRef, useState } from "react";
-// import { motion } from "framer-motion";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useAnimation,
+  useInView,
+  AnimatePresence,
+} from "framer-motion";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const FAQsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -59,41 +64,66 @@ const FAQsSection = () => {
   };
 
   const ref = useRef<HTMLDivElement>(null);
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".innerdiv", {
-        opacity: 0,
-        y: 500,
-        ease: "power2.inOut",
-        duration: 1,
-        scrollTrigger: {
-          trigger: ref.current,
-          start: "top 55%",
-          end: "bottom 55%",
-          // scrub: 1,
-          // markers: true,
-        },
-      });
-    },
-    { scope: ref }
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.registerPlugin(ScrollTrigger);
+  //     gsap.from(".innerdiv", {
+  //       opacity: 0,
+  //       y: 500,
+  //       ease: "power2.inOut",
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: ref.current,
+  //         start: "30% 55%",
+  //         end: "bottom 55%",
+  //         // scrub: 1,
+  //         markers: true,
+  //       },
+  //     });
+  //   },
+  //   { scope: ref }
+  // );
+  const inview = useInView(ref);
+  const controls = useAnimation();
+  useEffect(() => {
+    if (inview) {
+      controls.start("visible");
+      console.log("invirew");
+    }
+  }, [inview]);
+
+  const animationVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
 
   return (
-    <section ref={ref} className="py-12 px-4 md:px-6">
+    <section ref={ref} className="my-32 px-4 md:px-6">
       <div className="max-w-[80vw] mx-auto md:px-32 innerdiv">
-        <div className="flex flex-col justify-center items-center gap-3 urbanist-font">
+        <motion.div
+          variants={animationVariants}
+          initial="hidden"
+          animate={controls}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="flex flex-col justify-center items-center gap-3 urbanist-font"
+        >
           <h3 className="text-xl md:text-2xl text-[rgb(52,121,40)] leading-snug">
             FAQs
           </h3>
           <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Frequently Asked Questions
           </h2>
-        </div>
+        </motion.div>
         <div className="flex flex-col md:flex-row gap-6 inter-font w-full">
-          <div className="flex flex-col gap-6 w-full md:w-1/2">
+          <motion.div
+            animate={controls}
+            initial="hidden"
+            variants={animationVariants}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="flex flex-col gap-6 w-full md:w-1/2"
+          >
             {faqs.slice(0, 5).map((faq, index) => (
-              <div className="flex flex-col gap-2" key={index}>
+              <motion.div layout className="flex flex-col gap-2" key={index}>
                 <div
                   className={`p-4 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]`}
                   onClick={() => toggleAccordion(index)}
@@ -107,22 +137,38 @@ const FAQsSection = () => {
                     </span>
                   </div>
                 </div>
-                <div
-                  className={cn(
-                    "p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]",
-                    activeIndex === index ? "block" : "hidden"
+                <AnimatePresence>
+                  {activeIndex === index && (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -50 }}
+                      transition={{ duration: 0.5 }}
+                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]"
+                    >
+                      <p className="mt-3 inter-font text-sm md:text-base">
+                        {faq.description}
+                      </p>
+                    </motion.div>
                   )}
-                >
-                  <p className="mt-3 inter-font text-sm md:text-base">
-                    {faq.description}
-                  </p>
-                </div>
-              </div>
+                </AnimatePresence>
+              </motion.div>
             ))}
-          </div>
-          <div className="flex flex-col gap-6 w-full md:w-1/2">
+          </motion.div>
+          <motion.div
+            animate={controls}
+            initial="hidden"
+            variants={animationVariants}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="flex flex-col gap-6 w-full md:w-1/2"
+          >
             {faqs.slice(5).map((faq, index) => (
-              <div className="flex flex-col gap-2" key={index + 5}>
+              <motion.div
+                layout
+                className="flex flex-col gap-2"
+                key={index + 5}
+              >
                 <div
                   className={`p-4 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]`}
                   onClick={() => toggleAccordion(index + 5)}
@@ -136,19 +182,25 @@ const FAQsSection = () => {
                     </span>
                   </div>
                 </div>
-                <div
-                  className={cn(
-                    "p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]",
-                    activeIndex === index + 5 ? "block" : "hidden"
+                <AnimatePresence>
+                  {activeIndex === index + 5 && (
+                    <motion.div
+                      key={index + 5}
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -50 }}
+                      transition={{ duration: 0.5 }}
+                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]"
+                    >
+                      <p className="mt-3 inter-font text-sm md:text-base">
+                        {faq.description}
+                      </p>
+                    </motion.div>
                   )}
-                >
-                  <p className="mt-3 inter-font text-sm md:text-base">
-                    {faq.description}
-                  </p>
-                </div>
-              </div>
+                </AnimatePresence>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

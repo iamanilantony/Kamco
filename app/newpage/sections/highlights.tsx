@@ -1,10 +1,10 @@
+"use client";
 import Image from "next/image";
-
-import React from "react";
+import { motion } from "framer-motion";
 
 const Highlights = () => {
   return (
-    <section className="max-w-[94vw] mx-auto px-4 md:mt-32 mt-16">
+    <section className="max-w-[94vw] mx-auto px-4 md:mt-32 mt-16 overflow-hidden">
       <div className="gap-8 items-center flex flex-col lg:flex-row">
         {/* Left Content */}
         <div className="flex flex-col lg:flex-row justify-between items-end gap-3 lg:gap-6">
@@ -17,7 +17,12 @@ const Highlights = () => {
               Farming Tips and Techniques
             </h1>
           </div>
-          <p className="text-gray-700 md:max-w-[50%] inter-font text-sm lg:text-base">
+          <motion.p
+            initial={{ x: 500, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="text-gray-700 md:max-w-[50%] inter-font text-sm lg:text-base"
+          >
             Welcome to Harvest Insights, Kamco's blog dedicated to helping
             farmers thrive. From expert advice on crop management to the latest
             innovations in agricultural machinery, we share practical tips,
@@ -28,7 +33,7 @@ const Highlights = () => {
             <span className="text-red-500 font-semibold mt-2 cursor-pointer">
               Read More
             </span>
-          </p>
+          </motion.p>
         </div>
 
         {/* Right Content */}

@@ -1,10 +1,11 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect, useRef } from "react";
 import { FaFacebook, FaYoutube, FaEnvelope } from "react-icons/fa";
 import { CiLocationOn, CiMail } from "react-icons/ci";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,12 +21,33 @@ export default function Contact() {
     console.log(formData);
   };
 
+  const ref = useRef<HTMLDivElement>(null);
+  const inview = useInView(ref);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inview) {
+      controls.start("visible");
+    }
+  }, [inview]);
+
+  const animationVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
+
   return (
-    <div>
+    <div ref={ref}>
       <div className="max-w-[94vw] mx-auto py-12 px-4 md:px-48">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Form Section */}
-          <div className="space-y-6 max-w-md mx-auto lg:mx-0 flex flex-col justify-start items-center">
+          <motion.div
+            animate={controls}
+            initial="hidden"
+            variants={animationVariants}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="space-y-6 max-w-md mx-auto lg:mx-0 flex flex-col justify-start items-center"
+          >
             <h1 className="text-3xl md:text-5xl text-center font-bold mb-1 urbanist-font">
               Connect With Us
             </h1>
@@ -73,10 +95,16 @@ export default function Contact() {
                 Submit
               </button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Map and Contact Info Section */}
-          <div className="space-y-6">
+          <motion.div
+            animate={controls}
+            initial="hidden"
+            variants={animationVariants}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="space-y-6"
+          >
             <div className="relative w-full h-[250px] rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-black/50 p-6 text-white">
                 <div className="flex flex-col items-start gap-8 inter-font">
@@ -135,7 +163,7 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
