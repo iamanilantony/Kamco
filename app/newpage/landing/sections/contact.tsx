@@ -38,7 +38,7 @@ export default function Contact() {
 
   return (
     <div ref={ref}>
-      <div className="max-w-[94vw] mx-auto py-12 px-4 md:px-48">
+      <div className="max-w-[94vw] mx-auto py-12 px-4 md:px-32">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Form Section */}
           <motion.div

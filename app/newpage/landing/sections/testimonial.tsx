@@ -145,7 +145,7 @@ const Testimonial = () => {
           speed={40}
           gradientColor="white"
           gradientWidth={50}
-          pauseOnHover={true}
+          pauseOnClick={true}
           className="flex gap-16 sm:gap-32 my-12 sm:my-24"
         >
           {testimonialCards.map((testimonial, index) => (

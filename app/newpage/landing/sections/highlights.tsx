@@ -1,11 +1,18 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Highlights = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true });
+
   return (
     <section className="max-w-[94vw] mx-auto px-4 md:mt-32 mt-16 overflow-hidden">
-      <div className="gap-8 items-center flex flex-col lg:flex-row">
+      <div
+        ref={containerRef}
+        className="gap-8 items-center flex flex-col lg:flex-row"
+      >
         {/* Left Content */}
         <div className="flex flex-col lg:flex-row justify-between items-end gap-3 lg:gap-6">
           <div className="flex flex-col urbanist-font">
@@ -19,7 +26,7 @@ const Highlights = () => {
           </div>
           <motion.p
             initial={{ x: 500, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="text-gray-700 md:max-w-[50%] inter-font text-sm lg:text-base"
           >

@@ -64,14 +64,14 @@ const Hero = () => {
             delay={1}
             text="Empowering Farmers"
             staggerAmount={0.3}
-            className="exo-font font-light text-3xl max-sm:text-xl md:text-6xl"
+            className="exo-font font-semibold text-3xl max2-sm:text-xl md:text-6xl"
           />
           <SplitText
             blured
             delay={1.3}
             text="Enriching The Nation"
             staggerAmount={0.3}
-            className="md:mt-4 exo-font font-light max-sm:text-xl text-2xl md:text-6xl"
+            className="md:mt-4 exo-font font-semibold max-sm:text-2xl text-2xl md:text-6xl"
           />
         </div>
         <motion.div
@@ -98,6 +98,7 @@ const Hero = () => {
   return (
     <div className="flex justify-start items-center flex-col gap-2 md:min-h-[80vh] px-4 md:px-0">
       <ImageSlider
+        showArrows={false}
         showDots={false}
         className="max-h-[50vh] w-full md:w-[94vw] mt-2"
         slides={slides}
