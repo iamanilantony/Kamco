@@ -2,9 +2,35 @@
 import { ImageSlider } from "@/components/new_ui/imageslider";
 import { motion } from "framer-motion";
 import SplitText from "@/components/new_ui/splittext";
+import { useScramble } from "use-scramble";
 import React from "react";
 
 const Hero = () => {
+  const scrambleProps = {
+    speed: 0.4,
+    tick: 1,
+    step: 1,
+    scramble: 18,
+    seed: 1,
+  };
+
+  const stat1 = useScramble({
+    text: "50+",
+    ...scrambleProps,
+  });
+  const stat2 = useScramble({
+    text: "80+",
+    ...scrambleProps,
+  });
+  const stat3 = useScramble({
+    text: "1L+",
+    ...scrambleProps,
+  });
+  const stat4 = useScramble({
+    text: "900+",
+    ...scrambleProps,
+  });
+
   const slides = [
     <motion.div
       initial={{
@@ -82,7 +108,10 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex justify-center lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12">
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2
+                ref={stat1.ref}
+                className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+              >
                 50+
               </h2>
               <p className="text-sm md:text-lg font-medium text-gray-600">
@@ -90,7 +119,10 @@ const Hero = () => {
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2
+                ref={stat2.ref}
+                className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+              >
                 80+
               </h2>
               <p className="text-sm md:text-lg font-medium text-gray-600">
@@ -98,7 +130,10 @@ const Hero = () => {
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2
+                ref={stat3.ref}
+                className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+              >
                 1L+
               </h2>
               <p className="text-sm md:text-lg font-medium text-gray-600">
@@ -106,7 +141,10 @@ const Hero = () => {
               </p>
             </div>
             <div className="text-center">
-              <h2 className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+              <h2
+                ref={stat4.ref}
+                className="text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+              >
                 900+
               </h2>
               <p className="text-sm md:text-lg font-medium text-gray-600">
