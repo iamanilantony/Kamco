@@ -39,16 +39,14 @@ const Highlights = () => {
         {/* Right Content */}
       </div>
       <div className="mt-8">
-        <div>
-          <div className="relative bg-red-50">
-            <Image
-              src="/new_images/wheat.webp" // Replace with your image path
-              alt="Farming Insights"
-              className="rounded-lg shadow-md object-cover w-full max-sm:h-32"
-              width={800}
-              height={400}
-            />
-          </div>
+        <div className="relative bg-red-50">
+          <Image
+            src="/new_images/wheat.webp" // Replace with your image path
+            alt="Farming Insights"
+            className="rounded-lg shadow-md object-cover w-full max-sm:h-32"
+            width={800}
+            height={400}
+          />
         </div>
       </div>
 

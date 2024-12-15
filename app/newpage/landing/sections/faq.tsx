@@ -123,7 +123,7 @@ const FAQsSection = () => {
             className="flex flex-col gap-6 w-full md:w-1/2"
           >
             {faqs.slice(0, 5).map((faq, index) => (
-              <motion.div layout className="flex flex-col gap-2" key={index}>
+              <motion.div className="flex flex-col gap-2" key={index}>
                 <div
                   className={`p-4 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]`}
                   onClick={() => toggleAccordion(index)}
@@ -137,7 +137,7 @@ const FAQsSection = () => {
                     </span>
                   </div>
                 </div>
-                <AnimatePresence>
+                <AnimatePresence mode="wait">
                   {activeIndex === index && (
                     <motion.div
                       key={index}
