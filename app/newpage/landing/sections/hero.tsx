@@ -3,7 +3,7 @@ import { ImageSlider } from "@/components/new_ui/imageslider";
 import { motion } from "framer-motion";
 import SplitText from "@/components/new_ui/splittext";
 import { useScramble } from "use-scramble";
-import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
   const scrambleProps = {
@@ -161,9 +161,9 @@ const Hero = () => {
             Register Now
           </button>
 
-          <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
+          <Link href='/newpage/dealers' className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
             Explore Dealers
-          </button>
+          </Link>
         </div>
       </div>
     </div>
