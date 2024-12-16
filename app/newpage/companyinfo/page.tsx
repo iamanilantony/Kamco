@@ -73,7 +73,7 @@ const ConpanyInfo = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="w-full px-4 md:px-32 py-6 md:py-12 space-y-8 md:space-y-12 mt-6 md:mt-12">
+    <div className="w-full py-6 md:py-12 space-y-8 md:space-y-12 mt-6 md:mt-12">
       <InfoDiv title="Company Name">
         Kerala Agro Machinery Corporation Ltd. (KAMCO) was established in the
         year 1973 as a wholly owned subsidiary of Kerala Agro Industries
@@ -256,7 +256,7 @@ const ConpanyInfo = () => {
             return (
               <motion.div className="flex flex-col gap-2" key={index}>
                 <div
-                  className="p-3 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
+                  className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
                   onClick={() => toggleAccordion(index)}
                 >
                   <div className="flex justify-between items-center cursor-pointer">
@@ -276,7 +276,7 @@ const ConpanyInfo = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -50 }}
                       transition={{ duration: 0.5 }}
-                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]"
+                      className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
                     >
                       <p className="mt-3 inter-font text-sm md:text-base">
                         {faq.description}
@@ -293,7 +293,7 @@ const ConpanyInfo = () => {
       <InfoDiv title="Directory of Employee">
         <motion.div className="flex flex-col gap-2">
           <div
-            className="p-3 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
+            className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
             onClick={() => setIsActive(!isActive)}
           >
             <div className="flex justify-between items-center cursor-pointer">
@@ -310,7 +310,7 @@ const ConpanyInfo = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
-                className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]"
+                className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
               >
                 <p className="mt-3 inter-font text-sm md:text-base">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.

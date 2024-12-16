@@ -64,14 +64,14 @@ const Hero = () => {
             delay={1}
             text="Empowering Farmers"
             staggerAmount={0.3}
-            className="exo-font font-semibold text-3xl max2-sm:text-xl md:text-6xl"
+            className="exo-font max-sm:font-semibold text-3xl max-sm:text-2xl md:text-6xl"
           />
           <SplitText
             blured
             delay={1.3}
             text="Enriching The Nation"
             staggerAmount={0.3}
-            className="md:mt-4 exo-font font-semibold max-sm:text-2xl text-2xl md:text-6xl"
+            className="md:mt-4 exo-font max-sm:font-semibold text-left max-sm:text-2xl text-2xl md:text-6xl"
           />
         </div>
         <motion.div

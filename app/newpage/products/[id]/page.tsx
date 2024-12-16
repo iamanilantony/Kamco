@@ -1,9 +1,7 @@
 "use client";
 
-import { ChevronsUpDownIcon, CircleCheck, ShieldCheck } from "lucide-react";
+import { CircleCheck, ShieldCheck } from "lucide-react";
 import { VscTools } from "react-icons/vsc";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon } from "lucide-react";
 
 import React, { useState } from "react";
 import { Button } from "@/components/UI/button";
@@ -53,7 +51,6 @@ const ProductInfo = () => {
     "Rear Debris Shield: The rear debris shield effectively prevents soil and debris from being thrown backward, minimizing soil erosion and creating a cleaner working environment. This feature also helps to protect the operator from flying debris, enhancing safety and comfort during operation.",
   ];
   const models = ["KMB200"];
-  const [selectedModel, setSelectedModel] = useState(models[0]);
 
   return (
     <div className="flex flex-col gap-8 justify-center items-center w-full urbanist-font p-8 md:p-16 lg:p-32">
@@ -125,7 +122,7 @@ const ProductInfo = () => {
             </Button>
           </div>
         </div>
-        <p className="text-black inter-font">
+        <p className="text-black inter-font text-lg">
           The KAMCO Power Tiller is a robust and efficient agricultural tool
           designed to simplify farming tasks. It's a versatile machine that can
           handle a variety of field operations, from tilling to ploughing and
@@ -160,7 +157,7 @@ const ProductInfo = () => {
         </div>
         <div className="space-y-12 md:w-1/2">
           <h1 className="text-3xl font-bold">Additional Features</h1>
-          <ul className="list-disc pl-5 space-y-6 text-black">
+          <ul className="list-disc pl-5 space-y-6 text-black text-lg">
             {additionalFeatures.map((feature, index) => (
               <li key={index} className="inter-font">
                 {feature}
@@ -172,26 +169,33 @@ const ProductInfo = () => {
       <hr className="w-full h-[2px] bg-black" />
       <div className="w-full space-y-12 ">
         <h1 className="text-3xl font-bold">Product Specifications</h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-4 gap-8 md:gap-y-12">
+        <ul className="flex flex-col space-y-4">
           {specs.map((spec, index) => (
-            <div key={index}>
-              <p className="font-medium text-normal flex flex-col">
+            <li
+              key={index}
+              className="flex flex-col justify-start gap-1 border-gray-300 "
+            >
+              <p className="font-semibold text-lg flex items-center gap-3">
+                {" "}
+                <div className="rounded-full h-2 w-2 bg-black"></div>
                 {spec.label}
               </p>
-              <div className="inter-font mt-2 font-bold text-xl">
+              <div className="flex items-center pl-3">
                 {spec.value.split("|").map((item) => (
-                  <p>{item}</p>
+                  <p key={`${index}-${item}`} className="mr-4">
+                    {item}
+                  </p>
                 ))}
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <hr className="w-full h-[2px] bg-black" />
 
       <div className="w-full space-y-4">
         <h1 className="text-3xl font-bold">International Delivery</h1>
-        <p className="inter-font">
+        <p className="inter-font text-lg">
           Experience the power and efficiency of the KAMCO Power Tiller, now
           available for international delivery. Whether you're a farmer in the
           heartland of America, the fertile fields of Europe, or the diverse

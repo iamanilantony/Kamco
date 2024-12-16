@@ -22,14 +22,14 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-[#FAFFF7] py-3 px-4 xl:px-64 flex items-center justify-between"
+      className=" py-3 px-8  flex items-center justify-between mx-auto max-w-3xl md:max-w-6xl xl:max-w-7xl"
     >
       <Image
         src="/new_images/logo.webp"
         width={150}
         height={150}
         alt="logo"
-        className="ml-4 max-sm:ml-0 xl:ml-32"
+        className=""
       />
       <div className="flex items-center justify-center">
         {/* Desktop Menu */}
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
         </AnimatePresence>
 
         {/* Rest of the buttons */}
-        <div className="flex md:gap-4 ml-8">
+        <div className="flex md:gap-4 max-sm:gap-1 ml-8">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

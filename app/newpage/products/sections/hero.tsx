@@ -26,13 +26,13 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="min-h-screen flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-12 py-8 bgr">
+    <div className="min-h-screen flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-16 py-8">
       <Image
         src="/new_images/products/heroimage.webp"
         alt="hero"
         width={1200}
         height={1200}
-        className="object-fill absolute h-full w-full top-0 left-0"
+        className="object-cover absolute h-full w-full top-0 left-0"
         draggable={false}
       />
       <div className="container text-white z-10 w-full md:w-1/2 space-y-6 md:space-y-12 p-4 md:p-0 h-full">
