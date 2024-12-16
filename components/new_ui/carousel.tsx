@@ -35,14 +35,14 @@ export default function Carroussel(props: CarouselProps) {
 
   return (
     <div style={{ width: "100%", height: "100%", margin: props.margin }}>
-      <Carousel
+      {/* <Carousel
         slides={cards}
         //@ts-ignore
         goToSlide={goToSlide}
         offsetRadius={offsetRadius}
         showNavigation={showArrows}
         animationConfig={config.default} // Changed from config.gentle
-      />
+      /> */}
     </div>
   );
 }
