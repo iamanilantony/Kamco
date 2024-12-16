@@ -9,10 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Products", href: "/newpage/Products" },
-    { name: "Strategic Initiatives", href: "/newpage/strategicinitiatives" },
-    { name: "Tenders", href: "/newpage/Tenders" },
+    { name: "Home", href: "/newpage" },
+    { name: "Products", href: "/newpage/products" },
+    { name: "Strategic Initiatives", href: "/newpage/projects" },
+    { name: "Tenders", href: "/newpage/tendors" },
     { name: "About Us", href: "/newpage/about" },
     { name: "Statutory", href: "/newpage/statutory" },
   ];
