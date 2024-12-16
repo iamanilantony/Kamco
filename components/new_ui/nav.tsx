@@ -10,11 +10,11 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Products", href: "/Products" },
-    { name: "Strategic Initiatives", href: "/strategicinitiatives" },
-    { name: "Tenders", href: "/Tenders" },
-    { name: "About Us", href: "/about" },
-    { name: "Statutory", href: "/statutory" },
+    { name: "Products", href: "/newpage/Products" },
+    { name: "Strategic Initiatives", href: "/newpage/strategicinitiatives" },
+    { name: "Tenders", href: "/newpage/Tenders" },
+    { name: "About Us", href: "/newpage/about" },
+    { name: "Statutory", href: "/newpage/statutory" },
   ];
 
   return (
