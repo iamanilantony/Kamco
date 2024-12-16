@@ -105,7 +105,7 @@ const ProductInfo = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Power Tillers
             </h2>
-            <select className="border border-gray-300 p-2 rounded w-full md:w-auto">
+            <select className="border h-12 border-gray-300 p-2 rounded w-full md:w-auto bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-150 ease-in-out shadow-sm">
               <option value="KMB200">KMB200</option>
               {/* Add more options as needed */}
             </select>
@@ -169,27 +169,20 @@ const ProductInfo = () => {
       <hr className="w-full h-[2px] bg-black" />
       <div className="w-full space-y-12 ">
         <h1 className="text-3xl font-bold">Product Specifications</h1>
-        <ul className="flex flex-col space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-4 gap-8 md:gap-y-12">
           {specs.map((spec, index) => (
-            <li
-              key={index}
-              className="flex flex-col justify-start gap-1 border-gray-300 "
-            >
-              <p className="font-semibold text-lg flex items-center gap-3">
-                {" "}
-                <div className="rounded-full h-2 w-2 bg-black"></div>
+            <div key={index}>
+              <p className="font-medium text-normal flex flex-col">
                 {spec.label}
               </p>
-              <div className="flex items-center pl-3">
+              <div className="inter-font mt-2 font-bold text-xl">
                 {spec.value.split("|").map((item) => (
-                  <p key={`${index}-${item}`} className="mr-4">
-                    {item}
-                  </p>
+                  <p>{item}</p>
                 ))}
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
       <hr className="w-full h-[2px] bg-black" />
 

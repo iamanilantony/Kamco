@@ -17,46 +17,59 @@ const FAQsSection = () => {
 
   const faqs = [
     {
-      title: "How can I become a dealer of KAMCO?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "How to locate the nearest dealer?",
+      title:
+        "Is KAMCO the only government company in agriculture mechanization in India?",
       description:
-        'To find the nearest Kamco dealer, use our "Explore All Dealers" feature on the website. This tool lets you easily locate dealers by filtering based on locality or state. You can also sort results to find the most convenient option. This way, you can quickly connect with a dealer nearby to explore our products in person and get expert advice.',
+        "Yes, KAMCO is a prominent government company in India specializing in agricultural mechanization. It operates under the Government of Kerala and is dedicated to providing high-quality machinery for farmers.",
     },
     {
-      title: "Does Kamco provide maintenance and repair services?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "How do I request support for my Kamco equipment?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "Where can I find user manuals and technical documents?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "How can I become a dealer of KAMCO?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "How to locate the nearest dealer?",
+      title:
+        "Does KAMCO offer a wide range of products for different farming needs?",
       description:
-        'To find the nearest Kamco dealer, use our "Explore All Dealers" feature on the website. This tool lets you easily locate dealers by filtering based on locality or state. You can also sort results to find the most convenient option. This way, you can quickly connect with a dealer nearby to explore our products in person and get expert advice.',
+        "Yes, KAMCO provides a diverse range of products tailored to the varying requirements of farmers, such as the type of land, crops, and specific farming practices.",
     },
     {
-      title: "Does Kamco provide maintenance and repair services?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title:
+        "Will KAMCO assist farmers with SMAM registration and other related procedures?",
+      description:
+        "Yes, KAMCO offers support and guidance for farmers to complete SMAM (Sub-Mission on Agricultural Mechanization) registration and other government procedures required for effective farming practices.",
     },
     {
-      title: "How do I request support for my Kamco equipment?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title:
+        "What are the key benefits of choosing KAMCO’s agricultural machinery?",
+      description:
+        "KAMCO’s machinery is known for its durability, efficiency, and affordability. Additionally, the company ensures reliable after-sales service and readily available spare parts.",
     },
     {
-      title: "Where can I find user manuals and technical documents?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "How can I become a registered dealer for KAMCO?",
+      description:
+        "Dealers can apply by filling out the online registration form available on KAMCO’s website. The application will be reviewed, and selected dealers will be contacted for further steps.",
+    },
+    {
+      title: "What are the eligibility criteria to become a KAMCO dealer?",
+      description:
+        "To become a dealer, applicants must meet specific financial, infrastructure, and experience criteria outlined in the dealer registration guidelines available on the website.",
+    },
+    {
+      title:
+        "Does KAMCO provide training or marketing support for its dealers?",
+      description:
+        "Yes, KAMCO offers training sessions for dealers to familiarize them with the products and provides marketing materials to support promotional efforts.",
+    },
+    {
+      title: "How can I register as a supplier with KAMCO?",
+      description:
+        "Prospective suppliers can submit their applications through the Supplier Registration Form on the website, along with the required documents.",
+    },
+    {
+      title: "What are the key criteria for supplier registration?",
+      description:
+        "Suppliers must demonstrate reliability, financial stability, and prior experience in supplying quality materials as per KAMCO’s standards. Detailed requirements are listed on the registration page.",
+    },
+    {
+      title: "Does KAMCO allow MSME suppliers to participate in tenders?",
+      description:
+        "Yes, KAMCO encourages MSME suppliers to participate in tenders and provides equal opportunities in accordance with government procurement policies.",
     },
   ];
   const toggleAccordion = (index: number) => {
@@ -99,7 +112,7 @@ const FAQsSection = () => {
 
   return (
     <section ref={ref} className="my-32 px-4 md:px-6">
-      <div className="max-w-[80vw] mx-auto md:px-32 innerdiv">
+      <div className=" mx-auto md:px-32 innerdiv space-y-12">
         <motion.div
           variants={animationVariants}
           initial="hidden"
@@ -125,10 +138,10 @@ const FAQsSection = () => {
             {faqs.slice(0, 5).map((faq, index) => (
               <motion.div className="flex flex-col gap-2" key={index}>
                 <div
-                  className={`p-4 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]`}
+                  className={`p-4 md:p-6 md:px-12 rounded-lg transition-colors max-w-full bg-[#fffbe6] min-h-[110px] flex justify-start items-center`}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <div className="flex justify-between items-center cursor-pointer">
+                  <div className="flex justify-between items-center gap-3 cursor-pointer w-full">
                     <h3 className="text-lg md:text-xl font-semibold text-gray-900">
                       {faq.title}
                     </h3>
@@ -145,7 +158,7 @@ const FAQsSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -50 }}
                       transition={{ duration: 0.5 }}
-                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]"
+                      className="p-4 md:p-6 md:px-12 rounded-lg bg-[#c0eba6] h-40"
                     >
                       <p className="mt-3 inter-font text-sm md:text-base">
                         {faq.description}
@@ -164,16 +177,12 @@ const FAQsSection = () => {
             className="flex flex-col gap-6 w-full md:w-1/2"
           >
             {faqs.slice(5).map((faq, index) => (
-              <motion.div
-                layout
-                className="flex flex-col gap-2"
-                key={index + 5}
-              >
+              <motion.div className="flex flex-col gap-2" key={index + 5}>
                 <div
-                  className={`p-4 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6]`}
+                  className={`p-4 md:p-6 md:px-20 rounded-lg transition-colors max-w-full bg-[#fffbe6] min-h-[110px] flex justify-start items-center`}
                   onClick={() => toggleAccordion(index + 5)}
                 >
-                  <div className="flex justify-between items-center cursor-pointer">
+                  <div className="flex justify-between items-center gap-3 cursor-pointer w-full">
                     <h3 className="text-lg md:text-xl font-semibold text-gray-900">
                       {faq.title}
                     </h3>
@@ -190,7 +199,7 @@ const FAQsSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -50 }}
                       transition={{ duration: 0.5 }}
-                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6]"
+                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6] h-40"
                     >
                       <p className="mt-3 inter-font text-sm md:text-base">
                         {faq.description}
