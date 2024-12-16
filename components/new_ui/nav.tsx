@@ -14,7 +14,8 @@ const Navbar: React.FC = () => {
     { name: "Strategic Initiatives", href: "/newpage/projects" },
     { name: "Tenders", href: "/newpage/tendors" },
     { name: "About Us", href: "/newpage/about" },
-    { name: "Statutory", href: "/newpage/statutory" },
+    { name: "Statutory", href: "#" },
+    { name: "Connect", href: "#" },
   ];
 
   return (

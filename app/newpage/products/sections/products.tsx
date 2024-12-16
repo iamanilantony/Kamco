@@ -1,5 +1,6 @@
 import { Button } from "@/components/UI/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const ProductsCard = ({
@@ -11,6 +12,7 @@ const ProductsCard = ({
 }) => {
   return (
     <div className="overflow-hidden  w-full sm:w-[calc(50vw-30px)] md:w-[calc(25vw-85px)] relative h-80 bg-white rounded-xl border border-[#5B5B5B] p-4">
+      <Link href={'/newpage/products/2'}>
       <h1 className="text-xl font-bold mt-1 z-10 relative text-left w-full">
         {title}
       </h1>
@@ -20,7 +22,8 @@ const ProductsCard = ({
         src={imgPath}
         alt={title}
         className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 "
-      />
+        />
+        </Link>
     </div>
   );
 };
@@ -84,7 +87,7 @@ const Products = () => {
           className="w-full border-0 focus:ring-0 focus:outline-none"
         />
       </div>
-      <div className="flex flex-wrap gap-4 md:gap-12 pt-8 pb-32">
+      <div className="flex flex-wrap gap-4 md:gap-12 pt-8 pb-32 cursor-pointer">
         {products.map((product, index) => (
           <ProductsCard
             key={index}
