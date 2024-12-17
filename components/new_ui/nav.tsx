@@ -51,7 +51,7 @@ const Navbar = () => {
     initial={{ y: -100 }}
     animate={{ y: 0 }}
     transition={{ duration: 0.5 }}
-    className="py-3 px-8 flex items-center justify-between mx-auto max-w-3xl md:max-w-6xl xl:max-w-7xl fixed top-0 left-0 right-0 z-20"
+    className="py-3 px-8 flex items-center justify-between mx-auto max-w-3xl md:max-w-6xl xl:max-w-7xl"
   >
     {/* Logo */}
     <Image
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
                   <li>
                     <Link
-                      href="/newpage/about/team"
+                      href="/newpage/companyinfo"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       Company info
@@ -103,7 +103,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/newpage/about/vision"
+                      href="https://www.kamcoindia.com/userfiles/Organizational%20Chart_20-12-2021(1).jpg"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       Organizational Structure
@@ -111,7 +111,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/newpage/about/vision"
+                      href="/financial-report"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       Financial Report
@@ -119,7 +119,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href="/newpage/about/vision"
+                      href="/awards"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       Awards & Recognitions
