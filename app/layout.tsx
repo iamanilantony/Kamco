@@ -5,7 +5,7 @@ import Head from "next/head";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FooterSection from "@/components/UI/Footer";
-import NavBar from "@/components/UI/NavBar";
+// import NavBar from "@/components/UI/NavBar";
 import { NavigationMenu } from "@/components/UI/navigation-menu";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <title>Kamco</title>
             <link rel="icon" href="/LogoMain.png" />
           </Head>
-          {/* <NavBar />
+           {/* <NavBar />
           <main className="text-center">{children}</main>
           <FooterSection/> */}
           {children}
