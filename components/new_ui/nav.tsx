@@ -97,6 +97,7 @@ const Navbar = () => {
                     <Link
                       href="/newpage/companyinfo"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       Company info
                     </Link>
@@ -105,6 +106,7 @@ const Navbar = () => {
                     <Link
                       href="https://www.kamcoindia.com/userfiles/Organizational%20Chart_20-12-2021(1).jpg"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       Organizational Structure
                     </Link>
@@ -113,6 +115,7 @@ const Navbar = () => {
                     <Link
                       href="/financial-report"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       Financial Report
                     </Link>
@@ -121,6 +124,7 @@ const Navbar = () => {
                     <Link
                       href="/awards"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       Awards & Recognitions
                     </Link>
@@ -135,6 +139,7 @@ const Navbar = () => {
                       <Link
                         href="/newpage/statutory/policies"
                         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        onClick={() => setActiveDropdown(null)}
                       >
                         CM Redressal Cell
                       </Link>
@@ -143,6 +148,7 @@ const Navbar = () => {
                       <Link
                         href="/newpage/statutory/reports"
                         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        onClick={() => setActiveDropdown(null)}
                       >
                         Corporate Social Responsibility (CSR)
                       </Link>
@@ -151,6 +157,7 @@ const Navbar = () => {
                       <Link
                         href="/newpage/statutory/reports"
                         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                        onClick={() => setActiveDropdown(null)}
                       >
                         Right to Information (RTI)
                       </Link>
@@ -164,6 +171,7 @@ const Navbar = () => {
                     <Link
                       href="/newpage/connect/contact"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       Contact Us
                     </Link>
@@ -172,6 +180,7 @@ const Navbar = () => {
                     <Link
                       href="/newpage/connect/support"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       Support
                     </Link>

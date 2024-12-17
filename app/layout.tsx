@@ -4,9 +4,10 @@ import { Analytics } from "@/components/analytics";
 import Head from "next/head";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import FooterSection from "@/components/UI/Footer";
 // import NavBar from "@/components/UI/NavBar";
 import { NavigationMenu } from "@/components/UI/navigation-menu";
+import Navbar from "@/components/new_ui/nav";
+import Footer from "@/components/new_ui/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,17 +24,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
+        className={`antialiased bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <div className="max-w-full mx-auto">
           <Head>
             <title>Kamco</title>
             <link rel="icon" href="/LogoMain.png" />
           </Head>
-           {/* <NavBar />
+          <Navbar />
           <main className="text-center">{children}</main>
-          <FooterSection/> */}
-          {children}
+          <Footer />
         </div>
         <Analytics />
       </body>
