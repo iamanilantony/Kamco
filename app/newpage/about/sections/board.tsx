@@ -61,7 +61,7 @@ const BoardOfDirectors = () => {
       <h2 className="text-5xl font-bold text-center mb-6">
         Board of Directors
       </h2>
-      <div className="flex flex-col gap-16 px-12">
+      <div className="flex flex-col gap-16 md:px-12">
         <div className="flex flex-col gap-5 mx-auto md:flex-row md:gap-48">
           {[directors[0], directors[1]].map((item, i) => {
             return (
@@ -81,7 +81,7 @@ const BoardOfDirectors = () => {
             );
           })}
         </div>
-        <div className="grid grid-cols-1 gap-5 gap-y-16 mx-auto sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-5 gap-y-16 mx-auto sm:grid-cols-2 md:grid-cols-4">
           {directors.slice(2).map((item, i) => {
             return (
               <div key={i} className="flex flex-col items-center gap-2">

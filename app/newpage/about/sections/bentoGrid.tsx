@@ -74,8 +74,8 @@ const BentoGrid = () => {
   ];
 
   return (
-    <div className="p-4 md:px-16 bg-red-50 mt-32">
-      <div className="grid max-sm:flex max-sm:flex-col grid-rows-3 grid-cols-5 md:grid-rows-3 gap-4 min-h-screen">
+    <div className="p-4 md:px-16 mt-32">
+      <div className="grid max-sm:flex max-sm:flex-col grid-rows-3 grid-cols-5 md:grid-rows-3 gap-4 gap-x-3 min-h-screen">
         {cards.map((card, index) => (
           <div
             key={index}

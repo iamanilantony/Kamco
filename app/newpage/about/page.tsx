@@ -4,6 +4,7 @@ import Facilities from "./sections/facilities";
 import BoardOfDirectors from "./sections/board";
 import BentoGrid from "./sections/bentoGrid";
 import Journy from "./sections/journy";
+import Awards from "./sections/awards";
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
       <Hero />
       <BentoGrid />
       <Journy />
+      <Awards />
       <Facilities />
       <BoardOfDirectors />
     </>
