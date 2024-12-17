@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="px-4 py-8 md:px-8 md:py-16">
+    <div className="px-4 py-8 md:px-16 md:py-16">
       <div className="w-full flex flex-col justify-end items-start text-white bg-[url('/new_images/about/heroImage.webp')] bg-cover bg-center h-full min-h-[50vh] rounded-3xl">
         <div className="text-left p-8 md:p-16 md:py-24 space-y-4 md:space-y-6 max-w-[calc(90vw-2rem)] md:max-w-[calc(90vw-3rem)]">
           <h1 className="text-2xl md:text-5xl font-bold mb-1 urbanist-font">

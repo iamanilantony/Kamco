@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <Hero />
-      {/* <BentoGrid /> */}
+      <BentoGrid />
       <Journy />
       <Facilities />
       <BoardOfDirectors />

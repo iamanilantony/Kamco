@@ -57,7 +57,7 @@ const BoardOfDirectors = () => {
 
   const placeholderImage = "https://via.placeholder.com/150";
   return (
-    <div className="p-8 space-y-16">
+    <div className="p-8 space-y-16 mt-20">
       <h2 className="text-5xl font-bold text-center mb-6">
         Board of Directors
       </h2>
