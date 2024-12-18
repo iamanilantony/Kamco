@@ -21,7 +21,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#c0eba6] px-8 md:px-[10vw] py-8 exo-font">
+    <footer
+      id="footer"
+      className="bg-[#c0eba6] px-8 md:px-[10vw] py-8 exo-font"
+    >
       {" "}
       {/* Reduced py-12 to py-8 */}
       <div className="container mx-auto">

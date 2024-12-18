@@ -14,7 +14,7 @@ const Highlights = () => {
         className="gap-8 items-center flex flex-col lg:flex-row"
       >
         {/* Left Content */}
-        <div className="flex flex-col lg:flex-row justify-between items-end gap-3 lg:gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-end gap-3 lg:gap-6 text-left">
           <div className="flex flex-col urbanist-font">
             <h3 className="text-xl text-[rgb(52,121,40)] leading-snug">
               Highlights
