@@ -3,7 +3,7 @@ import { ImageSlider } from "@/components/new_ui/imageslider";
 import { motion } from "framer-motion";
 import SplitText from "@/components/new_ui/splittext";
 import { useScramble } from "use-scramble";
-import Link from "next/link";
+import Link from 'next/link';
 
 const Hero = () => {
   const scrambleProps = {
@@ -157,11 +157,10 @@ const Hero = () => {
           {/* Buttons */}
         </div>
         <div className="flex flex-col space-y-3 mt-6 md:mt-0 px-4 md:px-0">
-          <button className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
-            Register Now
-          </button>
-
-          <Link href='/newpage/dealers' className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-green-700 text-lg md:text-2xl urbanist-font">
+          <Link href='https://www.kamcoindia.com/dealers' className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-[#3b6631] text-lg md:text-2xl urbanist-font cursor-pointer z-10 transition-all duration-300 ease-in-out">
+          Register Now
+          </Link>
+          <Link href='/dealers' className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-[#beff96] text-lg md:text-2xl urbanist-font cursor-pointer z-10 transition-all duration-300 ease-in-out">
             Explore Dealers
           </Link>
         </div>
