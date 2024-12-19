@@ -17,7 +17,7 @@ const ProductsCard = ({
 }) => {
   return (
     <div className="overflow-hidden w-full sm:w-[calc(50vw-30px)] md:w-[calc(25vw-85px)] relative h-80 bg-white rounded-xl border border-[#5B5B5B] p-4 cursor-pointer group transition-all duration-300 ease-in-out hover:shadow-lg hover:translate-y-[-5px]">
-      <Link href={`/newpage/products/${codeName}`}>
+      <Link href={`/products/${codeName}`}>
         <h1 className="text-xl font-bold mt-1 z-10 relative text-left w-full transition-colors duration-300 ease-in-out group-hover:text-[#3b6631]">
           {title}
         </h1>

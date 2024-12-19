@@ -69,9 +69,9 @@ export default function Footer() {
                 <div className="mr-6">
                   <ul className="space-y-4">
                     {[
-                      { id: '1', title: "About us", href: '/newpage/about' },
-                      { id: '2', title: "Products", href: '/newpage/products' },
-                      { id: '3', title: "Strategic Initiatives", href: '/newpage/projects' },
+                      { id: '1', title: "About us", href: '/about' },
+                      { id: '2', title: "Products", href: '/products' },
+                      { id: '3', title: "Strategic Initiatives", href: '/projects' },
                       { id: '4', title: "Tenders", href: '/tendors' },
                       { id: '5', title: "Media", href: '#' },
                     ].map((item) => (

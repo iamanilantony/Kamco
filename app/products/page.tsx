@@ -1,8 +1,13 @@
-import ProductsPage from "@/components/UI/Products";
+import Hero from "./sections/hero";
+import Products from "./sections/products";
 
-export default function Page() {
+const page = () => {
+  return (
+    <>
+      <Hero />
+      <Products />
+    </>
+  );
+};
 
-    return (
-        <ProductsPage />
-    )
-}
+export default page;

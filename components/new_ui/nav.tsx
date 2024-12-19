@@ -15,11 +15,11 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const navItems = [
-    { name: "Home", href: "/newpage" },
-    { name: "Products", href: "/newpage/products" },
-    { name: "Strategic Initiatives", href: "/newpage/projects" },
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Strategic Initiatives", href: "/projects" },
     { name: "Tenders", href: "https://www.kamcoindia.com/tenders" },
-    { name: "About Us", href: "/newpage/about" },
+    { name: "About Us", href: "/about" },
     { name: "Statutory", href: "#" },
     { name: "Connect", href: "#" },
   ];
@@ -53,9 +53,8 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`py-3 px-8 flex items-center justify-between mx-auto max-w-3xl md:max-w-6xl xl:max-w-full xl:px-32 ${
-          isScrolled ? "bg-white shadow-md" : "bg-transparent"
-        }`}
+        className={`py-3 px-8 flex items-center justify-between mx-auto max-w-3xl md:max-w-6xl xl:max-w-full xl:px-32 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+          }`}
       >
         {/* Logo */}
         <Image
@@ -86,13 +85,12 @@ const Navbar = () => {
                     {["About Us", "Statutory", "Connect"].includes(
                       item.name
                     ) && (
-                      <ChevronDown
-                        size={16}
-                        className={`ml-1 transition-transform ${
-                          activeDropdown === item.name ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
+                        <ChevronDown
+                          size={16}
+                          className={`ml-1 transition-transform ${activeDropdown === item.name ? "rotate-180" : ""
+                            }`}
+                        />
+                      )}
                   </div>
 
                   {/* Dropdown Menus */}
@@ -101,7 +99,7 @@ const Navbar = () => {
                       <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
                         <li>
                           <Link
-                            href="/newpage/companyinfo"
+                            href="/companyinfo"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
@@ -143,7 +141,7 @@ const Navbar = () => {
                       <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
                         <li>
                           <Link
-                            href="/newpage/cm-redressal-cells"
+                            href="/cm-redressal-cell"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
@@ -153,6 +151,7 @@ const Navbar = () => {
                         <li>
                           <Link
                             href="https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
+                            target="_blank"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
@@ -175,25 +174,25 @@ const Navbar = () => {
                     <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
                       <li>
                         <Link
-                          href="#footer"
+                          href="/#footer"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
                           Contact Us
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
-                          href="/newpage/support"
+                          href="/support"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
                           Support
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link
-                          href="/newpage/newsletter"
+                          href="/newsletter"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
@@ -202,7 +201,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/newpage/media"
+                          href="#"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
@@ -211,7 +210,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/newpage/downloads"
+                          href="#"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
@@ -220,7 +219,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/newpage/notification"
+                          href="/notifications"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
@@ -235,20 +234,24 @@ const Navbar = () => {
           </ul>
           {/* Buttons */}
           <div className="flex md:gap-4 max-sm:gap-1 ml-8">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="rounded-full bg-slate-300 p-3 max-sm:scale-75"
-            >
-              <BellDot size={24} />
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="bg-[#d1f349] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75"
-            >
-              Login
-            </motion.button>
+            <Link href='/notifications'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="rounded-full bg-slate-300 p-3 max-sm:scale-75"
+              >
+                <BellDot size={24} />
+              </motion.button>
+            </Link>
+            <Link href='https://www.kamcoindia.com/dealers/user_login'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-[#d1f349] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75"
+              >
+                Login
+              </motion.button>
+            </Link>
           </div>
         </div>
 
