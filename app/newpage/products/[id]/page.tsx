@@ -2,12 +2,17 @@
 
 import { CircleCheck, ShieldCheck } from "lucide-react";
 import { VscTools } from "react-icons/vsc";
-
+import { useParams } from 'next/navigation';
+import products from '@/public/data/productDetails.json'
 import React, { useState } from "react";
 import { Button } from "@/components/UI/button";
 import Image from "next/image";
 
 const ProductInfo = () => {
+
+  const { id } = useParams();
+  const product = products && products?.products.find(prod => prod.id === id);
+
   const specs = [
     { label: "Engine Model", value: "ER 90" },
     { label: "Tiller Model", value: "KMB 200" },
@@ -52,11 +57,16 @@ const ProductInfo = () => {
   ];
   const models = ["KMB200"];
 
+
+  if (!product) {
+      return <p>Product not found</p>;
+  }
+
   return (
     <div className="flex flex-col gap-8 justify-center items-center w-full urbanist-font p-8 md:p-16 lg:p-32">
       <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-8 pb-12">
         <Image
-          src="/new_images/products/product/mainImg.webp"
+          src={product.image[0]}
           alt="Tractor"
           width={800}
           height={600}
@@ -68,7 +78,7 @@ const ProductInfo = () => {
             height={300}
             width={400}
             draggable={false}
-            src="/new_images/products/product/img1.webp"
+            src={product.image[0] || "/new_images/products/product/img1.webp"}
             alt="Tractor in Field"
             className="w-full h-auto"
           />
