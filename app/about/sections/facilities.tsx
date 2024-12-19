@@ -76,7 +76,7 @@ const Facilities = () => {
       >
         {facilities.map((facility, index) => (
           <SwiperSlide key={index}>
-            <div className="border-[#969696] rounded-lg border p-4 max-w-full md:max-w-xl my-4 md:my-8 h-full">
+            <div className="border-[#969696] rounded-lg border p-4 max-w-full md:max-w-xl my-4 md:my-8 h-full text-left">
               <Image
                 height={500}
                 width={500}

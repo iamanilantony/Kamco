@@ -26,7 +26,7 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="min-h-screen flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-16 py-8">
+    <div className="min-h-screen flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-16 py-8 text-left">
       <Image
         src="/new_images/products/heroimage.webp"
         alt="hero"

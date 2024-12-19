@@ -2,17 +2,17 @@
 
 import { CircleCheck, ShieldCheck } from "lucide-react";
 import { VscTools } from "react-icons/vsc";
-import { useParams } from 'next/navigation';
-import products from '@/public/data/productDetails.json'
+import { useParams } from "next/navigation";
+import products from "@/public/data/productDetails.json";
 import React, { useState } from "react";
 import { Button } from "@/components/UI/button";
 import Image from "next/image";
 
 const ProductInfo = () => {
-
   const params = useParams();
   const id = params?.id;
-  const product = products && products?.products.find(prod => prod.id === String(id));
+  const product =
+    products && products?.products.find((prod) => prod.id === String(id));
 
   const specs = [
     { label: "Engine Model", value: "ER 90" },
@@ -58,13 +58,12 @@ const ProductInfo = () => {
   ];
   const models = ["KMB200"];
 
-
   if (!product) {
-      return <p>Product not found</p>;
+    return <p>Product not found</p>;
   }
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center w-full urbanist-font p-8 md:p-16 lg:p-32">
+    <div className="flex flex-col gap-8 justify-center items-center w-full urbanist-font p-8 md:p-16 lg:p-32 text-left">
       <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-8 pb-12">
         <Image
           src={product.image[0]}
