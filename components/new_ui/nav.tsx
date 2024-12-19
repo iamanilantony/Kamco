@@ -143,7 +143,7 @@ const Navbar = () => {
                       <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
                         <li>
                           <Link
-                            href="/newpage/statutory/policies"
+                            href="/newpage/cm-redressal-cells"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
@@ -152,7 +152,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            href="/newpage/statutory/reports"
+                            href="https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
@@ -161,7 +161,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            href="/newpage/statutory/reports"
+                            href="/right-to-information"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
