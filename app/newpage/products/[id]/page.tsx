@@ -10,8 +10,8 @@ import Image from "next/image";
 
 const ProductInfo = () => {
 
-  const { id } = useParams();
-  const product = products && products?.products.find(prod => prod.id === id);
+  const id = useParams();
+  const product = products && products?.products.find(prod => prod.id === String(id));
 
   const specs = [
     { label: "Engine Model", value: "ER 90" },

@@ -18,7 +18,7 @@ const Navbar = () => {
     { name: "Home", href: "/newpage" },
     { name: "Products", href: "/newpage/products" },
     { name: "Strategic Initiatives", href: "/newpage/projects" },
-    { name: "Tenders", href: "/newpage/tendors" },
+    { name: "Tenders", href: "https://www.kamcoindia.com/tenders" },
     { name: "About Us", href: "/newpage/about" },
     { name: "Statutory", href: "#" },
     { name: "Connect", href: "#" },
