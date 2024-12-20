@@ -89,7 +89,7 @@ const Awards: React.FC = () => {
         draggable={false}
         src="/new_images/awards/award.webp"
         alt="Award Main Image"
-        className="h-auto w-full md:w-[40%]"
+        className="h-auto w-full md:w-[40%] rounded-3xl"
       />
       <div className="flex flex-col items-center justify-center w-full md:w-3/5 h-full mt-8 md:mt-0">
         <Swiper

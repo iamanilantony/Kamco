@@ -92,7 +92,7 @@ const ConpanyInfo = () => {
         <Image
           src="/new_images/companydetails.webp" // Replace with your image path
           alt="Farming Insights"
-          className="rounded-lg shadow-md object-cover w-full max-sm:h-32"
+          className="rounded-lg shadow-md object-cover w-full h-64 max-sm:h-32"
           width={800}
           height={400}
           draggable={false}

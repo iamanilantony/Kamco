@@ -119,7 +119,10 @@ const ProductInfo = () => {
                   className="flex flex-col gap-6 items-center text-center"
                 >
                   <div className="p-4 bg-[#FFFBE6] rounded-full flex justify-center items-center text-[#5B5B5B]">
-                    {highlightIcons[highlight.icon]}
+                    {
+                      // @ts-ignore
+                      highlightIcons[highlight.icon]
+                    }
                   </div>
                   <p className="text-black">{highlight.text}</p>
                 </div>
