@@ -6,21 +6,9 @@ import { CiLocationOn, CiMail } from "react-icons/ci";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
 import { motion, useAnimation, useInView } from "framer-motion";
+import ContactForm from "./contactForm";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-  };
-
   const ref = useRef<HTMLDivElement>(null);
   const inview = useInView(ref);
   const controls = useAnimation();
@@ -41,7 +29,7 @@ export default function Contact() {
       <div className="max-w-[94vw] mx-auto py-12 px-4 md:px-32">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Form Section */}
-          <motion.div
+          {/* <motion.div
             animate={controls}
             initial="hidden"
             variants={animationVariants}
@@ -95,7 +83,8 @@ export default function Contact() {
                 Submit
               </button>
             </form>
-          </motion.div>
+          </motion.div> */}
+          <ContactForm />
 
           {/* Map and Contact Info Section */}
           <motion.div

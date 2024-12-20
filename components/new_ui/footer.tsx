@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { motion } from "framer-motion";
+import NewsletterForm from "@/app/about/sections/newsletter";
 
 export default function Footer() {
   const socialLinks = [
@@ -110,7 +111,7 @@ export default function Footer() {
               {/* Newsletter Section */}
             </div>
           </div>
-          <div>
+          {/* <div>
             <h3 className="font-semibold exo-font text-lg mb-2">
               Join our newsletter
             </h3>
@@ -119,14 +120,14 @@ export default function Footer() {
             </p>
             <div className="flex justify-start items-center">
               <form
-                action="https://docs.google.com/forms/d/1GF2tUn4kwLlBMDKIWMMtO-DJrKnh-0mwEuDoAH2f1bs/formResponse" // Replace YOUR_FORM_ID with the actual form ID
+                action="https://docs.google.com/forms/d/1GF2tUn4kwLlBMDKIWMMtO-DJrKnh-0mwEuDoAH2f1bs/formResponse"
                 method="POST"
                 target="_blank"
                 className="relative flex items-center bg-black text-gray-100 px-4 py-2 rounded-full w-96"
               >
                 <input
                   type="email"
-                  name="entry.YPqjbf" // Replace YOUR_FIELD_ID with the field ID from the form
+                  name="entry.1302336877"
                   placeholder="Your email"
                   required
                   className="flex-grow bg-transparent outline-none text-white placeholder:text-gray-400 px-3"
@@ -144,7 +145,8 @@ export default function Footer() {
                 </motion.button>
               </form>
             </div>
-          </div>
+          </div> */}
+          <NewsletterForm />
 
 
         </div>
