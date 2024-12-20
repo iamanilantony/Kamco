@@ -6,6 +6,8 @@ import Highlights from "@/app/landing/sections/highlights";
 import Gallery from "@/app/landing/sections/gallery";
 import FAQsSection from "@/app/landing/sections/faq";
 import Contact from "@/app/landing/sections/contact";
+import Testimonial from "@/app/landing/sections/testimonial";
+
 
 const page = () => {
   return (
@@ -14,6 +16,7 @@ const page = () => {
       <Hero />
       <Categories />
       <Highlights />
+      <Testimonial />
       <Gallery />
       <FAQsSection />
       <Contact />
@@ -23,3 +26,5 @@ const page = () => {
 };
 
 export default page;
+
+

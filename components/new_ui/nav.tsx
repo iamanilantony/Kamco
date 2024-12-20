@@ -53,7 +53,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`py-3 px-8 flex items-center justify-between mx-auto max-w-3xl md:max-w-6xl xl:max-w-full xl:px-32 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        className={`py-3 px-8 flex items-center justify-between mx-auto z-50 max-w-3xl md:max-w-7xl xl:max-w-full xl:px-32 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
           }`}
       >
         {/* Logo */}
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <div ref={dropdownRef} className="relative">
                   <div
                     onClick={() => toggleDropdown(item.name, item.href)}
-                    className="cursor-pointer text-[rgb(55,65,81)] font-sans hover:text-[#d1f349] flex items-center"
+                    className="cursor-pointer text-[rgb(55,65,81)] font-sans hover:text-[#d1f349] flex items-center text-base lg:text-sm"
                   >
                     {item.name}{" "}
                     {["About Us", "Statutory", "Connect"].includes(
@@ -96,7 +96,7 @@ const Navbar = () => {
                   {/* Dropdown Menus */}
                   {item.name === "About Us" &&
                     activeDropdown === "About Us" && (
-                      <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
+                      <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
                         <li>
                           <Link
                             href="/companyinfo"
@@ -138,7 +138,7 @@ const Navbar = () => {
 
                   {item.name === "Statutory" &&
                     activeDropdown === "Statutory" && (
-                      <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
+                      <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
                         <li>
                           <Link
                             href="/cm-redressal-cell"
@@ -171,7 +171,7 @@ const Navbar = () => {
                     )}
 
                   {item.name === "Connect" && activeDropdown === "Connect" && (
-                    <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50">
+                    <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
                       <li>
                         <Link
                           href="/#footer"
@@ -190,7 +190,7 @@ const Navbar = () => {
                           Support
                         </Link>
                       </li> */}
-                      {/* <li>
+                      <li>
                         <Link
                           href="/newsletter"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -198,7 +198,7 @@ const Navbar = () => {
                         >
                           Newsletter
                         </Link>
-                      </li> */}
+                      </li>
                       <li>
                         <Link
                           href="/gallery"
@@ -217,7 +217,7 @@ const Navbar = () => {
                           Downloads
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
                           href="/notifications"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -225,7 +225,7 @@ const Navbar = () => {
                         >
                           Notification
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   )}
                 </div>
@@ -240,14 +240,14 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
                 className="rounded-full bg-slate-300 p-3 max-sm:scale-75"
               >
-                <BellDot size={24} />
+                <BellDot size={18} />
               </motion.button>
             </Link>
             <Link href='https://www.kamcoindia.com/dealers/user_login'>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-[#d1f349] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75"
+                className="bg-[#d1f349] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75 text-base lg:text-sm"
               >
                 Login
               </motion.button>

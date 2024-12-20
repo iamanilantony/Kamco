@@ -32,7 +32,7 @@ const Hero = () => {
         alt="hero"
         width={1200}
         height={1200}
-        className="object-cover absolute h-full w-full top-0 left-0"
+        className="object-cover absolute h-full w-full top-0 left-0 mt-20 pb-20"
         draggable={false}
       />
       <div className="container text-white z-10 w-full md:w-1/2 space-y-6 md:space-y-12 p-4 md:p-0 h-full">
