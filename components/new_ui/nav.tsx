@@ -99,6 +99,15 @@ const Navbar = () => {
                       <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
                         <li>
                           <Link
+                            href="/about"
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            About Kamco
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
                             href="/companyinfo"
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
