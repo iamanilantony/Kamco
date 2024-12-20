@@ -16,7 +16,7 @@ const Highlights = () => {
         {/* Left Content */}
         <div className="flex flex-col lg:flex-row justify-between items-end gap-3 lg:gap-6 text-left">
           <div className="flex flex-col urbanist-font">
-            <h3 className="text-xl text-[rgb(52,121,40)] leading-snug">
+            <h3 className="text-xl md:w-3/4 text-[rgb(52,121,40)] leading-snug">
               Highlights
             </h3>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
@@ -28,7 +28,7 @@ const Highlights = () => {
             initial={{ x: 500, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="text-gray-700 md:max-w-[50%] inter-font text-sm lg:text-base"
+            className="text-gray-700 md:max-w-[45%] inter-font text-sm lg:text-base"
           >
             Welcome to Harvest Insights, Kamco's blog dedicated to helping
             farmers thrive. From expert advice on crop management to the latest

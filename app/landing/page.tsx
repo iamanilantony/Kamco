@@ -9,7 +9,7 @@ import Testimonial from "./sections/testimonial";
 
 const page = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-[#d7ffbf]/10">
       <Hero />
       <Categories />
       <Highlights />

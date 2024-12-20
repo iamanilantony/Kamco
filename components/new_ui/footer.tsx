@@ -62,19 +62,21 @@ export default function Footer() {
 
           {/* Main Links Section */}
           <div className="flex flex-col">
-            <h3 className="font-semibold exo-font text-lg mb-2">
-              Main Links
-            </h3>
+            <h3 className="font-semibold exo-font text-lg mb-2">Main Links</h3>
             <div className="flex flex-col md:flex-row gap-12">
               <div className="flex">
                 <div className="mr-6">
                   <ul className="space-y-4">
                     {[
-                      { id: '1', title: "About us", href: '/about' },
-                      { id: '2', title: "Products", href: '/products' },
-                      { id: '3', title: "Strategic Initiatives", href: '/projects' },
-                      { id: '4', title: "Tenders", href: '/tendors' },
-                      { id: '5', title: "Media", href: '/gallery' },
+                      { id: "1", title: "About us", href: "/about" },
+                      { id: "2", title: "Products", href: "/products" },
+                      {
+                        id: "3",
+                        title: "Strategic Initiatives",
+                        href: "/projects",
+                      },
+                      { id: "4", title: "Tenders", href: "/tendors" },
+                      { id: "5", title: "Media", href: "/gallery" },
                     ].map((item) => (
                       <li key={item.id}>
                         <Link
@@ -90,11 +92,11 @@ export default function Footer() {
                 <div>
                   <ul className="space-y-4">
                     {[
-                      { id: 1, title: "Resources", href: '#' },
-                      { id: 2, title: "Downloads", href: '#' },
-                      { id: 3, title: "Media", href: '#' },
-                      { id: 4, title: "Notifications", href: '/notifications' },
-                      { id: 5, title: "Dealers", href: '/dealers' }
+                      { id: 1, title: "Resources", href: "#" },
+                      { id: 2, title: "Downloads", href: "#" },
+                      { id: 3, title: "Media", href: "#" },
+                      { id: 4, title: "Notifications", href: "/notifications" },
+                      { id: 5, title: "Dealers", href: "/dealers" },
                     ].map((item) => (
                       <li key={item.id}>
                         <Link
@@ -109,6 +111,7 @@ export default function Footer() {
                 </div>
               </div>
               {/* Newsletter Section */}
+              <NewsletterForm />
             </div>
           </div>
           {/* <div>
@@ -146,9 +149,6 @@ export default function Footer() {
               </form>
             </div>
           </div> */}
-          <NewsletterForm />
-
-
         </div>
 
         {/* Bottom Section */}

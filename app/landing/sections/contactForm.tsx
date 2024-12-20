@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex-1">
       <motion.div
         animate={controls}
         initial="hidden"
@@ -61,23 +61,26 @@ const ContactForm: React.FC = () => {
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="space-y-6 max-w-md mx-auto lg:mx-0 flex flex-col justify-start items-center"
+        className="space-y-6 flex flex-col justify-start items-center w-full"
       >
-        <h1 className="text-3xl md:text-5xl text-center font-bold mb-1 urbanist-font">
+        <h1
+          style={{
+            textWrap: "nowrap",
+          }}
+          className="text-3xl md:text-5xl text-center font-bold mb-1 urbanist-font"
+        >
           Connect With Us
         </h1>
         <form
           onSubmit={handleSubmit}
-          className="space-y-4 w-full md:flex md:flex-col justify-center items-center"
+          className="space-y-6 w-full md:flex md:flex-col justify-center items-center"
         >
           <input
             type="text"
             placeholder="Name"
             className="w-full px-4 py-2 rounded-md border border-[rgba(0,0,0,0.5)] focus:outline-none focus:ring-2 focus:ring-green-200"
             value={formData.name}
-            onChange={(e) =>
-              setFormData({ ...formData, name: e.target.value })
-            }
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
           <input
             type="email"

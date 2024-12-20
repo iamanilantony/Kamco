@@ -26,64 +26,8 @@ export default function Contact() {
 
   return (
     <div ref={ref}>
-      <div className="max-w-[94vw] mx-auto py-12 px-4 md:px-32">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Form Section */}
-          {/* <motion.div
-            animate={controls}
-            initial="hidden"
-            variants={animationVariants}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="space-y-6 max-w-md mx-auto lg:mx-0 flex flex-col justify-start items-center"
-          >
-            <h1 className="text-3xl md:text-5xl text-center font-bold mb-1 urbanist-font">
-              Connect With Us
-            </h1>
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-4 w-full md:flex md:flex-col justify-center items-center"
-            >
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full px-4 py-2 rounded-md border border-[rgba(0,0,0,0.5)] focus:outline-none focus:ring-2 focus:ring-green-200"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-2 rounded-md border border-[rgba(0,0,0,0.5)] focus:outline-none focus:ring-2 focus:ring-green-200"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full px-4 py-2 rounded-md border border-[rgba(0,0,0,0.5)] focus:outline-none focus:ring-2 focus:ring-green-200"
-                value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
-              />
-              <textarea
-                placeholder="Your Message"
-                rows={4}
-                className="w-full px-4 py-2 rounded-md border border-[rgba(0,0,0,0.5)] focus:outline-none focus:ring-2 focus:ring-green-200"
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-              />
-              <button className="bg-[#c0eba6] py-3 md:py-4 px-8 md:px-20 rounded-2xl text-xl md:text-2xl urbanist-font">
-                Submit
-              </button>
-            </form>
-          </motion.div> */}
+      <div className="md:max-w-7xl mx-auto py-12 px-16">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-32">
           <ContactForm />
 
           {/* Map and Contact Info Section */}
@@ -92,9 +36,9 @@ export default function Contact() {
             initial="hidden"
             variants={animationVariants}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="space-y-6"
+            className="space-y-6 max-md:w-full"
           >
-            <div className="relative w-full h-[250px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-[250px] rounded-lg overflow-hidden text-left">
               <div className="absolute inset-0 bg-black/50 p-6 text-white">
                 <div className="flex flex-col items-start gap-8 inter-font">
                   <CiLocationOn size={24} />

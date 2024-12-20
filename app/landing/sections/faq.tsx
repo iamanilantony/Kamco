@@ -111,8 +111,8 @@ const FAQsSection = () => {
   };
 
   return (
-    <section ref={ref} className="my-32 px-4 md:px-6">
-      <div className=" mx-auto md:px-32 innerdiv space-y-12">
+    <section ref={ref} className="my-32 px-12">
+      <div className="md:max-w-7xl mx-auto innerdiv space-y-12">
         <motion.div
           variants={animationVariants}
           initial="hidden"
@@ -127,7 +127,7 @@ const FAQsSection = () => {
             Frequently Asked Questions
           </h2>
         </motion.div>
-        <div className="flex flex-col md:flex-row gap-6 inter-font w-full">
+        <div className="flex flex-col md:flex-row gap-6 inter-font w-full text-left">
           <motion.div
             animate={controls}
             initial="hidden"
@@ -142,7 +142,7 @@ const FAQsSection = () => {
                   onClick={() => toggleAccordion(index)}
                 >
                   <div className="flex justify-between items-center gap-3 cursor-pointer w-full">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900">
                       {faq.title}
                     </h3>
                     <span className="text-xl font-bold">
@@ -158,7 +158,7 @@ const FAQsSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -50 }}
                       transition={{ duration: 0.5 }}
-                      className="p-4 md:p-6 md:px-12 rounded-lg bg-[#c0eba6] h-40"
+                      className="p-4 md:p-6 rounded-lg bg-[#c0eba6] flex justify-center items-center"
                     >
                       <p className="mt-3 inter-font text-sm md:text-base">
                         {faq.description}
@@ -183,7 +183,7 @@ const FAQsSection = () => {
                   onClick={() => toggleAccordion(index + 5)}
                 >
                   <div className="flex justify-between items-center gap-3 cursor-pointer w-full">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900">
                       {faq.title}
                     </h3>
                     <span className="text-xl font-bold">
@@ -199,7 +199,7 @@ const FAQsSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -50 }}
                       transition={{ duration: 0.5 }}
-                      className="p-4 md:p-6 md:px-20 rounded-lg bg-[#c0eba6] h-40"
+                      className="p-4 md:p-6 rounded-lg bg-[#c0eba6] flex justify-center items-center"
                     >
                       <p className="mt-3 inter-font text-sm md:text-base">
                         {faq.description}
