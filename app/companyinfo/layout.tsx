@@ -4,8 +4,8 @@ import React from "react";
 
 const Companylayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex min-h-screen md:px-16 px-8 gap-16 relative">
-      <div className="space-y-8 md:space-y-12 sticky top-0 self-start pt-24 max-md:hidden">
+    <div className="flex min-h-screen px-12 gap-12 relative">
+      <div className="space-y-8 sticky top-0 self-start pt-24 max-md:hidden">
         {[
           { title: "Company Profile", link: "#" },
           { title: "Marketing", link: "#Marketing" },
@@ -26,7 +26,7 @@ const Companylayout = ({ children }: { children: React.ReactNode }) => {
             style={{
               textWrap: "nowrap",
             }}
-            className="underline underline-offset-2 flex items-center text-black group "
+            className="underline underline-offset-2 flex items-center text-black group text-base"
           >
             {rule.title}
             <ChevronRight className="group-hover:translate-x-1 transition-transform" />
