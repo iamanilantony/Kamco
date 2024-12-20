@@ -74,7 +74,7 @@ export default function Footer() {
                       { id: '2', title: "Products", href: '/products' },
                       { id: '3', title: "Strategic Initiatives", href: '/projects' },
                       { id: '4', title: "Tenders", href: '/tendors' },
-                      { id: '5', title: "Media", href: '#' },
+                      { id: '5', title: "Media", href: '/gallery' },
                     ].map((item) => (
                       <li key={item.id}>
                         <Link
