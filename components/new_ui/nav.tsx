@@ -95,7 +95,7 @@ const Navbar = () => {
                     )}
                   </div>
 
-                  {/* Dropdown Menus */}
+                  {/* Dropdown Menus  */}
                   {item.name === "About Us" &&
                     activeDropdown === "About Us" && (
                       <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
