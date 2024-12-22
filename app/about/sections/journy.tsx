@@ -52,7 +52,9 @@ const Journy = () => {
               <div
                 key={index}
                 className={`p-5 py-3 border-r border-black last:border-r-0 text-black ${
-                  index === activeIndex ? "bg-[#C0EBA6] font-bold" : ""
+                  index === activeIndex
+                    ? "bg-[#C0EBA6] font-bold border-x"
+                    : "border-none"
                 }`}
               >
                 {item.year}

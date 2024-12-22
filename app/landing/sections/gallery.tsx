@@ -65,7 +65,7 @@ const Gallery = () => {
         href="/dealers"
         className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
       >
-        Explore Dealers
+        Explore Gallery
       </Link>
       <div className="flex justify-between items-center gap-5 pl-5">
         {Array.from({ length: imagesToShow }).map((_, index) => (

@@ -14,7 +14,11 @@ export default function Footer() {
       label: "Facebook",
     },
     { href: "#", icon: FaTwitter, label: "Twitter" },
-    { href: "#", icon: FaInstagram, label: "Instagram" },
+    {
+      href: "https://www.instagram.com/kamcoindiaofficial/",
+      icon: FaInstagram,
+      label: "Instagram",
+    },
     {
       href: "https://www.youtube.com/channel/UCh7eaVTY8Z85h7ml_TO9wbA",
       icon: FaYoutube,
@@ -31,7 +35,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-[#c0eba6] px-8 md:px-[10vw] py-8 exo-font"
+      className="bg-[#c0eba6] px-8 md:px-[6.5vw] py-8 exo-font"
     >
       {" "}
       {/* Reduced py-12 to py-8 */}
@@ -69,7 +73,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row gap-5">
             {/* Main Links Section */}
             <FooterSections
-              head="Main Links"
+              head="Company"
               links={[
                 { id: "0", title: "Home", href: "/" },
                 { id: "1", title: "About us", href: "/about" },

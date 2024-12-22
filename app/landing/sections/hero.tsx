@@ -132,7 +132,7 @@ const Hero = () => {
             href="/dealers"
             className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-[#beff96] text-base sm:text-lg md:text-2xl urbanist-font cursor-pointer z-10 transition-all duration-300 ease-in-out"
           >
-            Explore Gallery
+            Explore Dealers
           </Link>
         </div>
       </div>

@@ -70,12 +70,15 @@ export default function Contact() {
             <div className="flex flex-col md:flex-row gap-5">
               <div className="bg-[#c0eba6] rounded-lg p-6 w-full md:w-[95%]">
                 <div className="flex flex-col md:flex-row space-x-2 gap-12">
-                  <div className="flex flex-col items-start gap-2">
+                  <div className="flex items-start gap-2">
                     <MdOutlinePhoneInTalk className="w-5 h-5 mb-6" />
-                    <span className="text-sm">91-484-2474301 (5 Lines)</span>
-                    <span className="text-sm">+91-9400865666</span>
+                    <div className="flex flex-col gap-2 items-start">
+                      <p className="text-sm">91-484-2474301 (5 Lines)</p>
+
+                      <p className="text-sm">+91-9400865666</p>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-start justify-between gap-2">
+                  <div className="flex items-start gap-2">
                     <CiMail className="w-5 h-5" />
                     <span className="text-sm">mail@kamco.in</span>
                   </div>

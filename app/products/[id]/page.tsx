@@ -146,7 +146,7 @@ const ProductInfo = () => {
       <hr className="w-full h-[2px] bg-black" />
       <div className="w-full space-y-12 ">
         <h1 className="text-3xl font-bold">Product Specifications</h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-4 gap-8 md:gap-y-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row gap-8 md:gap-y-12">
           {specs.map((spec, index) => (
             <div key={index}>
               <p className="font-medium text-normal flex flex-col">

@@ -106,7 +106,7 @@ const Awards: React.FC = () => {
           }}
         >
           <SwiperSlide>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between md:min-h-[450px] h-full">
               {awardsData.slice(0, 4).map((award, index) => (
                 <AwardCard
                   key={index}
@@ -117,7 +117,7 @@ const Awards: React.FC = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between md:min-h-[450px] h-full">
               {awardsData.slice(4, 8).map((award, index) => (
                 <AwardCard
                   key={index}

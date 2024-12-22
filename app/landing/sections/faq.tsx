@@ -142,7 +142,7 @@ const FAQsSection = () => {
                   onClick={() => toggleAccordion(index)}
                 >
                   <div className="flex justify-between items-center gap-3 cursor-pointer w-full">
-                    <h3 className="text-base md:text-lg font-semibold text-gray-900">
+                    <h3 className="text-base md:text-lg leading-6 md:leading-6 font-semibold text-gray-900">
                       {faq.title}
                     </h3>
                     <span className="text-xl font-bold">
@@ -183,7 +183,7 @@ const FAQsSection = () => {
                   onClick={() => toggleAccordion(index + 5)}
                 >
                   <div className="flex justify-between items-center gap-3 cursor-pointer w-full">
-                    <h3 className="text-base md:text-lg font-semibold text-gray-900">
+                    <h3 className="text-base md:text-lg leading-6 md:leading-6 font-semibold text-gray-900">
                       {faq.title}
                     </h3>
                     <span className="text-xl font-bold">
