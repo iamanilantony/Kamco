@@ -41,7 +41,7 @@ const ProductInfo = () => {
           width={800}
           height={600}
           draggable={false}
-          className="w-full lg:w-1/2 h-auto "
+          className="w-full lg:w-1/2 h-auto border border-gray-300 rounded-xl"
         />
         <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full w-full lg:w-1/2">
           <Image
@@ -50,7 +50,7 @@ const ProductInfo = () => {
             draggable={false}
             src={product.image[0] || "/new_images/products/product/img1.webp"}
             alt="Tractor in Field"
-            className="w-full h-auto"
+            className="w-full h-full object-contain border border-gray-300 rounded-xl"
           />
           <Image
             height={300}
@@ -58,7 +58,7 @@ const ProductInfo = () => {
             draggable={false}
             src="/new_images/products/product/img2.webp"
             alt="Tractor in Water"
-            className="w-full h-auto"
+            className="w-full h-full border border-gray-300 rounded-xl"
           />
           <Image
             height={300}
@@ -66,7 +66,7 @@ const ProductInfo = () => {
             draggable={false}
             src="/new_images/products/product/img3.webp"
             alt="Tractor in Muddy Terrain"
-            className="w-full h-auto"
+            className="w-full h-full border border-gray-300 rounded-xl"
           />
           <Image
             height={300}
@@ -74,7 +74,7 @@ const ProductInfo = () => {
             draggable={false}
             src="/new_images/products/product/img4.webp"
             alt="Tractor near Tree"
-            className="w-full h-auto"
+            className="w-full h-full border border-gray-300 rounded-xl"
           />
         </div>
       </div>
@@ -105,7 +105,9 @@ const ProductInfo = () => {
             </Button>
           </div>
         </div>
-        <p className="text-black inter-font text-lg">{productDescription}</p>
+        <p className="text-black inter-font text-base font-medium">
+          {productDescription}
+        </p>
       </div>
       <hr className="w-full h-[2px] bg-black" />
       <div className="flex gap-5 max-sm:flex-col justify-between items-center w-full">
@@ -124,7 +126,7 @@ const ProductInfo = () => {
                       highlightIcons[highlight.icon]
                     }
                   </div>
-                  <p className="text-black">{highlight.text}</p>
+                  <p className="text-black text-base">{highlight.text}</p>
                 </div>
               ))}
             </div>
@@ -132,9 +134,9 @@ const ProductInfo = () => {
         </div>
         <div className="space-y-12 md:w-1/2">
           <h1 className="text-3xl font-bold">Additional Features</h1>
-          <ul className="list-disc pl-5 space-y-6 text-black text-lg">
+          <ul className="list-disc pl-5 space-y-6 text-black text-base">
             {additionalFeatures.map((feature, index) => (
-              <li key={index} className="inter-font">
+              <li key={index} className="inter-font font-medium ">
                 {feature}
               </li>
             ))}
@@ -163,7 +165,7 @@ const ProductInfo = () => {
 
       <div className="w-full space-y-4">
         <h1 className="text-3xl font-bold">International Delivery</h1>
-        <p className="inter-font text-lg">{internationalDelivery}</p>
+        <p className="inter-font text-base">{internationalDelivery}</p>
       </div>
     </div>
   );

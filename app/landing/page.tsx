@@ -7,9 +7,9 @@ import FAQsSection from "./sections/faq";
 import Contact from "./sections/contact";
 import Testimonial from "./sections/testimonial";
 
-const page = () => {
+const Landing = () => {
   return (
-    <div className="overflow-hidden bg-[#d7ffbf]/10">
+    <div className="overflow-hidden bg-gradient-to-b from-[#ffffff] via-[#d7ffbf]/10 to-[#d7ffbf]/20">
       <Hero />
       <Categories />
       <Highlights />
@@ -21,4 +21,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Landing;

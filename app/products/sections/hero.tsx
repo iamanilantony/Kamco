@@ -41,7 +41,7 @@ const Hero = () => {
           KAMCO Tractors: Your <br className="hidden md:block" /> Reliable Farm
           Partner
         </h1>
-        <p className="mt-2 inter-font text-base md:text-lg">
+        <p className="mt-2 inter-font text-base md:text-lg font-normal">
           Experience the future of farming with KAMCO Tractors. Our robust and
           efficient tractors are designed to handle the toughest terrains and
           the heaviest workloads. With cutting-edge technology and superior
@@ -61,17 +61,23 @@ const Hero = () => {
         </h2>
 
         {/* Product List */}
-        <ul className="space-y-4 md:space-y-8">
+        <ul className="space-y-4 md:space-y-10">
           {products.map((product, index) => (
-            <li key={index} className="flex items-center justify-between">
+            <li key={index} className="flex items-center justify-between gap-6">
               {/* Product Details */}
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-10 h-10 md:w-16 md:h-16 object-cover rounded"
                 />
-                <p className="text-lg md:text-base font-medium">
+                <p
+                  style={{
+                    textWrap: "wrap",
+                    maxWidth: "150px",
+                  }}
+                  className="text-xl md:text-base font-medium inter-font "
+                >
                   {product.name}
                 </p>
               </div>
@@ -79,7 +85,7 @@ const Hero = () => {
               {/* Learn More Link */}
               <a
                 href={product.link}
-                className="text-xs md:text-sm font-medium underline hover:text-gray-300"
+                className="text-xs md:text-sm underline hover:text-gray-300 inter-font font-[280]"
               >
                 Learn More
               </a>
@@ -91,7 +97,7 @@ const Hero = () => {
         <div className="text-center mt-6 md:mt-8">
           <a
             href="#"
-            className="text-xs md:text-sm font-medium underline hover:text-gray-300"
+            className="text-sm md:text-base font-[280] underline hover:text-gray-300 inter-font"
           >
             Explore All Products
           </a>

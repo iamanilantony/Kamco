@@ -63,7 +63,7 @@ const Facilities = () => {
         modules={[Navigation]}
         spaceBetween={25}
         slidesPerView={1}
-        slidesOffsetBefore={100}
+        slidesOffsetBefore={25}
         onSwiper={(swiper) => {
           //@ts-ignore
           swiperRef.current = swiper;
@@ -76,7 +76,7 @@ const Facilities = () => {
       >
         {facilities.map((facility, index) => (
           <SwiperSlide key={index}>
-            <div className="border-[#969696] rounded-lg border p-4 max-w-full md:max-w-xl my-4 md:my-8 h-full text-left">
+            <div className="border-[#969696] aspect-square rounded-lg border p-4 max-w-full md:max-w-xl my-4 md:my-8 h-full text-left">
               <Image
                 height={500}
                 width={500}

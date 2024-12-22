@@ -33,7 +33,9 @@ const Companylayout = ({ children }: { children: React.ReactNode }) => {
           </Link>
         ))}
       </div>
-      <div className="overflow-y-scroll flex-1 scroll-smooth">{children}</div>
+      <div className="overflow-y-scroll flex-1 scroll-smooth scrollbar-hide">
+        {children}
+      </div>
     </div>
   );
 };

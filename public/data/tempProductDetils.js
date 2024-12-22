@@ -42,7 +42,7 @@ export default [
     ],
     "models": ["KMB200"],
     "productDescription": "The KAMCO Power Tiller is a robust and efficient agricultural tool designed to simplify farming tasks. It's a versatile machine that can handle a variety of field operations, from tilling to ploughing and more. With its powerful engine and sturdy build, the KAMCO Power Tiller can effortlessly tackle tough terrains and heavy-duty work. Its ergonomic design ensures comfortable operation, reducing fatigue and maximizing productivity. Whether you're a small-scale farmer or a large-scale agricultural operation, the KAMCO Power Tiller is a reliable and cost-effective solution. Experience the power and precision of KAMCO, and take your farming to the next level.",
-    "internationalDelivery": "Experience the power and efficiency of the KAMCO Power Tiller, now available for international delivery. Whether you're a farmer in the heartland of America, the fertile fields of Europe, or the diverse landscapes of Asia, our reliable and durable tiller is designed to meet your specific needs. With its robust engine, versatile implements, and user-friendly design, the KAMCO Power Tiller is the perfect tool to elevate your agricultural practices. Order yours today and revolutionize your farming operations on a global scale."
+    "internationalDelivery": "The KAMCO Power Tiller is now available for international delivery. With a powerful engine, versatile implements, and a user-friendly design, it’s the perfect tool to boost agricultural productivity. Order now to enhance your farming operations."
   },
   {
     "id": "PR-012",

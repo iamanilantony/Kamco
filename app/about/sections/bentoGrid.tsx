@@ -42,7 +42,7 @@ const BentoGrid = () => {
       description:
         "We will accomplish our vision with undivided and undeterred commitment towards innovative quality products, through inspired individuals, simplified systems and 5X leadership.",
       imageUrl: "/new_images/bentoGrid/image3.webp",
-      customCardStyle: "top-32 left-5",
+      customCardStyle: "top-28 left-5",
       span: "sm:row-span-3 max-sm:col-span-1",
     },
     {
@@ -68,7 +68,7 @@ const BentoGrid = () => {
       customImageStyle: "left-0",
       description: "KAMCO provides training on modern farming techniques.",
       imageUrl: "/new_images/bentoGrid/image6.webp",
-      customCardStyle: "left-3/4 top-1/2 -translate-y-1/2",
+      customCardStyle: "left-3/4 bottom-8 -translate-x-[25%]",
       span: "col-span-3 max-sm:col-span-1",
     },
   ];
@@ -103,10 +103,10 @@ const BentoGrid = () => {
                 !isMobile && card.customCardStyle
               )}
             >
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4 tracking-tight">
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight urbanist-font ">
                 {card.title}
               </h3>
-              <p className="inter-font tracking-tighter">{card.description}</p>
+              <p className="inter-font text-black">{card.description}</p>
             </div>
           </div>
         ))}

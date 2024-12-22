@@ -53,8 +53,9 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`py-3 px-8 flex items-center justify-between mx-auto z-50 max-w-3xl md:max-w-7xl xl:max-w-full xl:px-32 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
-          }`}
+        className={`py-3 px-8 flex items-center justify-between mx-auto z-50 max-w-3xl md:max-w-7xl xl:max-w-full xl:px-32 ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
       >
         {/* Logo */}
         <Image
@@ -85,12 +86,13 @@ const Navbar = () => {
                     {["About Us", "Statutory", "Connect"].includes(
                       item.name
                     ) && (
-                        <ChevronDown
-                          size={16}
-                          className={`ml-1 transition-transform ${activeDropdown === item.name ? "rotate-180" : ""
-                            }`}
-                        />
-                      )}
+                      <ChevronDown
+                        size={16}
+                        className={`ml-1 transition-transform ${
+                          activeDropdown === item.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
                   </div>
 
                   {/* Dropdown Menus */}
@@ -112,7 +114,7 @@ const Navbar = () => {
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
-                            Company info 
+                            Company info
                           </Link>
                         </li>
                         <li>
@@ -131,15 +133,6 @@ const Navbar = () => {
                             onClick={() => setActiveDropdown(null)}
                           >
                             Financial Report
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/awards"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Awards & Recognitions
                           </Link>
                         </li>
                       </ul>
@@ -243,7 +236,7 @@ const Navbar = () => {
           </ul>
           {/* Buttons */}
           <div className="flex md:gap-4 max-sm:gap-1 ml-8">
-            <Link href='/notifications'>
+            <Link href="/notifications">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -252,7 +245,7 @@ const Navbar = () => {
                 <BellDot size={18} />
               </motion.button>
             </Link>
-            <Link href='https://www.kamcoindia.com/dealers/user_login'>
+            <Link href="https://www.kamcoindia.com/dealers/user_login">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

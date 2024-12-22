@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/UI/button";
 import Image from "next/image";
@@ -16,9 +16,9 @@ const ProductsCard = ({
   codeName: string;
 }) => {
   return (
-    <div className="overflow-hidden w-full sm:w-[calc(50vw-30px)] md:w-[calc(25vw-85px)] relative h-80 bg-white rounded-xl border border-[#5B5B5B] p-4 cursor-pointer group transition-all duration-300 ease-in-out hover:shadow-lg hover:translate-y-[-5px]">
+    <div className="overflow-hidden w-full sm:w-[calc(50vw-30px)] md:w-[calc(25vw-85px)] relative aspect-square bg-white rounded-xl border border-[#5B5B5B] p-4 cursor-pointer group transition-all duration-300 ease-in-out hover:shadow-lg hover:translate-y-[-5px]">
       <Link href={`/products/${codeName}`}>
-        <h1 className="text-xl font-bold mt-1 z-10 relative text-left w-full transition-colors duration-300 ease-in-out group-hover:text-[#3b6631]">
+        <h1 className="text-2xl font-bold mt-1 z-10 relative text-left w-full text-ellipsis">
           {title}
         </h1>
         <Image
@@ -26,7 +26,7 @@ const ProductsCard = ({
           width={200}
           src={imgPath}
           alt={title}
-          className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 transition-transform duration-300 ease-in-out group-hover:scale-100 group-hover:translate-x-[-5px] group-hover:translate-y-[-5px]"
+          className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 "
         />
       </Link>
     </div>
@@ -39,39 +39,46 @@ const Products = () => {
 
   // Button filter options
   const filterOptions = [
-    "land preparation",
-    "Plant Protection",
-    "de-weeding",
-    "Harvesting",
-    "Garden Tools",
+    { label: "Land Preparation", img: "/new_images/products/powertiller.webp" },
+    { label: "Plant Protection", img: "/products/PR-032.jpg" },
+    { label: "Deweeding", img: "/new_images/products/powertiller.webp" },
+    { label: "Harvesting", img: "/new_images/products/echoleopard.webp" },
+    { label: "Garden Tools", img: "/new_images/products/tractor1.webp" },
   ];
 
   // Filter products based on the selected filter
   const filteredProducts = selectedFilter
     ? products.filter((product) =>
-        product.category
-          ?.toLowerCase()
-          .includes(selectedFilter.toLowerCase())
+        product.category?.toLowerCase().includes(selectedFilter.toLowerCase())
       )
     : products;
 
   return (
-    <div className="flex flex-col space-y-8 justify-start max-sm:justify-center items-start max-sm:items-center urbanist-font px-4 md:px-16 min-h-screen">
+    <div className="flex flex-col space-y-8 justify-start max-sm:justify-center items-start max-sm:items-center urbanist-font px-4 md:px-16 min-h-screen mt-24">
       <h1 className="text-3xl md:text-5xl font-bold">Products</h1>
 
       {/* Filter Buttons */}
       <div className="flex flex-wrap gap-4 justify-center">
-        {filterOptions.map((product, index) => (
+        {filterOptions.map((option, index) => (
           <Button
             key={index}
             onClick={() =>
-              setSelectedFilter(selectedFilter === product ? null : product)
+              setSelectedFilter(
+                selectedFilter === option.label ? null : option.label
+              )
             }
-            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#c6b23e] hover:outline-[#5B5B5B] ${
-              selectedFilter === product ? "bg-[#FFD700] font-bold" : ""
+            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#f5eaac] hover:outline-[#5B5B5B] ${
+              selectedFilter === option.label ? "bg-[#f5eaac] font-bold" : ""
             }`}
           >
-            {product}
+            <Image
+              src={option.img}
+              alt={option.img}
+              width={50}
+              height={50}
+              className="h-6 w-8"
+            />
+            {option.label}
           </Button>
         ))}
       </div>
@@ -88,7 +95,7 @@ const Products = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="flex flex-wrap gap-4 md:gap-12 pt-8 pb-32">
+      <div className="flex flex-wrap gap-4 md:gap-12 pt-8  pb-32">
         {filteredProducts.map((product, index) => (
           <ProductsCard
             key={index}

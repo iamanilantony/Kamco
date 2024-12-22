@@ -15,11 +15,11 @@ interface AwardCardProps {
 // AwardCard Component
 const AwardCard: React.FC<AwardCardProps> = ({ title, description }) => {
   return (
-    <div className="flex flex-col m-2 items-center justify-between h-full p-6 bg-white rounded-lg shadow-md text-center ">
+    <div className="flex flex-col m-2 items-center justify-between h-full p-6 bg-white rounded-lg text-center ">
       {/* Title */}
       <h2 className="text-xl font-bold urbanist-font">{title}</h2>
       {/* Subtitle */}
-      <p className="text-gray-600 text-sm  inter-font">{description}</p>
+      <p className="text-sm text-black inter-font">{description}</p>
       {/* Placeholder Image */}
       <div className="flex items-center justify-center">
         <Image

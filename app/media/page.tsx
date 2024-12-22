@@ -42,7 +42,7 @@ const Media = () => {
     <div className="min-h-screen text-center p-32 py-12 space-y-32 urbanist-font">
       <h1 className="text-3xl md:text-5xl font-bold">Media</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-16">
         {currentImages.map((image, index) => (
           <div
             key={index}

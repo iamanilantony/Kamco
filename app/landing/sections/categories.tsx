@@ -3,8 +3,11 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const Categories = () => {
+  const router = useRouter();
+
   const items = [
     {
       imgSrc: "/new_images/categories/landPreparation.webp",
@@ -51,6 +54,7 @@ const Categories = () => {
             }}
             key={index}
             className="relative group rounded-lg overflow-hidden shadow-lg"
+            onClick={() => router.push("/products")}
           >
             {/* Image */}
             <Image

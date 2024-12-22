@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/UI/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,17 @@ import React, { useState } from "react";
 
 const CompanyInfoPage = () => {
   const [activeTab, setActiveTab] = useState("hydroponicSystems"); // Default tab
+
+  const tabOptions = [
+    { id: "hydroponicSystems", label: "Hydroponic Systems" },
+    {
+      id: "nightPachaCurryStreetInitiative",
+      label: "Night Pacha Curry Street Initiative",
+    },
+    { id: "fertilizersAndSoil", label: "Fertilizers and Soil Health" },
+    { id: "seedsandPlanting", label: "Seeds and Planting Materials" },
+    { id: "tractorManufacturing", label: "Tractor Manufacturing" },
+  ];
 
   const renderContent = () => {
     switch (activeTab) {
@@ -182,7 +194,7 @@ const CompanyInfoPage = () => {
               src="/kamco_factory.JPG"
               alt="Tractor Manufacturing"
             />
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left px-4 text-left">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left px-4">
               Tractor Manufacturing
             </h2>
             <div className="p-4">
@@ -409,84 +421,16 @@ const CompanyInfoPage = () => {
           <option value="tractorManufacturing">Tractor Manufacturing</option>
         </select>
       </div>
-      <div className="hidden md:block w-full md:w-1/5 bg-gray-100 p-4 text-sm md:text-base text-left pr-4">
-        <ul>
-          <li
-            className={`cursor-pointer py-2 md:py-4 mb-2 transition ${
-              activeTab === "hydroponicSystems" ? "text-green-600" : ""
-            }`}
+      <div className="hidden md:block w-full md:max-w-fit bg-gray-100 p-4 text-sm md:text-base text-left space-y-6 pr-4">
+        {tabOptions.map((tab) => (
+          <Button
+            onClick={() => setActiveTab(tab.id)}
+            className="bg-white p-6 flex items-center text-black group text-base hover:bg-white w-full justify-between shadow-none"
           >
-            <Link
-              href="#"
-              onClick={() => setActiveTab("hydroponicSystems")}
-              className="underline underline-offset-2 flex items-center text-black group text-base"
-            >
-              Hydroponic Systems
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </li>
-          <li
-            className={`cursor-pointer py-2 md:py-4 mb-2 transition ${
-              activeTab === "nightPachaCurryStreetInitiative"
-                ? "text-green-600"
-                : ""
-            }`}
-          >
-            <Link
-              href="#"
-              onClick={() => setActiveTab("nightPachaCurryStreetInitiative")}
-              className="underline underline-offset-2 flex items-center text-black group text-base"
-            >
-              Night Pacha Curry Street Initiative
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </li>
-          {/* <li className={`cursor-pointer py-2 md:py-4 mb-2 transition hover:text-green-600 ${activeTab === 'polyclinicAndEmployeeWelfare' ? 'text-green-600' : ''}`}>
-                        <span onClick={() => setActiveTab('polyclinicAndEmployeeWelfare')}>Polyclinic and Employee Welfare</span>
-                    </li> */}
-          <li
-            className={`cursor-pointer py-2 md:py-4 mb-2 transition ${
-              activeTab === "fertilizersAndSoil" ? "text-green-600" : ""
-            }`}
-          >
-            <Link
-              href="#"
-              onClick={() => setActiveTab("fertilizersAndSoil")}
-              className="underline underline-offset-2 flex items-center text-black group text-base"
-            >
-              Fertilizers and Soil Health
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </li>
-          <li
-            className={`cursor-pointer py-2 md:py-4 mb-2 transition ${
-              activeTab === "seedsandPlanting" ? "text-green-600" : ""
-            }`}
-          >
-            <Link
-              href="#"
-              onClick={() => setActiveTab("seedsandPlanting")}
-              className="underline underline-offset-2 flex items-center text-black group text-base"
-            >
-              Seeds and Planting Materials
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </li>
-          <li
-            className={`cursor-pointer py-2 md:py-4 mb-2 transition ${
-              activeTab === "tractorManufacturing" ? "text-green-600" : ""
-            }`}
-          >
-            <Link
-              href="#"
-              onClick={() => setActiveTab("tractorManufacturing")}
-              className="underline underline-offset-2 flex items-center text-black group text-base"
-            >
-              Tractor Manufacturing
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </li>
-        </ul>
+            {tab.label}
+            <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+          </Button>
+        ))}
       </div>
 
       {/* Content Area */}

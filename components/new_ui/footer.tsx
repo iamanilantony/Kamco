@@ -3,16 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import { HiArrowRight } from "react-icons/hi";
-import { motion } from "framer-motion";
 import NewsletterForm from "@/app/about/sections/newsletter";
+import FooterSections from "./footersections";
 
 export default function Footer() {
   const socialLinks = [
-    { href: "#", icon: FaFacebookF, label: "Facebook" },
+    {
+      href: "https://www.facebook.com/kamcoindia",
+      icon: FaFacebookF,
+      label: "Facebook",
+    },
     { href: "#", icon: FaTwitter, label: "Twitter" },
     { href: "#", icon: FaInstagram, label: "Instagram" },
-    { href: "#", icon: FaYoutube, label: "YouTube" },
+    {
+      href: "https://www.youtube.com/channel/UCh7eaVTY8Z85h7ml_TO9wbA",
+      icon: FaYoutube,
+      label: "YouTube",
+    },
   ];
 
   const bottomLinks = [
@@ -29,7 +36,7 @@ export default function Footer() {
       {" "}
       {/* Reduced py-12 to py-8 */}
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-40">
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-40 w-full">
           {/* Logo and Description Section */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
@@ -59,96 +66,33 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Main Links Section */}
-          <div className="flex flex-col">
-            <h3 className="font-semibold exo-font text-lg mb-2">Main Links</h3>
-            <div className="flex flex-col md:flex-row gap-12">
-              <div className="flex">
-                <div className="mr-6">
-                  <ul className="space-y-4">
-                    {[
-                      { id: "1", title: "About us", href: "/about" },
-                      { id: "2", title: "Products", href: "/products" },
-                      {
-                        id: "3",
-                        title: "Strategic Initiatives",
-                        href: "/projects",
-                      },
-                      { id: "4", title: "Tenders", href: "/tendors" },
-                      { id: "5", title: "Media", href: "/gallery" },
-                    ].map((item) => (
-                      <li key={item.id}>
-                        <Link
-                          href={item.href}
-                          className="text-gray-700 hover:text-black flex items-center gap-2"
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <ul className="space-y-4">
-                    {[
-                      { id: 1, title: "Resources", href: "#" },
-                      { id: 2, title: "Downloads", href: "#" },
-                      { id: 3, title: "Media", href: "#" },
-                      { id: 4, title: "Notifications", href: "/notifications" },
-                      { id: 5, title: "Dealers", href: "/dealers" },
-                    ].map((item) => (
-                      <li key={item.id}>
-                        <Link
-                          href={item.href}
-                          className="text-gray-700 hover:text-black flex items-center gap-2"
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              {/* Newsletter Section */}
-              <NewsletterForm />
-            </div>
+          <div className="flex flex-col md:flex-row gap-5">
+            {/* Main Links Section */}
+            <FooterSections
+              head="Main Links"
+              links={[
+                { id: "0", title: "Home", href: "/" },
+                { id: "1", title: "About us", href: "/about" },
+                { id: "2", title: "Products", href: "/products" },
+                {
+                  id: "3",
+                  title: "Strategic Initiatives",
+                  href: "/projects",
+                },
+                { id: "4", title: "Tenders", href: "/tendors" },
+              ]}
+            />
+            <FooterSections
+              head="Resources"
+              links={[
+                { id: 2, title: "Downloads", href: "#" },
+                { id: 3, title: "Media", href: "/media" },
+                { id: 4, title: "Notifications", href: "/notifications" },
+                { id: 5, title: "Dealers", href: "/dealers" },
+              ]}
+            />
+            <NewsletterForm />
           </div>
-          {/* <div>
-            <h3 className="font-semibold exo-font text-lg mb-2">
-              Join our newsletter
-            </h3>
-            <p className="text-sm text-gray-700 mb-4 exo-font">
-              Get the latest KAMCO updates right in your inbox, join our newsletter today!
-            </p>
-            <div className="flex justify-start items-center">
-              <form
-                action="https://docs.google.com/forms/d/1GF2tUn4kwLlBMDKIWMMtO-DJrKnh-0mwEuDoAH2f1bs/formResponse"
-                method="POST"
-                target="_blank"
-                className="relative flex items-center bg-black text-gray-100 px-4 py-2 rounded-full w-96"
-              >
-                <input
-                  type="email"
-                  name="entry.1302336877"
-                  placeholder="Your email"
-                  required
-                  className="flex-grow bg-transparent outline-none text-white placeholder:text-gray-400 px-3"
-                />
-                <motion.button
-                  whileHover={{
-                    x: 5,
-                    color: "black",
-                  }}
-                  whileTap={{ scale: 0.9 }}
-                  type="submit"
-                  className="bg-[#A5F400] text-black rounded-full w-10 h-10 flex justify-center items-center"
-                >
-                  <HiArrowRight />
-                </motion.button>
-              </form>
-            </div>
-          </div> */}
         </div>
 
         {/* Bottom Section */}
