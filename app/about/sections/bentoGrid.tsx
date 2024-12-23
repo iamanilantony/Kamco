@@ -64,7 +64,7 @@ const BentoGrid = () => {
     },
     {
       title: "KAMCO's Leadership",
-      customImageStyle: "object-cover",
+      customImageStyle: "object-contain h-3/4",
       description:
         "State-owned KAMCO promotes mechanized farming for small farmers.",
       imageUrl: "/new_images/bentoGrid/image5.webp",
@@ -75,7 +75,7 @@ const BentoGrid = () => {
     },
     {
       title: "Farmers Training",
-      customImageStyle: "left-0",
+      customImageStyle: "-left-24 object-contain",
       description: "KAMCO provides training on modern farming techniques.",
       imageUrl: "/new_images/bentoGrid/image6.webp",
       customCardStyle: "left-3/4 bottom-8 -translate-x-[25%]",

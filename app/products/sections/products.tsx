@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import products from "@/public/data/productListNew";
+import { useSearchParams } from "next/navigation";
 
 const ProductsCard = ({
   title,
@@ -37,7 +38,12 @@ const ProductsCard = ({
 
 const Products = () => {
   // State to keep track of selected filter
-  const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+  const searchparam = useSearchParams();
+  const initailFilter = searchparam?.get("category");
+  console.log(initailFilter);
+  const [selectedFilter, setSelectedFilter] = useState<string | null>(
+    initailFilter?.toString() || null
+  );
 
   // Button filter options
   const filterOptions = [
@@ -50,9 +56,11 @@ const Products = () => {
 
   // Filter products based on the selected filter
   const filteredProducts = selectedFilter
-    ? products.filter((product) =>
-      product.name?.toLowerCase().includes(selectedFilter.toLowerCase())
-    )
+    ? products.filter(
+        (product) =>
+          product.name?.toLowerCase().includes(selectedFilter.toLowerCase()) ||
+          product.category?.toLowerCase().includes(selectedFilter.toLowerCase())
+      )
     : products;
 
   return (
@@ -69,15 +77,16 @@ const Products = () => {
                 selectedFilter === option.label ? null : option.label
               )
             }
-            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#f5eaac] hover:outline-[#5B5B5B] ${selectedFilter === option.label ? "bg-[#f5eaac] font-bold" : ""
-              }`}
+            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-2xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#f5eaac] hover:outline-[#5B5B5B] ${
+              selectedFilter === option.label ? "bg-[#f5eaac] font-bold" : ""
+            }`}
           >
             <Image
               src={option.img}
               alt={option.img}
               width={50}
               height={50}
-              className="h-6 w-8"
+              className="h-12 w-16"
             />
             {option.label}
           </Button>

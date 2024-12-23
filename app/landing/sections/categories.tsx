@@ -54,7 +54,9 @@ const Categories = () => {
             }}
             key={index}
             className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
-            onClick={() => router.push("/products")}
+            onClick={() =>
+              router.push(`/products?category=${encodeURIComponent(item.text)}`)
+            }
           >
             {/* Image */}
             <Image
