@@ -27,7 +27,7 @@ const ProductsCard = ({
             width={200}
             src={imgPath}
             alt={title}
-            className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 "
+            className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 px-10"
           />
         </div>
       </Link>
