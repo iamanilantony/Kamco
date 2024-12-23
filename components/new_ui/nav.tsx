@@ -105,7 +105,7 @@ const Navbar = () => {
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
-                            About Kamco 
+                            About Kamco
                           </Link>
                         </li>
                         <li>
@@ -203,7 +203,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/gallery"
+                          href="/media"
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                           onClick={() => setActiveDropdown(null)}
                         >
