@@ -23,7 +23,7 @@ const BentoGrid = () => {
       customImageStyle: "",
       description:
         "Tools have advanced, making farming more efficient and predictable.",
-      imageUrl: "/new_images/bentoGrid/image1.webp",
+      imageUrl: "/gallery/2.JPG",
       customCardStyle: "",
       span: "col-span-2 max-sm:col-span-1", // Takes more grid columns
     },
@@ -40,8 +40,8 @@ const BentoGrid = () => {
       title: "Our Mission",
       customImageStyle: "h-3/5",
       description:
-        "We will accomplish our vision with undivided and undeterred commitment towards innovative quality products, through inspired individuals, simplified systems and 5X leadership.",
-      imageUrl: "/new_images/bentoGrid/image3.webp",
+        "Total farming solution through Agriculture Mechanization by sourcing, developing latest technologies and value added products to boost up agriculture production in our nation.",
+      imageUrl: "/gallery/3.JPG",
       customCardStyle: "top-28 left-5",
       span: "sm:row-span-3 max-sm:col-span-1",
     },
@@ -49,8 +49,8 @@ const BentoGrid = () => {
       title: "Our Vision",
       customImageStyle: "w-full",
       description:
-        "We will be a 3000 Cr Global brand in diversified farm mechanization products and solutions by 2025.",
-      imageUrl: "/new_images/bentoGrid/image4.webp",
+        "To provide sustainable and affordable farming solution through Agricultural Mechanization.",
+      imageUrl: "/gallery/5.JPG",
       customCardStyle: "w-2/5 top-1/2 -translate-y-1/2",
       span: "col-span-4 max-sm:col-span-1",
     },
@@ -59,7 +59,7 @@ const BentoGrid = () => {
       customImageStyle: "object-contain h-3/4",
       description:
         "State-owned KAMCO promotes mechanized farming for small farmers.",
-      imageUrl: "/new_images/bentoGrid/image5.webp",
+      imageUrl: "/gallery/6.JPG",
       customCardStyle: "top-10",
       span: "col-span-1 max-sm:col-span-1",
     },
@@ -67,7 +67,7 @@ const BentoGrid = () => {
       title: "Farmers Training",
       customImageStyle: "left-0",
       description: "KAMCO provides training on modern farming techniques.",
-      imageUrl: "/new_images/bentoGrid/image6.webp",
+      imageUrl: "/gallery/7.JPG",
       customCardStyle: "left-3/4 bottom-8 -translate-x-[25%]",
       span: "col-span-3 max-sm:col-span-1",
     },

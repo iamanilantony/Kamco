@@ -62,7 +62,7 @@ const Gallery = () => {
       className="my-32 flex flex-col justify-between relative gap-48"
     >
       <Link
-        href="/dealers"
+        href="/gallery"
         className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
       >
         Explore Gallery
@@ -76,7 +76,7 @@ const Gallery = () => {
           >
             <Image
               key={index}
-              src={`/new_images/gallery/img${index + 1}.webp`}
+              src={`/new_images/gallery/${index + 1}.JPG`}
               alt="Gallery Image"
               className="rounded-lg parall-img w-full"
               width={300}
@@ -94,7 +94,7 @@ const Gallery = () => {
           >
             <Image
               key={index}
-              src={`/new_images/gallery/img${index + 4 + 1}.webp`}
+              src={`/new_images/gallery/${index + 4 + 1}.JPG`}
               alt="Gallery Image"
               className="rounded-lg parall-img w-full"
               width={300}

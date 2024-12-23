@@ -25,23 +25,44 @@ const ConpanyInfo = () => {
   const Certifications = [
     {
       title: "Quality Systems",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: [
+        "Improvement in the systems and improved Customer/Dealer satisfaction",
+
+        "Comply with the requirement of Customers and applicable statutory/regulatory requirements",
+        
+        "Improvement in the effectiveness of the established quality systems",
+        
+        "Addresses Customer, Dealer, Vendor, Society, Employees & Share holders - for their requirement & satisfaction",
+      ]
     },
     {
       title: " ISO 9001 - 2000 Version",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["Improvements are made on regular basis based on the feed back from the customers & dealers",
+        "Regular interactions with all Venders including site visits to maintain and improve the acceptance level of components",
+        "KAMCO Power Tiller certified for compliance with Minimum Performance Standards of Govt. of India",
+        "KAMCO Power Reaper has been tested by SRFMT&TI, Ananthapur of Govt. of India"]
     },
     {
       title: "Quality Policy",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["Total customer satisfaction through quality products and services with improved technology and employee participation.",
+      "Comply with the requirements of customers and the applicable statutory / regulatory requirements. The effectiveness of the established quality management system is continually improved to enable achievement of the policy."
+      ]
     },
     {
       title: "Quality Objectives",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["To ensure that the quality requirements of the products and services offered are maintained at all stages.",
+
+            "To create a culture among all employees towards total quality concepts and productivity through total involvement and commitment of all employees",
+        
+            "To create healthy working environment for attainment of quality goals with excellence and to make quality a way of life",
+        
+            "To detect and prevent non conformance and defects as early as possible and to eliminate them through appropriate changes to the Quality Management System",
+        
+            "To achieve and maintain Quality Leadership through continuos technology upgradation, improvements in techniques, systems and procedures"]
     },
     {
       title: "ISO Procedures and Manuals",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: ["Quality System Manual","Quality System Procedures"]
     },
   ];
 
@@ -88,7 +109,7 @@ const ConpanyInfo = () => {
         District. With the present work force KAMCO can produce 8400 Power
         Tillers & 1200 Power Reapers per annum.
       </InfoDiv>
-      <div className="relative rounded-xl">
+      {/* <div className="relative rounded-xl">
         <Image
           src="/new_images/companydetails.webp" // Replace with your image path
           alt="Farming Insights"
@@ -97,7 +118,7 @@ const ConpanyInfo = () => {
           height={400}
           draggable={false}
         />
-      </div>
+      </div> */}
       <InfoDiv title="Objective of the Company">
         <div className="space-y-8">
           <p>
@@ -111,7 +132,7 @@ const ConpanyInfo = () => {
             equipment, implements and tools.
           </p>
           <p>
-             Assembly Unit was established in 1970 at Athani by M/s. Kerala Agro
+            Assembly Unit was established in 1970 at Athani by M/s. Kerala Agro
             Industries Corporation for the assembly of Kubota Power Tillers in
             technical collaboration with M/s.Kubota Ltd., Japan, the world's
             leading manufacturer of Power Tillers and other agricultural
@@ -119,7 +140,7 @@ const ConpanyInfo = () => {
             tillers with their own facilities.
           </p>
           <p>
-             KAMCO Power Tillers have become the most sought after Power Tillers
+            KAMCO Power Tillers have become the most sought after Power Tillers
             in India because of their quality and reliability.
           </p>
         </div>
@@ -206,7 +227,7 @@ const ConpanyInfo = () => {
       <hr className="w-full h-[2px] bg-black" />
       <InfoDiv title="Memorandum of Association">
         <Link
-          href="#"
+          href="https://www.kamcoindia.com/html/General/MEMORANDUM_OF_ASSOCIATION.pdf"
           className="underline underline-offset-2 flex items-center text-black group"
         >
           {" "}
@@ -218,25 +239,26 @@ const ConpanyInfo = () => {
       <InfoDiv title="Rules and Regulations">
         <div className="space-y-4 md:space-y-8">
           {[
-            { title: "Standing Orders", link: "" },
-            { title: "Delegation of Powers", link: "" },
-            { title: "Staff by laws", link: "" },
+            { title: "Standing Orders", link: "https://www.kamcoindia.com/html/HRM/Standing_order/Standing%20Order.pdf" },
+            { title: "Delegation of Powers", link: "https://www.kamcoindia.com/html/HRM/Delegation_of_Powers/Delegation_of_powers.pdf" },
+            { title: "Staff by laws", link: "https://www.kamcoindia.com/html/HRM/Staff_bye_laws/STAFF%20BYE%20LAWS.pdf" },
             {
               title: "Recruitment and Promotion Policies of Officers",
-              link: "",
+              link: "https://www.kamcoindia.com/html/Recruitement_and_Promotion_Policy_officers.pdf",
             },
             {
               title: "Recruitment and Promotion Policies of Workers",
-              link: "",
+              link: "https://www.kamcoindia.com/html/HRM/Recruitement_and_Promotion/Recruitement_and_Promotion_Policy_Workers.pdf",
             },
-            { title: "Leave rules", link: "" },
-            { title: "PF Trust Rules", link: "" },
-            { title: "Gratuity Rules", link: "" },
-            { title: "Welfare Centre Functions", link: "" },
-            { title: "Conveyance Advance", link: "" },
-            { title: "Medical Reimbursement", link: "" },
-            { title: "Group Personal Accident Insurance Scheme", link: "" },
-            { title: "Group Personal Leave Encashment Scheme", link: "" },
+            { title: "Leave rules Officer", link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%20officer.pdf" },
+            { title: "Leave rules Worker", link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%worker.pdf" },
+            { title: "PF Trust Rules", link: "https://www.kamcoindia.com/html/HRM/PF_Rules/PF%20Rules.pdf" },
+            { title: "Gratuity Rules", link: "https://www.kamcoindia.com/html/HRM/GRATUITY/GRATUITY.pdf" },
+            { title: "Welfare Centre Functions", link: "https://www.kamcoindia.com/html/HRM/Welfare_Centre/KAMCO%20WELFARE%20CENTRE.pdf" },
+            { title: "Conveyance Advance", link: "https://www.kamcoindia.com/html/HRM/Conveyance/conveyance.pdf" },
+            { title: "Medical Reimbursement", link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf" },
+            { title: "Group Personal Accident Insurance Scheme", link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf" },
+            { title: "Group Personal Leave Encashment Scheme", link: "https://www.kamcoindia.com/html/HRM/GLES/Group%20Leave%20Encashement%20Scheme%20Rules.pdf" },
           ].map((rule, index) => (
             <Link
               href={rule.link}
@@ -278,9 +300,15 @@ const ConpanyInfo = () => {
                       transition={{ duration: 0.5 }}
                       className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
                     >
-                      <p className="mt-3 inter-font text-sm md:text-base">
-                        {faq.description}
-                      </p>
+                      <ul>
+                        {
+                          faq.description.map((desc, index) => (
+                            <li className="mt-3 inter-font text-sm md:text-base" key={index}>
+                              {desc}
+                            </li>
+                          ))
+                        }
+                      </ul>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -291,6 +319,42 @@ const ConpanyInfo = () => {
       </InfoDiv>
       <hr className="w-full h-[2px] bg-black" />
       <InfoDiv title="Directory of Employee">
+        <motion.div className="flex flex-col gap-2 mb-5">
+          <div
+            className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
+            onClick={() => setIsActive(!isActive)}
+          >
+            <div className="flex justify-between items-center cursor-pointer">
+              <h3 className="text-lg  font- text-gray-900">Human Resources</h3>
+              <span className="text-xl font-bold">
+                {isActive ? <ChevronUp /> : <ChevronDown />}
+              </span>
+            </div>
+          </div>
+          <AnimatePresence mode="wait">
+            {isActive && (
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.5 }}
+                className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
+              >
+                <p className="mt-3 inter-font text-sm md:text-base">
+                Total employee strength 567 persons
+
+                Periodical training is being conducted to improve the performance levels of workmen
+
+    Mainly management development programmes conducted for officers
+
+    Training programmes designed to specific requirements based on individual needs
+
+    Periodical assessment of employees performance carried out after training
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <motion.div className="flex flex-col gap-2">
           <div
             className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
@@ -313,10 +377,15 @@ const ConpanyInfo = () => {
                 className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
               >
                 <p className="mt-3 inter-font text-sm md:text-base">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Deserunt harum corporis quam vel beatae, aliquid error ullam
-                  et, accusamus sint non nam blanditiis, id repudiandae fugit
-                  excepturi delectus eius molestias.
+                Total employee strength 567 persons
+
+                Periodical training is being conducted to improve the performance levels of workmen
+
+    Mainly management development programmes conducted for officers
+
+    Training programmes designed to specific requirements based on individual needs
+
+    Periodical assessment of employees performance carried out after training
                 </p>
               </motion.div>
             )}
