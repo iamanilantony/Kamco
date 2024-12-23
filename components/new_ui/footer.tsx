@@ -89,7 +89,7 @@ export default function Footer() {
             <FooterSections
               head="Resources"
               links={[
-                { id: 2, title: "Downloads", href: "#" },
+                { id: 2, title: "Downloads", href: "/downloads" },
                 { id: 3, title: "Media", href: "/media" },
                 { id: 4, title: "Notifications", href: "/notifications" },
                 { id: 5, title: "Dealers", href: "/dealers" },

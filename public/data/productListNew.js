@@ -21,7 +21,7 @@ export default [
       name: "Drone",
       codeName: "PR-021",
       category: "Plant protection",
-      src: "/products/PR-021_1.png",
+      src: "/products/Drone.png",
       piecesLeft: 56,
       description: "Advanced drones for plant protection.",
       slug: "plant-protection",

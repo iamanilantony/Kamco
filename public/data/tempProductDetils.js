@@ -86,7 +86,7 @@ export default [
   {
     "id": "PR-021",
     "name": "Drone",
-    "image": ["/products/PR-021_2.png","/products/PR-021_1.png","/products/PR-021_2.png"],
+    "image": ["/products/PR-021_2.png","/products/PR-021_1.png","/products/PR-021_2.png","/products/Drone.png"],
     "specs": [
       { "label": "Model", "value": "DR-200" },
       { "label": "Type", "value": "Quadcopter" },
@@ -229,7 +229,7 @@ export default [
   {
     "id": "PR-035",
     "name": "Cono Weeder",
-    "image": ["/products/PR-035.png"],
+    "image": ["/products/PR-035.png","/products/PR-035_2.jpg","/products/PR-035_3.png"],
     "specs": [
       { "label": "Model", "value": "CW 10" },
       { "label": "Type", "value": "Manual" },
