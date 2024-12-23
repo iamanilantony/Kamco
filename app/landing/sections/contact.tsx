@@ -51,7 +51,7 @@ export default function Contact() {
                     <p className="text-sm">Reg Office: Athani - 683585,</p>
                     <p className="text-sm">
                       Ernakulam District, Kerala State, India
-                    </p>
+                    </p> 
                   </div>
                   <button className="bg-[#c0eba6] text-black p-2 px-8 text-sm rounded-full hover:bg-green-600 transition-colors">
                     <Link href='https://maps.app.goo.gl/o8e6wmKyZpHh9qcz5' target="_blank">
