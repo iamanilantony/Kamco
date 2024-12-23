@@ -41,9 +41,9 @@ const ProductInfo = () => {
           width={800}
           height={600}
           draggable={false}
-          className="w-full lg:w-1/2 h-auto border border-gray-300 rounded-xl"
+          className="w-full lg:w-1/2 object-contain h-auto border border-gray-300 rounded-xl max-h-[30rem]"
         />
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full w-full lg:w-1/2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full w-full lg:w-1/2 max-h-[30rem]">
           <Image
             height={300}
             width={400}
@@ -56,7 +56,7 @@ const ProductInfo = () => {
             height={300}
             width={400}
             draggable={false}
-            src="/new_images/products/product/img2.webp"
+            src={product.image[2] || "/new_images/products/product/img2.webp"}
             alt="Tractor in Water"
             className="w-full h-full border border-gray-300 rounded-xl"
           />
@@ -64,7 +64,7 @@ const ProductInfo = () => {
             height={300}
             width={400}
             draggable={false}
-            src="/new_images/products/product/img3.webp"
+            src={product.image[3] ||  "/new_images/products/product/img3.webp"}
             alt="Tractor in Muddy Terrain"
             className="w-full h-full border border-gray-300 rounded-xl"
           />
@@ -72,7 +72,7 @@ const ProductInfo = () => {
             height={300}
             width={400}
             draggable={false}
-            src="/new_images/products/product/img4.webp"
+            src={product.image[4] || "/new_images/products/product/img4.webp"}
             alt="Tractor near Tree"
             className="w-full h-full border border-gray-300 rounded-xl"
           />

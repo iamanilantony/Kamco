@@ -12,7 +12,7 @@ export default [
       name: "Tractors",
       codeName: "PR-012",
       category: "Land Preparation",
-      src: "/new_images/products/tractor1.webp",
+      src: "/products/PR-012_2.jpg",
       piecesLeft: 75,
       description: "High-performance tractors for large-scale fields.",
       slug: "land-preparation",

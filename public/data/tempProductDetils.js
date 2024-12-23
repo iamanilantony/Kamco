@@ -47,7 +47,7 @@ export default [
   {
     "id": "PR-012",
     "name": "Tractors",
-    "image": ["/new_images/products/tractor1.webp"],
+    "image": ["/products/PR-012_2.jpg","/products/PR-012_1.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "TR 100" },
       { "label": "Horsepower", "value": "100 HP" },
@@ -86,7 +86,7 @@ export default [
   {
     "id": "PR-021",
     "name": "Drone",
-    "image": ["/new_images/products/drone.webp"],
+    "image": ["/products/PR-021_2.png","/products/PR-021_1.png","/products/PR-021_2.png"],
     "specs": [
       { "label": "Model", "value": "DR-200" },
       { "label": "Type", "value": "Quadcopter" },
@@ -121,7 +121,7 @@ export default [
   {
     "id": "PR-031",
     "name": "Echo Leopard Power weeder",
-    "image": ["/new_images/products/echoleopard.webp"],
+    "image": ["/products/PR-031_1.png","/products/PR-031_2.jpg","/products/PR-031_3.jpg","/products/PR-031_4.jpg","/products/PR-031_2.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "EL 50" },
       { "label": "Type", "value": "Petrol powered" },
@@ -157,7 +157,7 @@ export default [
   {
     "id": "PR-032",
     "name": "Geared Power weeder",
-    "image": ["/products/PR-032.jpg"],
+    "image": ["/products/PR-032.jpg","/products/PR-032_2_Power Weeder K40.png","/products/PR-032_3_Power Weeder K40.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "GP 60" },
       { "label": "Type", "value": "Diesel powered" },
@@ -298,7 +298,7 @@ export default [
   {
     "id": "PR-041",
     "name": "Power Reaper",
-    "image": ["/products/PR-041.jpg"],
+    "image": ["/products/PR-041.jpg","/products/PR-041_120H.jpg","/products/PR-041_120M.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "PR 80" },
       { "label": "Type", "value": "Diesel powered" },

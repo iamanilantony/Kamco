@@ -45,7 +45,7 @@ const Products = () => {
     { label: "Plant Protection", img: "/products/PR-032.jpg" },
     { label: "Deweeding", img: "/new_images/products/powertiller.webp" },
     { label: "Harvesting", img: "/new_images/products/echoleopard.webp" },
-    { label: "Garden Tools", img: "/new_images/products/tractor1.webp" },
+    { label: "Garden Tools", img: "/products/PR-012_1.jpg" },
   ];
 
   // Filter products based on the selected filter
