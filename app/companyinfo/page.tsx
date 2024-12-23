@@ -92,6 +92,7 @@ const ConpanyInfo = () => {
   };
 
   const [isActive, setIsActive] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
 
   return (
     <div className="w-full py-6 md:py-12 space-y-8 md:space-y-12 mt-6 md:mt-12 text-left">
@@ -340,35 +341,32 @@ const ConpanyInfo = () => {
                 transition={{ duration: 0.5 }}
                 className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
               >
-                <p className="mt-3 inter-font text-sm md:text-base">
-                Total employee strength 567 persons
-
-                Periodical training is being conducted to improve the performance levels of workmen
-
-    Mainly management development programmes conducted for officers
-
-    Training programmes designed to specific requirements based on individual needs
-
-    Periodical assessment of employees performance carried out after training
-                </p>
+                <ul className="mt-3 inter-font text-sm md:text-base">
+                  <li className="mb-4">Total employee strength 567 persons</li>
+                  <li className="mb-4">Periodical training is being conducted to improve the performance levels of workmen</li>
+                  <li className="mb-4">Mainly management development programmes conducted for officers</li>
+                  <li className="mb-4">Training programmes designed to specific requirements based on individual needs</li>
+                  <li>Periodical assessment of employees performance carried out after training</li>
+                </ul>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
-        <motion.div className="flex flex-col gap-2">
+
+        <motion.div className="flex flex-col gap-2 mb-5">
           <div
             className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
-            onClick={() => setIsActive(!isActive)}
+            onClick={() => setIsActive2(!isActive2)}
           >
             <div className="flex justify-between items-center cursor-pointer">
-              <h3 className="text-lg  font- text-gray-900">Human Resources</h3>
+              <h3 className="text-lg  font- text-gray-900">Directory of Employees</h3>
               <span className="text-xl font-bold">
-                {isActive ? <ChevronUp /> : <ChevronDown />}
+                {isActive2 ? <ChevronUp /> : <ChevronDown />}
               </span>
             </div>
           </div>
           <AnimatePresence mode="wait">
-            {isActive && (
+            {isActive2 && (
               <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -376,21 +374,19 @@ const ConpanyInfo = () => {
                 transition={{ duration: 0.5 }}
                 className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
               >
-                <p className="mt-3 inter-font text-sm md:text-base">
-                Total employee strength 567 persons
-
-                Periodical training is being conducted to improve the performance levels of workmen
-
-    Mainly management development programmes conducted for officers
-
-    Training programmes designed to specific requirements based on individual needs
-
-    Periodical assessment of employees performance carried out after training
-                </p>
+                <Link
+              href="https://www.kamcoindia.com/html/General/Directory_of_Employees.pdf"
+              className="underline underline-offset-2 flex items-center text-black group"
+            >
+              {" "}
+              Directory_of_Employees.pdf
+              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
+        
       </InfoDiv>
     </div>
   );
