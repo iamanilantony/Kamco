@@ -84,7 +84,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#c0eba6] rounded-lg p-6 flex flex-wrap gap-6 justify-between items-center">
+              <div className="bg-[#c0eba6] rounded-lg p-6 flex flex-wrap gap-6 justify-around items-center">
                 <a href="#" className="hover:opacity-75 transition-opacity">
                   <FaFacebook size={32} />
                 </a>

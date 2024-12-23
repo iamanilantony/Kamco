@@ -1,5 +1,6 @@
 import { Button } from "@/components/UI/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -7,22 +8,22 @@ const Hero = () => {
     {
       name: "Power Tillers",
       image: "/new_images/products/icons/img1.webp",
-      link: "#",
+      link: "/products/PR-011",
     },
     {
-      name: "Geared Power Rea...",
+      name: "Geared Power Weeder",
       image: "/new_images/products/icons/img2.webp",
-      link: "#",
+      link: "/products/PR-032",
     },
     {
       name: "Brush Cutters",
       image: "/new_images/products/icons/img3.webp",
-      link: "#",
+      link: "/products/PR-036",
     },
     {
       name: "Power Reaper",
       image: "/new_images/products/icons/img4.webp",
-      link: "#",
+      link: "products/PR-041",
     },
   ];
   return (
@@ -49,9 +50,11 @@ const Hero = () => {
           agriculture.
         </p>
 
-        <Button className="bg-[#d7ffbf] py-4 md:py-8 px-8 md:px-16 rounded-2xl text-lg md:text-xl urbanist-font text-black hover:bg-[#a6ff8f]">
-          Explore the Tractors
-        </Button>
+          <Button className="bg-[#d7ffbf] py-4 md:py-8 px-8 md:px-16 rounded-2xl text-lg md:text-xl urbanist-font text-black hover:bg-[#a6ff8f]">
+        <Link href='/products/PR-012' className="w-full">
+            Explore the Tractors
+        </Link>
+          </Button>
       </div>
       {/* right section */}
       <div className="text-white p-4 md:p-6 rounded-md z-10 w-full md:w-auto mt-8 md:mt-0 space-y-16 max-sm:hidden">
@@ -94,14 +97,14 @@ const Hero = () => {
         </ul>
 
         {/* Explore All Products */}
-        <div className="text-center mt-6 md:mt-8">
+        {/* <div className="text-center mt-6 md:mt-8">
           <a
             href="#"
             className="text-sm md:text-base font-[280] underline hover:text-gray-300 inter-font"
           >
             Explore All Products
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
