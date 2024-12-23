@@ -9,23 +9,22 @@ const BoardOfDirectors = () => {
       imageUrl: "/new_images/directors/Sasidharan.webp", // Replace with real image URL
     },
     {
-      name: "Shri. Prasanth Nair, IAS",
+      name: " Sri. N. Rajeev ",
       role: "MD, KAMCO",
-      imageUrl: "/new_images/directors/Prasanth.webp", // Replace with real image URL
     },
     {
-      name: "Additional Secretary",
-      role: "Agriculture (PU) Department, Government of Kerala, Thiruvananthapuram",
+      name: " Sri. M.R. Anoop ",
+      role: "Govt Director",
       imageUrl: null,
     },
     {
-      name: "Sri. Sreeni G.",
+      name: "Sri. G. Sreeni",
       role: "Joint Secretary, Finance Department, Government of Kerala, Thiruvananthapuram",
       imageUrl: null,
     },
     {
-      name: "Sri. George Sebastian",
-      role: "Additional Director (Planning), Directorate of Agriculture Development & Farmers Welfare Department",
+      name: "Smt. T.D. Meena",
+      role: "Govt Director",
       imageUrl: null,
     },
     {
@@ -49,9 +48,9 @@ const BoardOfDirectors = () => {
       imageUrl: "/new_images/directors/Gopi.webp",
     },
     {
-      name: "Shri. Vadakkodu Monachan",
+      name: " Sri. Gopalakrishna Pillai",
       role: "Director, KAMCO",
-      imageUrl: "/new_images/directors/Monachan.webp",
+      imageUrl: "/new_images/directors/Sri. Gopalakrishna Pillai.JPG",
     },
   ];
 

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
@@ -10,6 +11,7 @@ type ReviewCardProps = {
   rating: number;
   review: string;
   profileImage: string;
+  video: string;
   className?: string;
 };
 
@@ -20,6 +22,7 @@ const ReviewCard = ({
   rating,
   review,
   profileImage,
+  video,
   className,
 }: ReviewCardProps) => {
   return (
@@ -40,13 +43,18 @@ const ReviewCard = ({
 
       <div className=" h-20 w-20 absolute -top-1 -left-1 rounded-br-3xl bg-white border-b border-r border-black">
         <div className="w-20 h-20 rounded-full bg-red-500 -translate-x-2 -translate-y-2 overflow-hidden">
-          <Image
-            height={80}
-            width={80}
-            src={profileImage}
-            alt={`'s profile`}
-            className="w-20 h-20 rounded-br-xl object-cover"
-          />
+          <Link
+            href={video}
+            target="_blank"
+            className="w-20 h-20 rounded-br-xl object-cover cursor-pointer"
+          >
+            <Image
+              height={80}
+              width={80}
+              src={profileImage}
+              alt={`'s profile`}
+            />
+          </Link>
         </div>
       </div>
       <div className="flex items-center mb-4 ml-16">
@@ -96,6 +104,7 @@ const Testimonial = () => {
       review:
         "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
       profileImage: "/new_images/person.webp",
+      video: "https://youtu.be/LhzGVPbqS1k",
     },
     {
       name: "Jane Doe",
@@ -105,6 +114,7 @@ const Testimonial = () => {
       review:
         "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
       profileImage: "/new_images/person.webp",
+      video: "https://youtu.be/kTi11aaSR5E",
     },
     {
       name: "Jane Doe",
@@ -114,6 +124,7 @@ const Testimonial = () => {
       review:
         "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
       profileImage: "/new_images/person.webp",
+      video: "https://youtu.be/kTi11aaSR5E",
     },
     {
       name: "Jane Doe",
@@ -123,6 +134,7 @@ const Testimonial = () => {
       review:
         "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
       profileImage: "/new_images/person.webp",
+      video: "#",
     },
     {
       name: "Jane Doe",
@@ -132,6 +144,7 @@ const Testimonial = () => {
       review:
         "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
       profileImage: "/new_images/person.webp",
+      video: "#",
     },
   ];
   return (

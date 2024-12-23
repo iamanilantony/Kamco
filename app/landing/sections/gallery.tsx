@@ -39,18 +39,6 @@ const Gallery = () => {
             //   markers: true,
           },
         });
-        gsap.to(img, {
-          yPercent: -gsap.utils.random(35, 50),
-          duration: randomDuration,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top 50%",
-            end: "bottom 50%",
-            // markers: true,
-            scrub: 1,
-          },
-        });
       });
     },
     { scope: ref }
@@ -59,44 +47,44 @@ const Gallery = () => {
   return (
     <div
       ref={ref}
-      className="my-32 flex flex-col justify-between relative gap-48"
+      className="my-32 flex flex-col justify-between relative gap-64"
     >
       <Link
         href="/gallery"
-        className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+        className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-3/4 z-10"
       >
         Explore Gallery
       </Link>
-      <div className="flex justify-between items-center gap-5 pl-5">
+      <div className="flex justify-between items-center gap-8 md:gap-24 pl-5">
         {Array.from({ length: imagesToShow }).map((_, index) => (
           <div
             style={{
-              transform: `translateY(${Math.sin(index * 5) * 100}px)`,
+              transform: `translateY(${Math.sin(index * 5) * 150}px)`,
             }}
           >
             <Image
               key={index}
               src={`/new_images/gallery/${index + 1}.JPG`}
               alt="Gallery Image"
-              className="rounded-lg parall-img w-full"
+              className="rounded-lg parall-img w-full aspect-square"
               width={300}
               height={300}
             />
           </div>
         ))}
       </div>
-      <div className="flex justify-between items-center gap-5">
+      <div className="flex justify-between items-center gap-8 md:gap-24">
         {Array.from({ length: imagesToShow }).map((_, index) => (
           <div
             style={{
-              transform: `translateY(${Math.sin(index * 5) * 100}px)`,
+              transform: `translateY(${Math.sin(index * 5) * 150}px)`,
             }}
           >
             <Image
               key={index}
               src={`/new_images/gallery/${index + 4 + 1}.JPG`}
               alt="Gallery Image"
-              className="rounded-lg parall-img w-full"
+              className="rounded-lg parall-img w-full aspect-square"
               width={300}
               height={300}
             />

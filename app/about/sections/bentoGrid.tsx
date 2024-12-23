@@ -42,7 +42,7 @@ const BentoGrid = () => {
       description:
         "Total farming solution through Agriculture Mechanization by sourcing, developing latest technologies and value added products to boost up agriculture production in our nation.",
       imageUrl: "/gallery/3.JPG",
-      customCardStyle: "top-28 left-5",
+      customCardStyle: "top-10 left-5",
       span: "sm:row-span-3 max-sm:col-span-1",
     },
     {
@@ -56,7 +56,7 @@ const BentoGrid = () => {
     },
     {
       title: "KAMCO's Leadership",
-      customImageStyle: "object-contain h-3/4",
+      customImageStyle: "object-cover",
       description:
         "State-owned KAMCO promotes mechanized farming for small farmers.",
       imageUrl: "/gallery/6.JPG",
@@ -84,6 +84,7 @@ const BentoGrid = () => {
               card.span
             )}
           >
+            <div className="h-full w-full absolute bg-white/20 z-10"></div>
             {card.imageUrl && (
               <Image
                 src={card.imageUrl}
@@ -106,7 +107,7 @@ const BentoGrid = () => {
               <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight urbanist-font ">
                 {card.title}
               </h3>
-              <p className="inter-font text-black">{card.description}</p>
+              <p className="inter-font ">{card.description}</p>
             </div>
           </div>
         ))}

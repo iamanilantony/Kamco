@@ -24,13 +24,31 @@ const Facilities = () => {
       title: "Kalamassery Unit - Diesel Engine E...",
       description:
         "Our second unit, established in 1992 in Kalamassery, specializes in Diesel Engine production, forming the core of our Power Tiller and Tractor lineup.",
-      imageUrl: "/new_images/about/image3.webp",
+      imageUrl: "/new_images/about/KAMCO-KALAMASSERY UNIT-OUTSIDE.jpeg",
     },
     {
-      title: "Kalamassery Unit Expansion",
+      title: "Kanjikode, Palakkad Unit – Expanding Production",
       description:
-        "A new addition to our Kalamassery facility, expanding production capacity for modern power tillers and engine solutions that includes a state-of-the-art manufacturing unit for Power Tillers",
-      imageUrl: "/new_images/about/image4.webp",
+        "Established in 1995, the Kanjikode facility in Palakkad contributes to our production of Power Tillers, further expanding our reach and ability to serve India’s farmers with durable, high-quality machinery built for diverse agricultural applications.",
+      imageUrl: "/new_images/about/KAMCO-PALAKKAD UNIT-OUTSIDE.jpg",
+    },
+    {
+      title: "Mala, Thrissur Unit – Dedicated to Harvesting Solutions",
+      description:
+        "Our fourth unit in Mala, Thrissur, focuses on producing Power Reapers. With specialized assembly lines for critical components, the facility is equipped for thorough inspections and testing at every stage, ensuring that each reaper delivers reliability and performance that farmers can depend on.",
+      imageUrl: "/new_images/about/KAMCO-MALA UNIT-INSIDE.JPG",
+    },
+    {
+      title: "Kannur Unit – Garden Tiller and Power Weeder Innovation",
+      description:
+        "Inaugurated in 2014, our Kannur facility at Valiyavelicham is dedicated to Garden Tillers and Power Weeders, including models like the B30, K40, and the Eco Leopard Tiller KLW 100D. This unit combines cutting-edge manufacturing practices with stringent quality controls, ensuring that our tillers and weeders are robust, efficient, and versatile for various farming needs.",
+      imageUrl: "/new_images/about/KAMCO-KANNUR UNIT-OUTSIDE.jpg",
+    },
+    {
+      title: "Athani Tractor Manufacturing Unit",
+      description:
+        "Our Athani campus also houses a specialized unit for Tractor production, featuring an advanced, automated conveyor assembly system. Each tractor undergoes rigorous testing to ensure durability, power, and fuel efficiency, aligning with our mission to deliver modern, sustainable solutions for India’s agricultural future.",
+      imageUrl: "/new_images/about/image2.webp",
     },
   ];
 
@@ -63,20 +81,21 @@ const Facilities = () => {
         modules={[Navigation]}
         spaceBetween={25}
         slidesPerView={1}
-        slidesOffsetBefore={25}
+        slidesOffsetBefore={0}
         onSwiper={(swiper) => {
           //@ts-ignore
           swiperRef.current = swiper;
         }}
         breakpoints={{
-          640: { slidesPerView: 1 },
+          640: { slidesPerView: 1, slidesOffsetBefore: 0 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          1024: { slidesPerView: 3, slidesOffsetBefore: 25 },
         }}
+        className="h-full"
       >
         {facilities.map((facility, index) => (
           <SwiperSlide key={index}>
-            <div className="border-[#969696] aspect-square rounded-lg border p-4 max-w-full md:max-w-xl my-4 md:my-8 h-full text-left">
+            <div className="border-[#969696] aspect-auto rounded-lg border p-4 max-w-full md:max-w-xl my-4 md:my-8 h-full text-left min-h-[550px]">
               <Image
                 height={500}
                 width={500}
