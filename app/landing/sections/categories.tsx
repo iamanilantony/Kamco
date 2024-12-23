@@ -53,7 +53,7 @@ const Categories = () => {
               delay: 0.1,
             }}
             key={index}
-            className="relative group rounded-lg overflow-hidden shadow-lg"
+            className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
             onClick={() => router.push("/products")}
           >
             {/* Image */}

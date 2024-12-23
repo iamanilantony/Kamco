@@ -21,13 +21,15 @@ const ProductsCard = ({
         <h1 className="text-2xl font-bold mt-1 z-10 relative text-left w-full text-ellipsis">
           {title}
         </h1>
-        <Image
-          height={200}
-          width={200}
-          src={imgPath}
-          alt={title}
-          className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 "
-        />
+        <div>
+          <Image
+            height={200}
+            width={200}
+            src={imgPath}
+            alt={title}
+            className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 "
+          />
+        </div>
       </Link>
     </div>
   );
@@ -49,8 +51,8 @@ const Products = () => {
   // Filter products based on the selected filter
   const filteredProducts = selectedFilter
     ? products.filter((product) =>
-        product.category?.toLowerCase().includes(selectedFilter.toLowerCase())
-      )
+      product.category?.toLowerCase().includes(selectedFilter.toLowerCase())
+    )
     : products;
 
   return (
@@ -67,9 +69,8 @@ const Products = () => {
                 selectedFilter === option.label ? null : option.label
               )
             }
-            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#f5eaac] hover:outline-[#5B5B5B] ${
-              selectedFilter === option.label ? "bg-[#f5eaac] font-bold" : ""
-            }`}
+            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#f5eaac] hover:outline-[#5B5B5B] ${selectedFilter === option.label ? "bg-[#f5eaac] font-bold" : ""
+              }`}
           >
             <Image
               src={option.img}

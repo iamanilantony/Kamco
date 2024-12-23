@@ -48,7 +48,7 @@ const ProductInfo = () => {
             height={300}
             width={400}
             draggable={false}
-            src={product.image[0] || "/new_images/products/product/img1.webp"}
+            src={product.image[1] || "/new_images/products/product/img1.webp"}
             alt="Tractor in Field"
             className="w-full h-full object-contain border border-gray-300 rounded-xl"
           />

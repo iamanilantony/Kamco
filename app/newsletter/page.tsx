@@ -3,22 +3,23 @@
 import { Button } from "@/components/UI/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Newsletter = () => {
   const newsletters = [
-    { title: "January Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "February Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "March Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "April Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "May Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "June Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "July Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "August Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "September Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "October Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "November Newsletter", image: "https://via.placeholder.com/150" },
-    { title: "December Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "January Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "February Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "March Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "April Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "May Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "June Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "July Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "August Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "September Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "October Newsletter", image: "https://via.placeholder.com/150" },
+    // { title: "November Newsletter", image: "https://via.placeholder.com/150" },
+    { title: "December Newsletter", image: "/NewLetter/Newsletter_Dec.png", link: "/NewLetter/KAMCO_December_Newsletter.pdf" },
   ];
 
   const newslettersPerPage = 8;
@@ -46,41 +47,53 @@ const Newsletter = () => {
         {currentNewsletters.map((newsletter, index) => (
           <div
             key={index}
-            className="aspect-square relative overflow-hidden rounded-lg shadow-md"
+            className="aspect-square relative overflow-hidden rounded-lg shadow-md cursor-pointer transform transition-transform duration-300 hover:scale-105"
           >
-            <Image
-              src={newsletter.image}
-              alt={newsletter.title}
-              layout="fill"
-              objectFit="cover"
-            />
-            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 text-center">
-              {newsletter.title}
-            </div>
+            <Link href={newsletter.link} passHref>
+              {/* <a target="_blank" rel="noopener noreferrer"> */}
+                <div className="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer">
+                  <Image
+                    src={newsletter.image}
+                    alt={newsletter.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                  <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 text-center">
+                    {newsletter.title}
+                  </div>
+                </div>
+              {/* </a> */}
+            </Link>
+
           </div>
+
         ))}
       </div>
-      <div className="mt-8 flex justify-center items-center space-x-4">
-        <Button
-          onClick={goToPreviousPage}
-          disabled={currentPage === 1}
-          variant="outline"
-          size="icon"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </Button>
-        <span className="text-sm font-medium">
-          Page {currentPage} of {totalPages}
-        </span>
-        <Button
-          onClick={goToNextPage}
-          disabled={currentPage === totalPages}
-          variant="outline"
-          size="icon"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </Button>
-      </div>
+      {
+        newsletters.length > 6 && (
+          <div className="mt-8 flex justify-center items-center space-x-4">
+            <Button
+              onClick={goToPreviousPage}
+              disabled={currentPage === 1}
+              variant="outline"
+              size="icon"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <span className="text-sm font-medium">
+              Page {currentPage} of {totalPages}
+            </span>
+            <Button
+              onClick={goToNextPage}
+              disabled={currentPage === totalPages}
+              variant="outline"
+              size="icon"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+        )
+      }
     </div>
   );
 };
