@@ -7,6 +7,7 @@ import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
 import { motion, useAnimation, useInView } from "framer-motion";
 import ContactForm from "./contactForm";
+import Link from "next/link";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -53,7 +54,9 @@ export default function Contact() {
                     </p>
                   </div>
                   <button className="bg-[#c0eba6] text-black p-2 px-8 text-sm rounded-full hover:bg-green-600 transition-colors">
-                    View Map
+                    <Link href='https://maps.app.goo.gl/o8e6wmKyZpHh9qcz5' target="_blank">
+                      View Map
+                    </Link>
                   </button>
                 </div>
               </div>
