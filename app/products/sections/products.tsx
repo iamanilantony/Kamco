@@ -51,7 +51,7 @@ const Products = () => {
   // Filter products based on the selected filter
   const filteredProducts = selectedFilter
     ? products.filter((product) =>
-      product.category?.toLowerCase().includes(selectedFilter.toLowerCase())
+      product.name?.toLowerCase().includes(selectedFilter.toLowerCase())
     )
     : products;
 
