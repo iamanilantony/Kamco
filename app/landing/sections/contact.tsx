@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState, useEffect, useRef } from "react";
-import { FaFacebook, FaYoutube, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaEnvelope, FaTwitter } from "react-icons/fa";
 import { CiLocationOn, CiMail } from "react-icons/ci";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
@@ -85,17 +85,17 @@ export default function Contact() {
                 </div>
               </div>
               <div className="bg-[#c0eba6] rounded-lg p-6 flex flex-wrap gap-6 justify-around items-center">
-                <a href="#" className="hover:opacity-75 transition-opacity">
+                <a href="https://www.facebook.com/kamcoindia" className="hover:opacity-75 transition-opacity">
                   <FaFacebook size={32} />
                 </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
+                <a href="https://www.facebook.com/kamcoindia" className="hover:opacity-75 transition-opacity">
                   <FaYoutube size={32} />
                 </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
+                <a href="https://www.instagram.com/kamcoindiaofficial/" className="hover:opacity-75 transition-opacity">
                   <RiInstagramFill size={32} />
                 </a>
                 <a href="#" className="hover:opacity-75 transition-opacity">
-                  <FaEnvelope size={32} />
+                  <FaTwitter size={32} />
                 </a>
               </div>
             </div>
