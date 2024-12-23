@@ -25,7 +25,9 @@ const BentoGrid = () => {
         "Tools have advanced, making farming more efficient and predictable.",
       imageUrl: "/gallery/2.JPG",
       customCardStyle: "",
-      span: "col-span-2 max-sm:col-span-1", // Takes more grid columns
+      span: "col-span-2 max-sm:col-span-1",
+      textColor: "text-white",
+      overlayColor: "bg-black/20",
     },
     {
       title: "Quality Machinery",
@@ -35,6 +37,8 @@ const BentoGrid = () => {
       imageUrl: "/new_images/bentoGrid/image2.webp",
       customCardStyle: "top-10 left-10",
       span: "col-span-2 max-sm:col-span-1",
+      textColor: "text-black",
+      overlayColor: "",
     },
     {
       title: "Our Mission",
@@ -44,6 +48,8 @@ const BentoGrid = () => {
       imageUrl: "/gallery/3.JPG",
       customCardStyle: "top-10 left-5",
       span: "sm:row-span-3 max-sm:col-span-1",
+      textColor: "text-black",
+      overlayColor: "",
     },
     {
       title: "Our Vision",
@@ -53,6 +59,8 @@ const BentoGrid = () => {
       imageUrl: "/gallery/5.JPG",
       customCardStyle: "w-2/5 top-1/2 -translate-y-1/2",
       span: "col-span-4 max-sm:col-span-1",
+      textColor: "text-white",
+      overlayColor: "bg-black/20",
     },
     {
       title: "KAMCO's Leadership",
@@ -62,6 +70,8 @@ const BentoGrid = () => {
       imageUrl: "/gallery/6.JPG",
       customCardStyle: "top-10",
       span: "col-span-1 max-sm:col-span-1",
+      textColor: "text-white",
+      overlayColor: "bg-black/20",
     },
     {
       title: "Farmers Training",
@@ -70,6 +80,8 @@ const BentoGrid = () => {
       imageUrl: "/gallery/7.JPG",
       customCardStyle: "left-3/4 bottom-8 -translate-x-[25%]",
       span: "col-span-3 max-sm:col-span-1",
+      textColor: "text-black",
+      overlayColor: "",
     },
   ];
 
@@ -84,7 +96,9 @@ const BentoGrid = () => {
               card.span
             )}
           >
-            <div className="h-full w-full absolute bg-white/20 z-10"></div>
+            <div
+              className={`h-full w-full absolute ${card.overlayColor} z-10 overlay`}
+            ></div>
             {card.imageUrl && (
               <Image
                 src={card.imageUrl}
@@ -101,7 +115,8 @@ const BentoGrid = () => {
             <div
               className={cn(
                 "absolute bottom-10 left-10 z-10 text-left",
-                !isMobile && card.customCardStyle
+                !isMobile && card.customCardStyle,
+                card.textColor
               )}
             >
               <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight urbanist-font ">
