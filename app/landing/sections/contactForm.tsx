@@ -109,7 +109,7 @@ const ContactForm: React.FC = () => {
               setFormData({ ...formData, message: e.target.value })
             }
           />
-          <button className="bg-[#c0eba6] py-3 md:py-4 px-8 md:px-20 rounded-2xl text-xl md:text-2xl urbanist-font">
+          <button className="bg-[#c0eba6] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font">
             Submit
           </button>
         </form>

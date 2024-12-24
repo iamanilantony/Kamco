@@ -39,22 +39,21 @@ const Hero = () => {
       <div className="absolute h-full w-full top-0 left-0 bg-black/50"></div>
       <div className="container text-white z-10 w-full md:w-1/2 space-y-6 md:space-y-12 p-4 md:p-0 h-full">
         <h1 className="text-4xl md:text-6xl font-bold urbanist-font">
-          KAMCO Tractors: Your <br className="hidden md:block" /> Reliable Farm
-          Partner
+          KAMCO: More Than Products, We’re Transforming Lives
         </h1>
         <p className="mt-2 inter-font text-base md:text-lg font-normal">
-          Experience the future of farming with KAMCO Tractors. Our robust and
-          efficient tractors are designed to handle the toughest terrains and
-          the heaviest workloads. With cutting-edge technology and superior
-          performance, KAMCO tractors are the perfect solution for modern
-          agriculture.
+          At KAMCO, we don’t just create agricultural solutions – we empower
+          farmers. Every product we design is a step toward making farming
+          easier, more efficient, and more rewarding. From tackling tough
+          terrains to boosting productivity, our mission is to touch lives,
+          support dreams, and drive the future of agriculture.
         </p>
 
-          <Button className="bg-[#d7ffbf] py-4 md:py-8 px-8 md:px-16 rounded-2xl text-lg md:text-xl urbanist-font text-black hover:bg-[#a6ff8f]">
-        <Link href='/products/PR-012' className="w-full">
-            Explore the Tractors
-        </Link>
-          </Button>
+        <Button className="bg-[#d7ffbf] py-4 md:py-8 px-8 md:px-16 rounded-2xl text-lg md:text-xl urbanist-font text-black hover:bg-[#a6ff8f]">
+          <Link href="#product-grid" className="w-full">
+            Explore
+          </Link>
+        </Button>
       </div>
       {/* right section */}
       <div className="text-white p-4 md:p-6 rounded-md z-10 w-full md:w-auto mt-8 md:mt-0 space-y-16 max-sm:hidden">
@@ -68,12 +67,19 @@ const Hero = () => {
           {products.map((product, index) => (
             <li key={index} className="flex items-center justify-between gap-6">
               {/* Product Details */}
-              <div className="flex items-center space-x-3">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-10 h-10 md:w-16 md:h-16 object-cover rounded"
-                />
+              <div className="flex items-center space-x-8">
+                <Link
+                  href={"#product-grid"}
+                  className="bg-white rounded p-2 cursor-pointer"
+                >
+                  <Image
+                    src={product.image}
+                    height={100}
+                    width={100}
+                    alt={product.name}
+                    className="w-10 h-10 md:w-16 md:h-16 object-cover rounded"
+                  />
+                </Link>
                 <p
                   style={{
                     textWrap: "wrap",
@@ -84,14 +90,6 @@ const Hero = () => {
                   {product.name}
                 </p>
               </div>
-
-              {/* Learn More Link */}
-              <a
-                href={product.link}
-                className="text-xs md:text-sm underline hover:text-gray-300 inter-font font-[280]"
-              >
-                Learn More
-              </a>
             </li>
           ))}
         </ul>

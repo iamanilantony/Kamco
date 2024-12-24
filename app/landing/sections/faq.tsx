@@ -123,11 +123,11 @@ const FAQsSection = () => {
           <h3 className="text-xl md:text-2xl text-[rgb(52,121,40)] leading-snug">
             FAQs
           </h3>
-          <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
             Frequently Asked Questions
           </h2>
         </motion.div>
-        <div className="flex flex-col md:flex-row gap-6 inter-font w-full text-left">
+        <div className="flex flex-col md:flex-row gap-8 inter-font w-full text-left">
           <motion.div
             animate={controls}
             initial="hidden"

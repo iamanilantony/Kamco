@@ -17,22 +17,22 @@ const ProductsCard = ({
   codeName: string;
 }) => {
   return (
-    <div className="overflow-hidden w-full sm:w-[calc(50vw-30px)] md:w-[calc(25vw-85px)] relative aspect-square bg-white rounded-xl border border-[#5B5B5B] p-4 cursor-pointer group transition-all duration-300 ease-in-out hover:shadow-lg hover:translate-y-[-5px]">
-      <Link href={`/products/${codeName}`}>
+    <Link href={`/products/${codeName}`}>
+      <div className="overflow-hidden w-[90vw] sm:w-[calc(50vw-25px)] md:w-[calc(25vw-85px)] relative aspect-square bg-white rounded-xl border border-[#5B5B5B] p-4 cursor-pointer group flex flex-col items-center justify-between">
         <h1 className="text-2xl font-bold mt-1 z-10 relative text-left w-full text-ellipsis">
           {title}
         </h1>
-        <div>
+        <div className="flex items-center justify-center w-full h-full">
           <Image
-            height={200}
-            width={200}
+            height={250}
+            width={250}
             src={imgPath}
             alt={title}
-            className="w-full h-full object-contain translate-x-10 translate-y-10 absolute z-0 bottom-0 right-0 px-10"
+            className="object-contain group-hover:scale-105 transition-transform"
           />
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 
@@ -47,11 +47,26 @@ const Products = () => {
 
   // Button filter options
   const filterOptions = [
-    { label: "Land Preparation", img: "/new_images/products/powertiller.webp" },
-    { label: "Plant Protection", img: "/products/PR-032.jpg" },
-    { label: "Deweeding", img: "/new_images/products/powertiller.webp" },
-    { label: "Harvesting", img: "/new_images/products/echoleopard.webp" },
-    { label: "Garden Tools", img: "/products/PR-012_1.jpg" },
+    {
+      label: "Land Preparation",
+      img: "/new_images/products/bg_removed/landprep.webp",
+    },
+    {
+      label: "Plant Protection",
+      img: "/new_images/products/bg_removed/protection.webp",
+    },
+    {
+      label: "Deweeding",
+      img: "/new_images/products/bg_removed/landprep.webp",
+    },
+    {
+      label: "Harvesting",
+      img: "/new_images/products/bg_removed/harvesting.webp",
+    },
+    {
+      label: "Garden Tools",
+      img: "/new_images/products/bg_removed/garden.webp",
+    },
   ];
 
   // Filter products based on the selected filter
@@ -64,7 +79,10 @@ const Products = () => {
     : products;
 
   return (
-    <div className="flex flex-col space-y-8 justify-start max-sm:justify-center items-start max-sm:items-center urbanist-font px-4 md:px-16 min-h-screen mt-24">
+    <div
+      id="product-grid"
+      className="flex flex-col space-y-8 justify-start max-sm:justify-center items-start max-sm:items-center urbanist-font px-4 md:px-16 min-h-screen mt-24"
+    >
       <h1 className="text-3xl md:text-5xl font-bold">Products</h1>
 
       {/* Filter Buttons */}
@@ -77,8 +95,8 @@ const Products = () => {
                 selectedFilter === option.label ? null : option.label
               )
             }
-            className={`bg-[#FFFBE6] outline outline-[0.5px] outline-[#5B5B5B] rounded-2xl text-sm md:text-lg urbanist-font text-black p-4 md:p-8 hover:bg-[#f5eaac] hover:outline-[#5B5B5B] ${
-              selectedFilter === option.label ? "bg-[#f5eaac] font-bold" : ""
+            className={`bg-[#C0EBA6] outline outline-[0.5px] outline-[#5B5B5B] rounded-2xl text-base md:text-lg urbanist-font text-black p-8 hover:bg-[#C0EBA6] hover:outline-[#5B5B5B] transition-all max-sm:w-full max-sm:justify-between ${
+              selectedFilter === option.label ? "bg-[#C0EBA6] font-bold" : ""
             }`}
           >
             <Image
@@ -86,7 +104,7 @@ const Products = () => {
               alt={option.img}
               width={50}
               height={50}
-              className="h-12 w-16"
+              className="mr-2"
             />
             {option.label}
           </Button>
@@ -105,7 +123,7 @@ const Products = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="flex flex-wrap gap-4 md:gap-12 pt-8  pb-32">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-12 pt-8  pb-32">
         {filteredProducts.map((product, index) => (
           <ProductsCard
             key={index}

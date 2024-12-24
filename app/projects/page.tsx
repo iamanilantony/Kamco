@@ -24,7 +24,7 @@ const CompanyInfoPage = () => {
     switch (activeTab) {
       case "hydroponicSystems":
         return (
-          <div>
+          <div className="">
             {/* <img className="w-full h-48 md:h-72 object-cover mb-4" src='/Hydroponic_Farm_Illustration.jpg' alt="Hydroponic Systems" /> */}
             <img
               className="w-full h-48 md:h-72 object-cover mb-4"
@@ -401,9 +401,9 @@ const CompanyInfoPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row font-sans">
+    <div className="flex flex-col md:flex-row font-sans relative min-h-screen">
       {/* Sidebar for larger screens, Select input for mobile */}
-      <div className="block md:hidden mb-4 px-8">
+      <div className="block md:hidden mb-4 px-8 sticky top-0">
         <select
           className="w-full p-2 border rounded-md"
           value={activeTab}
@@ -421,16 +421,20 @@ const CompanyInfoPage = () => {
           <option value="tractorManufacturing">Tractor Manufacturing</option>
         </select>
       </div>
-      <div className="hidden md:block w-full md:max-w-fit bg-gray-100 p-4 text-sm md:text-base text-left space-y-6 pr-4">
-        {tabOptions.map((tab) => (
-          <Button
-            onClick={() => setActiveTab(tab.id)}
-            className="bg-white p-6 flex items-center text-black group text-base hover:bg-white w-full justify-between shadow-none"
-          >
-            {tab.label}
-            <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-          </Button>
-        ))}
+      <div className="hidden md:block w-full md:max-w-fit bg-gray-100 p-4 text-sm md:text-base text-left pr-4 ">
+        <div className="sticky top-5 space-y-6">
+          {tabOptions.map((tab) => (
+            <Button
+              onClick={() => setActiveTab(tab.id)}
+              className={`bg-white p-6 flex items-center text-black group text-base hover:bg-white w-full justify-between shadow-none ${
+                activeTab === tab.id ? "bg-blue-200" : ""
+              }`}
+            >
+              {tab.label}
+              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </Button>
+          ))}
+        </div>
       </div>
 
       {/* Content Area */}

@@ -9,11 +9,11 @@ type linkProps = {
 const FooterSections = ({ ...props }: { head: string; links: linkProps[] }) => {
   return (
     <div className="flex flex-col">
-      <h3 className="font-semibold exo-font text-lg mb-2">{props.head}</h3>
+      <h3 className="font-semibold exo-font text-lg mb-3">{props.head}</h3>
       <div className="flex flex-col md:flex-row gap-12">
         <div className="flex">
           <div className="mr-6">
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {props.links.map((item) => (
                 <li key={item.id}>
                   <Link

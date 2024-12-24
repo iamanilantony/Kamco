@@ -39,7 +39,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="space-y-6 max-md:w-full"
           >
-            <div className="relative w-full h-[250px] rounded-lg overflow-hidden text-left">
+            <div className="relative w-full h-[300px] rounded-lg overflow-hidden text-left">
               <div className="absolute inset-0 bg-black/50 p-6 text-white">
                 <div className="flex flex-col items-start gap-8 inter-font">
                   <CiLocationOn size={24} />
@@ -51,10 +51,13 @@ export default function Contact() {
                     <p className="text-sm">Reg Office: Athani - 683585,</p>
                     <p className="text-sm">
                       Ernakulam District, Kerala State, India
-                    </p> 
+                    </p>
                   </div>
-                  <button className="bg-[#c0eba6] text-black p-2 px-8 text-sm rounded-full hover:bg-green-600 transition-colors">
-                    <Link href='https://maps.app.goo.gl/o8e6wmKyZpHh9qcz5' target="_blank">
+                  <button className="bg-[#c0eba6] text-black p-2 px-8 text-sm rounded-full hover:bg-[#ade28c] transition-colors">
+                    <Link
+                      href="https://maps.app.goo.gl/o8e6wmKyZpHh9qcz5"
+                      target="_blank"
+                    >
                       View Map
                     </Link>
                   </button>
@@ -88,13 +91,22 @@ export default function Contact() {
                 </div>
               </div>
               <div className="bg-[#c0eba6] rounded-lg p-6 flex flex-wrap gap-6 justify-around items-center">
-                <a href="https://www.facebook.com/kamcoindia" className="hover:opacity-75 transition-opacity">
+                <a
+                  href="https://www.facebook.com/kamcoindia"
+                  className="hover:opacity-75 transition-opacity"
+                >
                   <FaFacebook size={32} />
                 </a>
-                <a href="https://www.facebook.com/kamcoindia" className="hover:opacity-75 transition-opacity">
+                <a
+                  href="https://www.facebook.com/kamcoindia"
+                  className="hover:opacity-75 transition-opacity"
+                >
                   <FaYoutube size={32} />
                 </a>
-                <a href="https://www.instagram.com/kamcoindiaofficial/" className="hover:opacity-75 transition-opacity">
+                <a
+                  href="https://www.instagram.com/kamcoindiaofficial/"
+                  className="hover:opacity-75 transition-opacity"
+                >
                   <RiInstagramFill size={32} />
                 </a>
                 <a href="#" className="hover:opacity-75 transition-opacity">

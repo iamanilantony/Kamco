@@ -34,9 +34,9 @@ const Gallery = () => {
           ease: "power2.inOut",
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 50%",
+            start: "20% 50%",
             end: "bottom 50%",
-            //   markers: true,
+            // markers: true,
           },
         });
       });
@@ -47,7 +47,7 @@ const Gallery = () => {
   return (
     <div
       ref={ref}
-      className="my-32 flex flex-col justify-between relative gap-64"
+      className="my-32 pb-32 flex flex-col justify-between relative gap-64"
     >
       <Link
         href="/media"

@@ -28,7 +28,7 @@ const ReviewCard = ({
   return (
     <div
       className={cn(
-        "bg-[#f9fafb] border rounded-3xl p-4 min-h-[300px] sm:p-6 w-[85vw] sm:w-[60vw] md:w-[calc(50vw-50px)] relative border-black my-16  mx-4 sm:mx-8 text-left",
+        "bg-[#f9fafb] border rounded-3xl p-4 min-h-[300px] sm:p-6 w-[85vw] sm:w-[60vw] md:w-[calc(50vw-50px)] relative border-black my-16  mx-4 sm:mx-20 text-left",
         className
       )}
     >
@@ -159,7 +159,7 @@ const Testimonial = () => {
   ];
   return (
     <div className="p-4 sm:p-16 mb-16 sm:mb-32 flex flex-col justify-center items-center">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug urbanist-font text-center px-4">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug urbanist-font text-center px-4">
         Farmers Recount Their Experiences
       </h1>
       <div className="p-2 sm:p-6 flex justify-center items-center w-full">
@@ -169,7 +169,7 @@ const Testimonial = () => {
           gradientColor="white"
           gradientWidth={50}
           pauseOnClick={true}
-          className="flex gap-16 sm:gap-32 my-12 sm:my-24"
+          className="flex gap-16 sm:gap-32 mb-12 sm:mb-24 mt-8"
         >
           {testimonialCards.map((testimonial, index) => (
             <ReviewCard

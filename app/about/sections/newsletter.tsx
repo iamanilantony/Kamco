@@ -37,12 +37,12 @@ const NewsletterForm: React.FC = () => {
 
   return (
     <div>
-      <h3 className="font-semibold exo-font text-lg mb-2">
+      <h3 className="font-semibold exo-font text-lg mb-3">
         Join our newsletter
       </h3>
-      <p className="text-sm text-gray-700 mb-4 exo-font">
-        Get the latest KAMCO updates right in your inbox, join our newsletter
-        today!
+      <p className="text-base text-gray-700 mb-3 exo-font leading-tight">
+        Get the latest KAMCO updates right in your inbox,
+        <br /> join our newsletter today!
       </p>
       <div className="flex justify-start items-center">
         <form

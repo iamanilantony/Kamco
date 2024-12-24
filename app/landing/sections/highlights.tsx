@@ -8,7 +8,7 @@ const Highlights = () => {
   const isInView = useInView(containerRef, { once: true });
 
   return (
-    <section className="max-w-[94vw] mx-auto px-4 md:mt-32 mt-16 overflow-hidden">
+    <section className="max-w-[94vw] mx-auto px-4 md:mt-32 mt-16 mb-12 overflow-hidden">
       <div
         ref={containerRef}
         className="gap-8 items-center flex flex-col lg:flex-row"

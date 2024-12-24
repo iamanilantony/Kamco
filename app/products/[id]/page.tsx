@@ -64,7 +64,7 @@ const ProductInfo = () => {
             height={300}
             width={400}
             draggable={false}
-            src={product.image[3] ||  "/new_images/products/product/img3.webp"}
+            src={product.image[3] || "/new_images/products/product/img3.webp"}
             alt="Tractor in Muddy Terrain"
             className="w-full h-full border border-gray-300 rounded-xl"
           />
@@ -82,9 +82,7 @@ const ProductInfo = () => {
       <div className="">
         <div className="flex max-sm:flex-col justify-between items-center w-full">
           <div className="flex justify-center gap-8 mb-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              {product.name}
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold">{product.name}</h2>
             <select className="border h-12 border-gray-300 p-2 rounded w-full md:w-auto bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-150 ease-in-out shadow-sm">
               {models.map((model, index) => (
                 <option key={index} value={model}>
@@ -144,9 +142,9 @@ const ProductInfo = () => {
         </div>
       </div>
       <hr className="w-full h-[2px] bg-black" />
-      <div className="w-full space-y-12 ">
+      <div className="w-full space-y-4 ">
         <h1 className="text-3xl font-bold">Product Specifications</h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row gap-8 md:gap-y-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row gap-8 md:gap-y-8">
           {specs.map((spec, index) => (
             <div key={index}>
               <p className="font-medium text-normal flex flex-col">
