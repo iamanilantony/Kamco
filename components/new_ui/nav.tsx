@@ -58,13 +58,16 @@ const Navbar = () => {
         }`}
       >
         {/* Logo */}
-        <Image
-          src="/new_images/logo.webp"
-          width={150}
-          height={150}
-          alt="logo"
-          className="cursor-pointer"
-        />
+        <div className="relative">
+          <Image
+            src="/new_images/logo.webp"
+            width={150}
+            height={150}
+            alt="logo"
+            className=""
+          />
+          <Link href={'/'} className="cursor-pointer w-full h-full absolute  top-0 "/>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 justify-end ">
@@ -80,7 +83,7 @@ const Navbar = () => {
                 <div ref={dropdownRef} className="relative">
                   <div
                     onClick={() => toggleDropdown(item.name, item.href)}
-                    className="cursor-pointer text-[rgb(55,65,81)] font-sans hover:text-[#d1f349] flex items-center text-base lg:text-sm"
+                    className="cursor-pointer text-[rgb(55,65,81)] font-sans hover:text-black flex items-center text-base lg:text-sm"
                   >
                     {item.name}{" "}
                     {["About Us", "Statutory", "Connect"].includes(
@@ -249,7 +252,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-[#d1f349] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75 text-base lg:text-sm"
+                className="bg-[#d7ffbf] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75 text-base lg:text-sm"
               >
                 Login
               </motion.button>
