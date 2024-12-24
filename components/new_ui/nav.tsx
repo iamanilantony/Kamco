@@ -250,7 +250,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-[#d1f349] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75 text-base lg:text-sm"
+                className="bg-[#d7ffbf] text-black px-6 py-3 font-semibold rounded-full max-sm:scale-75 text-base lg:text-sm"
               >
                 Login
               </motion.button>
