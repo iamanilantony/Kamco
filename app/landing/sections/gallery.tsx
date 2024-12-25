@@ -50,8 +50,8 @@ const Gallery = () => {
       className="my-32 pb-32 flex flex-col justify-between relative gap-64"
     >
       <Link
-        href="/media"
-        className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-32 md:-translate-y-36 z-10"
+        href="/gallery"
+        className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-32 md:-translate-y-48 z-10"
       >
         Explore Gallery
       </Link>

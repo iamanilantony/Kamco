@@ -123,7 +123,7 @@ const Products = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="flex flex-wrap justify-center gap-4 md:gap-12 pt-8  pb-32">
+      <div className="flex flex-wrap justify-start gap-4 md:gap-12 pt-8  pb-32">
         {filteredProducts.map((product, index) => (
           <ProductsCard
             key={index}

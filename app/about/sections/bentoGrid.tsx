@@ -24,7 +24,7 @@ const BentoGrid = () => {
       description:
         "Tools have advanced, making farming more efficient and predictable.",
       imageUrl: "/new_images/bentoGrid/image1.webp",
-      customCardStyle: "",
+      customCardStyle: "w-3/5",
       span: "col-span-2 max-sm:col-span-1",
       textColor: "",
       overlayColor: "",
@@ -35,7 +35,7 @@ const BentoGrid = () => {
       description:
         "KAMCO offers ISO 9001:2015 certified Tillers, Tractors, and Engines for farmers.",
       imageUrl: "/new_images/bentoGrid/image2.webp",
-      customCardStyle: "top-10 left-10",
+      customCardStyle: "top-10 left-10 w-3/5",
       span: "col-span-2 max-sm:col-span-1",
       textColor: "text-black",
       overlayColor: "",
@@ -104,7 +104,7 @@ const BentoGrid = () => {
                 src={card.imageUrl}
                 alt={card.title}
                 width={600}
-                height={150}
+                height={1200}
                 className={cn(
                   "rounded-lg absolute right-0 bottom-0 object-cover h-full max-sm:relative max-sm:h-[300px]",
                   !isMobile && card.customImageStyle

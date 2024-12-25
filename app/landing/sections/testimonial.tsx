@@ -28,7 +28,7 @@ const ReviewCard = ({
   return (
     <div
       className={cn(
-        "bg-[#f9fafb] border rounded-3xl p-4 min-h-[300px] sm:p-6 w-[85vw] sm:w-[60vw] md:w-[calc(50vw-50px)] relative border-black my-16  mx-4 sm:mx-20 text-left",
+        "bg-[#f9fafb] border rounded-3xl p-4 min-h-[300px] sm:p-6 w-[85vw] sm:w-[60vw] md:w-[calc(42vw-50px)] relative border-black my-16  mx-4 sm:mx-16 text-left",
         className
       )}
     >
@@ -104,55 +104,54 @@ const ReviewCard = ({
 };
 
 const Testimonial = () => {
-  //create me some testimonial cards content
   const testimonialCards = [
     {
-      name: "John Doe",
+      name: "Rahul Singh",
       designation: "Farmer",
-      location: "Agribusiness Owner, Kochi, Kerala",
+      location: "Agribusiness Owner, Amritsar, Punjab",
       rating: 5,
       review:
-        "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
+        "Kamco’s website made my search for high-quality tractors a breeze. The product details and shipping were transparent, so I’d recommend them to anyone. The detailed specifications and user reviews helped me make an informed decision. The tractor I purchased has significantly improved my farm's productivity. The customer service was also exceptional, guiding me through the entire process and ensuring timely delivery. I am extremely satisfied with my purchase and will definitely return for more equipment in the future. The tractor's performance has exceeded my expectations, and it has become an indispensable part of my farming operations. The fuel efficiency and durability of the tractor have also been impressive, making it a cost-effective investment. I appreciate Kamco's commitment to quality and customer satisfaction, and I look forward to exploring more of their products.",
       profileImage: "/new_images/person.webp",
       video: "https://youtu.be/LhzGVPbqS1k",
     },
     {
-      name: "Jane Doe",
+      name: "Priya Patel",
       designation: "Farmer",
-      location: "Agribusiness Owner, Kochi, Kerala",
+      location: "Farm Entrepreneur, Ahmedabad, Gujarat",
       rating: 4,
       review:
-        "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
+        "I discovered the perfect power weeder for my farm through Kamco’s well-organized site. The support team was incredibly helpful, answering all my queries promptly. The detailed descriptions and comparison tools made it easy to choose the right product. Since using the power weeder, I have noticed a significant reduction in manual labor and an increase in efficiency. The blog section also provided valuable tips on maintaining the equipment. Overall, Kamco is a great resource for any farmer looking to upgrade their tools. The power weeder has made a noticeable difference in the quality of my crops, and I am grateful for the time and effort saved. The durability and ease of use of the power weeder have been outstanding, and I am confident it will serve me well for years to come. Kamco's dedication to providing top-notch agricultural solutions is evident in their products and services.",
       profileImage: "/new_images/person.webp",
       video: "https://youtu.be/kTi11aaSR5E",
     },
     {
-      name: "Jane Doe",
+      name: "Mahesh Kumar",
       designation: "Farmer",
-      location: "Agribusiness Owner, Kochi, Kerala",
+      location: "Farmer, Hyderabad, Telangana",
       rating: 4,
       review:
-        "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
+        "I'm impressed with the range of agricultural implements Kamco offers. The product reviews and specs are spot-on, ensuring I made the right choice. The website is user-friendly, and the checkout process was seamless. The equipment I purchased has been a game-changer for my farm, allowing me to complete tasks more efficiently and effectively. The after-sales support has also been commendable, with the team providing timely assistance whenever needed. I highly recommend Kamco to fellow farmers. The implements have significantly improved my farm's productivity, and I am pleased with their performance. The quality and reliability of Kamco's products have exceeded my expectations, and I am confident in their ability to withstand the demands of my farming operations. Kamco's commitment to innovation and customer satisfaction is truly commendable.",
       profileImage: "/new_images/person.webp",
       video: "https://youtu.be/kTi11aaSR5E",
     },
     {
-      name: "Jane Doe",
+      name: "Anjali Varma",
       designation: "Farmer",
-      location: "Agribusiness Owner, Kochi, Kerala",
+      location: "Farm Owner, Jaipur, Rajasthan",
       rating: 4,
       review:
-        "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
+        "Navigating Kamco’s site was effortless. Their detailed blog helped me learn new farming techniques, and I quickly found the tools I needed. The comprehensive product descriptions and customer reviews gave me confidence in my purchase. The equipment has performed exceptionally well, and I have seen a noticeable improvement in my farm's productivity. The customer service team was also very supportive, providing guidance on product usage and maintenance. Kamco has become my go-to source for agricultural tools and equipment. The tools have made my farming tasks more manageable and efficient, and I am grateful for the positive impact they have had on my farm. The quality and durability of Kamco's products are impressive, and I am confident in their ability to meet my farming needs. Kamco's dedication to providing valuable resources and support to farmers is truly appreciated.",
       profileImage: "/new_images/person.webp",
       video: "#",
     },
     {
-      name: "Jane Doe",
+      name: "Arjun Reddy",
       designation: "Farmer",
-      location: "Agribusiness Owner, Kochi, Kerala",
+      location: "Agripreneur, Guntur, Andhra Pradesh",
       rating: 4,
       review:
-        "Kamco’s website is a go-to resource for farmers and agricultural businesses seeking high-quality equipment. The site’s design is clean and user-friendly, making it easy for visitors to explore their extensive range of tools, from tractors to reapers and tillers. Each product page provides detailed specifications and practical insights, helping users make informed choices. The site also includes a helpful blog, “Harvest Insights,” which covers valuable farming tips, industry news, and success stories. Overall, Kamco’s website is an excellent platform that reflects their commitment to empowering modern farmers with reliable, efficient tools and insightful resources.",
+        "I’m thrilled with my new Kamco drone purchase. The website guided me step by step—from specs to checkout. A fantastic experience! The drone has revolutionized the way I monitor my crops, providing real-time data and insights that have helped me make better farming decisions. The quality of the product is top-notch, and the customer support team has been very responsive to my queries. I am very satisfied with my purchase and look forward to exploring more innovative products from Kamco. The drone's advanced features and ease of use have made it an invaluable tool for my farming operations. The data collected by the drone has allowed me to optimize my crop management practices, resulting in improved yields and reduced costs. Kamco's commitment to innovation and excellence is evident in their products, and I am excited to see what they will offer next.",
       profileImage: "/new_images/person.webp",
       video: "#",
     },

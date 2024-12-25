@@ -31,7 +31,7 @@ const Hero = () => {
         src="/new_images/hero.webm"
       />
 
-      <div className="absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12 flex max-sm:flex-col flex-row justify-between items-center">
+      <div className="hidden absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12  max-sm:flex-col flex-row justify-between items-center">
         <div className="max-sm:text-center md:text-left">
           <SplitText
             blured
