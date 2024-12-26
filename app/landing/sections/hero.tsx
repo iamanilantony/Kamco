@@ -54,14 +54,14 @@ const Hero = () => {
           <SplitText
             blured
             delay={0}
-            text="A BOON FOR THE FARMERS,"
+            text="A Boon for the Farmers,"
             staggerAmount={1.3}
             className="exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />
           <SplitText
             blured
             delay={0.9}
-            text="A GAIN GOT THE NATION."
+            text="A Gain for the Nation"
             staggerAmount={1.3}
             className="md:mt-4 exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />

@@ -9,7 +9,7 @@ import Testimonial from "./sections/testimonial";
 
 const Landing = () => {
   return (
-    <div className="overflow-hidden bg-gradient-to-b from-[#ffffff] via-[#d7ffbf]/10 to-[#d7ffbf]/20">
+    <div className="overflow-hidden ">
       <Hero />
       <Categories />
       <Highlights />
