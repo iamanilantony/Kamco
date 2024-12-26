@@ -44,7 +44,7 @@ const ProductInfo = () => {
           className="w-full lg:w-1/2 object-contain h-auto border border-gray-300 rounded-xl max-h-[30rem]"
         />
         <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full w-full lg:w-1/2 max-h-[30rem]">
-          <Image
+          {/* <Image
             height={300}
             width={400}
             draggable={false}
@@ -75,7 +75,18 @@ const ProductInfo = () => {
             src={product.image[4] || "/new_images/products/product/img4.webp"}
             alt="Tractor near Tree"
             className="w-full h-full border border-gray-300 rounded-xl"
-          />
+          /> */}
+          {product.image.slice(1, 5).map((img, index) => (
+            <Image
+              key={index}
+              height={300}
+              width={400}
+              draggable={false}
+              src={img}
+              alt="Tractor in Field"
+              className="w-full h-full object-contain border border-gray-300 rounded-xl"
+            />
+          ))}
         </div>
       </div>
 
