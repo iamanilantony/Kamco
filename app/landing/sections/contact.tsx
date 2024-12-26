@@ -36,7 +36,7 @@ export default function Contact() {
             animate={controls}
             initial="hidden"
             variants={animationVariants}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.7 }} 
             className="space-y-6 max-md:w-full"
           >
             <div className="relative w-full h-[300px] rounded-lg overflow-hidden text-left">
