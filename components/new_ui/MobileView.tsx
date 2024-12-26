@@ -1,16 +1,35 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const MobileView = ({
   isOpen,
   navItems,
   setIsOpen,
+  activeDropdown,
+  setActiveDropdown,
 }: {
   isOpen: boolean;
-  navItems: { name: string; href: string }[];
+  navItems: {
+    name: string;
+    href: string;
+    subItems?: { name: string; href: string }[];
+  }[];
   setIsOpen: (arg0: boolean) => void;
+  activeDropdown: string | null;
+  setActiveDropdown: (arg0: string | null) => void;
 }) => {
+  const toggleDropdown = (name: string) => {
+    //@ts-ignore
+    setActiveDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const router = useRouter();
+
   return (
     <AnimatePresence mode="wait">
       {isOpen && (
@@ -35,15 +54,46 @@ const MobileView = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * i }}
-                className="my-2"
+                className="my-2 w-full text-center"
               >
-                <Link
-                  href={item.href}
-                  className="text-[rgb(55,65,81)] font-sans hover:text-[#d1f349]"
-                  onClick={() => setIsOpen(false)}
+                <div
+                  onClick={() => {
+                    if (!item.subItems) {
+                      router.push(item.href);
+                      setIsOpen(false);
+                    } else {
+                      item.subItems
+                        ? toggleDropdown(item.name)
+                        : setIsOpen(false);
+                    }
+                  }}
+                  className="cursor-pointer text-[rgb(55,65,81)] font-sans hover:font-semibold flex items-center justify-center"
                 >
                   {item.name}
-                </Link>
+                  {item.subItems && (
+                    <ChevronDown
+                      size={16}
+                      className={`ml-1 transition-transform ${
+                        activeDropdown === item.name ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
+                </div>
+                {item.subItems && activeDropdown === item.name && (
+                  <ul className="flex flex-col space-y-2 mt-2">
+                    {item.subItems.map((subItem) => (
+                      <li key={subItem.name}>
+                        <Link
+                          href={subItem.href}
+                          className="text-[rgb(55,65,81)] font-sans hover:text-[#d1f349] "
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </motion.li>
             ))}
           </ul>

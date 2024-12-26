@@ -10,7 +10,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const ref = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
@@ -56,14 +55,14 @@ const Hero = () => {
             delay={0}
             text="A Boon for the Farmers,"
             staggerAmount={1.3}
-            className="exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
+            className="exo-font font-light text-3xl sm:text-5xl text-left md:text-6xl"
           />
           <SplitText
             blured
             delay={0.9}
             text="A Gain for the Nation"
             staggerAmount={1.3}
-            className="md:mt-4 exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
+            className="md:mt-4 exo-font font-light text-3xl sm:text-5xl text-left md:text-6xl"
           />
         </div>
         <motion.div
@@ -92,7 +91,7 @@ const Hero = () => {
       <ImageSlider
         showArrows={false}
         showDots={false}
-        className="max-h-[80vh] w-full md:w-[94vw] mt-2"
+        className="max-h-[80vh] max-sm:mt-8 max-sm:h-[60vh] w-full md:w-[94vw] mt-2"
         slides={slides}
       />
       <div className="max-w-full md:max-w-[94vw] w-full flex flex-col md:flex-row justify-between">

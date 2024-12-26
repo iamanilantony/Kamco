@@ -3,8 +3,7 @@ import { BellDot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronUp, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import MobileView from "./MobileView";
 
@@ -19,9 +18,38 @@ const Navbar = () => {
     { name: "Products", href: "/products" },
     { name: "Strategic Initiatives", href: "/projects" },
     { name: "Tenders", href: "https://www.kamcoindia.com/tenders" },
-    { name: "About Us", href: "/about" },
-    { name: "Statutory", href: "#" },
-    { name: "Connect", href: "#" },
+    {
+      name: "About Us",
+      href: "#",
+      subItems: [
+        { name: "About Kamco", href: "/about" },
+        { name: "Company info", href: "/companyinfo" },
+        { name: "Organizational Structure", href: "/orgstructure" },
+        { name: "Financial Report", href: "/financial-report" },
+      ],
+    },
+    {
+      name: "Statutory",
+      href: "#",
+      subItems: [
+        { name: "CM Redressal Cell", href: "/cm-redressal-cell" },
+        {
+          name: "Corporate Social Responsibility (CSR)",
+          href: "https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf",
+        },
+        { name: "Right to Information (RTI)", href: "/right-to-information" },
+      ],
+    },
+    {
+      name: "Connect",
+      href: "#",
+      subItems: [
+        { name: "Contact Us", href: "/#footer" },
+        { name: "Newsletter", href: "/newsletter" },
+        { name: "Media", href: "/media" },
+        { name: "Downloads", href: "/downloads" },
+      ],
+    },
   ];
 
   // Check if the page is scrolled down
@@ -268,7 +296,13 @@ const Navbar = () => {
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </motion.button>
       </motion.nav>
-      <MobileView isOpen={isOpen} navItems={navItems} setIsOpen={setIsOpen} />
+      <MobileView
+        isOpen={isOpen}
+        navItems={navItems}
+        setIsOpen={setIsOpen}
+        activeDropdown={activeDropdown}
+        setActiveDropdown={setActiveDropdown}
+      />
     </>
   );
 };
