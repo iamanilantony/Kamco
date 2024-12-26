@@ -43,7 +43,7 @@ const Hero = () => {
           />
           <SplitText
             blured
-            delay={1.5}
+            delay={0.9}
             text="Enriching The Nation"
             staggerAmount={1.3}
             className="md:mt-4 exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
