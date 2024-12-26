@@ -2,27 +2,27 @@
 import { ImageSlider } from "@/components/new_ui/imageslider";
 import { motion } from "framer-motion";
 import SplitText from "@/components/new_ui/splittext";
-import Link from "next/link";
+
 import Animatedbutton from "@/components/new_ui/animatedbutton";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.to(ref.current, {
+      opacity: 1,
+      scrollTrigger: {
+        start: "2% top",
+        end: "bottom top",
+      },
+    });
+  });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const slides = [
     <motion.div
       initial={{
@@ -49,19 +49,19 @@ const Hero = () => {
         src="/new_images/hero.webm"
       />
 
-      <div className=" absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12  max-sm:flex-col flex-row justify-between items-center">
+      <div className=" absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12 flex max-sm:flex-col justify-between items-center">
         <div className="max-sm:text-center md:text-left">
           <SplitText
             blured
             delay={0}
-            text="Empowering Farmers"
+            text="A BOON FOR THE FARMERS,"
             staggerAmount={1.3}
             className="exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />
           <SplitText
             blured
             delay={0.9}
-            text="Enriching The Nation"
+            text="A GAIN GOT THE NATION."
             staggerAmount={1.3}
             className="md:mt-4 exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />
@@ -92,19 +92,17 @@ const Hero = () => {
       <ImageSlider
         showArrows={false}
         showDots={false}
-        className="max-h-[60vh] w-full md:w-[94vw] mt-2"
+        className="max-h-[80vh] w-full md:w-[94vw] mt-2"
         slides={slides}
       />
       <div className="max-w-full md:max-w-[94vw] w-full flex flex-col md:flex-row justify-between">
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isScrolled ? 1 : 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="pt-8 flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10"
-        >
+        <div className="pt-8  flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10">
           {/* Stats */}
-          <div className="flex justify-center lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12">
+          <div
+            ref={ref}
+            className="flex justify-center opacity-0 lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12"
+          >
             <div className="text-center">
               <h2 className="text-2xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
                 50+
@@ -138,7 +136,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
         <div className="flex flex-col space-y-3 mt-6 md:mt-0 px-4 md:px-0">
           {/* <Link
             href="https://www.kamcoindia.com/dealers"

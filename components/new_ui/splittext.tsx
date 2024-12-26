@@ -60,7 +60,13 @@ const SplitText = ({
   );
 
   return (
-    <p ref={ref} className={cn("text-center md:text-3xl text-lg", className)}>
+    <div
+      style={{
+        width: "fit-content",
+      }}
+      ref={ref}
+      className={cn("text-center md:text-3xl text-lg", className)}
+    >
       {text.split(" ").map((word, index) => {
         return (
           <span key={index} className="overflow-clip inline-block mr-2">
@@ -78,7 +84,7 @@ const SplitText = ({
           </span>
         );
       })}
-    </p>
+    </div>
   );
 };
 
