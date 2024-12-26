@@ -4,8 +4,25 @@ import { motion } from "framer-motion";
 import SplitText from "@/components/new_ui/splittext";
 import Link from "next/link";
 import Animatedbutton from "@/components/new_ui/animatedbutton";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const slides = [
     <motion.div
       initial={{
@@ -82,7 +99,7 @@ const Hero = () => {
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: isScrolled ? 1 : 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="pt-8 flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10"
         >
