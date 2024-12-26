@@ -32,20 +32,20 @@ const Hero = () => {
         src="/new_images/hero.webm"
       />
 
-      <div className="hidden absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12  max-sm:flex-col flex-row justify-between items-center">
+      <div className=" absolute top-1/2 left-0 text-white w-full transform -translate-y-1/2 px-4 md:px-12  max-sm:flex-col flex-row justify-between items-center">
         <div className="max-sm:text-center md:text-left">
           <SplitText
             blured
-            delay={1}
+            delay={0}
             text="Empowering Farmers"
-            staggerAmount={0.3}
+            staggerAmount={1.3}
             className="exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />
           <SplitText
             blured
-            delay={1.3}
+            delay={1.5}
             text="Enriching The Nation"
-            staggerAmount={0.3}
+            staggerAmount={1.3}
             className="md:mt-4 exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />
         </div>

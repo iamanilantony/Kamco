@@ -26,9 +26,11 @@ const SplitText = ({
       gsap.registerPlugin(ScrollTrigger);
       if (!scrolled) {
         gsap.from(".char", {
-          y: 100,
+          y: 20,
+          scale: 1.5,
+          opacity: 0,
           filter: blured ? "blur(10px)" : "none",
-          duration: 1,
+          duration: 0.5,
           delay: delay,
           stagger: {
             amount: staggerAmount,
@@ -41,9 +43,11 @@ const SplitText = ({
             trigger: ".char",
             start: "top 80%",
           },
-          y: 100,
+          y: 20,
+          scale: 1.5,
+          opacity: 0,
           filter: blured ? "blur(10px)" : "none",
-          duration: 1,
+          duration: 0.5,
           delay: delay,
           stagger: {
             amount: staggerAmount,
