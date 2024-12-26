@@ -2,7 +2,7 @@ export default [
   {
     "id": "PR-011",
     "name": "Power Tillers",
-    "image": ["/new_images/products/powertiller.webp","/products/PR-011_2.jpg","/products/PR-011_3.jpg"],
+    "image": ["/products/PR-011_2.jpg","/products/PR-011_2.jpg","/products/PR-011_3.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "ER 90" },
       { "label": "Tiller Model", "value": "KMB 200" },
