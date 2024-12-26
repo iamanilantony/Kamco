@@ -1,12 +1,54 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { useRouter } from "next/navigation";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const Categories = () => {
   const router = useRouter();
+  const itemsRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(
+    () => {
+      gsap.to(".ani-card-1", {
+        opacity: 1,
+        scale: 1,
+        delay: 0.1,
+        ease: "power2.inOut",
+
+        scrollTrigger: {
+          trigger: itemsRef.current,
+          start: "top 97%",
+          end: "50% 80%",
+          scrub: 1,
+          // markers: true,
+        },
+      });
+    },
+    { scope: itemsRef }
+  );
+  useGSAP(
+    () => {
+      gsap.to(".ani-card-2", {
+        opacity: 1,
+        scale: 1,
+        delay: 0.1,
+        ease: "power2.inOut",
+
+        scrollTrigger: {
+          trigger: itemsRef.current,
+          start: "top 82%",
+          end: "bottom 75%",
+          scrub: 1,
+          // markers: true,
+        },
+      });
+    },
+    { scope: itemsRef }
+  );
 
   const items = [
     {
@@ -37,23 +79,16 @@ const Categories = () => {
       </h2>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div
+        ref={itemsRef}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+      >
         {items.map((item, index) => (
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{
-              duration: 0.5,
-              delay: 0.1,
-            }}
+          <div
             key={index}
-            className="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer"
+            className={`relative group rounded-lg overflow-hidden shadow-lg cursor-pointer ${
+              index > 2 ? "ani-card-2" : "ani-card-1"
+            } opacity-0 scale-50`}
             onClick={() =>
               router.push(`/products?category=${encodeURIComponent(item.text)}`)
             }
@@ -72,7 +107,7 @@ const Categories = () => {
                 {item.text}
               </p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

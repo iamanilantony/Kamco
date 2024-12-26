@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Animatedbutton from "@/components/new_ui/animatedbutton";
 
 const Highlights = () => {
   const containerRef = useRef(null);
@@ -59,9 +60,12 @@ const Highlights = () => {
 
       {/* Footer Section */}
       <div className="mt-8 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
-        <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font capitalize">
+        {/* <button className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font capitalize">
           view all articles
-        </button>
+        </button> */}
+        <Animatedbutton delay={0.5} viewBased className="bg-[#d7ffbf]">
+          View All Articles
+        </Animatedbutton>
         <div className="flex items-center gap-4">
           <button className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-700 transition">
             &#8592;

@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Animatedbutton from "@/components/new_ui/animatedbutton";
 
 const Gallery = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -49,12 +50,20 @@ const Gallery = () => {
       ref={ref}
       className="my-32 pb-32 flex flex-col justify-between relative gap-64"
     >
-      <Link
+      {/* <Link
         href="/gallery"
         className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-32 md:-translate-y-48 z-10"
       >
         Explore Gallery
-      </Link>
+      </Link> */}
+      <Animatedbutton
+        delay={0.5}
+        viewBased
+        navigateto="/gallery"
+        className="absolute top-1/4 left-[40%] z-10 bg-[#d7ffbf]"
+      >
+        Explore Gallery
+      </Animatedbutton>
       <div className="flex justify-between items-center gap-8 md:gap-24 pl-5">
         {Array.from({ length: imagesToShow }).map((_, index) => (
           <div

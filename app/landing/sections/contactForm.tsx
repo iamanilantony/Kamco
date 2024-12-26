@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Animatedbutton from "@/components/new_ui/animatedbutton";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -109,9 +110,13 @@ const ContactForm: React.FC = () => {
               setFormData({ ...formData, message: e.target.value })
             }
           />
-          <button className="bg-[#c0eba6] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font">
+          {/* <button className="bg-[#c0eba6] py-3 md:py-5 px-8 md:px-16 rounded-2xl text-xl md:text-2xl urbanist-font">
             Submit
-          </button>
+          </button> */}
+          <Animatedbutton delay={0.5} viewBased className="bg-[#c0eba6] ">
+            {" "}
+            Submit{" "}
+          </Animatedbutton>
         </form>
       </motion.div>
 

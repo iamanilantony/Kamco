@@ -3,6 +3,7 @@ import { ImageSlider } from "@/components/new_ui/imageslider";
 import { motion } from "framer-motion";
 import SplitText from "@/components/new_ui/splittext";
 import Link from "next/link";
+import Animatedbutton from "@/components/new_ui/animatedbutton";
 
 const Hero = () => {
   const slides = [
@@ -122,7 +123,7 @@ const Hero = () => {
           </div>
         </motion.div>
         <div className="flex flex-col space-y-3 mt-6 md:mt-0 px-4 md:px-0">
-          <Link
+          {/* <Link
             href="https://www.kamcoindia.com/dealers"
             className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-[#3b6631] text-base sm:text-lg md:text-2xl urbanist-font cursor-pointer z-10 transition-all duration-300 ease-in-out"
           >
@@ -133,7 +134,21 @@ const Hero = () => {
             className="bg-[#d7ffbf] py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-[#beff96] text-base sm:text-lg md:text-2xl urbanist-font cursor-pointer z-10 transition-all duration-300 ease-in-out"
           >
             Explore Dealers
-          </Link>
+          </Link> */}
+          <Animatedbutton
+            navigateto={"https://www.kamcoindia.com/dealers"}
+            delay={1.2}
+            className="bg-[#274321] text-white hover:bg-[#3b6631]"
+          >
+            Register Now
+          </Animatedbutton>
+          <Animatedbutton
+            navigateto={"/dealers"}
+            delay={1.2}
+            className="bg-[#d7ffbf] hover:bg-[#beff96]"
+          >
+            Explore Dealers
+          </Animatedbutton>
         </div>
       </div>
     </div>
