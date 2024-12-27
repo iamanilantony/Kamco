@@ -31,7 +31,7 @@ function ReviewCard({
    };
 
    return (
-      <div className='w-full max-w-2xl min-h-[385px] rounded-2xl bg-white p-6 shadow-xl sm:p-8 cursor-pointer transition-all hover:shadow-2xl mx-4'>
+      <div className='w-full max-w-2xl min-h-[385px] rounded-2xl bg-white p-6 shadow-xl sm:p-8 cursor-pointer transition-all hover:shadow-2xl mx-3'>
          <div className='relative'>
             <Quote className='h-8 w-8 text-[#274321]/20' />
 
@@ -136,7 +136,7 @@ const Testimonial = () => {
    ];
 
    return (
-      <div className='p-4 sm:p-16 mb-32 flex flex-col justify-center items-center'>
+      <div className='p-4 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto'>
          <div className='flex justify-start w-full'>
             <h2 className='mb-0 text-2xl text-left font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl'>
                Farmers Recount Their Experiences
@@ -150,7 +150,7 @@ const Testimonial = () => {
                gradientColor='white'
                gradientWidth={50}
                pauseOnClick={true}
-               className='flex gap-4 mb-12 sm:mb-24 mt-8 h-full py-4 overflow-hidden'
+               className='h-full py-4 overflow-hidden'
             >
                {testimonialCards.map((testimonial, index) => (
                   <ReviewCard

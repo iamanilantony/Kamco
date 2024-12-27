@@ -132,9 +132,8 @@ export default function FAQ() {
    }, [inView, controls]);
 
    return (
-      <section className='py-6 md:py-16 px-4 md:px-6 lg:px-8 bg-yellow-50/20' ref={ref}>
+      <section className='py-6 md:py-16  bg-yellow-50/20 max-w-[94vw] mx-auto' ref={ref}>
          <motion.div
-            className='container mx-auto max-w-7xl'
             initial='hidden'
             animate={controls}
             variants={{
