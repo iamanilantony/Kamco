@@ -124,8 +124,9 @@ const Products = () => {
                <Button
                   variant='secondary'
                   className={cn(
-                     'bg-green-100 hover:bg-green-200 w-full sm:w-auto  text-green-800 h-auto py-3 px-6 flex items-center gap-3 text-base',
-                     selectedFilter === option.label && 'bg-green-400 hover:bg-green-400'
+                     'bg-white border border-green-400  w-full sm:w-auto  text-black h-auto py-3 px-6 flex items-center gap-3 text-base',
+                     selectedFilter === option.label &&
+                        'bg-green-800 text-white hover:bg-green-800 border-none'
                   )}
                   key={index}
                   onClick={() =>
