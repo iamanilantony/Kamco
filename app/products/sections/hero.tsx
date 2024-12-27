@@ -29,7 +29,7 @@ const Hero = () => {
    //  ];
 
    return (
-      <div className='min-h-[50vh] md:min-h-[70vh] lg:min-h-[90vh] flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-16 py-8 text-left relative'>
+      <div className='min-h-[50vh] md:min-h-[70vh] lg:min-h-[92vh] flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-16 py-8 text-left relative'>
          <Image
             src='/new_images/products/heroimage.webp'
             alt='hero'
