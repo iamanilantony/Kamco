@@ -14,8 +14,7 @@ export default function Highlights() {
       <motion.section
          initial={{ opacity: 0, y: 100 }}
          whileInView={{ opacity: 1, y: 0 }}
-         duration={0.85}
-         // viewport={{ once: true, amount: 0.5 }}
+         transition={{ duration: 0.85, ease: 'easeOut' }}
          className='relative overflow-hidden  py-3 sm:py-4'
       >
          {/* Background Wheat Pattern */}
