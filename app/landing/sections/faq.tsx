@@ -132,7 +132,7 @@ export default function FAQ() {
    }, [inView, controls]);
 
    return (
-      <section className='py-16 px-4 md:px-6 lg:px-8 bg-yellow-50/20' ref={ref}>
+      <section className='py-6 md:py-16 px-4 md:px-6 lg:px-8 bg-yellow-50/20' ref={ref}>
          <motion.div
             className='container mx-auto max-w-7xl'
             initial='hidden'
@@ -144,14 +144,14 @@ export default function FAQ() {
             transition={{ duration: 0.5 }}
          >
             {/* Header */}
-            <div className='mb-12 text-center'>
+            <div className='mb-6 md:mb-12 text-center'>
                <h2 className='mb-0 text-2xl text-left font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl'>
                   Frequently Asked Questions
                </h2>
             </div>
 
             {/* FAQ Grid */}
-            <div className='flex flex-col md:flex-row gap-6'>
+            <div className='flex flex-col md:flex-row gap-3 md:gap-6'>
                <div className='flex flex-col gap-3 md:w-1/2'>
                   {faqs.slice(0, 5).map((faq, index) => (
                      <AccordionItem

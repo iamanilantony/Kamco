@@ -1,29 +1,23 @@
 'use client';
 
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 
 export default function Highlights() {
    const containerRef = useRef<HTMLDivElement>(null);
    const contentRef = useRef<HTMLDivElement>(null);
 
-   useGSAP(() => {
-      const tl = gsap.timeline();
-
-      tl.from(contentRef.current, {
-         y: 30,
-         opacity: 0,
-         duration: 0.8,
-         ease: 'power3.out',
-      });
-   }, []);
-
    return (
-      <section className='relative overflow-hidden  py-3 sm:py-4'>
+      <motion.section
+         initial={{ opacity: 0, y: 100 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         duration={0.85}
+         // viewport={{ once: true, amount: 0.5 }}
+         className='relative overflow-hidden  py-3 sm:py-4'
+      >
          {/* Background Wheat Pattern */}
          <div className='absolute inset-0 opacity-5'>
             <Image
@@ -122,6 +116,6 @@ export default function Highlights() {
          {/* Decorative Elements */}
          <div className='absolute -left-4 top-1/4 h-72 w-72 rounded-full bg-[#d7ffbf]/20 blur-3xl' />
          <div className='absolute -right-4 bottom-1/4 h-72 w-72 rounded-full bg-[#274321]/10 blur-3xl' />
-      </section>
+      </motion.section>
    );
 }
