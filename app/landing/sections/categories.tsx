@@ -72,7 +72,7 @@ const Categories = () => {
    ];
 
    return (
-      <div className='max-w-[94vw] mx-auto flex flex-col justify-center items-center gap-8 py-10'>
+      <div className='max-w-[94vw] mx-auto flex flex-col justify-center items-center gap-8 py-10 pt-14'>
          {/* Title */}
          {/* <h2 className='text-4xl font-bold text-center text-gray-900 urbanist-font'>Categories</h2> */}
          <div className='flex justify-start w-full'>

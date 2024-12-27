@@ -23,7 +23,7 @@ export default function Highlights() {
    }, []);
 
    return (
-      <section className='relative overflow-hidden  py-10 sm:py-24'>
+      <section className='relative overflow-hidden  py-3 sm:py-4'>
          {/* Background Wheat Pattern */}
          <div className='absolute inset-0 opacity-5'>
             <Image

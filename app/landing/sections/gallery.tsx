@@ -58,7 +58,7 @@ const Gallery = () => {
             delay={0.5}
             viewBased
             navigateto='/gallery'
-            className='group absolute top-[30%] left-[40%] z-10 inline-flex items-center justify-center overflow-hidden rounded-lg bg-green-600 px-8 py-3 text-lg font-medium text-white transition duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2'
+            className='group absolute top-[30%] left-[40%] z-10 inline-flex items-center justify-center overflow-hidden rounded-lg bg-green-600 px-3 py-3 text-lg font-medium text-white transition duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2'
          >
             Explore Gallery
          </Animatedbutton>
