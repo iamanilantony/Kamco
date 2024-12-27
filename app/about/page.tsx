@@ -8,14 +8,14 @@ import Awards from "./sections/awards";
 
 const About = () => {
   return (
-    <>
-      <Hero />
-      <BentoGrid />
-      <Journy />
-      <Awards />
-      <Facilities />
-      <BoardOfDirectors />
-    </>
+     <>
+        <Hero />
+        <BentoGrid />
+        <Journy />
+        <Awards />
+        <Facilities />
+        <BoardOfDirectors />
+     </>
   );
 };
 
