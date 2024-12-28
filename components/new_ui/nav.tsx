@@ -15,9 +15,6 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
-    { name: "Strategic Initiatives", href: "/projects" },
-    { name: "Tenders", href: "https://www.kamcoindia.com/tenders" },
     {
       name: "About Us",
       href: "#",
@@ -28,6 +25,9 @@ const Navbar = () => {
         { name: "Financial Report", href: "/financial-report" },
       ],
     },
+    { name: "Products", href: "/products" },
+    { name: "New Initiatives", href: "/projects" },
+    { name: "Tenders", href: "https://www.kamcoindia.com/tenders" },
     {
       name: "Statutory",
       href: "#",

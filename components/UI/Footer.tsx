@@ -7,7 +7,7 @@ export default function Footer() {
         { name: "Home", slug: '#' },
         { name: "About us", slug: 'aboutUs' },
         { name: "Products", slug: 'products' },
-        { name: "Strategic Initiatives", slug: 'projects' },
+        { name: "New Initiatives", slug: 'projects' },
         { name: "Support", slug: '#' },
         { name: "Tenders", slug: 'tendors' },
         { name: "Media", slug: '#' },

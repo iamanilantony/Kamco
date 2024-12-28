@@ -76,7 +76,7 @@ export default function Footer() {
                        { id: '2', title: 'Products', href: '/products' },
                        {
                           id: '3',
-                          title: 'Strategic Initiatives',
+                          title: 'New Initiatives',
                           href: '/projects',
                        },
                        { id: '4', title: 'Tenders', href: '/tendors' },
