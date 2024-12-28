@@ -128,7 +128,7 @@ export default function Highlights() {
                           </Link>
                           <Link
                             href="/articles"
-                            className="group hidden inline-flex items-center gap-2 rounded-full bg-[#d7ffbf] px-6 py-3 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-[#c1f7a1] sm:text-base"
+                            className="group hidden items-center gap-2 rounded-full bg-[#d7ffbf] px-6 py-3 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-[#c1f7a1] sm:text-base"
                           >
                             View All Articles
                           </Link>
