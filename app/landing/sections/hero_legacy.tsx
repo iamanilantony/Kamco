@@ -151,11 +151,11 @@ const HeroLegacy = () => {
             Explore Dealers
           </Link> */}
                <Animatedbutton
-                  navigateto={'https://www.kamcoindia.com/dealers'}
+                  navigateto={'/projects'}
                   delay={1.2}
                   className='bg-[#274321] text-white hover:bg-[#3b6631]'
                >
-                  Register Now
+                  New Initiatives
                </Animatedbutton>
                <Animatedbutton
                   navigateto={'/dealers'}

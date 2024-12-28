@@ -161,7 +161,7 @@ const NavBar = () => {
           onClick={handleLinkClick}
           className="block md:inline-block text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
         >
-          <span className="inline-block min-w-[80px] text-center">Strategic Initiatives</span>
+          <span className="inline-block min-w-[80px] text-center">New Initiatives</span>
         </Link>
 
         <Link
