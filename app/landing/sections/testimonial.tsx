@@ -119,24 +119,34 @@ const Testimonial = () => {
       video: "https://youtu.be/kTi11aaSR5E",
     },
     {
-      name: "Anjali Varma",
+      name: " Anil Pradhaan",
       designation: "Farmer",
-      location: "Farm Owner, Jaipur, Rajasthan",
-      rating: 4,
+      location: "Agribusiness Owner, Amritsar, Punjab",
+      rating: 5,
       review:
-        "Kamco’s site is easy to navigate, with helpful blogs and product details. The tools improved my farm’s efficiency, and the customer support was great. Kamco’s reliable and durable products have positively impacted my farming operations.",
-      profileImage: "/new_images/person.webp",
-      video: "#",
+        "Kamco’s website made finding the right tractor easy with clear details and reviews. The tractor improved productivity, and the excellent service ensured a smooth purchase. Its fuel efficiency and durability make it a great investment. Kamco’s quality and customer focus exceeded my expectations.",
+      profileImage: "/new_images/testimonials/person1.jpg",
+      video: "https://youtu.be/LhzGVPbqS1k",
     },
     {
-      name: "Ravi Patel",
+      name: "Sunil Grover",
       designation: "Farmer",
-      location: "Agripreneur, Guntur, Andhra Pradesh",
+      location: "Farm Entrepreneur, Ahmedabad, Gujarat",
       rating: 4,
       review:
-        "My Kamco drone purchase was smooth, with the site guiding me step-by-step. The drone transformed crop monitoring, offering real-time data and optimizing management. Its quality and innovation make it essential for my farm.",
-      profileImage: "/new_images/person.webp",
-      video: "#",
+        "Kamco’s site helped me find the ideal power weeder with ease. The support team promptly answered my questions. The equipment has reduced labor and boosted efficiency. The blog provided useful tips, and the weeder has been a durable tool for my farm.",
+      profileImage: "/new_images/testimonials/person2.jpg",
+      video: "https://youtu.be/kTi11aaSR5E",
+    },
+    {
+      name: "Mahesh Kumar",
+      designation: "Farmer",
+      location: "Farmer, Hyderabad, Telangana",
+      rating: 4,
+      review:
+        "Kamco’s range of implements and accurate reviews made my choice easy. The seamless purchase process and excellent support were impressive. The equipment has boosted farm productivity and reliability, making Kamco a top choice for farmers.",
+      profileImage: "/new_images/testimonials/person3.png",
+      video: "https://youtu.be/kTi11aaSR5E",
     },
   ];
 
