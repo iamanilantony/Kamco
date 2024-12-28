@@ -33,84 +33,91 @@ export default function Footer() {
   ];
 
   return (
-     <footer
-        id='footer'
-        // className="bg-[#c0eba6] px-8 md:px-[6.5vw] py-8 exo-font"
-        className='bg-green-100 px-8 md:px-[6.5vw] py-8 exo-font'
-     >
-        {' '}
-        {/* Reduced py-12 to py-8 */}
-        <div className='container mx-auto'>
-           <div className='flex flex-col md:flex-row justify-between gap-12 md:gap-40 w-full'>
-              {/* Logo and Description Section */}
-              <div className='space-y-6'>
-                 <Link href='/' className='inline-block'>
-                    <Image
-                       src='/new_images/logo.webp'
-                       width={200}
-                       height={150}
-                       alt='logo'
-                       className=''
-                    />
-                 </Link>
-                 <p className='text-sm text-gray-700 max-w-sm'>
-                    KAMCO was started way back in 1973 to aid farmers in their quest for higher
-                    productivity, more prosperity and greater happiness in their lives.
-                 </p>
-                 <div className='flex gap-4'>
-                    {socialLinks.map(({ href, icon: Icon, label }) => (
-                       <Link key={label} href={href} className='text-gray-700 hover:text-black'>
-                          <Icon size={20} />
-                          <span className='sr-only'>{label}</span>
-                       </Link>
-                    ))}
-                 </div>
-              </div>
-              <div className='flex flex-col md:flex-row gap-5'>
-                 {/* Main Links Section */}
-                 <FooterSections
-                    head='Company'
-                    links={[
-                       { id: '0', title: 'Home', href: '/' },
-                       { id: '1', title: 'About us', href: '/about' },
-                       { id: '2', title: 'Products', href: '/products' },
-                       {
-                          id: '3',
-                          title: 'New Initiatives',
-                          href: '/projects',
-                       },
-                       { id: '4', title: 'Tenders', href: '/tendors' },
-                    ]}
-                 />
-                 <FooterSections
-                    head='Resources'
-                    links={[
-                       { id: 2, title: 'Downloads', href: '/downloads' },
-                       { id: 3, title: 'Media', href: '/media' },
-                       { id: 4, title: 'Notifications', href: '/notifications' },
-                       { id: 5, title: 'Dealers', href: '/dealers' },
-                    ]}
-                 />
-                 <NewsletterForm />
-              </div>
-           </div>
-
-           {/* Bottom Section */}
-           <div className='mt-8 pt-4 border-t border-gray-500'>
-              {' '}
-              {/* Reduced mt-12 to mt-8 and pt-6 to pt-4 */}
-              <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
-                 <p className='text-sm text-gray-700'>© Copyright 2024. All rights reserved</p>
-                 <div className='flex gap-6 text-sm text-gray-700'>
-                    {bottomLinks.map(({ href, label }) => (
-                       <Link key={label} href={href} className='hover:text-black'>
-                          {label}
-                       </Link>
-                    ))}
-                 </div>
-              </div>
-           </div>
+    <footer
+      id="footer"
+      // className="bg-[#c0eba6] px-8 md:px-[6.5vw] py-8 exo-font"
+      className="bg-[#d7ffbf] px-8 md:px-[6.5vw] py-8 exo-font"
+    >
+      {" "}
+      {/* Reduced py-12 to py-8 */}
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-40 w-full">
+          {/* Logo and Description Section */}
+          <div className="space-y-6">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/new_images/logo.webp"
+                width={200}
+                height={150}
+                alt="logo"
+                className=""
+              />
+            </Link>
+            <p className="text-sm text-gray-700 max-w-sm">
+              KAMCO was started way back in 1973 to aid farmers in their quest
+              for higher productivity, more prosperity and greater happiness in
+              their lives.
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map(({ href, icon: Icon, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="text-gray-700 hover:text-black"
+                >
+                  <Icon size={20} />
+                  <span className="sr-only">{label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-5">
+            {/* Main Links Section */}
+            <FooterSections
+              head="Company"
+              links={[
+                { id: "0", title: "Home", href: "/" },
+                { id: "1", title: "About us", href: "/about" },
+                { id: "2", title: "Products", href: "/products" },
+                {
+                  id: "3",
+                  title: "New Initiatives",
+                  href: "/projects",
+                },
+                { id: "4", title: "Tenders", href: "/tendors" },
+              ]}
+            />
+            <FooterSections
+              head="Resources"
+              links={[
+                { id: 2, title: "Downloads", href: "/downloads" },
+                { id: 3, title: "Media", href: "/media" },
+                { id: 4, title: "Notifications", href: "/notifications" },
+                { id: 5, title: "Dealers", href: "/dealers" },
+              ]}
+            />
+            <NewsletterForm />
+          </div>
         </div>
-     </footer>
+
+        {/* Bottom Section */}
+        <div className="mt-8 pt-4 border-t border-gray-500">
+          {" "}
+          {/* Reduced mt-12 to mt-8 and pt-6 to pt-4 */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-700">
+              © Copyright 2024. All rights reserved
+            </p>
+            <div className="flex gap-6 text-sm text-gray-700">
+              {bottomLinks.map(({ href, label }) => (
+                <Link key={label} href={href} className="hover:text-black">
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
