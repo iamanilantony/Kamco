@@ -31,7 +31,7 @@ export default function Hero() {
                {/* Hero Text */}
                <div className='max-w-3xl space-y-6'>
                   <h1 className='font-heading text-3xl font-bold text-left leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl'>
-                     A Boon for the Farmers,
+                     A Boon for the Farmer,
                      <br />A Gain for the Nation.
                   </h1>
                   <p className='max-w-xl text-lg text-gray-200 sm:text-xl text-left'>

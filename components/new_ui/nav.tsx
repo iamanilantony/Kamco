@@ -48,6 +48,9 @@ const Navbar = () => {
         { name: "Newsletter", href: "/newsletter" },
         { name: "Media", href: "/media" },
         { name: "Downloads", href: "/downloads" },
+        { name: "Dealer Registration", href: "#" },
+        { name: "Authorised Dealers", href: "/dealers" },
+        { name: "Supplier Registration", href: "#" },
       ],
     },
   ];
