@@ -48,7 +48,7 @@ const Navbar = () => {
         { name: "Newsletter", href: "/newsletter" },
         { name: "Media", href: "/media" },
         { name: "Downloads", href: "/downloads" },
-        { name: "Dealer Registration", href: "#" },
+        { name: "Dealer Registration", href: "https://www.kamcoindia.com/userfiles/KAMCO-APPLICATION-FOR-DEALERSHIP.pdf" },
         { name: "Authorised Dealers", href: "/dealers" },
         { name: "Supplier Registration", href: "#" },
       ],
