@@ -48,12 +48,12 @@ export default function Hero() {
                   className='mt-2 flex flex-col gap-4 sm:flex-row sm:gap-6'
                >
                   <Link
-                     href='https://www.kamcoindia.com/dealers'
+                     href='/projects'
                      className='group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-green-600 px-8 py-3 text-lg font-medium text-white transition duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2'
                      target='_blank'
                      rel='noopener noreferrer'
                   >
-                     <span className='relative'>Register Now</span>
+                     <span className='relative'>New Initiatives</span>
                      <span className='absolute bottom-0 left-0 h-1 w-0 bg-white transition-all duration-300 group-hover:w-full' />
                   </Link>
                   <Link
