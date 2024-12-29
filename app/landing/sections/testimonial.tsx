@@ -6,6 +6,8 @@ import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Animatedheading from "@/components/new_ui/animatedheading";
+import { Swiper, SwiperSlide } from "swiper/react";
+import useIsMobile from "@/lib/hooks/useIsMobile";
 
 type ReviewCardProps = {
   name: string;
@@ -151,27 +153,20 @@ const Testimonial = () => {
     },
   ];
 
+  const { ismobile } = useIsMobile();
+
   return (
-    <div className="p-4 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
+    <div className="p-4 max-sm:px-0 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
       <Animatedheading>Farmers Recount Their Experiences</Animatedheading>
 
-      <div className="p-2 sm:p-6 flex justify-center items-center w-full">
-        <Marquee
-          gradient={true}
-          speed={80}
-          gradientColor="white"
-          gradientWidth={50}
-          pauseOnClick={true}
-          className="h-full py-4 overflow-hidden"
-        >
+      <div className="sm:p-6 flex justify-center items-center w-full">
+        <Swiper spaceBetween={10} slidesPerView={ismobile ? 1 : 2} loop={true}>
           {testimonialCards.map((testimonial, index) => (
-            <ReviewCard
-              //  className={index % 2 === 0 ? 'translate-y-8 sm:translate-y-16' : ''}
-              key={index}
-              {...testimonial}
-            />
+            <SwiperSlide className="py-8" key={index}>
+              <ReviewCard {...testimonial} />
+            </SwiperSlide>
           ))}
-        </Marquee>
+        </Swiper>
       </div>
     </div>
   );
