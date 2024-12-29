@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import Animatedheading from "@/components/new_ui/animatedheading";
 
 export default function Highlights() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,9 +67,7 @@ export default function Highlights() {
 
       <div ref={containerRef} className="relative mx-auto w-[94vw]">
         <div ref={contentRef} className="relative">
-          <h2 className="mb-8 text-2xl !text-center font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
-            Highlights
-          </h2>
+          <Animatedheading className="mb-8">Highlights</Animatedheading>
 
           <Swiper
             ref={swiperRef}

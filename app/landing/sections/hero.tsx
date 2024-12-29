@@ -5,14 +5,16 @@ import Link from "next/link";
 import useIsMobile from "@/lib/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
 import Animatedbutton from "@/components/new_ui/animatedbutton";
+import { TextScramble } from "@/components/new_ui/textscramble";
+import { TextEffect } from "@/components/new_ui/textanimation";
 
 export default function Hero() {
   const { ismobile } = useIsMobile();
   return (
     <div>
       <motion.div
-        initial={{ opacity: 0, scale: 0.3 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative max-sm:h-[50vh] mt-16 md:mt-20 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg"
       >
@@ -39,15 +41,23 @@ export default function Hero() {
           >
             {/* Hero Text */}
             <div className="max-w-3xl space-y-6">
-              <h1 className="font-heading text-3xl font-bold text-left leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                A Boon for the Farmer,
-                <br />A Gain for the Nation.
-              </h1>
-              <p className="max-w-xl text-lg text-gray-200 sm:text-xl text-left">
+              <TextEffect
+                per="char"
+                preset="slide"
+                delay={0.5}
+                className="font-heading text-3xl font-bold text-left leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
+              >
+                A Boon for the Farmer, A Gain for the Nation.
+              </TextEffect>
+              <TextEffect
+                delay={1}
+                preset="blur"
+                className="max-w-xl text-lg text-gray-200 sm:text-xl text-left"
+              >
                 Unleashing the power of innovation—tools that turn hard work
                 into unstoppable growth, enabling greater efficiency and
                 sustainable success.
-              </p>
+              </TextEffect>
             </div>
 
             {/* CTA Buttons */}
@@ -131,33 +141,45 @@ export default function Hero() {
             {/* Stats */}
             <div className="flex justify-center lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12">
               <div className="text-center">
-                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                <TextScramble
+                  duration={1}
+                  className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+                >
                   50+
-                </h2>
+                </TextScramble>
                 <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
                   Years of <br /> Experience
                 </p>
               </div>
               <div className="text-center">
-                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                <TextScramble
+                  duration={1}
+                  className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+                >
                   80+
-                </h2>
+                </TextScramble>
                 <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
                   Dealers <br /> Across Country
                 </p>
               </div>
               <div className="text-center">
-                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                <TextScramble
+                  duration={1}
+                  className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+                >
                   1L+
-                </h2>
+                </TextScramble>
                 <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
                   Happy <br /> Customers
                 </p>
               </div>
               <div className="text-center">
-                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                <TextScramble
+                  duration={1}
+                  className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900"
+                >
                   900+
-                </h2>
+                </TextScramble>
                 <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
                   Skilled <br /> Manpower
                 </p>

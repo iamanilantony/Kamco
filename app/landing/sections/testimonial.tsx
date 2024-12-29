@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Animatedheading from "@/components/new_ui/animatedheading";
 
 type ReviewCardProps = {
   name: string;
@@ -152,11 +153,7 @@ const Testimonial = () => {
 
   return (
     <div className="p-4 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
-      <div className="flex justify-center w-full">
-        <h2 className="mb-0 text-2xl text-center font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
-          Farmers Recount Their Experiences
-        </h2>
-      </div>
+      <Animatedheading>Farmers Recount Their Experiences</Animatedheading>
 
       <div className="p-2 sm:p-6 flex justify-center items-center w-full">
         <Marquee

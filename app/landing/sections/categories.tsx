@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Animatedheading from "@/components/new_ui/animatedheading";
 
 const Categories = () => {
   const router = useRouter();
@@ -75,11 +76,12 @@ const Categories = () => {
     <div className="max-w-[94vw] mx-auto flex flex-col justify-center items-center gap-8 py-10 pt-14">
       {/* Title */}
       {/* <h2 className='text-4xl font-bold text-center text-gray-900 urbanist-font'>Categories</h2> */}
-      <div className="flex justify-center w-full">
+      {/* <div className="flex justify-center w-full">
         <h2 className="mb-0 text-2xl text-center font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
           Categories
         </h2>
-      </div>
+      </div> */}
+      <Animatedheading>Categories</Animatedheading>
 
       {/* Grid Section */}
       <div

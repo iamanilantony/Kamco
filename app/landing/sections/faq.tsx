@@ -4,6 +4,7 @@ import * as React from "react";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Animatedheading from "@/components/new_ui/animatedheading";
 
 const faqs = [
   {
@@ -150,12 +151,9 @@ export default function FAQ() {
         transition={{ duration: 0.5 }}
       >
         {/* Header */}
-        <div className="mb-6 md:mb-12 text-center">
-          <h2 className="mb-0 text-2xl font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
-            Frequently Asked Questions
-          </h2>
-        </div>
-
+        <Animatedheading className="md:mb-8 mb-6">
+          Frequently Asked Questions
+        </Animatedheading>
         {/* FAQ Grid */}
         <div className="flex flex-col md:flex-row gap-3 md:gap-6">
           <div className="flex flex-col gap-3 md:w-1/2">
