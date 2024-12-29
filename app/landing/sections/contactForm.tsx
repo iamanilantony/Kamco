@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex-1">
+    <div id="connect" className="flex-1">
       <motion.div
         animate={controls}
         initial="hidden"

@@ -15,7 +15,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="relative max-sm:h-[50vh] mt-16 md:mt-20 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg"
       >
         {/* Background Image with Overlay */}
@@ -33,25 +33,19 @@ export default function Hero() {
 
         {/* Content Container */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-            className="flex min-h-screen flex-col items-start justify-center gap-8 py-10 lg:py-20"
-          >
+          <div className="flex min-h-screen flex-col items-start justify-center gap-8 py-10 lg:py-20">
             {/* Hero Text */}
             <div className="max-w-3xl space-y-6">
               <TextEffect
                 per="char"
                 preset="slide"
-                delay={0.5}
                 className="font-heading text-3xl font-bold text-left leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
               >
                 A Boon for the Farmer, A Gain for the Nation.
               </TextEffect>
               <TextEffect
-                delay={1}
                 preset="blur"
+                delay={0.3}
                 className="max-w-xl text-lg text-gray-200 sm:text-xl text-left"
               >
                 Unleashing the power of innovation—tools that turn hard work
@@ -105,7 +99,7 @@ export default function Hero() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{
                     duration: 0.6,
-                    delay: 0.2 + index * 0.2, // Staggered delay for each card
+                    delay: 0.8 + index * 0.2, // Staggered delay for each card
                   }}
                   className="rounded-xl bg-white/10 p-4 backdrop-blur-sm transition-transform duration-300 hover:scale-105 sm:p-6"
                 >
@@ -118,7 +112,7 @@ export default function Hero() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Decorative Elements */}

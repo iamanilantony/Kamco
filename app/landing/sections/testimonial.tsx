@@ -8,6 +8,7 @@ import Marquee from "react-fast-marquee";
 import Animatedheading from "@/components/new_ui/animatedheading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useIsMobile from "@/lib/hooks/useIsMobile";
+import { motion } from "framer-motion";
 
 type ReviewCardProps = {
   name: string;
@@ -159,7 +160,12 @@ const Testimonial = () => {
     <div className="p-4 max-sm:px-0 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
       <Animatedheading>Farmers Recount Their Experiences</Animatedheading>
 
-      <div className="sm:p-6 flex justify-center items-center w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.85, ease: "easeOut" }}
+        className="sm:p-6 flex justify-center items-center w-full"
+      >
         <Swiper spaceBetween={10} slidesPerView={ismobile ? 1 : 2} loop={true}>
           {testimonialCards.map((testimonial, index) => (
             <SwiperSlide className="py-8" key={index}>
@@ -167,7 +173,7 @@ const Testimonial = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </div>
   );
 };

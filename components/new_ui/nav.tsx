@@ -3,15 +3,15 @@ import { BellDot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronDown, ChevronRight, ChevronUp, Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 import MobileView from "./MobileView";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -44,7 +44,7 @@ const Navbar = () => {
       name: "Connect",
       href: "#",
       subItems: [
-        { name: "Contact Us", href: "/#footer" },
+        { name: "Contact Us", href: "/#connect" },
         { name: "Newsletter", href: "/newsletter" },
         { name: "Media", href: "/media" },
         { name: "Downloads", href: "/downloads" },
@@ -106,14 +106,32 @@ const Navbar = () => {
       };
     }
   }, [lastScrollY]);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setActiveDropdown(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: showNav ? 0 : -100 }}
         transition={{ duration: 0.5 }}
-        // className={`py-3 px-8 flex items-center justify-between mx-auto z-50 max-w-3xl md:max-w-7xl xl:max-w-full xl:px-32 ${
-        className={`py-3  flex items-center justify-between mx-auto z-30 w-full px-12 fixed top-0 left-0 right-0 backdrop-blur-lg`}
+        className={`py-3 flex items-center justify-between mx-auto z-30 w-full px-12 fixed top-0 left-0 right-0 backdrop-blur-lg ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
       >
         {/* Logo */}
         <Link href="/">
@@ -126,7 +144,7 @@ const Navbar = () => {
           />
         </Link>
         {/* Desktop Menu */}
-        <div className="hidden md:flex flex-1 justify-end ">
+        <div className="hidden md:flex flex-1 justify-end">
           <ul className="flex flex-row space-x-6 items-center">
             {navItems.map((item, i) => (
               <motion.li
@@ -154,157 +172,24 @@ const Navbar = () => {
                     )}
                   </div>
 
-                  {/* Dropdown Menus  */}
-                  {item.name === "About Us" &&
-                    activeDropdown === "About Us" && (
-                      <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
-                        <li>
+                  {/* Dropdown Menus */}
+                  {item.subItems && activeDropdown === item.name && (
+                    <ul
+                      //@ts-ignore //div element and list element type cannot be assigned to the ref
+                      ref={dropdownRef}
+                      className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm"
+                    >
+                      {item.subItems.map((subItem) => (
+                        <li key={subItem.name}>
                           <Link
-                            href="/about"
+                            href={subItem.href}
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
                           >
-                            About Kamco
+                            {subItem.name}
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            href="/companyinfo"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Company info
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/orgstructure"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Organizational Structure
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/financial-report"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Financial Report
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-
-                  {item.name === "Statutory" &&
-                    activeDropdown === "Statutory" && (
-                      <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
-                        <li>
-                          <Link
-                            href="/cm-redressal-cell"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            CM Redressal Cell
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
-                            target="_blank"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Corporate Social Responsibility (CSR)
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="/right-to-information"
-                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            Right to Information (RTI)
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-
-                  {item.name === "Connect" && activeDropdown === "Connect" && (
-                    <ul className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 shadow-md rounded-md z-50 text-base lg:text-sm">
-                      <li>
-                        <Link
-                          href="/#footer"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Contact Us
-                        </Link>
-                      </li>
-                      {/* <li>
-                        <Link
-                          href="/support"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Support
-                        </Link>
-                      </li> */}
-                      <li>
-                        <Link
-                          href="/newsletter"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Newsletter
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/media"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Media
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/downloads"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Downloads
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/dealerregistration"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Dealer Registration
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/suppilerregistration"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Supplier Registration
-                        </Link>
-                      </li>
-                      {/* <li>
-                        <Link
-                          href="/notifications"
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          Notification
-                        </Link>
-                      </li> */}
+                      ))}
                     </ul>
                   )}
                 </div>
@@ -326,7 +211,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-green-600 text-white font-medium px-6 py-2  rounded-lg max-sm:scale-75 text-base lg:text-sm relative top-1"
+                className="bg-green-600 text-white font-medium px-6 py-2 rounded-lg max-sm:scale-75 text-base lg:text-sm relative top-1"
               >
                 Login
               </motion.button>

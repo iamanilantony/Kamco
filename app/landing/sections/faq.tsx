@@ -64,22 +64,24 @@ const faqs = [
 ];
 
 const AccordionItem: React.FC<{
+  index: number;
   question: string;
   answer: string;
   isOpen: boolean;
   onClick: () => void;
-}> = ({ question, answer, isOpen, onClick }) => {
+}> = ({ index, question, answer, isOpen, onClick }) => {
   return (
     <motion.div
       className="mb-4 overflow-hidden rounded-lg bg-[#fffbe6] flex flex-col items-center justify-center"
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
       exit="hidden"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
     >
       <button
         className="flex w-full items-center justify-between rounded-lg bg-yellow-50/60 p-4 text-left text-base font-medium text-gray-900 hover:bg-yellow-50 focus:outline-none focus-visible:shadow-[0_0_0_2px_rgba(0,0,0,0.1)]"
@@ -159,6 +161,7 @@ export default function FAQ() {
           <div className="flex flex-col gap-3 md:w-1/2">
             {faqs.slice(0, 5).map((faq, index) => (
               <AccordionItem
+                index={index}
                 key={index}
                 question={faq.title}
                 answer={faq.description}
@@ -171,6 +174,7 @@ export default function FAQ() {
           <div className="flex flex-col gap-3 md:w-1/2">
             {faqs.slice(5).map((faq, index) => (
               <AccordionItem
+                index={index + 5}
                 key={index + 5}
                 question={faq.title}
                 answer={faq.description}
