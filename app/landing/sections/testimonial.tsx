@@ -3,12 +3,13 @@
 import { Star, Quote, PlayCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Animatedheading from "@/components/new_ui/animatedheading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useIsMobile from "@/lib/hooks/useIsMobile";
 import { motion } from "framer-motion";
+import Modal from "@/components/new_ui/modal";
 
 type ReviewCardProps = {
   name: string;
@@ -19,6 +20,7 @@ type ReviewCardProps = {
   profileImage: string;
   video: string;
   className?: string;
+  onVideoClick: (videoUrl: string) => void;
 };
 
 function ReviewCard({
@@ -29,9 +31,10 @@ function ReviewCard({
   review,
   profileImage,
   video,
+  onVideoClick,
 }: ReviewCardProps) {
   const handleClick = () => {
-    window.open(video, "_blank", "noopener,noreferrer");
+    onVideoClick(video);
   };
 
   return (
@@ -77,7 +80,7 @@ function ReviewCard({
             <div className="rounded-lg bg-[#274321]/5 p-2 flex items-center gap-2 w-fit md:w-auto mx-auto">
               <PlayCircle className="h-5 w-5 text-[#274321]" />
               <button
-                onClick={() => handleClick()}
+                onClick={handleClick}
                 className="text-xs font-medium text-[#274321]"
               >
                 Watch Video Testimonial
@@ -91,6 +94,14 @@ function ReviewCard({
 }
 
 const Testimonial = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleVideoClick = (videoUrl: string) => {
+    setSelectedVideo(videoUrl);
+    setIsModalOpen(true);
+  };
+
   const testimonialCards = [
     {
       name: " Anil Pradhaan",
@@ -98,9 +109,9 @@ const Testimonial = () => {
       location: "Agribusiness Owner, Amritsar, Punjab",
       rating: 5,
       review:
-        "Kamco’s website made finding the right tractor easy with clear details and reviews. The tractor improved productivity, and the excellent service ensured a smooth purchase. Its fuel efficiency and durability make it a great investment. Kamco’s quality and customer focus exceeded my expectations.",
+        "Kamco’s website made finding the right tractor easy with clear details and reviews. The tractor improved productivity, and the excellent service ensured a smooth purchase. Its fuel efficiency and durability make it a great investment. ",
       profileImage: "/new_images/testimonials/person1.jpg",
-      video: "https://youtu.be/LhzGVPbqS1k",
+      video: "https://www.youtube.com/watch?v=LhzGVPbqS1k",
     },
     {
       name: "Sunil Grover",
@@ -108,9 +119,9 @@ const Testimonial = () => {
       location: "Farm Entrepreneur, Ahmedabad, Gujarat",
       rating: 4,
       review:
-        "Kamco’s site helped me find the ideal power weeder with ease. The support team promptly answered my questions. The equipment has reduced labor and boosted efficiency. The blog provided useful tips, and the weeder has been a durable tool for my farm.",
+        "Kamco’s site helped me find the ideal power weeder with ease. The support team promptly answered my questions. The equipment has reduced labor and boosted efficiency. The blog provided useful tips, and the weeder has been a durable tool.",
       profileImage: "/new_images/testimonials/person2.jpg",
-      video: "https://youtu.be/kTi11aaSR5E",
+      video: "https://www.youtube.com/watch?v=kTi11aaSR5E",
     },
     {
       name: "Mahesh Kumar",
@@ -120,61 +131,42 @@ const Testimonial = () => {
       review:
         "Kamco’s range of implements and accurate reviews made my choice easy. The seamless purchase process and excellent support were impressive. The equipment has boosted farm productivity and reliability, making Kamco a top choice for farmers.",
       profileImage: "/new_images/testimonials/person3.png",
-      video: "https://youtu.be/kTi11aaSR5E",
-    },
-    {
-      name: " Anil Pradhaan",
-      designation: "Farmer",
-      location: "Agribusiness Owner, Amritsar, Punjab",
-      rating: 5,
-      review:
-        "Kamco’s website made finding the right tractor easy with clear details and reviews. The tractor improved productivity, and the excellent service ensured a smooth purchase. Its fuel efficiency and durability make it a great investment. Kamco’s quality and customer focus exceeded my expectations.",
-      profileImage: "/new_images/testimonials/person1.jpg",
-      video: "https://youtu.be/LhzGVPbqS1k",
-    },
-    {
-      name: "Sunil Grover",
-      designation: "Farmer",
-      location: "Farm Entrepreneur, Ahmedabad, Gujarat",
-      rating: 4,
-      review:
-        "Kamco’s site helped me find the ideal power weeder with ease. The support team promptly answered my questions. The equipment has reduced labor and boosted efficiency. The blog provided useful tips, and the weeder has been a durable tool for my farm.",
-      profileImage: "/new_images/testimonials/person2.jpg",
-      video: "https://youtu.be/kTi11aaSR5E",
-    },
-    {
-      name: "Mahesh Kumar",
-      designation: "Farmer",
-      location: "Farmer, Hyderabad, Telangana",
-      rating: 4,
-      review:
-        "Kamco’s range of implements and accurate reviews made my choice easy. The seamless purchase process and excellent support were impressive. The equipment has boosted farm productivity and reliability, making Kamco a top choice for farmers.",
-      profileImage: "/new_images/testimonials/person3.png",
-      video: "https://youtu.be/kTi11aaSR5E",
+      video: "https://www.youtube.com/watch?v=zoVUu-0Z2JE",
     },
   ];
 
   const { ismobile } = useIsMobile();
 
   return (
-    <div className="p-4 max-sm:px-0 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
-      <Animatedheading>Farmers Recount Their Experiences</Animatedheading>
+    <>
+      <div className="p-4 max-sm:px-0 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
+        <Animatedheading>Farmers Recount Their Experiences</Animatedheading>
 
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.85, ease: "easeOut" }}
-        className="sm:p-6 flex justify-center items-center w-full"
-      >
-        <Swiper spaceBetween={10} slidesPerView={ismobile ? 1 : 2} loop={true}>
-          {testimonialCards.map((testimonial, index) => (
-            <SwiperSlide className="py-8" key={index}>
-              <ReviewCard {...testimonial} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </motion.div>
-    </div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.85, ease: "easeOut" }}
+          className="sm:p-6 flex justify-center items-center w-full"
+        >
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={ismobile ? 1 : 2}
+            loop={true}
+          >
+            {testimonialCards.map((testimonial, index) => (
+              <SwiperSlide className="py-8" key={index}>
+                <ReviewCard {...testimonial} onVideoClick={handleVideoClick} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+      </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        videoUrl={selectedVideo || ""}
+      />
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import MobileView from "./MobileView";
+import useClickOutside from "@/lib/hooks/useclickedoutside";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -96,32 +97,6 @@ const Navbar = () => {
       setLastScrollY(window.scrollY);
     }
   };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, [lastScrollY]);
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
-    ) {
-      setActiveDropdown(null);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <>

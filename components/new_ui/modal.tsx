@@ -49,7 +49,7 @@ const Modal = ({ isOpen, onClose, videoUrl }: ModalProps) => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="Video"
-              className="absolute top-1/2 -translate-y-3/4 -translate-x-1/2 left-1/2 w-[60%] h-[60%] aspect-video"
+              className="absolute top-1/2 md:-translate-y-3/4 -translate-x-1/2 left-1/2 md:w-[60%] md:h-[60%] w-full h-[50vh] md:aspect-video"
             />
           </div>
         </div>
