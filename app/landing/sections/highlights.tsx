@@ -33,6 +33,15 @@ export default function Highlights() {
       image:
         "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BxUsu9cFqbQhlbyFCEZBaA.jpeg",
     },
+    {
+      title: "Sustainable Growth: Empowering Farmers for the Future",
+      description:
+        "How empowering farmers with sustainable practices, technology, and market access can drive resilience and prosperity.",
+      readMore:
+        "https://medium.com/@support_62461/sustainable-growth-empowering-farmers-for-the-future-c7f22696c3f1",
+      image:
+        "https://miro.medium.com/v2/resize:fit:828/format:webp/1*QvR0Cb85rjSP6YCSDg8iwg.jpeg",
+    },
   ];
 
   const swiperRef = useRef(null);

@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const MobileView = ({
@@ -40,13 +40,22 @@ const MobileView = ({
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className="fixed flex-col justify-center items-center md:hidden top-0 right-0 h-screen w-full bg-[#FAFFF7] z-40"
         >
-          <Image
-            src="/new_images/logo.webp"
-            width={150}
-            height={150}
-            alt="logo"
-            className="mx-auto mt-12"
-          />
+          <div className="flex justify-between items-center w-full px-6 py-4">
+            <Image
+              src="/new_images/logo.webp"
+              width={150}
+              height={150}
+              alt="logo"
+              className="cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            />
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-gray-700 hover:text-gray-900"
+            >
+              <X size={24} />
+            </button>
+          </div>
           <ul className="flex flex-col space-y-4 items-center justify-center w-full pt-20">
             {navItems.map((item, i) => (
               <motion.li
@@ -85,7 +94,7 @@ const MobileView = ({
                       <li key={subItem.name}>
                         <Link
                           href={subItem.href}
-                          className="text-[rgb(55,65,81)] font-sans hover:text-[#d1f349] "
+                          className="text-[rgb(55,65,81)] font-sans hover:text-[#d1f349]"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}

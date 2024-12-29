@@ -81,16 +81,39 @@ const Navbar = () => {
     setActiveDropdown((prev) => (prev === name ? null : name)); // Toggle dropdown
   };
 
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // Scroll down
+        setShowNav(false);
+      } else {
+        // Scroll up
+        setShowNav(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [lastScrollY]);
   return (
     <>
       <motion.nav
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        animate={{ y: showNav ? 0 : -100 }}
         transition={{ duration: 0.5 }}
         // className={`py-3 px-8 flex items-center justify-between mx-auto z-50 max-w-3xl md:max-w-7xl xl:max-w-full xl:px-32 ${
-        className={`py-3  flex items-center justify-between mx-auto z-50 w-[94vw] ${
-          isScrolled ? "bg-white shadow-md" : "bg-transparent"
-        }`}
+        className={`py-3  flex items-center justify-between mx-auto z-30 w-full px-12 fixed top-0 left-0 right-0 backdrop-blur-lg`}
       >
         {/* Logo */}
         <Link href="/">

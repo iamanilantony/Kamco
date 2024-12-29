@@ -5,12 +5,13 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import useIsMobile from "@/lib/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
+import Animatedbutton from "@/components/new_ui/animatedbutton";
 
 export default function Hero() {
   const { ismobile } = useIsMobile();
   return (
     <div>
-      <div className="relative max-sm:h-[60vh] max-sm:mt-8 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg">
+      <div className="relative max-sm:h-[60vh] mt-20 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <video
@@ -46,28 +47,30 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-2 flex flex-col gap-4 sm:flex-row sm:gap-6"
-            >
-              <Link
-                href="/projects"
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-green-600 px-8 py-3 text-lg font-medium text-white transition duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-                target="_blank"
-                rel="noopener noreferrer"
+            {!ismobile && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="mt-2 flex flex-col gap-4 sm:flex-row sm:gap-6"
               >
-                <span className="relative">New Initiatives</span>
-                <span className="absolute bottom-0 left-0 h-1 w-0 bg-white transition-all duration-300 group-hover:w-full" />
-              </Link>
-              <Link
-                href={"/dealers"}
-                className="group inline-flex items-center justify-center rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition duration-300 hover:bg-white hover:text-green-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-              >
-                Explore Dealers
-              </Link>
-            </motion.div>
+                <Link
+                  href="/projects"
+                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-green-600 px-8 py-3 text-lg font-medium text-white transition duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="relative">New Initiatives</span>
+                  <span className="absolute bottom-0 left-0 h-1 w-0 bg-white transition-all duration-300 group-hover:w-full" />
+                </Link>
+                <Link
+                  href={"/dealers"}
+                  className="group inline-flex items-center justify-center rounded-lg border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition duration-300 hover:bg-white hover:text-green-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                >
+                  Explore Dealers
+                </Link>
+              </motion.div>
+            )}
 
             {/* Statistics Grid */}
             <div
@@ -113,40 +116,67 @@ export default function Hero() {
         </div>
       </div>
       {ismobile && (
-        <div className="flex justify-center py-8 lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
-              50+
-            </h2>
-            <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
-              Years of <br /> Experience
-            </p>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="max-w-full md:max-w-[94vw] w-full flex flex-col md:flex-row justify-between"
+        >
+          {/* Stats Section */}
+          <div className="pt-8  flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10">
+            {/* Stats */}
+            <div className="flex justify-center lg:justify-start space-x-6 md:space-x-20 ml-4 md:ml-12">
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                  50+
+                </h2>
+                <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
+                  Years of <br /> Experience
+                </p>
+              </div>
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                  80+
+                </h2>
+                <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
+                  Dealers <br /> Across Country
+                </p>
+              </div>
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                  1L+
+                </h2>
+                <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
+                  Happy <br /> Customers
+                </p>
+              </div>
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
+                  900+
+                </h2>
+                <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
+                  Skilled <br /> Manpower
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
-              80+
-            </h2>
-            <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
-              Dealers <br /> Across Country
-            </p>
+          <div className="flex flex-col space-y-3 mt-6 md:mt-0 px-4 md:px-0">
+            <Animatedbutton
+              navigateto={"/projects"}
+              delay={1}
+              className="bg-[#274321] text-white hover:bg-[#3b6631]"
+            >
+              New Initiatives
+            </Animatedbutton>
+            <Animatedbutton
+              navigateto={"/dealers"}
+              delay={1}
+              className="bg-[#d7ffbf] hover:bg-[#beff96]"
+            >
+              Explore Dealers
+            </Animatedbutton>
           </div>
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
-              1L+
-            </h2>
-            <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
-              Happy <br /> Customers
-            </p>
-          </div>
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-3xl md:text-5xl urbanist-font font-bold text-gray-900">
-              900+
-            </h2>
-            <p className="text-xs sm:text-sm md:text-lg font-medium text-gray-600">
-              Skilled <br /> Manpower
-            </p>
-          </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );
