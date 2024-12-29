@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 import useIsMobile from "@/lib/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
@@ -11,7 +10,12 @@ export default function Hero() {
   const { ismobile } = useIsMobile();
   return (
     <div>
-      <div className="relative max-sm:h-[60vh] mt-20 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative max-sm:h-[50vh] mt-16 md:mt-20 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg"
+      >
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <video
@@ -30,7 +34,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
             className="flex min-h-screen flex-col items-start justify-center gap-8 py-10 lg:py-20"
           >
             {/* Hero Text */}
@@ -114,7 +118,7 @@ export default function Hero() {
         <div className="pt-8  flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10">
           {/* Stats */}
         </div>
-      </div>
+      </motion.div>
       {ismobile && (
         <motion.div
           initial={{ opacity: 0, y: 50 }}

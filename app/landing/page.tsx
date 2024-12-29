@@ -6,6 +6,7 @@ import Gallery from "./sections/gallery";
 import FAQsSection from "./sections/faq";
 import Contact from "./sections/contact";
 import Testimonial from "./sections/testimonial";
+import GalleryLegacy from "./sections/gallery_legacy";
 
 const Landing = () => {
   return (
@@ -14,7 +15,8 @@ const Landing = () => {
       <Categories />
       <Highlights />
       <Testimonial />
-      <Gallery />
+      {/* <Gallery /> */}
+      <GalleryLegacy />
       <FAQsSection />
       <Contact />
     </div>

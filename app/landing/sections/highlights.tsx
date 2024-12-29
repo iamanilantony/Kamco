@@ -66,7 +66,7 @@ export default function Highlights() {
 
       <div ref={containerRef} className="relative mx-auto w-[94vw]">
         <div ref={contentRef} className="relative">
-          <h2 className="mb-8 text-2xl !text-left font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
+          <h2 className="mb-8 text-2xl !text-center font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
             Highlights
           </h2>
 

@@ -152,8 +152,8 @@ const Testimonial = () => {
 
   return (
     <div className="p-4 sm:pt-16 mb-0 flex flex-col justify-center items-center max-w-[94vw] mx-auto">
-      <div className="flex justify-start w-full">
-        <h2 className="mb-0 text-2xl text-left font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
+      <div className="flex justify-center w-full">
+        <h2 className="mb-0 text-2xl text-center font-bold tracking-tight text-[#274321] sm:text-3xl lg:text-4xl">
           Farmers Recount Their Experiences
         </h2>
       </div>
