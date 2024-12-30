@@ -1,10 +1,11 @@
 "use client";
 
 import { FormEvent, useState, useEffect, useRef } from "react";
-import { FaFacebook, FaYoutube, FaEnvelope, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { CiLocationOn, CiMail } from "react-icons/ci";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
 import { motion, useAnimation, useInView } from "framer-motion";
 import ContactForm from "./contactForm";
 import Link from "next/link";
@@ -91,27 +92,38 @@ export default function Contact() {
                 </div>
               </div>
               <div className="bg-[#d7ffbf] rounded-lg p-6 flex flex-wrap gap-6 justify-around items-center">
-                <a
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.facebook.com/kamcoindia"
                   className="hover:opacity-75 transition-opacity"
                 >
                   <FaFacebook size={32} />
-                </a>
-                <a
+                </Link>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.facebook.com/kamcoindia"
                   className="hover:opacity-75 transition-opacity"
                 >
                   <FaYoutube size={32} />
-                </a>
-                <a
+                </Link>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.instagram.com/kamcoindiaofficial/"
                   className="hover:opacity-75 transition-opacity"
                 >
                   <RiInstagramFill size={32} />
-                </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <FaTwitter size={32} />
-                </a>
+                </Link>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://x.com/kamcoindia_ofcl?t=oIyNl3yGZ7QIVcCTeALjAA&s=09"
+                  className="hover:opacity-75 transition-opacity"
+                >
+                  <FaXTwitter size={32} />
+                </Link>
               </div>
             </div>
           </motion.div>

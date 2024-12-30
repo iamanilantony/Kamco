@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import NewsletterForm from "@/app/about/sections/newsletter";
 import FooterSections from "./footersections";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   const socialLinks = [
@@ -13,7 +14,11 @@ export default function Footer() {
       icon: FaFacebookF,
       label: "Facebook",
     },
-    { href: "#", icon: FaTwitter, label: "Twitter" },
+    {
+      href: "https://x.com/kamcoindia_ofcl?t=oIyNl3yGZ7QIVcCTeALjAA&s=09",
+      icon: FaXTwitter,
+      label: "Twitter",
+    },
     {
       href: "https://www.instagram.com/kamcoindiaofficial/",
       icon: FaInstagram,
@@ -63,6 +68,8 @@ export default function Footer() {
                 <Link
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-700 hover:text-black"
                 >
                   <Icon size={20} />
