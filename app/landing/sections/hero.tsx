@@ -28,7 +28,7 @@ export default function Hero() {
             className="w-full h-full object-cover rounded-2xl md:object-cover"
             src="/new_images/hero.webm"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/10" />
         </div>
 
         {/* Content Container */}

@@ -120,7 +120,7 @@ const Navbar = () => {
         </Link>
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 justify-end">
-          <ul className="flex flex-row space-x-6 items-center">
+          <ul className="flex flex-row space-x-10 items-center">
             {navItems.map((item, i) => (
               <motion.li
                 key={item.name}
@@ -186,7 +186,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-green-600 text-white font-medium px-6 py-2 rounded-lg max-sm:scale-75 text-base lg:text-sm relative top-1"
+                className="bg-[#d2f348] text-black rounded-3xl font-semibold px-6 py-3 max-sm:scale-75 text-base lg:text-sm relative top-1"
               >
                 Login
               </motion.button>

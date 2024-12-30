@@ -61,7 +61,7 @@ const HeroLegacy = () => {
           <SplitText
             blured
             delay={0.9}
-            text="A GAIN GOT THE NATION."
+            text="A GAIN FOR THE NATION."
             staggerAmount={1.3}
             className="md:mt-4 exo-font font-light text-2xl sm:text-5xl text-left md:text-6xl"
           />
