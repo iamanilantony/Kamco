@@ -160,6 +160,10 @@ const Navbar = () => {
                             href={subItem.href}
                             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             onClick={() => setActiveDropdown(null)}
+                            {...(subItem.href ===
+                            "https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
+                              ? { target: "_blank", rel: "noopener noreferrer" }
+                              : {})}
                           >
                             {subItem.name}
                           </Link>

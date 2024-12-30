@@ -13,7 +13,7 @@ export default function Page() {
         <ol className="list-decimal pl-5 space-y-4 text-left text-base font-medium text-gray-700">
           <li>
             <Link
-              href="https://www.kamcoindia.com/userfiles/PIO_24-04-2024(1).jpg"
+              href="https://drive.google.com/file/d/1c0-LGVe7aw5tUt-3lRCe_drf5g5HmEuE/view"
               target="_blank"
               className="cursor-pointer hover:bg-gray-100 rounded-md block"
             >

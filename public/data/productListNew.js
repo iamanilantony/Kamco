@@ -1,6 +1,6 @@
 export default [
     {
-      name: "Power Tillers",
+      name: "Power Tiller",
       codeName: "PR-011",
       category: "Land Preparation",
       src: "/products/PR-011.jpg",

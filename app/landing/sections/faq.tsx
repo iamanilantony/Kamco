@@ -157,7 +157,7 @@ export default function FAQ() {
           Frequently Asked Questions
         </Animatedheading>
         {/* FAQ Grid */}
-        <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-6 md:max-w-6xl mx-auto">
           <div className="flex flex-col gap-3 md:w-1/2">
             {faqs.slice(0, 5).map((faq, index) => (
               <AccordionItem

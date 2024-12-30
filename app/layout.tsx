@@ -24,7 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-[#d7ffbf]/20 text-slate-900 dark:text-slate-50 ${inter.className}`}
+        className={`antialiased bg-[#fafff7] text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <div className="max-w-full mx-auto">
           <Head>
