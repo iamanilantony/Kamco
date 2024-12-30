@@ -271,9 +271,9 @@ const NavBar = () => {
         <Link
           href="https://www.kamcoindia.com/dealers/user_login"
           onClick={handleLinkClick}
-          className="block md:inline-block bg-[#166434] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md"
+          className="block md:inline-block bg-[#D2F348] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md"
         >
-          Login
+          Loginqwdw
         </Link>
       </nav>
     </header>

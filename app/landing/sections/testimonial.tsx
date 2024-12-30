@@ -148,17 +148,13 @@ const Testimonial = () => {
           transition={{ duration: 0.85, ease: "easeOut" }}
           className="sm:p-6 flex justify-center items-center w-full"
         >
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={ismobile ? 1 : 2}
-            loop={true}
-          >
+          <Marquee speed={25} pauseOnHover={true}>
             {testimonialCards.map((testimonial, index) => (
               <SwiperSlide className="py-8" key={index}>
                 <ReviewCard {...testimonial} onVideoClick={handleVideoClick} />
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Marquee>
         </motion.div>
       </div>
       <Modal

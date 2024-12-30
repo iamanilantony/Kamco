@@ -84,7 +84,7 @@ const AccordionItem: React.FC<{
       viewport={{ once: true }}
     >
       <button
-        className="flex w-full items-center justify-between rounded-lg bg-yellow-50/60 p-4 text-left text-base font-medium text-gray-900 hover:bg-yellow-50 focus:outline-none focus-visible:shadow-[0_0_0_2px_rgba(0,0,0,0.1)]"
+        className="flex w-full items-center justify-between rounded-lg bg-yellow-50/60 p-4 text-left text-lg font-medium text-gray-900 hover:bg-yellow-50 focus:outline-none focus-visible:shadow-[0_0_0_2px_rgba(0,0,0,0.1)]"
         onClick={onClick}
         aria-expanded={isOpen}
       >
