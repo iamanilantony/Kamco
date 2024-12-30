@@ -2,7 +2,7 @@
 
 import { CircleCheck, ShieldCheck } from "lucide-react";
 import { VscTools } from "react-icons/vsc";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import products from "@/public/data/tempProductDetils";
 import React from "react";
 import { Button } from "@/components/UI/button";
@@ -31,6 +31,8 @@ const ProductInfo = () => {
     VscTools: <VscTools size={36} className="font-bold text-xl" />,
     CircleCheck: <CircleCheck size={36} />,
   };
+
+  const router = useRouter();
 
   return (
     <div className="flex flex-col gap-8 justify-center items-center w-full urbanist-font p-8 md:p-16 lg:p-32 text-left">
@@ -104,12 +106,16 @@ const ProductInfo = () => {
           </div>
           <div className="flex justify-between gap-3 items-center mb-8">
             <Button
+              onClick={() => router.push("/dealers")}
               size={"lg"}
               className="bg-[#166434] hover:bg-[#166434] py-8 md:py-8 px-6 md:px-12 text-xl rounded-2xl"
             >
               Contact Dealers
             </Button>
-            <Button className="bg-[#C0EBA6] hover:bg-[#C0EBA6] text-black py-8 md:py-8 px-6 md:px-12 text-xl rounded-2xl">
+            <Button
+              onClick={() => router.push("/#connect")}
+              className="bg-[#C0EBA6] hover:bg-[#C0EBA6] text-black py-8 md:py-8 px-6 md:px-12 text-xl rounded-2xl"
+            >
               Enquire Now
             </Button>
           </div>

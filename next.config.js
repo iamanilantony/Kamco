@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["www.kamcoindia.com", "www.worldometers.info",'via.placeholder.com'],
+    domains: ["www.kamcoindia.com", "www.worldometers.info",'via.placeholder.com','miro.medium.com'],
   },
   webpack: (config) => {
     // You can make any custom modifications here
