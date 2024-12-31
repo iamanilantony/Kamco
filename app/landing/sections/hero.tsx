@@ -16,7 +16,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative max-sm:h-[50vh] mt-16 md:mt-20 lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg"
+        className="relative max-sm:h-[50vh] lg:h-[90vh] overflow-hidden w-[94vw] mx-auto rounded-lg md:mt-0"
       >
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
