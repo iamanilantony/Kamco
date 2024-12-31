@@ -22,15 +22,12 @@ const Media = () => {
     "/gallery/13.JPG",
   ];
   const dummyImages = [
-    "https://via.placeholder.com/300?text=Event+1",
-    "https://via.placeholder.com/300?text=Event+2",
-    "https://via.placeholder.com/300?text=Event+3",
-    "https://via.placeholder.com/300?text=Event+4",
-    "https://via.placeholder.com/300?text=Event+5",
-    "https://via.placeholder.com/300?text=Event+6",
-    "https://via.placeholder.com/300?text=Event+7",
-    "https://via.placeholder.com/300?text=Event+8",
-    "https://via.placeholder.com/300?text=Event+9",
+    "/Newsandevents/IMG20241031112229.jpg",
+    "/Newsandevents/IMG20241031112513.jpg",
+    "/Newsandevents/MAC00377.JPG",
+    "/Newsandevents/MAC00286.JPG",
+    "/Newsandevents/MAC00230.JPG",
+    "/Newsandevents/MAC00205.JPG",
   ];
 
   const imagesPerPage = 9;
