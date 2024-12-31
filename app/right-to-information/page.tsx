@@ -24,20 +24,11 @@ export default function Page() {
             Query Disposition Status:
             <span className="block mt-2">
               <Link
-                href="https://www.kamcoindia.com/userfiles/RIA%20-Register_Updated_ason_DEC2021(2).pdf"
+                href="https://www.kamcoindia.com/ckeditor_files/1729853675.pdf"
                 target="_blank"
                 className="cursor-pointer hover:bg-gray-100 rounded-md p-2 block"
               >
-                BEFORE 2020
-              </Link>
-            </span>
-            <span className="block mt-2">
-              <Link
-                href="https://www.kamcoindia.com/ckeditor_files/1729853636.pdf"
-                target="_blank"
-                className="cursor-pointer hover:bg-gray-100 rounded-md p-2 block"
-              >
-                2021
+                2023
               </Link>
             </span>
             <span className="block mt-2">
@@ -51,11 +42,20 @@ export default function Page() {
             </span>
             <span className="block mt-2">
               <Link
-                href="https://www.kamcoindia.com/ckeditor_files/1729853675.pdf"
+                href="https://www.kamcoindia.com/ckeditor_files/1729853636.pdf"
                 target="_blank"
                 className="cursor-pointer hover:bg-gray-100 rounded-md p-2 block"
               >
-                2023
+                2021
+              </Link>
+            </span>
+            <span className="block mt-2">
+              <Link
+                href="https://www.kamcoindia.com/userfiles/RIA%20-Register_Updated_ason_DEC2021(2).pdf"
+                target="_blank"
+                className="cursor-pointer hover:bg-gray-100 rounded-md p-2 block"
+              >
+                BEFORE 2020
               </Link>
             </span>
             (Click on the required year)
