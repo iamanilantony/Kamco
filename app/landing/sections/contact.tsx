@@ -79,7 +79,7 @@ export default function Contact() {
                 <div className="flex flex-col md:flex-row space-x-2 gap-12">
                   <div className="flex items-start gap-2">
                     <MdOutlinePhoneInTalk className="w-5 h-5 mb-6" />
-                    <div className="flex flex-col gap-2 items-start">
+                    <div className="flex flex-col gap-2 items-center">
                       <p className="text-sm">91-484-2474301 (5 Lines)</p>
 
                       <p className="text-sm">+91-9400865666</p>
