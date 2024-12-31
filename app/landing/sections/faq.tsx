@@ -111,7 +111,7 @@ const AccordionItem: React.FC<{
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
-            className="bg-yellow-50/60 rounded-b-lg text-left flex-grow"
+            className="bg-[#c0eba6] rounded-b-lg text-left flex-grow"
           >
             <motion.div
               variants={{ collapsed: { y: -10 }, open: { y: 0 } }}
