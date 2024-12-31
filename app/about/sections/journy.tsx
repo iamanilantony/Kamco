@@ -29,6 +29,12 @@ const Journy = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleYearClick = (index: number) => {
+    // @ts-ignore
+    swiperRef.current?.slideToLoop(index);
+    setActiveIndex(index);
+  };
+
   return (
     <div className="p-4 md:p-8 urbanist-font my-16 space-y-20">
       <h2 className="text-3xl md:text-5xl font-bold text-center w-full mb-4 md:mb-6">
@@ -51,7 +57,8 @@ const Journy = () => {
             {history.map((item, index) => (
               <div
                 key={index}
-                className={`p-5 py-3 border-r border-black last:border-r-0 text-black ${
+                onClick={() => handleYearClick(index)}
+                className={`p-5 py-3 border-r border-black last:border-r-0 text-black cursor-pointer ${
                   index === activeIndex
                     ? "bg-[#C0EBA6] font-bold border-x"
                     : "border-none"

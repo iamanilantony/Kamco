@@ -28,6 +28,16 @@ body {
 .urbanist-font {
   font-family: "Urbanist", sans-serif;
 }
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+.swiper-transition {
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
