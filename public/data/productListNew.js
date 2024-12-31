@@ -9,7 +9,7 @@ export default [
       slug: "land-preparation",
     },
     {
-      name: "Tractors",
+      name: "Tractor",
       codeName: "PR-012",
       category: "Land Preparation",
       src: "/products/PR-012_2.jpg",
@@ -65,7 +65,7 @@ export default [
     {
       name: "Brush Cutter",
       codeName: "PR-036",
-      category: "Plant protection",
+      category: "De weeding",
       src: "/products/PR-036.jpg", // Original src retained
       piecesLeft: 200,
       description: "Versatile brush cutter for various applications.",

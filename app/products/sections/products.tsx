@@ -50,7 +50,6 @@ const Products = () => {
   // State to keep track of selected filter
   const searchparam = useSearchParams();
   const initailFilter = searchparam?.get("category");
-  console.log(initailFilter);
   const [selectedFilter, setSelectedFilter] = useState<string | null>(
     initailFilter?.toString() || null
   );
@@ -66,7 +65,7 @@ const Products = () => {
       img: "/new_images/products/bg_removed/protection.webp",
     },
     {
-      label: "Deweeding",
+      label: "De weeding",
       img: "/new_images/products/bg_removed/landprep.webp",
     },
     {

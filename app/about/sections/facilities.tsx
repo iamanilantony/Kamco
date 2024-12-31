@@ -9,12 +9,6 @@ import Image from "next/image";
 const Facilities = () => {
   const facilities = [
     {
-      title: "Tractor Manufacturing Unit",
-      description:
-        "Athani houses a specialized unit for Tractor production, featuring an advanced automated conveyor assembly system for durability and power.",
-      imageUrl: "/Units/ATHANI.JPG",
-    },
-    {
       title: "Athani Unit - Power Hub",
       description:
         "Located at our head office, the Athani facility houses KAMCO’s primary production lines for Power Tillers, including the KMB200, Super DI, and Super DI-SS models, as well as Tractors.",
@@ -48,7 +42,7 @@ const Facilities = () => {
       title: "Athani Tractor Manufacturing Unit",
       description:
         "Our Athani campus also houses a specialized unit for Tractor production, featuring an advanced, automated conveyor assembly system. Each tractor undergoes rigorous testing to ensure durability, power, and fuel efficiency, aligning with our mission to deliver modern, sustainable solutions for India’s agricultural future.",
-      imageUrl: "/new_images/about/image2.webp",
+      imageUrl: "/Units/ATHANI.JPG",
     },
   ];
 
