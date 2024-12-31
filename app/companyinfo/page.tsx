@@ -230,6 +230,7 @@ const ConpanyInfo = () => {
         <Link
           href="https://www.kamcoindia.com/html/General/MEMORANDUM_OF_ASSOCIATION.pdf"
           className="underline underline-offset-2 flex items-center text-black group"
+          target="_blank"
         >
           {" "}
           View General Memorandum of Association{" "}
@@ -263,6 +264,7 @@ const ConpanyInfo = () => {
           ].map((rule, index) => (
             <Link
               href={rule.link}
+              target="_blank"
               className="underline underline-offset-2 flex items-center text-black group"
             >
               {" "}
@@ -375,6 +377,7 @@ const ConpanyInfo = () => {
                 className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
               >
                 <Link
+                  target="_blank"
               href="https://www.kamcoindia.com/html/General/Directory_of_Employees.pdf"
               className="underline underline-offset-2 flex items-center text-black group"
             >
