@@ -10,16 +10,16 @@ import GalleryLegacy from "./sections/gallery_legacy";
 
 const Landing = () => {
   return (
-    <div className="overflow-hidden ">
-      <Hero />
-      <Categories />
-      <Highlights />
-      <Testimonial />
+     <div className='overflow-hidden '>
+        <Hero />
+        <Categories />
+        <Highlights />
+        <Testimonial />
 
-      <GalleryLegacy />
-      <FAQsSection />
-      <Contact />
-    </div>
+        <Gallery />
+        <FAQsSection />
+        <Contact />
+     </div>
   );
 };
 
