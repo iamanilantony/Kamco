@@ -2,24 +2,20 @@ import Gallery from "@/components/UI/GalleryPage";
 import ProductsPage from "@/components/UI/Products";
 
 export default function Page() {
+  const photos = [
+    "/new_images/gallery/img1.webp",
+    "/new_images/gallery/img2.webp",
+    "/new_images/gallery/img3.webp",
+    "/new_images/gallery/img4.webp",
+    "/new_images/gallery/img5.webp",
+    "/new_images/gallery/img6.webp",
+    "/new_images/gallery/img7.webp",
+    "/new_images/gallery/img8.webp",
+    "/new_images/gallery/img9.webp",
+    "/new_images/gallery/img10.webp",
+    "/new_images/gallery/img11.webp",
+    "/new_images/gallery/img12.webp",
+  ];
 
-    const photos = [
-        '/gallery/1.JPG',
-        '/gallery/2.JPG',
-        '/gallery/3.JPG',
-        '/gallery/4.JPG',
-        '/gallery/5.JPG',
-        '/gallery/6.JPG',
-        '/gallery/7.JPG',
-        '/gallery/8.JPG',
-        '/gallery/9.JPG',
-        '/gallery/10.JPG',
-        '/gallery/11.JPG',
-        '/gallery/12.JPG',
-        '/gallery/13.JPG',
-    ]
-
-    return (
-        <Gallery images={photos}/>
-    )
+  return <Gallery images={photos} />;
 }
