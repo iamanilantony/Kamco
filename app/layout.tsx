@@ -32,7 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <link rel="icon" href="/LogoMain.png" />
           </Head>
           <Navbar />
-          <main className="text-center">{children}</main>
+          <main className="text-center mt-20">{children}</main>
           <Footer />
         </div>
         <Analytics />
