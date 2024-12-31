@@ -19,7 +19,7 @@ export default function Hero() {
             className='relative h-fit  w-[94vw] mx-auto rounded-lg md:mt-0'
          >
             {/* Background Image with Overlay */}
-            <div className='absolute inset-0 z-0'>
+            <div className='absolute inset-0 z-0 rounded-xl'>
                <video
                   autoPlay
                   loop
@@ -28,7 +28,7 @@ export default function Hero() {
                   className='w-full h-full object-cover rounded-2xl md:object-cover'
                   src='/new_images/hero.webm'
                />
-               <div className='absolute inset-0 bg-gradient-to-r from-black/60 to-black/10' />
+               <div className='absolute inset-0 bg-gradient-to-r from-black/60 to-black/10 rounded-xl' />
             </div>
 
             {/* Content Container */}
@@ -123,10 +123,10 @@ export default function Hero() {
             </div>
 
             {/* Decorative Elements */}
-            <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent' />
+            <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent rounded-xl' />
             <div className='absolute -left-48 top-1/4 h-96 w-96 rounded-full bg-green-500/20 blur-3xl' />
             <div className='absolute -right-48 top-3/4 h-96 w-96 rounded-full bg-green-500/20 blur-3xl' />
-            <div className='pt-8  flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10'>
+            <div className='pt-8  flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10 rounded-xl'>
                {/* Stats */}
             </div>
          </motion.div>
