@@ -89,7 +89,7 @@ const CompanyInfoPage = () => {
                         </div>
                     </HoverCardTrigger>
                     <HoverCardContent>
-                        <Image src='/general/OLDPHOTOS/IMG20241031112402.JPG' height={400} width={400} alt='athanifactory3-1-09002.JPG' />
+                        <Image src='/journey.png' height={400} width={400} alt='athanifactory3-1-09002.JPG' />
                     </HoverCardContent>
                 </HoverCard>
 

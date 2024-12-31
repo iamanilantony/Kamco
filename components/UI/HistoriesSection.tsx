@@ -7,7 +7,7 @@ const historyContent = [
   {
     year: '1973',
     description: 'In 1973, KAMCO was formed as a joint venture between Kerala Agro Industries Corporation Ltd. (KAIC) and the Government of Kerala, focusing on agro-based industries.',
-    image: '/general/OLDPHOTOS/IMG20241031112402.jpg',
+    image: '/journey.png',
   },
   {
     year: '1974',

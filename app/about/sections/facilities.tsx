@@ -12,7 +12,7 @@ const Facilities = () => {
       title: "Tractor Manufacturing Unit",
       description:
         "Athani houses a specialized unit for Tractor production, featuring an advanced automated conveyor assembly system for durability and power.",
-      imageUrl: "/new_images/about/image1.webp",
+      imageUrl: "/Units/ATHANI.JPG",
     },
     {
       title: "Athani Unit - Power Hub",
@@ -24,25 +24,25 @@ const Facilities = () => {
       title: "Kalamassery Unit - Diesel Engine E...",
       description:
         "Our second unit, established in 1992 in Kalamassery, specializes in Diesel Engine production, forming the core of our Power Tiller and Tractor lineup.",
-      imageUrl: "/new_images/about/KAMCO-KALAMASSERY UNIT-OUTSIDE.jpeg",
+      imageUrl: "/Units/KALAMASSERY.jpeg",
     },
     {
       title: "Kanjikode, Palakkad Unit – Expanding Production",
       description:
         "Established in 1995, the Kanjikode facility in Palakkad contributes to our production of Power Tillers, further expanding our reach and ability to serve India’s farmers with durable, high-quality machinery built for diverse agricultural applications.",
-      imageUrl: "/new_images/about/KAMCO-PALAKKAD UNIT-OUTSIDE.jpg",
+      imageUrl: "/Units/PALAKKAD.jpg",
     },
     {
       title: "Mala, Thrissur Unit – Dedicated to Harvesting Solutions",
       description:
         "Our fourth unit in Mala, Thrissur, focuses on producing Power Reapers. With specialized assembly lines for critical components, the facility is equipped for thorough inspections and testing at every stage, ensuring that each reaper delivers reliability and performance that farmers can depend on.",
-      imageUrl: "/new_images/about/KAMCO-MALA UNIT-INSIDE.JPG",
+      imageUrl: "/Units/MALA.JPG",
     },
     {
       title: "Kannur Unit – Garden Tiller and Power Weeder Innovation",
       description:
         "Inaugurated in 2014, our Kannur facility at Valiyavelicham is dedicated to Garden Tillers and Power Weeders, including models like the B30, K40, and the Eco Leopard Tiller KLW 100D. This unit combines cutting-edge manufacturing practices with stringent quality controls, ensuring that our tillers and weeders are robust, efficient, and versatile for various farming needs.",
-      imageUrl: "/new_images/about/KAMCO-KANNUR UNIT-OUTSIDE.jpg",
+      imageUrl: "/Units/KANNUR.jpg",
     },
     {
       title: "Athani Tractor Manufacturing Unit",

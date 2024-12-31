@@ -11,6 +11,7 @@ const BoardOfDirectors = () => {
     {
       name: " Sri. N. Rajeev ",
       role: "MD, KAMCO",
+      imageUrl: "/MD.jpg", // Replace with real image URL
     },
     {
       name: " Sri. M.R. Anoop ",
