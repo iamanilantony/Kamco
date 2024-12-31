@@ -222,7 +222,7 @@ KAMCO is expanding into the seeds and planting materials business to support agr
     };
 
     return (
-        <div className="flex flex-col md:flex-row font-sans">
+        <div className="flex flex-col md:flex-row font-sans md:pt-40">
             {/* Sidebar for larger screens, Select input for mobile */}
             <div className="block md:hidden mb-4 px-8">
                 <select
