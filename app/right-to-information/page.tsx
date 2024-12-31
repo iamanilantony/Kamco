@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-     <div className='flex flex-col md:flex-row justify-center py-10 md:mx-20 mt-16'>
+     <div className='flex flex-col md:flex-row justify-center py-10 md:mx-20 mt-16 h-[60vh]'>
         {/* Left Side - Contact Information */}
         <div className='md:w-max p-6 py-12 border-2 border-[#166434] md:rounded-2xl rounded-xl flex flex-col justify-start mx-auto md:mx-16 mb-8 md:mb-0'>
            {/* Centered on mobile */}
