@@ -4,7 +4,7 @@ export default [
     "name": "Power Tillers",
     "image": ["/products/PR-011_2.jpg","/products/PR-011_2.jpg","/products/PR-011_3.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "ER 90" },
+      { "label": "Engine Model", "value": "KMB200" },
       { "label": "Tiller Model", "value": "KMB 200" },
       { "label": "Type", "value": "Rotary, Diesel powered, water cooled with radiator" },
       { "label": "Width", "value": "600mm" },
@@ -49,7 +49,7 @@ export default [
     "name": "Tractors",
     "image": ["/products/PR-012_2.jpg","/products/PR-012_1.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "TR 100" },
+      { "label": "Engine Model", "value": "Tera TRAC 4W" },
       { "label": "Horsepower", "value": "100 HP" },
       { "label": "Type", "value": "4WD, Diesel powered" },
       { "label": "Width", "value": "2000mm" },
@@ -79,7 +79,7 @@ export default [
       "Hydraulic Lift: Efficient hydraulic lift system for heavy loads.",
       "Comfortable Cabin: Ergonomically designed cabin for operator comfort."
     ],
-    "models": ["TR100"],
+    "models": ["Tera TRAC 4W"],
     "productDescription": "The KAMCO Tractor is a high-performance machine designed for large-scale agricultural operations. With its powerful engine and robust build, it can handle a variety of tasks with ease. The tractor's ergonomic design ensures operator comfort, while its advanced features enhance productivity. Whether you're ploughing, tilling, or transporting, the KAMCO Tractor is a reliable and efficient choice.",
     "internationalDelivery": "The KAMCO Tractor is available for international delivery, ensuring that farmers around the world can benefit from its advanced features and reliable performance. Order now and take your farming operations to the next level."
   },
@@ -88,7 +88,7 @@ export default [
     "name": "Drone",
     "image": ["/products/PR-021_2.png","/products/PR-021_1.png","/products/PR-021_2.png","/products/Drone.png"],
     "specs": [
-      { "label": "Model", "value": "DR-200" },
+      { "label": "Model", "value": "FIA QD10" },
       { "label": "Type", "value": "Quadcopter" },
       { "label": "Battery Life", "value": "2 hours" },
       { "label": "Range", "value": "5 km" },
@@ -114,7 +114,7 @@ export default [
       "Autonomous Flight: Capable of autonomous flight with pre-programmed routes.",
       "Real-time Monitoring: Real-time monitoring and data collection."
     ],
-    "models": ["DR200"],
+    "models": ["FIA QD10"],
     "productDescription": "The KAMCO Drone is an advanced tool for modern agriculture, designed to enhance efficiency and precision in plant protection. With its high-resolution camera and long battery life, it can cover large areas and provide valuable data for crop management. The drone's autonomous flight capabilities and real-time monitoring features make it an indispensable tool for farmers.",
     "internationalDelivery": "The KAMCO Drone is available for international delivery, bringing cutting-edge technology to farmers worldwide. Order now and revolutionize your plant protection practices."
   },
@@ -123,7 +123,7 @@ export default [
     "name": "Echo Leopard Power weeder",
     "image": ["/products/PR-031_1.png","/products/PR-031_2.jpg","/products/PR-031_3.jpg","/products/PR-031_4.jpg","/products/PR-031_2.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "EL 50" },
+      { "label": "Engine Model", "value": "KLW100D" },
       { "label": "Type", "value": "Petrol powered" },
       { "label": "Width", "value": "500mm" },
       { "label": "RPM", "value": "3000" },
@@ -150,7 +150,7 @@ export default [
       "Lightweight Design: Easy to maneuver and transport.",
       "Durable Blades: High-quality blades for efficient weeding."
     ],
-    "models": ["EL50"],
+    "models": ["KLW100D"],
     "productDescription": "The Echo Leopard Power Weeder is a reliable tool for de-weeding tasks, designed to make weeding efficient and effortless. With its powerful engine and durable blades, it can handle tough weeds with ease. The weeder's lightweight design and adjustable handle ensure comfortable operation, making it a valuable addition to any farm.",
     "internationalDelivery": "The Echo Leopard Power Weeder is available for international delivery, ensuring that farmers around the world can benefit from its efficiency and reliability. Order now and simplify your weeding tasks."
   },
@@ -159,7 +159,7 @@ export default [
     "name": "Geared Power weeder",
     "image": ["/products/PR-032.jpg","/products/PR-032_2_Power Weeder K40.png","/products/PR-032_3_Power Weeder K40.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "GP 60" },
+      { "label": "Engine Model", "value": "PW -6.00 G" },
       { "label": "Type", "value": "Diesel powered" },
       { "label": "Width", "value": "600mm" },
       { "label": "RPM", "value": "2500" },
@@ -186,7 +186,7 @@ export default [
       "Heavy-duty Design: Built for intensive weeding tasks.",
       "Adjustable Depth: Control the depth of weeding for optimal results."
     ],
-    "models": ["GP60"],
+    "models": ["PW -6.00 GG"],
     "productDescription": "The Geared Power Weeder is a durable and efficient tool for intensive weeding tasks. Its powerful diesel engine and geared transmission ensure consistent performance, while its adjustable depth control allows for precise weeding. The weeder's heavy-duty design makes it suitable for demanding agricultural applications.",
     "internationalDelivery": "The Geared Power Weeder is available for international delivery, providing farmers worldwide with a reliable solution for their weeding needs. Order now and enhance your weeding efficiency."
   },
@@ -195,7 +195,7 @@ export default [
     "name": "Garden Tillers",
     "image": ["/products/PR-033.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "GT 30" },
+      { "label": "Engine Model", "value": "B30" },
       { "label": "Type", "value": "Petrol powered" },
       { "label": "Width", "value": "300mm" },
       { "label": "RPM", "value": "2800" },
@@ -222,7 +222,7 @@ export default [
       "Adjustable Tines: Customize tilling depth and width.",
       "Foldable Handle: Convenient storage with foldable handle."
     ],
-    "models": ["GT30"],
+    "models": ["B30"],
     "productDescription": "The Garden Tiller is a compact and efficient tool for garden use, designed to make tilling easy and effective. With its lightweight design and adjustable tines, it can handle various soil conditions and tilling requirements. The tiller's foldable handle ensures convenient storage, making it a perfect choice for home gardeners.",
     "internationalDelivery": "The Garden Tiller is available for international delivery, bringing efficient tilling solutions to gardeners worldwide. Order now and simplify your garden preparation tasks."
   },
@@ -231,7 +231,7 @@ export default [
     "name": "Cono Weeder",
     "image": ["/products/PR-035.png","/products/PR-035_2.jpg","/products/PR-035_3.png"],
     "specs": [
-      { "label": "Model", "value": "CW 10" },
+      { "label": "Model", "value": "KPW2" },
       { "label": "Type", "value": "Manual" },
       { "label": "Width", "value": "400mm" },
       { "label": "Weight", "value": "10 kg" }
@@ -255,7 +255,7 @@ export default [
       "Durable Construction: Built to last with high-quality materials.",
       "Efficient Weeding: Designed for effective weeding in various conditions."
     ],
-    "models": ["CW10"],
+    "models": ["KPW25"],
     "productDescription": "The Cono Weeder is a specialized tool for efficient de-weeding, designed to be easy to use and maintain. Its lightweight and durable construction make it suitable for various weeding tasks, providing effective results with minimal effort. The Cono Weeder is a valuable addition to any farm or garden.",
     "internationalDelivery": "The Cono Weeder is available for international delivery, ensuring that farmers and gardeners worldwide can benefit from its efficiency and ease of use. Order now and enhance your weeding practices."
   },
@@ -264,7 +264,7 @@ export default [
     "name": "Brush Cutter",
     "image": ["/products/PR-036.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "BC 40" },
+      { "label": "Engine Model", "value": "KBC300" },
       { "label": "Type", "value": "Petrol powered" },
       { "label": "Width", "value": "400mm" },
       { "label": "RPM", "value": "3200" },
@@ -291,7 +291,7 @@ export default [
       "Ergonomic Design: Comfortable to use for extended periods.",
       "Versatile: Suitable for various cutting applications."
     ],
-    "models": ["BC40"],
+    "models": ["KBC300"],
     "productDescription": "The Brush Cutter is a versatile and powerful tool for various cutting applications, designed to handle tough tasks with ease. Its high-performance engine and ergonomic design ensure comfortable and efficient operation. The brush cutter's compatibility with various attachments makes it a valuable tool for any farm or garden.",
     "internationalDelivery": "The Brush Cutter is available for international delivery, providing farmers and gardeners worldwide with a reliable solution for their cutting needs. Order now and enhance your cutting efficiency."
   },
@@ -300,7 +300,7 @@ export default [
     "name": "Power Reaper",
     "image": ["/products/PR-041.jpg","/products/PR-041_120H.jpg","/products/PR-041_120M.jpg"],
     "specs": [
-      { "label": "Engine Model", "value": "PR 80" },
+      { "label": "Engine Model", "value": "KR 120H" },
       { "label": "Type", "value": "Diesel powered" },
       { "label": "Width", "value": "800mm" },
       { "label": "RPM", "value": "2400" },
@@ -327,7 +327,7 @@ export default [
       "Durable Blades: Long-lasting blades for efficient cutting.",
       "Easy Operation: User-friendly design for easy operation."
     ],
-    "models": ["PR80"],
+    "models": ["KR 120H"],
     "productDescription": "The Cono Weeder is a specialized tool for efficient de-weeding, designed to be easy to use and maintain. Its lightweight and durable construction make it suitable for various weeding tasks, providing effective results with minimal effort. The Cono Weeder is a valuable addition to any farm or garden.",
     "internationalDelivery": "The Cono Weeder is available for international delivery, ensuring that farmers and gardeners worldwide can benefit from its efficiency and ease of use. Order now and enhance your weeding practices."
 },
