@@ -7,19 +7,9 @@ import React, { useState } from "react";
 
 const Media = () => {
   const images = [
-    "/gallery/1.JPG",
-    "/gallery/2.JPG",
-    "/gallery/3.JPG",
-    "/gallery/4.JPG",
-    "/gallery/5.JPG",
-    "/gallery/6.JPG",
-    "/gallery/7.JPG",
-    "/gallery/8.JPG",
-    "/gallery/9.JPG",
-    "/gallery/10.JPG",
-    "/gallery/11.JPG",
-    "/gallery/12.JPG",
-    "/gallery/13.JPG",
+    "/News/news1.JPG",
+    "/News/news2.jpg",
+    "/News/news3.jpeg"
   ];
   const dummyImages = [
     "/NewsAndEvents/IMG20241031112229.jpg",
