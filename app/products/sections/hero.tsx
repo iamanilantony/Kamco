@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <div className="max-sm:mt-20 min-h-[50vh] md:min-h-[70vh] lg:min-h-[93vh] flex flex-col md:flex-row gap-12 md:justify-between items-center md:px-16 py-8 text-left relative">
       <Image
-        src="/new_images/products/heroimage.webp"
+        src="/Product_banner.png"
         alt="hero"
         width={1200}
         height={1200}
