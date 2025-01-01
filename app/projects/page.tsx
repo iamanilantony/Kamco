@@ -383,7 +383,7 @@ const CompanyInfoPage = () => {
               <ul>
                 <li className="text-blue-800">
                   <Link
-                    href="https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
+                    href="https://web.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

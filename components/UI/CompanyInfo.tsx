@@ -125,12 +125,12 @@ const CompanyInfoPage = () => {
                     <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center">Board of Directors</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 md:mb-10">
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/ckeditor_files/1724654902.jpg' alt='Shri. C K Sasidharan' className='w-40 h-40' width={200} height={200} />
+                            <Image src='https://web.kamcoindia.com/ckeditor_files/1724654902.jpg' alt='Shri. C K Sasidharan' className='w-40 h-40' width={200} height={200} />
                             <p className="font-bold mt-2">Shri. C K Sasidharan</p>
                             <p>CHAIRMAN, KAMCO</p>
                         </div>
                         <div className="flex flex-col items-center">
-                            <Image src='https://www.kamcoindia.com/ckeditor_files/1724654670.jpg' alt='Shri. Prasanth Nair, IAS' className='w-40 h-40' width={200} height={200} />
+                            <Image src='https://web.kamcoindia.com/ckeditor_files/1724654670.jpg' alt='Shri. Prasanth Nair, IAS' className='w-40 h-40' width={200} height={200} />
                             <p className="font-bold mt-2">Shri. Prasanth Nair, IAS</p>
                             <p>MD, KAMCO</p>
                         </div>
@@ -138,46 +138,46 @@ const CompanyInfoPage = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 border-t-2 py-20">
 
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/no-image.jpg' alt='Additional Secretary' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/no-image.jpg' alt='Additional Secretary' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Additional Secretary</p>
                             <p>Agriculture (PU) Department,</p>
                             <p>Government of Kerala, Thiruvananthapuram.</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/no-image.jpg' alt='Sri. Sreeni G.' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/no-image.jpg' alt='Sri. Sreeni G.' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Sri. Sreeni G.</p>
                             <p>Joint Secretary,</p>
                             <p>Finance Department,</p>
                             <p>Government of Kerala, Thiruvananthapuram.</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/no-image.jpg' alt='Sri. George Sebastian' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/no-image.jpg' alt='Sri. George Sebastian' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Sri. George Sebastian</p>
                             <p>Additional Director (Planning)</p>
                             <p>Directorate of Agriculture Development & Farmers Welfare Department</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/BUHARI-1.jpg' alt='Shri. Buhari' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/BUHARI-1.jpg' alt='Shri. Buhari' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Shri. Buhari</p>
                             <p>Director, KAMCO</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/M-T-NIKSON-1.jpg' alt='Shri. M T Nikson' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/M-T-NIKSON-1.jpg' alt='Shri. M T Nikson' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Shri. M T Nikson</p>
                             <p>Director, KAMCO</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/K-A-CHAKKOCHAN-1.jpg' alt='Shri. K.A. Chackochan' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/K-A-CHAKKOCHAN-1.jpg' alt='Shri. K.A. Chackochan' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Shri. K.A. Chackochan</p>
                             <p>Director, KAMCO</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/C-K-GOPI-1.jpg' alt='Shri. C.K. Gopi' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/C-K-GOPI-1.jpg' alt='Shri. C.K. Gopi' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Shri. C.K. Gopi</p>
                             <p>Director, KAMCO</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
-                            <Image src='https://www.kamcoindia.com/userfiles/VADAKODU-MONACHAN-1.jpg' alt='Shri. Vadakodu Monachan' className='w-20 h-20' width={100} height={100} />
+                            <Image src='https://web.kamcoindia.com/userfiles/VADAKODU-MONACHAN-1.jpg' alt='Shri. Vadakodu Monachan' className='w-20 h-20' width={100} height={100} />
                             <p className="font-bold mt-2">Shri. Vadakodu Monachan</p>
                             <p>Director, KAMCO</p>
                         </div>

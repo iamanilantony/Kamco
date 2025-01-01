@@ -41,7 +41,9 @@ const Hero = () => {
       <div className="absolute h-full w-full top-0 left-0 bg-black/50"></div>
       <div className="container text-white z-10 w-full md:w-2/3 space-y-6 md:space-y-12 p-4 md:p-0 h-full">
         <h1 className="text-4xl md:text-6xl font-bold urbanist-font">
-          KAMCO: More Than Products, We’re Transforming Lives
+          KAMCO: More Than Products, 
+          <br/>
+          We’re Transforming Lives
         </h1>
         <p className="mt-2 inter-font text-base md:text-lg font-normal">
           At KAMCO, we don’t just create agricultural solutions – we empower

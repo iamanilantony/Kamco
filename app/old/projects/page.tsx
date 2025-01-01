@@ -210,7 +210,7 @@ KAMCO is expanding into the seeds and planting materials business to support agr
                         <div>
                             <ul>
                                 <li className='text-blue-800'>
-                                    <Link href='https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf' target="_blank" rel="noopener noreferrer">Corporate Social Responsibility(CSR) Policy of KAMCO-Malayalam Version</Link>
+                                    <Link href='https://web.kamcoindia.com/userfiles/CSR_KAMCO.pdf' target="_blank" rel="noopener noreferrer">Corporate Social Responsibility(CSR) Policy of KAMCO-Malayalam Version</Link>
                                 </li>
                             </ul>
                         </div>

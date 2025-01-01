@@ -32,7 +32,7 @@ const SupplierRegistration = () => {
             </Link>{" "}
             <br />
             Website:{" "}
-            <Link href="https://www.kamcoindia.com" className="text-blue-500">
+            <Link href="https://web.kamcoindia.com" className="text-blue-500">
               www.kamcoindia.com
             </Link>
           </p>
@@ -92,7 +92,7 @@ const SupplierRegistration = () => {
             .
           </p>
           <Link
-            href="https://www.kamcoindia.com/userfiles/VRF(1).pdf" // Replace with the actual download link
+            href="https://web.kamcoindia.com/userfiles/VRF(1).pdf" // Replace with the actual download link
             className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition"
             download
             target="_blank"

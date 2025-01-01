@@ -28,7 +28,7 @@ const Navbar = () => {
       },
       { name: 'Products', href: '/products' },
       { name: 'New Initiatives', href: '/projects' },
-      { name: 'Tenders', href: 'https://www.kamcoindia.com/tenders' },
+      { name: 'Tenders', href: 'https://web.kamcoindia.com/tenders' },
       {
          name: 'Statutory',
          href: '#',
@@ -36,7 +36,7 @@ const Navbar = () => {
             { name: 'CM Redressal Cell', href: '/cm-redressal-cell' },
             {
                name: 'Corporate Social Responsibility (CSR)',
-               href: 'https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf',
+               href: 'https://web.kamcoindia.com/userfiles/CSR_KAMCO.pdf',
             },
             { name: 'Right to Information (RTI)', href: '/right-to-information' },
          ],
@@ -168,7 +168,7 @@ const Navbar = () => {
                                           className='block px-4 py-2 text-gray-700 hover:bg-gray-100'
                                           onClick={() => setActiveDropdown(null)}
                                           {...(subItem.href ===
-                                          'https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf'
+                                          'https://web.kamcoindia.com/userfiles/CSR_KAMCO.pdf'
                                              ? { target: '_blank', rel: 'noopener noreferrer' }
                                              : {})}
                                        >
@@ -193,7 +193,7 @@ const Navbar = () => {
                         <BellDot size={18} />
                      </motion.button>
                   </Link>
-                  <Link href='https://www.kamcoindia.com/dealers/user_login'>
+                  <Link href='https://web.kamcoindia.com/dealers/user_login'>
                      <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}

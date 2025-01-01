@@ -22,7 +22,7 @@ export default function Page() {
                  Query Disposition Status:
                  <span className='block mt-2'>
                     <Link
-                       href='https://www.kamcoindia.com/ckeditor_files/1729853675.pdf'
+                       href='https://web.kamcoindia.com/ckeditor_files/1729853675.pdf'
                        target='_blank'
                        className='cursor-pointer hover:bg-gray-100 rounded-md p-2 block'
                     >
@@ -31,7 +31,7 @@ export default function Page() {
                  </span>
                  <span className='block mt-2'>
                     <Link
-                       href='https://www.kamcoindia.com/ckeditor_files/1729853656.pdf'
+                       href='https://web.kamcoindia.com/ckeditor_files/1729853656.pdf'
                        target='_blank'
                        className='cursor-pointer hover:bg-gray-100 rounded-md p-2 block'
                     >
@@ -40,7 +40,7 @@ export default function Page() {
                  </span>
                  <span className='block mt-2'>
                     <Link
-                       href='https://www.kamcoindia.com/ckeditor_files/1729853636.pdf'
+                       href='https://web.kamcoindia.com/ckeditor_files/1729853636.pdf'
                        target='_blank'
                        className='cursor-pointer hover:bg-gray-100 rounded-md p-2 block'
                     >
@@ -49,7 +49,7 @@ export default function Page() {
                  </span>
                  <span className='block mt-2'>
                     <Link
-                       href='https://www.kamcoindia.com/userfiles/RIA%20-Register_Updated_ason_DEC2021(2).pdf'
+                       href='https://web.kamcoindia.com/userfiles/RIA%20-Register_Updated_ason_DEC2021(2).pdf'
                        target='_blank'
                        className='cursor-pointer hover:bg-gray-100 rounded-md p-2 block'
                     >

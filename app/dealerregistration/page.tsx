@@ -18,7 +18,7 @@ const DealerRegistration: React.FC = () => {
         {/* Download Button */}
         <div className="mb-6">
           <Link
-            href="https://www.kamcoindia.com/userfiles/KAMCO-APPLICATION-FOR-DEALERSHIP.pdf" // Replace with the actual download link
+            href="https://web.kamcoindia.com/userfiles/KAMCO-APPLICATION-FOR-DEALERSHIP.pdf" // Replace with the actual download link
             className="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition focus:outline-none"
             target="_blank"
             rel="noopener noreferrer"

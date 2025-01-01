@@ -139,7 +139,7 @@ const HeroLegacy = () => {
         </div>
         <div className="flex flex-col space-y-3 mt-6 md:mt-0 px-4 md:px-0">
           {/* <Link
-            href="https://www.kamcoindia.com/dealers"
+            href="https://web.kamcoindia.com/dealers"
             className="bg-[#274321] text-white py-3 md:py-5 px-8 md:px-16 rounded-2xl hover:bg-[#3b6631] text-base sm:text-lg md:text-2xl urbanist-font cursor-pointer z-10 transition-all duration-300 ease-in-out"
           >
             Register Now

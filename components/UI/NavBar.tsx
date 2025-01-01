@@ -192,7 +192,7 @@ const NavBar = () => {
                   About Us
                 </Link>
                 <Link
-                  href="https://www.kamcoindia.com/userfiles/Organizational%20Chart_20-12-2021(1).jpg"
+                  href="https://web.kamcoindia.com/userfiles/Organizational%20Chart_20-12-2021(1).jpg"
                   onClick={handleLinkClick}
                   // target="_blank"
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
@@ -240,7 +240,7 @@ const NavBar = () => {
                   CM Redressal Cell
                 </Link>
                 <Link
-                  href="https://www.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
+                  href="https://web.kamcoindia.com/userfiles/CSR_KAMCO.pdf"
                   onClick={handleLinkClick}
                   target="_blank"
                   className="cursor-pointer hover:bg-gray-100 rounded-md p-2"
@@ -269,7 +269,7 @@ const NavBar = () => {
         </Link>
 
         <Link
-          href="https://www.kamcoindia.com/dealers/user_login"
+          href="https://web.kamcoindia.com/dealers/user_login"
           onClick={handleLinkClick}
           className="block md:inline-block bg-[#D2F348] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md"
         >

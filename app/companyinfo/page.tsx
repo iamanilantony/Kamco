@@ -234,7 +234,7 @@ const ConpanyInfo = () => {
       <hr className="w-full h-[2px] bg-black" />
       <InfoDiv title="Memorandum of Association">
         <Link
-          href="https://www.kamcoindia.com/html/General/MEMORANDUM_OF_ASSOCIATION.pdf"
+          href="https://web.kamcoindia.com/html/General/MEMORANDUM_OF_ASSOCIATION.pdf"
           className="underline underline-offset-2 flex items-center text-black group"
           target="_blank"
         >
@@ -249,59 +249,59 @@ const ConpanyInfo = () => {
           {[
             {
               title: "Standing Orders",
-              link: "https://www.kamcoindia.com/html/HRM/Standing_order/Standing%20Order.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Standing_order/Standing%20Order.pdf",
             },
             {
               title: "Delegation of Powers",
-              link: "https://www.kamcoindia.com/html/HRM/Delegation_of_Powers/Delegation_of_powers.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Delegation_of_Powers/Delegation_of_powers.pdf",
             },
             {
               title: "Staff by laws",
-              link: "https://www.kamcoindia.com/html/HRM/Staff_bye_laws/STAFF%20BYE%20LAWS.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Staff_bye_laws/STAFF%20BYE%20LAWS.pdf",
             },
             {
               title: "Recruitment and Promotion Policies of Officers",
-              link: "https://www.kamcoindia.com/html/Recruitement_and_Promotion_Policy_officers.pdf",
+              link: "https://web.kamcoindia.com/html/Recruitement_and_Promotion_Policy_officers.pdf",
             },
             {
               title: "Recruitment and Promotion Policies of Workers",
-              link: "https://www.kamcoindia.com/html/HRM/Recruitement_and_Promotion/Recruitement_and_Promotion_Policy_Workers.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Recruitement_and_Promotion/Recruitement_and_Promotion_Policy_Workers.pdf",
             },
             {
               title: "Leave rules Officer",
-              link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%20officer.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%20officer.pdf",
             },
             {
               title: "Leave rules Worker",
-              link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%worker.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%worker.pdf",
             },
             {
               title: "PF Trust Rules",
-              link: "https://www.kamcoindia.com/html/HRM/PF_Rules/PF%20Rules.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/PF_Rules/PF%20Rules.pdf",
             },
             {
               title: "Gratuity Rules",
-              link: "https://www.kamcoindia.com/html/HRM/GRATUITY/GRATUITY.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/GRATUITY/GRATUITY.pdf",
             },
             {
               title: "Welfare Centre Functions",
-              link: "https://www.kamcoindia.com/html/HRM/Welfare_Centre/KAMCO%20WELFARE%20CENTRE.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Welfare_Centre/KAMCO%20WELFARE%20CENTRE.pdf",
             },
             {
               title: "Conveyance Advance",
-              link: "https://www.kamcoindia.com/html/HRM/Conveyance/conveyance.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Conveyance/conveyance.pdf",
             },
             {
               title: "Medical Reimbursement",
-              link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf",
             },
             {
               title: "Group Personal Accident Insurance Scheme",
-              link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf",
             },
             {
               title: "Group Personal Leave Encashment Scheme",
-              link: "https://www.kamcoindia.com/html/HRM/GLES/Group%20Leave%20Encashement%20Scheme%20Rules.pdf",
+              link: "https://web.kamcoindia.com/html/HRM/GLES/Group%20Leave%20Encashement%20Scheme%20Rules.pdf",
             },
           ].map((rule, index) => (
             <Link
@@ -441,7 +441,7 @@ const ConpanyInfo = () => {
               >
                 <Link
                   target="_blank"
-                  href="https://www.kamcoindia.com/html/General/Directory_of_Employees.pdf"
+                  href="https://web.kamcoindia.com/html/General/Directory_of_Employees.pdf"
                   className="underline underline-offset-2 flex items-center text-black group"
                 >
                   {" "}
