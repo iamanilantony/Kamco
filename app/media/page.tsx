@@ -63,7 +63,7 @@ const Media = () => {
 
   return (
     <div className="min-h-screen text-center p-32 py-12 space-y-24 urbanist-font">
-      <h1 className="text-3xl md:text-5xl font-bold urbanist-font">Gallery</h1>
+      <h1 className="text-3xl md:text-5xl font-bold urbanist-font">Media</h1>
       <div className="flex mt-0 w-full justify-center items-center py-4">
         <Button
           size={"lg"}

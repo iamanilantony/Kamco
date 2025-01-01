@@ -261,7 +261,7 @@ const NavBar = () => {
         </div>
 
         <Link
-          href="/notifications"
+          href="#"
           onClick={handleLinkClick}
           className="block md:inline-block text-gray-700 px-1 font-normal transition-all duration-200 ease-in-out"
         >
