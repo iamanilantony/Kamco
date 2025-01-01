@@ -65,6 +65,10 @@ const Products = () => {
       img: "/products/PR-041_120B.png",
     },
     {
+      label: "Intercultivation",
+      img: "/products/Garden Tiller PNG.png",
+    },
+    {
       label: "De weeding",
       img: "/products/PR-036RemoveBackground.png",
     },
@@ -74,7 +78,7 @@ const Products = () => {
     },
     {
       label: "Plant Protection",
-      img: "/new_images/products/bg_removed/protection.webp",
+      img: "/products/Drone Background Removed.png",
     },
   ];
 
@@ -137,8 +141,8 @@ const Products = () => {
             <Image
               src={option.img}
               alt={option.img}
-              width={64}
-              height={64}
+              width={72}
+              height={72}
               className="object-contain"
             />
             <span>{option.label}</span>
