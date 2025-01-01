@@ -184,7 +184,7 @@ const Navbar = () => {
                </ul>
                {/* Buttons */}
                <div className='flex md:gap-4 max-sm:gap-1 ml-8'>
-                  <Link href='/notifications'>
+                  <Link href='#'>
                      <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
