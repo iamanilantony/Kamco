@@ -62,15 +62,15 @@ const Products = () => {
     },
     {
       label: "Harvesting",
-      img: "/new_images/products/bg_removed/harvesting.webp",
+      img: "/products/PR-041_120B.png",
     },
     {
       label: "De weeding",
-      img: "/new_images/products/bg_removed/landprep.webp",
+      img: "/products/PR-036RemoveBackground.png",
     },
     {
       label: "Garden Tools/ Irrigation",
-      img: "/new_images/products/bg_removed/garden.webp",
+      img: "/products/Pumpset Image Preview.png",
     },
     {
       label: "Plant Protection",
