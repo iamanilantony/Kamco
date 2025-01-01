@@ -61,20 +61,20 @@ const Products = () => {
       img: "/new_images/products/bg_removed/landprep.webp",
     },
     {
-      label: "Plant Protection",
-      img: "/new_images/products/bg_removed/protection.webp",
+      label: "Harvesting",
+      img: "/new_images/products/bg_removed/harvesting.webp",
     },
     {
       label: "De weeding",
       img: "/new_images/products/bg_removed/landprep.webp",
     },
     {
-      label: "Harvesting",
-      img: "/new_images/products/bg_removed/harvesting.webp",
+      label: "Garden Tools/ Irrigation",
+      img: "/new_images/products/bg_removed/garden.webp",
     },
     {
-      label: "Garden Tools",
-      img: "/new_images/products/bg_removed/garden.webp",
+      label: "Plant Protection",
+      img: "/new_images/products/bg_removed/protection.webp",
     },
   ];
 
