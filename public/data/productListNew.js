@@ -29,7 +29,7 @@ export default [
     {
       name: "Echo Leopard Power weeder",
       codeName: "PR-031",
-      category: "De weeding",
+      category: "Inter Cultivation",
       src: "/products/PR-031.png",
       piecesLeft: 150,
       description: "Reliable power weeder for de-weeding tasks.",
@@ -38,7 +38,7 @@ export default [
     {
       name: "Geared Power weeder",
       codeName: "PR-032",
-      category: "De weeding",
+      category: "Inter Cultivation",
       src: "/products/PR-032.jpg", // Original src retained
       piecesLeft: 60,
       description: "Durable, geared power weeder for intensive work.",

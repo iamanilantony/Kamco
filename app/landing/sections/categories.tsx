@@ -53,23 +53,27 @@ const Categories = () => {
 
   const items = [
     {
-      imgSrc: "/new_images/categories/landPreparation.webp",
+      imgSrc: "/Product_Category_Images/Product Category - Tiller.png",
       text: "Land Preparation",
     },
+    {
+      imgSrc: "/Product_Category_Images/Product Category - Harvesting.png",
+      text: "Harvesting",
+    },
+    {
+      imgSrc: "/Product_Category_Images/Product Category - Intercultivation (1).png",
+      text: "Inter Cultivation",
+    },
+    {
+      imgSrc: "/Product_Category_Images/Product category - Deweeding.png",
+      text: "De Weeding",
+    },
+    { imgSrc: "/Product_Category_Images/Product Category - Garden Tools Irrigation (1).png", text: "Garden Tools/Irrigation" },
     {
       imgSrc: "/new_images/categories/plantProtection.webp",
       text: "Plant Protection",
     },
-    {
-      imgSrc: "/new_images/categories/deweeding.webp",
-      text: "De Weeding",
-    },
-    {
-      imgSrc: "/new_images/categories/harvesting.webp",
-      text: "Harvesting",
-    },
-    { imgSrc: "/new_images/categories/gardenTools.webp", text: "Garden Tools" },
-    { imgSrc: "/new_images/categories/kamco.webp", text: "KAMCO-lite" },
+    // { imgSrc: "/Product_Category_Images/Product category - Deweeding.png", text: "KAMCO-lite" },
   ];
 
   return (
