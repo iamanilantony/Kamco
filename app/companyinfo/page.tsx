@@ -29,40 +29,45 @@ const ConpanyInfo = () => {
         "Improvement in the systems and improved Customer/Dealer satisfaction",
 
         "Comply with the requirement of Customers and applicable statutory/regulatory requirements",
-        
+
         "Improvement in the effectiveness of the established quality systems",
-        
+
         "Addresses Customer, Dealer, Vendor, Society, Employees & Share holders - for their requirement & satisfaction",
-      ]
+      ],
     },
     {
       title: " ISO 9001 - 2000 Version",
-      description: ["Improvements are made on regular basis based on the feed back from the customers & dealers",
+      description: [
+        "Improvements are made on regular basis based on the feed back from the customers & dealers",
         "Regular interactions with all Venders including site visits to maintain and improve the acceptance level of components",
         "KAMCO Power Tiller certified for compliance with Minimum Performance Standards of Govt. of India",
-        "KAMCO Power Reaper has been tested by SRFMT&TI, Ananthapur of Govt. of India"]
+        "KAMCO Power Reaper has been tested by SRFMT&TI, Ananthapur of Govt. of India",
+      ],
     },
     {
       title: "Quality Policy",
-      description: ["Total customer satisfaction through quality products and services with improved technology and employee participation.",
-      "Comply with the requirements of customers and the applicable statutory / regulatory requirements. The effectiveness of the established quality management system is continually improved to enable achievement of the policy."
-      ]
+      description: [
+        "Total customer satisfaction through quality products and services with improved technology and employee participation.",
+        "Comply with the requirements of customers and the applicable statutory / regulatory requirements. The effectiveness of the established quality management system is continually improved to enable achievement of the policy.",
+      ],
     },
     {
       title: "Quality Objectives",
-      description: ["To ensure that the quality requirements of the products and services offered are maintained at all stages.",
+      description: [
+        "To ensure that the quality requirements of the products and services offered are maintained at all stages.",
 
-            "To create a culture among all employees towards total quality concepts and productivity through total involvement and commitment of all employees",
-        
-            "To create healthy working environment for attainment of quality goals with excellence and to make quality a way of life",
-        
-            "To detect and prevent non conformance and defects as early as possible and to eliminate them through appropriate changes to the Quality Management System",
-        
-            "To achieve and maintain Quality Leadership through continuos technology upgradation, improvements in techniques, systems and procedures"]
+        "To create a culture among all employees towards total quality concepts and productivity through total involvement and commitment of all employees",
+
+        "To create healthy working environment for attainment of quality goals with excellence and to make quality a way of life",
+
+        "To detect and prevent non conformance and defects as early as possible and to eliminate them through appropriate changes to the Quality Management System",
+
+        "To achieve and maintain Quality Leadership through continuos technology upgradation, improvements in techniques, systems and procedures",
+      ],
     },
     {
       title: "ISO Procedures and Manuals",
-      description: ["Quality System Manual","Quality System Procedures"]
+      description: ["Quality System Manual", "Quality System Procedures"],
     },
   ];
 
@@ -87,6 +92,7 @@ const ConpanyInfo = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -241,9 +247,18 @@ const ConpanyInfo = () => {
       <InfoDiv title="Rules and Regulations">
         <div className="space-y-4 md:space-y-8">
           {[
-            { title: "Standing Orders", link: "https://www.kamcoindia.com/html/HRM/Standing_order/Standing%20Order.pdf" },
-            { title: "Delegation of Powers", link: "https://www.kamcoindia.com/html/HRM/Delegation_of_Powers/Delegation_of_powers.pdf" },
-            { title: "Staff by laws", link: "https://www.kamcoindia.com/html/HRM/Staff_bye_laws/STAFF%20BYE%20LAWS.pdf" },
+            {
+              title: "Standing Orders",
+              link: "https://www.kamcoindia.com/html/HRM/Standing_order/Standing%20Order.pdf",
+            },
+            {
+              title: "Delegation of Powers",
+              link: "https://www.kamcoindia.com/html/HRM/Delegation_of_Powers/Delegation_of_powers.pdf",
+            },
+            {
+              title: "Staff by laws",
+              link: "https://www.kamcoindia.com/html/HRM/Staff_bye_laws/STAFF%20BYE%20LAWS.pdf",
+            },
             {
               title: "Recruitment and Promotion Policies of Officers",
               link: "https://www.kamcoindia.com/html/Recruitement_and_Promotion_Policy_officers.pdf",
@@ -252,15 +267,42 @@ const ConpanyInfo = () => {
               title: "Recruitment and Promotion Policies of Workers",
               link: "https://www.kamcoindia.com/html/HRM/Recruitement_and_Promotion/Recruitement_and_Promotion_Policy_Workers.pdf",
             },
-            { title: "Leave rules Officer", link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%20officer.pdf" },
-            { title: "Leave rules Worker", link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%worker.pdf" },
-            { title: "PF Trust Rules", link: "https://www.kamcoindia.com/html/HRM/PF_Rules/PF%20Rules.pdf" },
-            { title: "Gratuity Rules", link: "https://www.kamcoindia.com/html/HRM/GRATUITY/GRATUITY.pdf" },
-            { title: "Welfare Centre Functions", link: "https://www.kamcoindia.com/html/HRM/Welfare_Centre/KAMCO%20WELFARE%20CENTRE.pdf" },
-            { title: "Conveyance Advance", link: "https://www.kamcoindia.com/html/HRM/Conveyance/conveyance.pdf" },
-            { title: "Medical Reimbursement", link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf" },
-            { title: "Group Personal Accident Insurance Scheme", link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf" },
-            { title: "Group Personal Leave Encashment Scheme", link: "https://www.kamcoindia.com/html/HRM/GLES/Group%20Leave%20Encashement%20Scheme%20Rules.pdf" },
+            {
+              title: "Leave rules Officer",
+              link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%20officer.pdf",
+            },
+            {
+              title: "Leave rules Worker",
+              link: "https://www.kamcoindia.com/html/HRM/Leave_Rules/Leave%20rule%worker.pdf",
+            },
+            {
+              title: "PF Trust Rules",
+              link: "https://www.kamcoindia.com/html/HRM/PF_Rules/PF%20Rules.pdf",
+            },
+            {
+              title: "Gratuity Rules",
+              link: "https://www.kamcoindia.com/html/HRM/GRATUITY/GRATUITY.pdf",
+            },
+            {
+              title: "Welfare Centre Functions",
+              link: "https://www.kamcoindia.com/html/HRM/Welfare_Centre/KAMCO%20WELFARE%20CENTRE.pdf",
+            },
+            {
+              title: "Conveyance Advance",
+              link: "https://www.kamcoindia.com/html/HRM/Conveyance/conveyance.pdf",
+            },
+            {
+              title: "Medical Reimbursement",
+              link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf",
+            },
+            {
+              title: "Group Personal Accident Insurance Scheme",
+              link: "https://www.kamcoindia.com/html/HRM/Medical_Reimbursemnt/Reimbursement.pdf",
+            },
+            {
+              title: "Group Personal Leave Encashment Scheme",
+              link: "https://www.kamcoindia.com/html/HRM/GLES/Group%20Leave%20Encashement%20Scheme%20Rules.pdf",
+            },
           ].map((rule, index) => (
             <Link
               href={rule.link}
@@ -304,13 +346,14 @@ const ConpanyInfo = () => {
                       className="p-4 md:p-6 md:px-16 rounded-lg bg-[#c0eba6]"
                     >
                       <ul>
-                        {
-                          faq.description.map((desc, index) => (
-                            <li className="mt-3 inter-font text-sm md:text-base" key={index}>
-                              {desc}
-                            </li>
-                          ))
-                        }
+                        {faq.description.map((desc, index) => (
+                          <li
+                            className="mt-3 inter-font text-sm md:text-base"
+                            key={index}
+                          >
+                            {desc}
+                          </li>
+                        ))}
                       </ul>
                     </motion.div>
                   )}
@@ -325,7 +368,10 @@ const ConpanyInfo = () => {
         <motion.div className="flex flex-col gap-2 mb-5">
           <div
             className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
-            onClick={() => setIsActive(!isActive)}
+            onClick={() => {
+              setIsActive(!isActive);
+              setIsActive2(false);
+            }}
           >
             <div className="flex justify-between items-center cursor-pointer">
               <h3 className="text-lg  font- text-gray-900">Human Resources</h3>
@@ -345,10 +391,22 @@ const ConpanyInfo = () => {
               >
                 <ul className="mt-3 inter-font text-sm md:text-base">
                   <li className="mb-4">Total employee strength 567 persons</li>
-                  <li className="mb-4">Periodical training is being conducted to improve the performance levels of workmen</li>
-                  <li className="mb-4">Mainly management development programmes conducted for officers</li>
-                  <li className="mb-4">Training programmes designed to specific requirements based on individual needs</li>
-                  <li>Periodical assessment of employees performance carried out after training</li>
+                  <li className="mb-4">
+                    Periodical training is being conducted to improve the
+                    performance levels of workmen
+                  </li>
+                  <li className="mb-4">
+                    Mainly management development programmes conducted for
+                    officers
+                  </li>
+                  <li className="mb-4">
+                    Training programmes designed to specific requirements based
+                    on individual needs
+                  </li>
+                  <li>
+                    Periodical assessment of employees performance carried out
+                    after training
+                  </li>
                 </ul>
               </motion.div>
             )}
@@ -358,10 +416,15 @@ const ConpanyInfo = () => {
         <motion.div className="flex flex-col gap-2 mb-5">
           <div
             className="p-3 md:p-6 md:px-16 rounded-lg transition-colors max-w-full bg-[#fffbe6]"
-            onClick={() => setIsActive2(!isActive2)}
+            onClick={() => {
+              setIsActive2(!isActive2);
+              setIsActive(false);
+            }}
           >
             <div className="flex justify-between items-center cursor-pointer">
-              <h3 className="text-lg  font- text-gray-900">Directory of Employees</h3>
+              <h3 className="text-lg  font- text-gray-900">
+                Directory of Employees
+              </h3>
               <span className="text-xl font-bold">
                 {isActive2 ? <ChevronUp /> : <ChevronDown />}
               </span>
@@ -378,18 +441,17 @@ const ConpanyInfo = () => {
               >
                 <Link
                   target="_blank"
-              href="https://www.kamcoindia.com/html/General/Directory_of_Employees.pdf"
-              className="underline underline-offset-2 flex items-center text-black group"
-            >
-              {" "}
-              Directory_of_Employees.pdf
-              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+                  href="https://www.kamcoindia.com/html/General/Directory_of_Employees.pdf"
+                  className="underline underline-offset-2 flex items-center text-black group"
+                >
+                  {" "}
+                  Directory_of_Employees.pdf
+                  <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
-        
       </InfoDiv>
     </div>
   );
