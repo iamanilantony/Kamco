@@ -82,7 +82,7 @@ const awardsData: Award[] = [
 const Awards: React.FC = () => {
   const swiperRef = useRef(null);
   return (
-    <div className="p-4 md:p-16 my-16 md:my-12 urbanist-font flex flex-col md:flex-row items-center justify-center gap-3">
+    <div className="p-4 md:p-16 md:mt-20 mt-8 urbanist-font flex flex-col md:flex-row items-center justify-center gap-3">
       <Image
         height={300}
         width={400}

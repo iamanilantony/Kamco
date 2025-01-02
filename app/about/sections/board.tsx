@@ -57,10 +57,11 @@ const BoardOfDirectors = () => {
 
   const placeholderImage = "https://via.placeholder.com/150";
   return (
-    <div className="p-8 space-y-16 mt-20">
-      <h2 className="text-5xl font-bold text-center mb-6">
+    <div className="p-8 md:space-y-16 space-y-8 md:my-20 my-8 ">
+      <h2 className="text-3xl md:text-5xl font-bold text-center w-full mb-4 md:mb-6">
         Board of Directors
       </h2>
+
       <div className="flex flex-col gap-16 md:px-12">
         <div className="flex flex-col gap-5 mx-auto md:flex-row md:gap-48">
           {[directors[0], directors[1]].map((item, i) => {

@@ -11,24 +11,13 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import history from "@/public/data/history";
 import { cn } from "@/lib/utils";
+import useIsMobile from "@/lib/hooks/useIsMobile";
 
 const Journy = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const [ismobile, setismobile] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setismobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+  const { ismobile } = useIsMobile();
   const handleYearClick = (index: number) => {
     // @ts-ignore
     swiperRef.current?.slideToLoop(index);
@@ -36,13 +25,13 @@ const Journy = () => {
   };
 
   return (
-    <div className="p-4 md:p-8 urbanist-font my-16 space-y-20">
+    <div className="p-4 md:p-8 urbanist-font md:mt-20 mt-8 md:space-y-16 space-y-8">
       <h2 className="text-3xl md:text-5xl font-bold text-center w-full mb-4 md:mb-6">
         Our Journey Over The Years
       </h2>
 
-      <div className="flex flex-col items-center">
-        <div className="items-center hidden md:flex">
+      <div className="flex-col items-center hidden md:flex">
+        <div className="items-center flex">
           {/* Left Arrow */}
           <button
             // @ts-ignore
@@ -79,53 +68,91 @@ const Journy = () => {
         </div>
       </div>
 
-      <Swiper
-        className="justify-center items-center flex"
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        spaceBetween={ismobile ? 500 : -500}
-        slidesPerView={ismobile ? 1 : 3}
-        loop={true}
-        effect="coverflow"
-        initialSlide={0}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: ismobile ? 0 : 10,
-          depth: 150,
-          modifier: 1.5,
-          slideShadows: true,
-        }}
-        centeredSlides={true}
-        onSwiper={(swiper) => {
-          //@ts-ignore
-          swiperRef.current = swiper;
-        }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-      >
-        {history.map((facility, index) => (
-          <SwiperSlide key={index}>
-            <div
-              className={cn(
-                "relative rounded-xl overflow-hidden h-full shadow-lg min-w-[800px] transition-transform",
-                index === activeIndex ? "scale-100" : "scale-90"
-              )}
-            >
-              <Image
-                height={500}
-                width={500}
-                src={facility.image}
-                alt={facility.description}
-                className="w-full h-[480px]  object-cover rounded-lg"
-              />
-              <div className="absolute bottom-0 left-0 z-10 text-left bg-black/60 text-white p-8">
-                <h3 className="text-2xl font-semibold mb-5 urbanist-font">
-                  {facility.year}
-                </h3>
-                <p className="inter-font">{facility.description}</p>
+      {!ismobile ? (
+        <Swiper
+          className="justify-center items-center flex"
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          spaceBetween={-500}
+          slidesPerView={3}
+          loop={true}
+          effect="coverflow"
+          initialSlide={0}
+          coverflowEffect={{
+            rotate: 0,
+            depth: 150,
+            slideShadows: false,
+          }}
+          centeredSlides={true}
+          onSwiper={(swiper) => {
+            //@ts-ignore
+            swiperRef.current = swiper;
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        >
+          {history.map((facility, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={cn(
+                  "relative rounded-xl overflow-hidden h-full shadow-lg min-w-[800px] transition-transform",
+                  index === activeIndex ? "scale-100" : "scale-90"
+                )}
+              >
+                <Image
+                  height={500}
+                  width={500}
+                  src={facility.image}
+                  alt={facility.description}
+                  className="w-full h-[480px]  object-cover rounded-lg"
+                />
+                <div className="absolute bottom-0 left-0 z-10 text-left bg-black/60 text-white p-8">
+                  <h3 className="text-2xl font-semibold mb-5 urbanist-font">
+                    {facility.year}
+                  </h3>
+                  <p className="inter-font">{facility.description}</p>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <Swiper
+          className="justify-center items-center flex"
+          modules={[Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          loop={true}
+          initialSlide={0}
+          onSwiper={(swiper) => {
+            //@ts-ignore
+            swiperRef.current = swiper;
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        >
+          {history.map((facility, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={cn(
+                  "relative rounded-xl overflow-hidden h-full shadow-lg transition-transform"
+                )}
+              >
+                <Image
+                  height={800}
+                  width={800}
+                  src={facility.image}
+                  alt={facility.description}
+                  className="w-full h-[480px]  object-cover rounded-lg"
+                />
+                <div className="absolute bottom-0 left-0 z-10 text-left bg-black/60 text-white p-4">
+                  <h3 className="text-xl font-semibold mb-3 urbanist-font">
+                    {facility.year}
+                  </h3>
+                  <p className="inter-font">{facility.description}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 };

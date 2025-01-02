@@ -49,12 +49,12 @@ const Facilities = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="p-4 md:p-8 urbanist-font">
-      <div className="flex flex-col md:flex-row items-center justify-between">
+    <div className="p-4 md:p-8 md:mt-20 mt-8 urbanist-font">
+      <div className="flex flex-col  items-center justify-between">
         <h2 className="text-3xl md:text-5xl font-bold text-center w-full mb-4 md:mb-6">
           Our Manufacturing Facilities
         </h2>
-        <div className="flex items-center justify-center md:justify-end gap-4 w-full md:w-1/6 mb-4 md:mb-0">
+        <div className="flex items-end justify-center md:justify-end gap-4 w-full  mb-4 md:mb-0">
           <button
             //@ts-ignore
             onClick={() => swiperRef.current?.slidePrev()}

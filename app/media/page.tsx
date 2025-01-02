@@ -6,11 +6,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const Media = () => {
-  const images = [
-    "/News/news1.JPG",
-    "/News/news2.jpg",
-    "/News/news3.jpeg"
-  ];
+  const images = ["/News/news1.JPG", "/News/news2.jpg", "/News/news3.jpeg"];
   const dummyImages = [
     "/NewsAndEvents/IMG20241031112229.jpg",
     "/NewsAndEvents/IMG20241031112513.jpg",
@@ -52,7 +48,7 @@ const Media = () => {
   };
 
   return (
-    <div className="min-h-screen text-center p-32 py-12 space-y-24 urbanist-font">
+    <div className="min-h-screen text-center md:p-32 p-12 py-12 space-y-24 urbanist-font">
       <h1 className="text-3xl md:text-5xl font-bold urbanist-font">Media</h1>
       <div className="flex mt-0 w-full justify-center items-center py-4">
         <Button
@@ -85,7 +81,7 @@ const Media = () => {
         }`}
       >
         {pageType == "news" ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-16">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-16">
             {images.map((image, index) => (
               <div
                 key={index}
