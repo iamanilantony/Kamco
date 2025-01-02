@@ -140,14 +140,14 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className="p-4 max-sm:px-0 sm:pt-16 mb-0 flex flex-col justify-center items-center  mx-auto">
+      <div className="p-4 max-sm:px-0 sm:py-16 sm:pb-4 mb-0 flex flex-col justify-center items-center  mx-auto">
         <Animatedheading>Farmers Recount Their Experiences</Animatedheading>
 
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: "easeOut" }}
-          className="sm:p-6 flex justify-center items-center w-full"
+          className=" flex justify-center items-center w-full"
         >
           <Swiper
             modules={[Autoplay]}

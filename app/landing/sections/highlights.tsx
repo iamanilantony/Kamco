@@ -19,20 +19,20 @@ export default function Highlights() {
     {
       title: "Tech-Driven Farming: Bridging Innovation and Sustainability",
       description:
-      "How emerging technologies are reshaping farming practices, unlocking new possibilities, and ensuring that agriculture thrives in harmony with the planet.",
+        "How emerging technologies are reshaping farming practices, unlocking new possibilities, and ensuring that agriculture thrives in harmony with the planet.",
       readMore:
-      "https://medium.com/@support_62461/tech-driven-farming-bridging-innovation-and-sustainability-4d7b8529ae90",
+        "https://medium.com/@support_62461/tech-driven-farming-bridging-innovation-and-sustainability-4d7b8529ae90",
       image:
-      "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BxUsu9cFqbQhlbyFCEZBaA.jpeg",
+        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BxUsu9cFqbQhlbyFCEZBaA.jpeg",
     },
     {
       title: "Sustainable Growth: Empowering Farmers for the Future",
       description:
-      "How empowering farmers with sustainable practices, technology, and market access can drive resilience and prosperity.",
+        "How empowering farmers with sustainable practices, technology, and market access can drive resilience and prosperity.",
       readMore:
-      "https://medium.com/@support_62461/sustainable-growth-empowering-farmers-for-the-future-c7f22696c3f1",
+        "https://medium.com/@support_62461/sustainable-growth-empowering-farmers-for-the-future-c7f22696c3f1",
       image:
-      "https://miro.medium.com/v2/resize:fit:828/format:webp/1*QvR0Cb85rjSP6YCSDg8iwg.jpeg",
+        "https://miro.medium.com/v2/resize:fit:828/format:webp/1*QvR0Cb85rjSP6YCSDg8iwg.jpeg",
     },
     {
       title: "Harvest Insights: Modern Farming Tips and Techniques",
@@ -52,7 +52,7 @@ export default function Highlights() {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.85, ease: "easeOut" }}
-      className="relative overflow-hidden py-3 sm:py-4"
+      className="relative overflow-hidden py-3 sm:py-16 sm:pb-4"
     >
       {/* Background Wheat Pattern */}
       <div className="absolute inset-0 opacity-5">

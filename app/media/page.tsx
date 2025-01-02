@@ -85,13 +85,13 @@ const Media = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="aspect-square relative overflow-hidden rounded-lg shadow-md"
+                className=" relative overflow-hidden rounded-lg shadow-md"
               >
                 <Image
                   src={image}
                   alt={`Gallery image ${startIndex + index + 1}`}
-                  layout="fill"
-                  objectFit="cover"
+                  width={500}
+                  height={500}
                   className="transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>

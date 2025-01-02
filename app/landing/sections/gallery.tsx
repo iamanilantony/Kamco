@@ -19,7 +19,7 @@ const Gallery = () => {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.85, ease: "easeOut" }}
-      className="p-4 flex flex-col justify-center items-center max-w-[94vw] mx-auto"
+      className="p-4 py-16 pb-4 flex flex-col justify-center items-center max-w-[94vw] mx-auto"
     >
       <Animatedheading className="mb-8">Image Gallery</Animatedheading>
 

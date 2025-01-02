@@ -140,7 +140,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="py-6 md:py-16  bg-yellow-50/20 max-w-[94vw] mx-auto"
+      className="py-6 md:py-16 pb-4  bg-yellow-50/20 max-w-[94vw] mx-auto"
       ref={ref}
     >
       <motion.div

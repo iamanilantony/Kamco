@@ -61,14 +61,19 @@ const Categories = () => {
       text: "Harvesting",
     },
     {
-      imgSrc: "/Product_Category_Images/Product Category - Intercultivation (1).png",
+      imgSrc:
+        "/Product_Category_Images/Product Category - Intercultivation (1).png",
       text: "Inter Cultivation",
     },
     {
       imgSrc: "/Product_Category_Images/Product category - Deweeding.png",
       text: "De Weeding",
     },
-    { imgSrc: "/Product_Category_Images/Product Category - Garden Tools Irrigation (1).png", text: "Garden Tools/Irrigation" },
+    {
+      imgSrc:
+        "/Product_Category_Images/Product Category - Garden Tools Irrigation (1).png",
+      text: "Garden Tools/Irrigation",
+    },
     {
       imgSrc: "/new_images/categories/plantProtection.webp",
       text: "Plant Protection",
@@ -77,7 +82,7 @@ const Categories = () => {
   ];
 
   return (
-    <div className="max-w-[94vw] mx-auto flex flex-col justify-center items-center gap-8 py-10 pt-14">
+    <div className="max-w-[94vw] mx-auto flex flex-col justify-center items-center gap-8 py-16 pb-4 ">
       {/* Title */}
       {/* <h2 className='text-4xl font-bold text-center text-gray-900 urbanist-font'>Categories</h2> */}
       {/* <div className="flex justify-center w-full">

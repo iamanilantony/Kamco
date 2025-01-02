@@ -28,7 +28,7 @@ export default function Contact() {
 
   return (
     <div ref={ref}>
-      <div className="md:max-w-7xl mx-auto py-12 px-6 lg:px-16">
+      <div className="md:max-w-7xl mx-auto py-16 px-6 lg:px-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-32">
           <ContactForm />
 
