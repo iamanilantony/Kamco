@@ -216,12 +216,13 @@ const Navbar = () => {
             </motion.button>
          </motion.nav>
          <MobileView
-            isOpen={isOpen}
-            navItems={navItems}
-            setIsOpen={setIsOpen}
-            activeDropdown={activeDropdown}
-            setActiveDropdown={setActiveDropdown}
-         />
+   isOpen={isOpen}
+   navItems={[...navItems, { name: 'LogIn', href: 'https://web.kamcoindia.com/dealers/user_login' }]}
+   setIsOpen={setIsOpen}
+   activeDropdown={activeDropdown}
+   setActiveDropdown={setActiveDropdown}
+/>
+
       </>
    );
 };

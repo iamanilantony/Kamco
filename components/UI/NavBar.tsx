@@ -273,7 +273,7 @@ const NavBar = () => {
           onClick={handleLinkClick}
           className="block md:inline-block bg-[#D2F348] text-white font-semibold rounded-lg px-4 py-2 md:px-8 md:py-2 hover:bg-[#0f4222] transition duration-200 ease-in-out shadow-md"
         >
-          Loginqwdw
+              Login
         </Link>
       </nav>
     </header>
