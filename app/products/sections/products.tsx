@@ -18,7 +18,7 @@ const ProductsCard = ({
   codeName: string;
 }) => {
   return (
-    <Link href={`/products/${codeName}`}>
+    <Link href={`/products`}>
       <div className="overflow-hidden w-[90vw] sm:w-[calc(50vw-25px)] md:w-[calc(25vw-85px)] relative aspect-square bg-white rounded-xl border border-gray-300 p-4 cursor-pointer group flex flex-col items-center justify-between">
         <h1 className="text-2xl font-bold mt-1 z-10 relative text-left w-full text-ellipsis">
           {title}
