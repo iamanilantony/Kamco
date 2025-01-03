@@ -41,12 +41,11 @@ const SupplierRegistration = () => {
         {/* Content Section */}
         <div className="text-gray-700 leading-relaxed mb-8">
           <p>
-            Kerala Agro Machinery Corporation Ltd. (KAMCO) is intended to cater
-            to the farming requirements of small and marginal scale farmers. It
-            is an initiative to allow small farmers to enjoy mechanized farming.
-            The quality standard for each and every product has been tested &
-            certified by competent authorities. The global standard and system
-            maintained has earned KAMCO ISO 9001:2008 certifications.
+          Kerala Agro Machinery Corporation Ltd. (KAMCO) is dedicated to meeting the farming needs of small and marginal farmers by providing access to mechanized farming. Our products are designed to help small farmers enjoy the benefits of modern agricultural technology. Each product undergoes rigorous testing and certification by competent authorities to ensure the highest quality standards. KAMCO has earned the prestigious ISO 9001:2015 certification for maintaining global standards and systems.
+          </p>
+          <br/>
+          <p>
+KAMCO offers a wide range of products, including Tillers, Tractors, Reapers, Diesel Engines, Weeders, Brush Cutters, Pumpsets and other agricultural machineries. Our success can be attributed to a unique marketing strategy that has enabled us to expand our reach beyond India, capturing the International Agro-machinery market.
           </p>
           <p className="mt-4">
             KAMCO's product range includes Tiller, Tractor, Reaper, Diesel
