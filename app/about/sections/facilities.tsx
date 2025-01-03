@@ -15,7 +15,7 @@ const Facilities = () => {
       imageUrl: "/Units/ATHANI.JPG",
     },
     {
-      title: "Kalamassery Unit - Diesel Engine E...",
+      title: "Kalamassery Unit – Diesel Engine Expertise.",
       description:
         "Our second unit, established in 1992 in Kalamassery, specializes in Diesel Engine production, forming the core of our Power Tiller and Tractor lineup.",
       imageUrl: "/Units/KALAMASSERY.jpeg",
