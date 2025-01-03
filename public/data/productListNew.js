@@ -35,15 +35,15 @@ export default [
       description: "Reliable power weeder for de-weeding tasks.",
       slug: "de-weeding",
     },
-    {
-      name: "Geared Power weeder",
-      codeName: "PR-032",
-      category: "Inter Cultivation",
-      src: "/products/PR-032.jpg", // Original src retained
-      piecesLeft: 60,
-      description: "Durable, geared power weeder for intensive work.",
-      slug: "de-weeding",
-    },
+    // {
+    //   name: "Geared Power weeder",
+    //   codeName: "PR-032",
+    //   category: "Inter Cultivation",
+    //   src: "/products/PR-032.jpg", // Original src retained
+    //   piecesLeft: 60,
+    //   description: "Durable, geared power weeder for intensive work.",
+    //   slug: "de-weeding",
+    // },
     {
       name: "Garden Tillers",
       codeName: "PR-033",
