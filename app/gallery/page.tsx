@@ -7,6 +7,7 @@ export default function Page() {
     "/new_images/gallery/img2.webp",
     "/new_images/gallery/img3.webp",
     "/new_images/gallery/img4.webp",
+    "/new_images/gallery/Image DSC00947.JPG",
     "/new_images/gallery/img5.webp",
     "/new_images/gallery/img6.webp",
     "/new_images/gallery/img7.webp",

@@ -19,10 +19,10 @@ const BentoGrid = () => {
 
   const cards = [
     {
-      title: "Agricultural Revolution",
+      title: "Our Vision",
       customImageStyle: "",
       description:
-        "Tools have advanced, making farming more efficient and predictable.",
+        "To provide sustainable and affordable farming solution through Agricultural Mechanization.",
       imageUrl: "/new_images/bentoGrid/image1.webp",
       customCardStyle: "w-3/5",
       span: "col-span-2 max-sm:col-span-1",
@@ -30,10 +30,10 @@ const BentoGrid = () => {
       overlayColor: "",
     },
     {
-      title: "Quality Machinery",
+      title: "Our Mission",
       customImageStyle: "object-contain -right-36 h-3/4",
       description:
-        "KAMCO offers ISO 9001:2015 certified Tillers, Tractors, and Engines for farmers.",
+      "Total farming solution through Agriculture Mechanization by sourcing, developing latest technologies and value added products to boost up agriculture production in our nation.",        
       imageUrl: "/new_images/bentoGrid/image2.webp",
       customCardStyle: "top-10 left-10 w-3/5",
       span: "col-span-2 max-sm:col-span-1",
@@ -41,10 +41,10 @@ const BentoGrid = () => {
       overlayColor: "",
     },
     {
-      title: "Our Mission",
+      title: "Quality Machinery",
       customImageStyle: "h-3/5",
       description:
-        "Total farming solution through Agriculture Mechanization by sourcing, developing latest technologies and value added products to boost up agriculture production in our nation.",
+      "KAMCO offers ISO 9001:2015 certified Tillers, Tractors, and Engines for farmers.",
       imageUrl: "/new_images/bentoGrid/image3.webp",
       customCardStyle: "top-10 left-5",
       span: "sm:row-span-3 max-sm:col-span-1",
@@ -52,10 +52,10 @@ const BentoGrid = () => {
       overlayColor: "",
     },
     {
-      title: "Our Vision",
+      title: "Agricultural Revolution",
       customImageStyle: "w-full",
       description:
-        "To provide sustainable and affordable farming solution through Agricultural Mechanization.",
+        "Tools have advanced, making farming more efficient and predictable.",
       imageUrl: "/new_images/bentoGrid/image4.webp",
       customCardStyle: "w-2/5 top-1/2 -translate-y-1/2",
       span: "col-span-4 max-sm:col-span-1",
