@@ -109,7 +109,7 @@ const ConpanyInfo = () => {
         machinery specifically Power Tillers and Diesel Engines. Subsequently
         KAMCO became a separate Govt. of Kerala undertaking in 1986. Paid up
         capital is Rs. 161 lakh Present Net Worth of the Company is Rs. 6014.14
-        lakh. Total work force at present is 567 Certified for ISO 9001 - 2000
+        lakh. Total work force at present is 567 Certified for ISO 9001 - 2015
         version from September 2002.At present, KAMCO has five units located at
         Athani and Kalamassery in Ernakulam District , at Kanjikode in Palakkad
         District, at Mala in Trichur dist. and at Valiyavelicham in Kannur
