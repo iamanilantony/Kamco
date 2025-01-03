@@ -2,7 +2,7 @@
     "products": [
       {
         "id": "PR-011",
-        "title": "Power Tillers",
+        "title": "Power Tiller",
         "price": 12000,
         "piecesLeft": 150,
         "description": "Engine Power: 30 HP minimum required. Used for soil preparation, ploughing, and weeding. Ideal for small and medium-sized farms with hardened steel blades for superior cutting.",
@@ -34,7 +34,7 @@
       },
       {
         "id": "PR-012",
-        "title": "Tractors",
+        "title": "Tractor",
         "price": 30000,
         "piecesLeft": 75,
         "description": "A 50 HP tractor designed for medium to large-scale farm operations. Suitable for tilling, ploughing, and transport tasks.",
@@ -100,7 +100,7 @@
       },
       {
         "id": "PR-022",
-        "title": "Sprayers",
+        "title": "Sprayer",
         "price": 1500,
         "piecesLeft": 200,
         "description": "Portable sprayer for effective pest and nutrient application in small to medium-sized fields. Easy to handle and maintain.",
@@ -195,7 +195,7 @@
       },
       {
         "id": "PR-033",
-        "title": "Garden Tillers",
+        "title": "Garden Tiller",
         "price": 2100,
         "piecesLeft": 110,
         "description": "Compact and lightweight garden tiller perfect for home gardens and small farms. Equipped with adjustable blades and easy handling.",

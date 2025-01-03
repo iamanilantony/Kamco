@@ -75,7 +75,7 @@ export default function Contact() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-5">
-              <div className="bg-[#d7ffbf] rounded-lg p-6 w-full md:w-[95%]">
+              <div className="bg-[#d7ffbf] rounded-lg p-6 w-full md:w-[100%]">
                 <div className="flex flex-col md:flex-row space-x-2 gap-12">
                   <div className="flex items-start gap-2">
                     <MdOutlinePhoneInTalk className="w-5 h-5 mb-6" />
@@ -87,7 +87,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CiMail className="w-5 h-5" />
-                    <span className="text-sm">mail@kamco.in</span>
+                    <span className="text-sm">mail@kamcoindia.com</span>
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Contact() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.facebook.com/kamcoindia"
+                  href="https://www.youtube.com/channel/UCh7eaVTY8Z85h7ml_TO9wbA"
                   className="hover:opacity-75 transition-opacity"
                 >
                   <FaYoutube size={32} />

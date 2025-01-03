@@ -45,7 +45,7 @@ export default [
     //   slug: "de-weeding",
     // },
     {
-      name: "Garden Tillers",
+      name: "Garden Tiller",
       codeName: "PR-033",
       category: "Garden Tools",
       src: "/products/PR-033.jpg", // Original src retained

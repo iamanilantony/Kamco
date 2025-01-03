@@ -4,7 +4,7 @@
         "name": "Land Preparation",
         "codeName": "PR-01",
         "subcategories": [
-          { "name": "Power Tillers", "codeName": "PR-011", "src": "/products/PR-011.jpg" },
+          { "name": "Power Tiller", "codeName": "PR-011", "src": "/products/PR-011.jpg" },
           { "name": "Tractors", "codeName": "PR-012", "src": "/products/PR-012.jpg" }
         ]
       },
@@ -13,7 +13,7 @@
         "codeName": "PR-02",
         "subcategories": [
           { "name": "Drone", "codeName": "PR-021", "src": "/products/PR_021.png" },
-          { "name": "Sprayers", "codeName": "PR-022", "src": "/products/PR-022.png" }
+          { "name": "Sprayer", "codeName": "PR-022", "src": "/products/PR-022.png" }
         ]
       },
       {
@@ -22,7 +22,7 @@
         "subcategories": [
           { "name": "Echo Leopard Power weeder", "codeName": "PR-031", "src": "/products/PR-031.jpg" },
           { "name": "Geared Power weeder", "codeName": "PR-032", "src": "/products/PR-032.jpg" },
-          { "name": "Garden Tillers", "codeName": "PR-033", "src": "/products/PR-033.jpg" },
+          { "name": "Garden Tiller", "codeName": "PR-033", "src": "/products/PR-033.jpg" },
           { "name": "Micro Tiller", "codeName": "PR-034", "src": "/products/PR-034.jpg" },
           { "name": "Cono Weeder", "codeName": "PR-035", "src": "/products/PR-035.jpg" },
           { "name": "Brush Cutter", "codeName": "PR-036", "src": "/products/PR-036.jpg" },

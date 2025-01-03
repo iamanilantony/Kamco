@@ -41,7 +41,7 @@ export default function Hero() {
                         preset='slide'
                         className='font-heading text-3xl font-bold text-left leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl'
                      >
-                        {'A Boon for the Farmer,'}
+                        {'A Boon for the Farmer;'}
                      </TextEffect>
                      <TextEffect
                         per='char'

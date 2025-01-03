@@ -90,7 +90,7 @@ const Categories = () => {
           Categories
         </h2>
       </div> */}
-      <Animatedheading>Categories</Animatedheading>
+      <Animatedheading>Product Categories</Animatedheading>
 
       {/* Grid Section */}
       <div

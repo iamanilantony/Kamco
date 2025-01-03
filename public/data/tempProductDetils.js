@@ -1,7 +1,7 @@
 export default [
   {
     "id": "PR-011",
-    "name": "Power Tillers",
+    "name": "Power Tiller",
     "image": ["/products/PR-011_2.jpg","/products/PR-011_2.jpg","/products/PR-011_3.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "KMB200" },
@@ -46,7 +46,7 @@ export default [
   },
   {
     "id": "PR-012",
-    "name": "Tractors",
+    "name": "Tractor",
     "image": ["/products/PR-012_2.jpg","/products/PR-012_1.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "Tera TRAC 4W" },
@@ -192,7 +192,7 @@ export default [
   },
   {
     "id": "PR-033",
-    "name": "Garden Tillers",
+    "name": "Garden Tiller",
     "image": ["/products/PR-033.jpg"],
     "specs": [
       { "label": "Engine Model", "value": "B30" },

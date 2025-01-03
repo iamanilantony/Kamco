@@ -129,6 +129,7 @@ export default function Highlights() {
                         <div className="flex flex-wrap items-center gap-4">
                           <Link
                             href={highlight.readMore}
+                            target="_blank"
                             className="group inline-flex items-center gap-2 rounded-full bg-[#274321] px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-[#1a2d15] sm:text-base"
                           >
                             Read Article
