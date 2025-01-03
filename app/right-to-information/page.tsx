@@ -5,7 +5,7 @@ export default function Page() {
   return (
      <div className='flex flex-col md:flex-row justify-center py-10 md:mx-20 mt-16 h-[60vh]'>
         {/* Left Side - Contact Information */}
-        <div className='md:w-max p-6 py-12 border-2 border-[#166434] md:rounded-2xl rounded-xl flex flex-col justify-start mx-auto md:mx-16 mb-8 md:mb-0'>
+        <div className='md:w-max p-6 py-12 border-2 border-[#166434] md:rounded-2xl rounded-xl flex flex-col justify-start mx-auto md:mx-16 mb-8 md:mb-0 overflow-hidden'>
            {/* Centered on mobile */}
            <h2 className='text-2xl font-semibold mb-6 text-left'>Important Links</h2>
            <ol className='list-decimal pl-5 space-y-4 text-left text-base font-medium text-gray-700'>

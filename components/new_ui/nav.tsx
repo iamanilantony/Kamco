@@ -119,9 +119,9 @@ const Navbar = () => {
             {/* Logo */}
             <Link href='/'>
                <Image
-                  src='/new_images/logo.webp'
-                  width={150}
-                  height={150}
+                  src='/logowithiso.png'
+                  width={200}
+                  height={200}
                   alt='logo'
                   className='cursor-pointer'
                />
