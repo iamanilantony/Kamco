@@ -74,7 +74,7 @@ const MobileView = ({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * i }}
-                  className="my-2 w-full text-center"
+                  className="my-2 w-full text-left px-4"
                 >
                   <div
                     onClick={() => {
@@ -84,7 +84,7 @@ const MobileView = ({
                         toggleDropdown(item.name);
                       }
                     }}
-                    className="cursor-pointer text-[rgb(55,65,81)] font-sans hover:font-semibold flex items-center justify-center"
+                    className="cursor-pointer font-semibold text-[rgb(55,65,81)] font-sans hover:font-bold flex items-center justify-between"
                   >
                     {item.name}
                     {item.subItems && (
@@ -97,7 +97,7 @@ const MobileView = ({
                     )}
                   </div>
                   {item.subItems && activeDropdown === item.name && (
-                    <ul className="flex flex-col space-y-2 mt-2">
+                    <ul className="flex flex-col space-y-2 mt-2 px-2">
                       {item.subItems.map((subItem) => (
                         <li key={subItem.name}>
                           <div
