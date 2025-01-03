@@ -22,8 +22,7 @@ export default function Highlights() {
         "How emerging technologies are reshaping farming practices, unlocking new possibilities, and ensuring that agriculture thrives in harmony with the planet.",
       readMore:
         "https://medium.com/@support_62461/tech-driven-farming-bridging-innovation-and-sustainability-4d7b8529ae90",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BxUsu9cFqbQhlbyFCEZBaA.jpeg",
+      image: "/new_images/hilights/techinical.jpg",
     },
     {
       title: "Sustainable Growth: Empowering Farmers for the Future",
@@ -31,8 +30,7 @@ export default function Highlights() {
         "How empowering farmers with sustainable practices, technology, and market access can drive resilience and prosperity.",
       readMore:
         "https://medium.com/@support_62461/sustainable-growth-empowering-farmers-for-the-future-c7f22696c3f1",
-      image:
-        "https://miro.medium.com/v2/resize:fit:828/format:webp/1*QvR0Cb85rjSP6YCSDg8iwg.jpeg",
+      image: "/new_images/hilights/sustainable.jpg",
     },
     {
       title: "Harvest Insights: Modern Farming Tips and Techniques",
@@ -40,8 +38,7 @@ export default function Highlights() {
         "The transformative power of modern farming and share actionable tips for farmers, entrepreneurs, and agriculture enthusiasts to harness these advancements effectively.",
       readMore:
         "https://medium.com/@support_62461/harvest-insights-modern-farming-tips-and-techniques-701ee55ccace",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*qQn57ePtDCwJJGmIX79WxA.jpeg",
+      image: "/new_images/hilights/harvest.jpg",
     },
   ];
 

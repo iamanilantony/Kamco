@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
+import { Dialog, Transition } from "@headlessui/react"; // updated import
+import { Fragment } from "react"; // new import
 
 const Media = () => {
   const images = ["/News/news1.JPG", "/News/news2.jpg", "/News/news3.jpeg"];
@@ -26,6 +28,7 @@ const Media = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageType, setPageType] = useState("news"); // new state
   const [transition, setTransition] = useState(false); // new state
+  const [selectedImage, setSelectedImage] = useState<string | null>(null); // new state
 
   const totalPages = Math.ceil(
     (pageType === "news" ? images.length : dummyImages.length) / imagesPerPage
@@ -91,6 +94,7 @@ const Media = () => {
               <div
                 key={index}
                 className=" relative overflow-hidden rounded-lg shadow-md"
+                onClick={() => setSelectedImage(image)} // new onClick handler
               >
                 <Image
                   src={image}
@@ -142,6 +146,40 @@ const Media = () => {
           <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
+      <Dialog
+        open={selectedImage !== null}
+        onClose={() => setSelectedImage(null)}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+      >
+        <Transition
+          show={selectedImage !== null}
+          as={Fragment}
+          enter="transition-opacity duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-300"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="relative">
+            {selectedImage && (
+              <Image
+                src={selectedImage}
+                alt="Enlarged image"
+                width={800}
+                height={800}
+                className="rounded-lg"
+              />
+            )}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-2"
+            >
+              Close
+            </button>
+          </div>
+        </Transition>
+      </Dialog>
     </div>
   );
 };

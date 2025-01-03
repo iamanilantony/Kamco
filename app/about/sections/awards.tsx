@@ -82,67 +82,74 @@ const awardsData: Award[] = [
 const Awards: React.FC = () => {
   const swiperRef = useRef(null);
   return (
-    <div className="p-4 md:p-16 md:mt-20 mt-8 urbanist-font flex flex-col md:flex-row items-center justify-center gap-3">
-      <Image
-        height={300}
-        width={400}
-        draggable={false}
-        src="/new_images/awards/award.webp"
-        alt="Award Main Image"
-        className="h-auto w-full md:w-[40%] rounded-3xl"
-      />
-      <div className="flex flex-col items-center justify-center w-full md:w-3/5 h-full mt-8 md:mt-0">
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={50}
-          slidesPerView={1}
-          allowTouchMove={false}
-          pagination={{ clickable: true }}
-          onSlideChange={() => console.log("slide change")}
-          className="w-full h-full min-h-[500px]"
-          onSwiper={(swiper) => {
-            //@ts-ignore
-            swiperRef.current = swiper;
-          }}
-        >
-          <SwiperSlide>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between md:min-h-[450px] h-full">
-              {awardsData.slice(0, 4).map((award, index) => (
-                <AwardCard
-                  key={index}
-                  title={award.title}
-                  description={award.description}
-                />
-              ))}
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between md:min-h-[450px] h-full">
-              {awardsData.slice(4, 8).map((award, index) => (
-                <AwardCard
-                  key={index}
-                  title={award.title}
-                  description={award.description}
-                />
-              ))}
-            </div>
-          </SwiperSlide>
-        </Swiper>
-        <div className="flex items-center justify-center md:justify-end gap-8 mt-8 w-full md:w-1/6 mb-4 md:mb-0">
-          <button
-            //@ts-ignore
-            onClick={() => swiperRef.current?.slidePrev()}
-            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-700 transition"
+    <div className="p-4 md:p-16 md:mt-20 mt-8 urbanist-font flex flex-col items-center justify-center gap-3">
+      <div className="w-full text-center mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold">
+          Awards & Recognitions
+        </h2>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8">
+        <Image
+          height={300}
+          width={400}
+          draggable={false}
+          src="/new_images/awards/award.webp"
+          alt="Award Main Image"
+          className="h-auto w-full md:w-[40%] rounded-3xl"
+        />
+        <div className="flex flex-col items-center justify-center w-full md:w-3/5 h-full mt-8 md:mt-0">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={50}
+            slidesPerView={1}
+            allowTouchMove={false}
+            pagination={{ clickable: true }}
+            onSlideChange={() => console.log("slide change")}
+            className="w-full h-full min-h-[500px]"
+            onSwiper={(swiper) => {
+              //@ts-ignore
+              swiperRef.current = swiper;
+            }}
           >
-            &#8592;
-          </button>
-          <button
-            //@ts-ignore
-            onClick={() => swiperRef.current?.slideNext()}
-            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-700 transition"
-          >
-            &#8594;
-          </button>
+            <SwiperSlide>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between md:min-h-[450px] h-full">
+                {awardsData.slice(0, 4).map((award, index) => (
+                  <AwardCard
+                    key={index}
+                    title={award.title}
+                    description={award.description}
+                  />
+                ))}
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between md:min-h-[450px] h-full">
+                {awardsData.slice(4, 8).map((award, index) => (
+                  <AwardCard
+                    key={index}
+                    title={award.title}
+                    description={award.description}
+                  />
+                ))}
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="flex items-center justify-center md:justify-end gap-8 mt-8 w-full md:w-1/6 mb-4 md:mb-0">
+            <button
+              //@ts-ignore
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-700 transition"
+            >
+              &#8592;
+            </button>
+            <button
+              //@ts-ignore
+              onClick={() => swiperRef.current?.slideNext()}
+              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-gray-700 transition"
+            >
+              &#8594;
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -101,7 +101,7 @@ const ConpanyInfo = () => {
   const [isActive2, setIsActive2] = useState(false);
 
   return (
-    <div className="w-full py-6 md:py-12 space-y-8 md:space-y-12 mt-6 md:mt-12 text-left">
+    <div className="w-full py-6 md:py-12 space-y-8 md:space-y-12 mt-6 md:mt-12 text-left scrollbar-hide">
       <InfoDiv title="Company Name">
         Kerala Agro Machinery Corporation Ltd. (KAMCO) was established in the
         year 1973 as a wholly owned subsidiary of Kerala Agro Industries
