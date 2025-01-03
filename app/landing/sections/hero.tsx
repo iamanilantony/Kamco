@@ -56,7 +56,7 @@ export default function Hero() {
                         delay={0.3}
                         className='max-w-xl text-lg text-gray-200 sm:text-xl text-left'
                      >
-                        Unleashing the power of innovation—tools that turn hard work into
+                        Unleashing the power of innovation—tools that turn hardwork into
                         unstoppable growth, enabling greater efficiency and sustainable success.
                      </TextEffect>
                   </div>

@@ -80,7 +80,7 @@ const HeroLegacy = () => {
           className="max-sm:text-center text-right text-xs sm:text-sm md:text-base mt-4 md:mt-0"
         >
           <p>Unleashing the power of innovation—tools that</p>
-          <p>turn hard work into unstoppable</p>
+          <p>turn hardwork into unstoppable</p>
           <p>growth, enabling greater efficiency and </p>
           <p>sustainable success.</p>
         </motion.div>

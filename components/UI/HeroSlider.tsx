@@ -11,7 +11,7 @@ const HeroSlider = () => {
   const slides = [
     {
       image: "/IMG1112135.jpg",
-      subtitle: "Unleashing the power of innovation—tools that turn hard work into unstoppable growth, enabling greater efficiency and sustainable success.",
+      subtitle: "Unleashing the power of innovation—tools that turn hardwork into unstoppable growth, enabling greater efficiency and sustainable success.",
     },
     {
       image: "/IMG2222135.jpg",

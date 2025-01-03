@@ -24,7 +24,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-200 font-medium text-base w-full md:w-3/4 mb-4 font-sans text-left animate__animated animate__fadeIn animate__delay-1s animate__bounceInUp">
-          Unleashing the power of innovation—tools that turn hard work into unstoppable growth, enabling greater efficiency and sustainable success.
+          Unleashing the power of innovation—tools that turn hardwork into unstoppable growth, enabling greater efficiency and sustainable success.
         </p>
         <div className="flex justify-between md:justify-start sm:space-y-0 sm:space-x-4 animate__animated animate__fadeIn animate__delay-2s animate__bounceInUp">
           <Link href="/products" className="bg-white mr-2 md:mr-4 text-black text-xs h-10 md:h-max md:text-base px-2 md:px-6 py-3 rounded-md hover:bg-gray-200 transition font-sans">
