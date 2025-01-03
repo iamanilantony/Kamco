@@ -12,7 +12,7 @@ export default function Page() {
               CHIEF MINISTER’S REDRESSAL CELL
            </h2>
            <p className='mb-2 text-center'>Charge Officer - KAMCO:</p>
-           <p className='mb-2 text-center'>Shri. Vijayakumar M C, Sr. Manager (HR)</p>
+           <p className='mb-2 text-center'>Shri. Vijayakumar M C, DGM (HR)</p>
            <p className='mb-2 text-center'>Phone: +91-944 699 2031, 0484-2474301</p>
            <p className='mb-2 text-center'>
               Email:{' '}

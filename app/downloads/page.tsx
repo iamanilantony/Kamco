@@ -25,6 +25,7 @@ const Downloads = () => {
                   <a
                     href="https://drive.google.com/file/d/1p5Zx5XD3Zt8a-0pIyQOyrIjNHwql8YM8/view?usp=drive_link"
                     className="text-blue-600 hover:underline"
+                    target="_blank"
                   >
                     View PDF
                   </a>
@@ -38,6 +39,7 @@ const Downloads = () => {
                   <a
                     href="https://drive.google.com/file/d/1lWkxriSCSjjCOzRMHhPia93kiCk3XEA8/view?usp=drive_link"
                     className="text-blue-600 hover:underline"
+                    target="_blank"
                   >
                     View PDF
                   </a>
