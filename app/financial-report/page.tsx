@@ -2,7 +2,7 @@ import Gallery from "@/components/UI/GalleryPage";
 
 export default function Page() {
     return (
-        <div className="flex justify-center items-center p-4">
+        <div className="flex justify-center items-center p-4 my-40">
             <div className="w-full max-w-4xl">
                 <table className="w-full border-collapse border border-gray-300 text-left">
                     <thead>
@@ -16,16 +16,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Report 2021-22</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="/docs/Kamco_Annual_Report-2021-2022.pdf" 
-                                    target="_blank"
-                                    className="text-blue-600 hover:underline">View Report</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="p-3 border border-gray-300">Annual Return 2021-22</td>
-                            <td className="p-3 border border-gray-300">
-                                <a 
-                                    href="https://web.kamcoindia.com//userfiles/KAMCO_Form_MGT_7-2022-Final.pdf" 
+                                    href="/Docs/FinancialReport/Kamco Annual Report -2021-2022.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
@@ -34,7 +25,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Report 2020-21</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="https://web.kamcoindia.com//userfiles/FINANCIALS FY 2020-21.pdf" 
+                                    href="/Docs/FinancialReport/KAMCO-Annual Report-FY 2020-21.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
@@ -43,7 +34,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Return 2020-21</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="https://web.kamcoindia.com//userfiles/FORM MGT-7-KAMCO-FY 2020-21.pdf" 
+                                    href="/Docs/FinancialReport/KAMCO Form MGT 7 2021.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
@@ -52,7 +43,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Report 2019-20</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="https://web.kamcoindia.com//userfiles/Annual Report 2019-20.pdf" 
+                                    href="/Docs/FinancialReport/Annual Report FY 2019-20.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
@@ -61,7 +52,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Report 2018-19</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="https://web.kamcoindia.com//userfiles/Annual Report 2018-19.pdf" 
+                                    href="/Docs/FinancialReport/Kamco Annual Report 2018-19.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
@@ -70,7 +61,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Report 2017-18</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="https://web.kamcoindia.com//userfiles/Annual Report 2017-18.pdf" 
+                                    href="/Docs/FinancialReport/Kamco Annual Report 2017-18.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
@@ -79,7 +70,7 @@ export default function Page() {
                             <td className="p-3 border border-gray-300">Annual Report 2016-17</td>
                             <td className="p-3 border border-gray-300">
                                 <a 
-                                    href="https://web.kamcoindia.com//userfiles/Annual Report 2016-17.pdf" 
+                                    href="/Docs/FinancialReport/Kamco Annual Report 2016-17.pdf" 
                                     target="_blank"
                                     className="text-blue-600 hover:underline">View Report</a>
                             </td>
