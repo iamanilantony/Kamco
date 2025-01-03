@@ -11,6 +11,7 @@ type AnimatedbuttonProps = {
   onClick?: () => void;
   viewBased?: boolean;
   navigateto?: string | null;
+  duration?: number;
 };
 
 const Animatedbutton = ({
@@ -20,6 +21,7 @@ const Animatedbutton = ({
   onClick,
   viewBased = false,
   navigateto = null,
+  duration = 0.5,
 }: AnimatedbuttonProps) => {
   const ref = useRef(null);
   let inview = useInView(ref, { once: true });
@@ -46,11 +48,11 @@ const Animatedbutton = ({
       initial="hidden"
       animate={controls}
       variants={{
-        hidden: { opacity: 0, scale: 0.5 },
+        hidden: { opacity: 0, scale: 0.3 },
         visible: {
           opacity: 1,
           scale: 1,
-          transition: { duration: 0.5, delay: delay },
+          transition: { duration: duration, delay: delay },
         },
       }}
       className={cn(

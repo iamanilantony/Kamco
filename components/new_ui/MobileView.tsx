@@ -103,7 +103,7 @@ const MobileView = ({
                         <li key={subItem.name}>
                           <div
                             onClick={() => handleNavigation(subItem.href)}
-                            className="text-[rgb(55,65,81)] font-sans hover:text-[#d1f349] cursor-pointer"
+                            className="text-[rgb(55,65,81)] font-sans text-sm hover:text-[#d1f349] cursor-pointer"
                           >
                             {subItem.name}
                           </div>
