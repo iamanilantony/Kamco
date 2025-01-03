@@ -47,13 +47,6 @@ const SupplierRegistration = () => {
           <p>
 KAMCO offers a wide range of products, including Tillers, Tractors, Reapers, Diesel Engines, Weeders, Brush Cutters, Pumpsets and other agricultural machineries. Our success can be attributed to a unique marketing strategy that has enabled us to expand our reach beyond India, capturing the International Agro-machinery market.
           </p>
-          <p className="mt-4">
-            KAMCO's product range includes Tiller, Tractor, Reaper, Diesel
-            Engine, Weeder, Brush Cutter and Pumpset. Its unparalleled success
-            can be attributed to its unique marketing strategy. Today, KAMCO's
-            marketing efforts have gone above the confines of India to capture
-            the overseas agro-machinery market.
-          </p>
         </div>
 
         {/* Applications Section */}
