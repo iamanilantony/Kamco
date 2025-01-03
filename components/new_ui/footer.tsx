@@ -58,10 +58,9 @@ export default function Footer() {
                 className=""
               />
             </Link>
-            <p className="text-sm text-gray-700 max-w-sm">
-              KAMCO was started way back in 1973 to aid farmers in their quest
-              for higher productivity, more prosperity and greater happiness in
-              their lives.
+            <p className="text-lg text-gray-700 max-w-sm">
+            A Boon for the Farmer; <br/>
+            A Gain for the Nation
             </p>
             <div className="flex gap-4">
               {socialLinks.map(({ href, icon: Icon, label }) => (
