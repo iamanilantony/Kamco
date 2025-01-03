@@ -14,6 +14,11 @@ const Media = () => {
     "/NewsAndEvents/MAC00286.JPG",
     "/NewsAndEvents/MAC00230.JPG",
     "/NewsAndEvents/MAC00205.JPG",
+    "/NewsAndEvents/Image2.jpeg",
+    "/NewsAndEvents/Image3.jpeg",
+    "/NewsAndEvents/Image4.jpeg",
+    "/NewsAndEvents/MOU.jpg",
+    "/NewsAndEvents/MOU1.jpeg",
   ];
 
   const imagesPerPage = 9;
