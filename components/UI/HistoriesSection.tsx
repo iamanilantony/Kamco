@@ -12,7 +12,7 @@ const historyContent = [
   {
     year: '1974',
     description: 'In 1974, KAMCO began production of the Power Tiller, a versatile machine that became essential for farming, offering multi-purpose functionality for tilling, ploughing, and more.',
-    image: '/products/PR-031.png',
+    image: '/products/PR-011_3.jpg',
   },
   {
     year: '1992',
