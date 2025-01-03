@@ -27,7 +27,7 @@ const facilitiesData = [
   },
   {
     title: "Kannur Unit – Garden Tiller and Power Weeder Innovation",
-    description: "Inaugurated in 2014, our Kannur facility is dedicated to Garden Tillers and Power Weeders, ensuring robust and efficient solutions.",
+    description: "Inaugurated in 2014, our Kannur facility at Valiyavelicham focuses on Garden Tillers and Power Weeders, including the B30, K40, and Eco Leopard Tiller KLW 100D. With advanced manufacturing and strict quality controls, it ensures robust, efficient, and versatile solutions for farming needs.",
     image: "/general/DSC_0002.JPG",
   },
   {

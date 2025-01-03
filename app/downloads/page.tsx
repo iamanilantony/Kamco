@@ -19,7 +19,7 @@ const Downloads = () => {
             <tbody>
               <tr>
                 <td className="p-3 border border-gray-300">
-                  KAMCO APPLICARION FOR DEALERSHIP
+                  KAMCO APPLICATION FOR DEALERSHIP
                 </td>
                 <td className="p-3 border border-gray-300">
                   <a
