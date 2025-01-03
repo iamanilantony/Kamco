@@ -6,6 +6,7 @@ import { ChevronDown, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 import useClickOutside from "@/lib/hooks/useclickedoutside";
+import { Button } from "../UI/button";
 
 const MobileView = ({
   isOpen,
@@ -113,6 +114,19 @@ const MobileView = ({
                 </motion.li>
               ))}
             </ul>
+          </div>
+          <div className="flex justify-center items-center w-full mt-4">
+            <Button
+              size={"lg"}
+              onClick={() =>
+                handleNavigation(
+                  "https://web.kamcoindia.com/dealers/user_login"
+                )
+              }
+              className="mt-12 text-black bg-[#d2f348] py-4 px-8 rounded-full"
+            >
+              Login
+            </Button>
           </div>
         </motion.div>
       )}
