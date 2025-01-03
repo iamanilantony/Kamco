@@ -49,7 +49,7 @@ const Newsletter = () => {
             key={index}
             className="aspect-square relative overflow-hidden rounded-lg shadow-md cursor-pointer transform transition-transform duration-300 hover:scale-105"
           >
-            <Link href={newsletter.link} passHref>
+            <Link href={newsletter.link} passHref target="_blank">
               {/* <a target="_blank" rel="noopener noreferrer"> */}
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer">
                   <Image
