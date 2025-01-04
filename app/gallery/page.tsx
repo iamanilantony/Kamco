@@ -1,5 +1,4 @@
 import Gallery from "@/components/UI/GalleryPage";
-import ProductsPage from "@/components/UI/Products";
 
 export default function Page() {
   const photos = [

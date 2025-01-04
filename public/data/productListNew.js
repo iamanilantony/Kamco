@@ -33,7 +33,7 @@ export default [
       src: "/products/PR-031.png",
       piecesLeft: 150,
       description: "Reliable power weeder for de-weeding tasks.",
-      slug: "de-weeding",
+      slug: "intercultivation",
     },
     // {
     //   name: "Geared Power weeder",
@@ -80,5 +80,70 @@ export default [
       description: "Efficient power reaper for harvesting tasks.",
       slug: "harvesting",
     },
+    { 
+      name: "Power Weeder", 
+      codeName: "PR-041", 
+      category: "Land Preparation", 
+      src: "/products/Power_Weeder-removebg.png", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "land-preparation" 
+    },
+    { 
+      name: "Micro Tiller", 
+      codeName: "PR-041", 
+      category: "Inter Cultivation", 
+      src: "/products/Micro_Tiller__1_-bgremove.png", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "intercultivation" 
+    },
+    { 
+      name: "Horti Tool Kit", 
+      codeName: "PR-041", 
+      category: "Garden Tools", 
+      src: "/products/KAMCO Horti Tool Kit 1.png", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "garden-tools" 
+    },
+    { 
+      name: "Agri Tool Kit", 
+      codeName: "PR-041", 
+      category: "Garden Tools", 
+      src: "/products/KAMCO Agri Tool Kit.png", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "garden-tools" 
+    },
+    { 
+      name: "Mini Agri Tool Kit", 
+      codeName: "PR-041", 
+      category: "Garden Tools", 
+      src: "/products/KAMCO Mini Agri Tool Kit.png", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "garden-tools" 
+    },
+    { 
+      name: "Pumpset", 
+      codeName: "PR-041", 
+      category: "Garden Tools", 
+      src: "/products/Pumpset KWP 40s (1).jpg", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "garden-tools" 
+    },
+    { 
+      name: "Sprayer", 
+      codeName: "PR-041", 
+      category: "Plant protection", 
+      src: "/products/FARMAK F-708 Sprayer.png", 
+      piecesLeft: 45, 
+      description: "Efficient power reaper for harvesting tasks.", 
+      slug: "plant-protection" 
+    },
+
+
   ];
   
