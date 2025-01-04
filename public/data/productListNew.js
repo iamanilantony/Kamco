@@ -29,7 +29,7 @@ export default [
     {
       name: "Echo Leopard Power weeder",
       codeName: "PR-031",
-      category: "Inter Cultivation",
+      category: "Intercultivation",
       src: "/products/PR-031.png",
       piecesLeft: 150,
       description: "Reliable power weeder for de-weeding tasks.",
@@ -47,7 +47,7 @@ export default [
     {
       name: "Garden Tiller",
       codeName: "PR-033",
-      category: "Garden Tools",
+      category: "Garden Tools/ Irrigation",
       src: "/products/PR-033.jpg", // Original src retained
       piecesLeft: 120,
       description: "Compact tillers for garden use.",
@@ -101,7 +101,7 @@ export default [
     { 
       name: "Horti Tool Kit", 
       codeName: "PR-041", 
-      category: "Garden Tools", 
+      category: "Garden Tools/ Irrigation", 
       src: "/products/KAMCO Horti Tool Kit 1.png", 
       piecesLeft: 45, 
       description: "Efficient power reaper for harvesting tasks.", 
@@ -110,7 +110,7 @@ export default [
     { 
       name: "Agri Tool Kit", 
       codeName: "PR-041", 
-      category: "Garden Tools", 
+      category: "Garden Tools/ Irrigation", 
       src: "/products/KAMCO Agri Tool Kit.png", 
       piecesLeft: 45, 
       description: "Efficient power reaper for harvesting tasks.", 
@@ -119,7 +119,7 @@ export default [
     { 
       name: "Mini Agri Tool Kit", 
       codeName: "PR-041", 
-      category: "Garden Tools", 
+      category: "Garden Tools/ Irrigation", 
       src: "/products/KAMCO Mini Agri Tool Kit.png", 
       piecesLeft: 45, 
       description: "Efficient power reaper for harvesting tasks.", 
@@ -128,7 +128,7 @@ export default [
     { 
       name: "Pumpset", 
       codeName: "PR-041", 
-      category: "Garden Tools", 
+      category: "Garden Tools/ Irrigation", 
       src: "/products/Pumpset KWP 40s (1).jpg", 
       piecesLeft: 45, 
       description: "Efficient power reaper for harvesting tasks.", 
